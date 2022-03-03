@@ -4,15 +4,18 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 public class Loginactivity extends AppCompatActivity {
 
     TabLayout tabLayout;
-    ViewPager viewPager;
+    ViewPager2 viewPager;
     FloatingActionButton fb,google,twitter;
+    private String[] titles = new String[]{"Login","Sign up"};
     float v=0;
 
     @Override
@@ -27,13 +30,13 @@ public class Loginactivity extends AppCompatActivity {
         google =findViewById(R.id.fab_google);
 
 
-        tabLayout.addTab(tabLayout.newTab().setText("Login"));
-        tabLayout.addTab(tabLayout.newTab().setText("Sign Up"));
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        final com.example.astrology.LoginAdapter adapter= new com.example.astrology.LoginAdapter(getSupportFragmentManager(), this,tabLayout.getTabCount());
+
+        final LoginAdapter adapter= new LoginAdapter( this);
         viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        new TabLayoutMediator(tabLayout,viewPager,((tab, position) -> tab.setText(titles[position]))).attach();
 
         fb.setTranslationY(300);
         google.setTranslationY(300);
