@@ -25,16 +25,15 @@ public class SignupTabFragment extends Fragment {
         name =root.findViewById(R.id.name);
         dateofbirth =root.findViewById(R.id.dateofbirth);
         birthtime =root.findViewById(R.id.birthtime);
-        passs =root.findViewById(R.id.passs);
+
         mobilee =root.findViewById(R.id.mobilee);
-        confirmpass = root.findViewById(R.id.confirmpasss);
+
         signup = root.findViewById(R.id.signup);
         radioGroup = root.findViewById(R.id.radio);
         placeofbirth = root.findViewById(R.id.placeofbirth);
 
         emaill.setTranslationY(300);
-        passs.setTranslationY(300);
-        confirmpass.setTranslationY(300);
+
         signup.setTranslationY(300);
         radioGroup.setTranslationY(300);
         name.setTranslationY(300);
@@ -45,8 +44,8 @@ public class SignupTabFragment extends Fragment {
         radioGroup.setTranslationY(300);
 
         emaill.setAlpha(v);
-        passs.setAlpha(v);
-        confirmpass.setAlpha(v);
+
+
         signup.setAlpha(v);
         radioGroup.setAlpha(v);
         dateofbirth.setAlpha(v);
@@ -59,8 +58,7 @@ public class SignupTabFragment extends Fragment {
 
 
         emaill.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
-        passs.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
-        confirmpass.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
+
         signup.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
         mobilee.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
         placeofbirth.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
