@@ -164,7 +164,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:passwordToggleEnabled="true"
-
+        app:passwordToggleTint="#1886CF"
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="248dp">
     <EditText
@@ -184,7 +184,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:passwordToggleEnabled="true"
-
+        app:passwordToggleTint="#1886CF"
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="248dp">
     <EditText
