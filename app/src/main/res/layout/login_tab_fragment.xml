@@ -26,10 +26,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_bg"
             android:hint="Email"
-            android:padding="10dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:padding="15dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias=".5"
@@ -42,7 +40,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
-
             tools:layout_editor_absoluteX="92dp"
             tools:layout_editor_absoluteY="248dp">
 
@@ -52,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/edit_text_bg"
-                android:ems="20"
+                android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:textColor="#090909" />
