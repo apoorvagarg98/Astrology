@@ -7,20 +7,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class SignUp1 extends AppCompatActivity {
-  Button signuppage2;
+   FloatingActionButton signup2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up1);
 
-        signuppage2= findViewById(R.id.signuppage2);
-
-        signuppage2.setOnClickListener(new View.OnClickListener() {
+        signup2= findViewById(R.id.signup2);
+        signup2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SignUp1.this,SignUp2.class));
             }
         });
+
     }
 }

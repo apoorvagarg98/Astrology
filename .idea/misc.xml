@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/drawable-v24/buttonshapewhitebg.xml" value="0.20925925925925926" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/drawable/box.xml" value="0.21875" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/drawable/edit_text_bg.xml" value="0.21875" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/drawable/edit_text_bgrg.xml" value="0.21875" />
@@ -13,8 +14,8 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_loginactivity.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_loginorsignup.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_sign_up1.xml" value="0.14" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_sign_up2.xml" value="0.14" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_splashscreen.xml" value="0.18" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_sign_up2.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_splashscreen.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/login_tab_fragment.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/signup_tab_fragment.xml" value="0.22" />
       </map>

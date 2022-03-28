@@ -95,9 +95,9 @@
                 android:id="@+id/fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:autoText="true"
                 android:background="@drawable/textviewbg"
+                android:autoText="true"
+
                 android:backgroundTint="#F6F7FA"
                 android:ems="10"
                 android:hint="Email Id:"

@@ -25,14 +25,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         android:gravity="center"
+        android:layout_margin="10dp"
         android:orientation="vertical">
 
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/hindiname"
@@ -48,45 +48,42 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/englishname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            <TextView
+                android:id="@+id/englishname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
 
-            android:layout_marginTop="60dp"
+                android:layout_marginTop="60dp"
 
-            android:layout_marginBottom="50dp"
-            android:fontFamily="@font/poppins_light"
-            android:gravity="center"
-            android:text="AADISHAKTI"
-            android:textColor="#EA08DE"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:text="AADISHAKTI"
+                android:textColor="#EA08DE"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-
+        </RelativeLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="5dp"
-
             tools:layout_editor_absoluteX="92dp"
             tools:layout_editor_absoluteY="248dp">
 
 
             <EditText
-                android:id="@+id/fullname"
+                android:id="@+id/Birthdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:autoText="true"
                 android:background="@drawable/textviewbg"
                 android:backgroundTint="#F6F7FA"
                 android:ems="10"
-                android:hint="Name:"
+                android:hint="Birth Date:"
                 android:inputType="textPersonName"
                 android:shadowColor="#EFE1E1"
                 android:textColor="#090909"
@@ -95,8 +92,6 @@
                 android:textColorLink="#FAF3F3"
                 android:textStyle="normal" />
         </com.google.android.material.textfield.TextInputLayout>
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,18 +101,17 @@
             tools:layout_editor_absoluteY="248dp">
 
             <EditText
-                android:id="@+id/pass"
+                android:id="@+id/birthtime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/textviewbg"
                 android:backgroundTint="#F6F7FA"
                 android:ems="10"
-                android:hint="Mobile Number:"
+                android:hint="Birth Time:"
                 android:inputType="textPassword"
                 android:textColor="#090909" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -129,13 +123,13 @@
             tools:layout_editor_absoluteY="248dp">
 
             <EditText
-                android:id="@+id/emailid"
+                android:id="@+id/birthplace"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/textviewbg"
                 android:backgroundTint="@color/white"
                 android:ems="10"
-                android:hint="Email Id:"
+                android:hint="Birth Place:"
                 android:inputType="textPassword"
                 android:textColor="#090909" />
 
@@ -174,15 +168,11 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-
-            >
+            android:paddingRight="10dp">
 
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:fontFamily="@font/poppins_light"
                 android:gravity="center"
                 android:text="Already have an account?"
