@@ -5,112 +5,125 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/bgg"
+    android:background="@drawable/finalbg"
     android:layout_gravity="center"
     android:gravity="center"
     tools:context=".loginorsignup">
 
-
-    <ImageView
-        android:id="@+id/topicon"
-        android:layout_width="58dp"
-        android:layout_height="60dp"
-        android:layout_alignParentRight="true"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:fontFamily="@font/baloo"
-        android:gravity="center"
-        android:src="@drawable/photo"
-        android:text="AADISHAKTI"
-        android:textColor="#E9E83141"
-        android:textSize="32sp" />
-
-    <TextView
-        android:id="@+id/hindiname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="40dp"
-        android:fontFamily="@font/poppins_light"
-        android:gravity="center"
-        android:text="आदिशक्ति:"
-        android:layout_alignParentTop="true"
-        android:textColor="#EA08DE"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/englishname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="120dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="80dp"
-        android:fontFamily="@font/poppins_light"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:text="AADISHAKTI"
-        android:textColor="#EA08DE"
-        android:textSize="24sp" />
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:orientation="vertical">
 
 
-        <ImageView
-            android:id="@+id/mainlogo"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"
-
-            android:src="@drawable/photo_ccexpress"
-
-            android:textColor="@color/white"
-            android:textSize="150sp" />
-
-        <ImageView
-            android:id="@+id/swagat"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:fontFamily="@font/baloo"
-            android:src="@drawable/swagat"
-            android:textColor="@color/white"
-            android:textSize="150sp" />
-
-        <TextView
-            android:id="@+id/topline1"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:gravity="center"
-            android:text=" 🙏🏻जय श्री गणेशाय नमः🌹🕉️💯🙏🏻 🐚🌹ॐ नमः शिवाय🌹अतुल्यशिव 🌹 🙏🏻❤️🕉️༺❤️हर_हर_महादेव ❤️༻🕉️❤️🙏🏻🌹 मां 🌹पार्वत्यै🌹 देवीया: नमः🌹🐚🙏🏻🌹 जय हिंद❤ वंदे मांतरम❤🇮🇳❤🙏😇 ❤🕉️💯🙏🏻😍🥰🕉😇🌹🌎🕉"
-            android:textColor="#131111"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+
+            <TextView
+                    android:id="@+id/hindiname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center"
+                    android:text="आदिशक्ति:"
+                    android:textColor="#D100D1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/englishname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center"
+                    android:text="AADISHAKTI"
+                    android:textColor="#D100D1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/topicon"
+                android:layout_width="58dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/photo"
+                android:text="AADISHAKTI"
+                android:textColor="#E9E83141"
+                android:textSize="32sp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mainlogo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/mainlogo" />
+
+            <ImageView
+                android:id="@+id/swagat"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/baloo"
+                android:src="@drawable/swagat"
+                android:textColor="@color/white"
+                android:textSize="150sp" />
+
+
+            <TextView
+                android:id="@+id/topline1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text=" 🙏🏻जय श्री गणेशाय नमः🌹🕉️💯🙏🏻 🐚🌹ॐ नमः शिवाय🌹अतुल्यशिव 🌹 🙏🏻❤️🕉️༺❤️हर_हर_महादेव ❤️༻🕉️❤️🙏🏻🌹 मां 🌹पार्वत्यै🌹 देवीया: नमः🌹🐚🙏🏻🌹 जय हिंद❤ वंदे मांतरम❤🇮🇳❤🙏😇 ❤🕉️💯🙏🏻😍🥰🕉😇🌹🌎🕉"
+                android:textColor="#131111"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true"
         >
 
@@ -122,7 +135,7 @@
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_weight="0.4"
+            android:layout_weight="0.3"
             android:background="@drawable/box"
             android:gravity="center"
 
@@ -133,13 +146,8 @@
             android:textSize="16sp"
             android:textStyle="normal"
             android:visibility="visible"
-            app:backgroundTint="#4DBFF0"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias=".7"
-            app:layout_constraintWidth_percent=".8" />
+            app:backgroundTint="#33F3EF"
+           />
 
 
         <Button
@@ -151,7 +159,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
 
-            android:layout_weight="0.4"
+            android:layout_weight="0.3"
             android:background="@drawable/box"
             android:gravity="center"
 
@@ -161,14 +169,10 @@
             android:textSize="16sp"
             android:textStyle="normal"
             android:visibility="visible"
-            app:backgroundTint="#4DBFF0"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias=".7"
-            app:layout_constraintWidth_percent=".8" />
+            app:backgroundTint="#33F3EF"
+           />
 
     </LinearLayout>
+
 
 </RelativeLayout>
