@@ -9,37 +9,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Astrology">
-        <activity
-            android:name=".SignUp2"
-            android:exported="false" />
-        <activity
-            android:name=".SignUp1"
-            android:exported="false" />
+        android:theme="@style/Theme.LoginActivity" >
         <activity
             android:name=".Login"
-            android:exported="false" />
-        <activity
-            android:name=".loginorsignup"
-            android:exported="true" />
-        <activity
-            android:name=".Splashscreen"
+            android:exported="true" >
+
+
+        </activity>
+
+        <activity android:name=".Splashscreen"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
-        <activity
-            android:name=".Loginactivity"
-            android:exported="true" />
+        <activity android:name=".loginorsignup"/>
+        <activity android:name=".SignUp1"/>
+        <activity android:name=".SignUp2"/>
+
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true" >
 
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+        </activity>
     </application>
 
 </manifest>

@@ -91,6 +91,50 @@
                 android:textSize="20sp" />
 
 
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:text="Please Select Your Gender"
+                android:textColor="#D100D1"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/button_bg"
+                    android:padding="2dp"
+                    android:text="Male"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/button_bg"
+                    android:padding="2dp"
+                    android:text="Female">
+
+                </RadioButton>
+
+
+            </RadioGroup>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -133,7 +177,6 @@
                     android:backgroundTint="#F6F7FA"
                     android:ems="10"
                     android:hint="Birth Time:"
-                    android:inputType="textPassword"
                     android:textColor="#090909" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -154,53 +197,30 @@
                     android:backgroundTint="#F6F7FA"
                     android:ems="10"
                     android:hint="Birth Place:"
+                    android:textColor="#090909" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/white"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="248dp">
+
+                <EditText
+                    android:id="@+id/passsignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textviewbg"
+                    android:backgroundTint="#F6F7FA"
+                    android:ems="10"
+                    android:hint="password"
                     android:inputType="textPassword"
                     android:textColor="#090909" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            <TextView
-                android:id="@+id/gender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="2dp"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="center"
-                android:text="Please Select Your Gender"
-                android:textColor="#D100D1"
-                android:textStyle="bold"
-                android:textSize="14sp" />
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_bg"
-                    android:padding="2dp"
-                    android:layout_margin="5dp"
-                    android:text="Male">
-                </RadioButton>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button_bg"
-                    android:padding="2dp"
-                    android:layout_margin="5dp"
-                    android:text="Female">
-
-                </RadioButton>
-
-
-            </RadioGroup>
 
             <RelativeLayout
                 android:layout_width="match_parent"
