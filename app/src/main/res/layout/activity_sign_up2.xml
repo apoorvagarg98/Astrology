@@ -77,18 +77,6 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/logintextview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                  android:layout_marginBottom="20dp"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="center"
-                android:text="Help Us With A Little Info"
-                android:textColor="#D100D1"
-                android:textSize="20sp" />
 
 
             <TextView
