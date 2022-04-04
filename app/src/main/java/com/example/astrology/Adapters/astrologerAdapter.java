@@ -6,6 +6,10 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.astrology.astrologerFragementDirectory.Home;
 import com.example.astrology.astrologerFragementDirectory.careerFragement;
+import com.example.astrology.astrologerFragementDirectory.foriegnTravel;
+import com.example.astrology.astrologerFragementDirectory.health;
+import com.example.astrology.astrologerFragementDirectory.loveMatters;
+import com.example.astrology.astrologerFragementDirectory.studies;
 
 public class astrologerAdapter extends FragmentStateAdapter {
 
@@ -14,9 +18,6 @@ public class astrologerAdapter extends FragmentStateAdapter {
     public astrologerAdapter (FragmentActivity fm){
         super(fm);
     }
-
-
-
 
     @NonNull
     @Override
@@ -28,8 +29,22 @@ public class astrologerAdapter extends FragmentStateAdapter {
             case 1:
                careerFragement cf= new careerFragement();
                 return cf;
+            case 2:
+              health h= new health();
+                return h;
+            case 3:
+               foriegnTravel ft= new foriegnTravel();
+                return ft;
 
-            default:
+            case 4:
+                studies s= new studies();
+                return s;
+
+                case 5:
+                loveMatters lm= new loveMatters();
+                return lm;
+
+                default:
                 Home homee= new Home();
                 return homee;
         }
