@@ -1,4 +1,4 @@
-package com.example.astrology;
+package com.example.astrology.models;
 
 public class userModel {
 

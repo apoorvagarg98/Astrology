@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="613dp">
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="327dp">
 
         <Button
             android:id="@+id/button"
@@ -23,7 +23,7 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="148dp"
+            android:layout_width="158dp"
             android:layout_height="wrap_content"
             android:text="palmistry"
             app:layout_column="1"
@@ -39,7 +39,7 @@
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="wrap_content"
+            android:layout_width="161dp"
             android:layout_height="wrap_content"
             android:text=" Vastu Expert"
             app:layout_column="1"
@@ -47,7 +47,7 @@
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="match_parent"
+            android:layout_width="139dp"
             android:layout_height="wrap_content"
             android:text="Tarot Card"
             app:layout_column="0"
@@ -70,4 +70,12 @@
             app:layout_column="0"
             app:layout_row="3" />
     </androidx.gridlayout.widget.GridLayout>
+
+    <ImageView
+        android:id="@+id/slideShow"
+        android:layout_width="381dp"
+        android:layout_height="283dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="25dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,10 @@
-package com.example.astrology;
+package com.example.astrology.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.astrology.R;
 
 public class MainActivity extends AppCompatActivity {
 

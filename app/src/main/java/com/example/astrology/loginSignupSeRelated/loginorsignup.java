@@ -1,10 +1,9 @@
-package com.example.astrology;
+package com.example.astrology.loginSignupSeRelated;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -12,6 +11,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.astrology.R;
 
 public class loginorsignup extends AppCompatActivity {
 
@@ -56,7 +57,7 @@ public class loginorsignup extends AppCompatActivity {
         signinbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(loginorsignup.this,Login.class));
+                startActivity(new Intent(loginorsignup.this, Login.class));
             }
         });
 
@@ -66,7 +67,7 @@ public class loginorsignup extends AppCompatActivity {
         signupbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(loginorsignup.this,SignUp1.class));
+                startActivity(new Intent(loginorsignup.this, SignUp1.class));
             }
         });
 
