@@ -1,10 +1,9 @@
 package com.example.astrology.Activities;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
-
 import android.os.Bundle;
-
 import com.example.astrology.Adapters.astrologerAdapter;
 import com.example.astrology.R;
 import com.google.android.material.tabs.TabLayout;
@@ -15,23 +14,19 @@ public class astrologer extends AppCompatActivity {
     ViewPager2 viewPager2;
 
     private String[] titles = new String[]{"home","love","career","health","studies","foriegn travel"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_astrologer);
-
-
         tabLayout =findViewById(R.id.tabs);
         viewPager2 =findViewById(R.id.viewpager);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
-
         final astrologerAdapter adapter= new astrologerAdapter( this);
         viewPager2.setAdapter(adapter);
         new TabLayoutMediator(tabLayout,viewPager2,((tab, position) -> tab.setText(titles[position]))).attach();
-
         tabLayout.setTranslationY(300);
 
     }
 }
+
