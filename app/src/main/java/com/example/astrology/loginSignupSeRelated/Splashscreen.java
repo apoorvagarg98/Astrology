@@ -15,7 +15,7 @@ import com.example.astrology.R;
 
 public class Splashscreen extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT=7000;
+    private static int SPLASH_TIME_OUT=4000;
 
 
     Animation topAnimation,bottomAnimation,middleAnimation;
