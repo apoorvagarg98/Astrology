@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "607255403199",
+    "project_id": "astrology-cd018",
+    "storage_bucket": "astrology-cd018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607255403199:android:47c98a273e0d93b246c40a",
+        "android_client_info": {
+          "package_name": "com.example.astrology"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607255403199-qqvo363k46al7hjltatt029rdbrd6ufi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkahrf0nSYNTRa52nBacm2jh2lZ4ydems"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607255403199-qqvo363k46al7hjltatt029rdbrd6ufi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

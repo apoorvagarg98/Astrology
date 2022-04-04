@@ -73,7 +73,7 @@ public class SignUp2 extends AppCompatActivity {
         String namespre,phonespre,emailspre,passwordspre,dateofbirthst,placeofbirthst,birthtimest;
         namespre = getIntent().getStringExtra("name").toString();
         phonespre =getIntent().getStringExtra("mobile").toString();
-        emailspre =getIntent().getStringExtra("email").toString();
+        emailspre =getIntent().getStringExtra("email").toString().trim();
         passwordspre = passs.getText().toString();
         dateofbirthst = dateofbirth.getText().toString();
         placeofbirthst = placeofbirth.getText().toString();
