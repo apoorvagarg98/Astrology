@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/finalbg"
-    tools:context=".loginSignupSeRelated.Login">
+    tools:context=".ExpertLogin">
 
 
     <LinearLayout
@@ -59,7 +59,6 @@
                 android:layout_height="60dp"
                 android:layout_alignParentRight="true"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
@@ -72,21 +71,34 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
-            android:gravity="center"
+            android:layout_marginTop="40dp"
             android:orientation="vertical">
 
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/mainlogo"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="Sign In To Continue"
+                android:textColor="#D100D1"
+                android:textSize="24sp"
+                android:textStyle="bold"></ImageView>
+
             <TextView
-                android:id="@+id/logintextview"
+                android:id="@+id/Exlogintextview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="center"
-                android:text="Sign In To Continue"
+                android:text="Expert Sign In"
                 android:textColor="#D100D1"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -100,7 +112,7 @@
 
 
                 <EditText
-                    android:id="@+id/fullnamel"
+                    android:id="@+id/Exfullname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autoText="true"
@@ -128,7 +140,7 @@
                 tools:layout_editor_absoluteY="248dp">
 
                 <EditText
-                    android:id="@+id/pass"
+                    android:id="@+id/Expass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/textviewbg"
@@ -142,11 +154,11 @@
 
 
             <Button
-                android:id="@+id/yo"
+                android:id="@+id/Exlogin"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/box"
                 android:gravity="center"
                 android:ems="5"
@@ -159,15 +171,16 @@
                 android:textSize="16sp"
                 android:textStyle="normal"
                 android:visibility="visible"
-                app:backgroundTint="#4DBFF0"  />
+                app:backgroundTint="#4DBFF0" />
 
             <TextView
-                android:id="@+id/forgotPassword2"
+                android:id="@+id/exforgotPassword2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="center"
+                android:layout_gravity="center"
                 android:text="Forgot Password?"
                 android:textColor="#4DBFF0"
                 android:textSize="16dp" />
@@ -177,7 +190,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingLeft="10dp"
@@ -186,21 +199,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:layout_margin="3dp"
                     android:fontFamily="@font/poppins_light"
                     android:gravity="center"
-                    android:text="Don't have an account?"
+                    android:text="Are you new Expert?"
                     android:textColor="@color/black"
                     android:textSize="14dp" />
 
                 <TextView
-                    android:id="@+id/dontHaveacc"
+                    android:id="@+id/ExdontHaveacc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:layout_margin="3dp"
                     android:fontFamily="@font/poppins_light"
                     android:gravity="center"
-                    android:text="Sign Up"
+                    android:text="Please Sign Up Here"
                     android:textColor="#4DBFF0"
                     android:textSize="14dp"
                     android:textStyle="bold" />
@@ -208,10 +221,12 @@
             </LinearLayout>
 
 
+
         </LinearLayout>
 
 
     </LinearLayout>
+
 
 
 

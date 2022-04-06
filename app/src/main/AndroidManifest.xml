@@ -10,11 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Astrology">
         <activity
+            android:name=".ExpertSignUp3"
+            android:exported="false" />
+        <activity
+            android:name=".ExpertSignUp2"
+            android:exported="false" />
+        <activity
+            android:name=".ExpertSignUp1"
+            android:exported="false" />
+        <activity
+            android:name=".ExpertLogin"
+            android:exported="false" />
+        <activity
             android:name=".Activities.astrologer"
             android:exported="true" />
         <activity
             android:name=".loginSignupSeRelated.Login"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".loginSignupSeRelated.Splashscreen"
             android:exported="true">
@@ -29,7 +41,7 @@
         <activity android:name=".loginSignupSeRelated.SignUp2" />
         <activity
             android:name=".Activities.MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

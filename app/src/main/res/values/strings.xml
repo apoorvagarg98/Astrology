@@ -1,5 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Astrology</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="app_name">MyAndroidApp</string>
+    <string name="profession_prompt">Choose a country</string>
+
+    <string-array name="profession_arrays">
+        <item>Astrologer</item>
+        <item>Numerologist</item>
+        <item>Vastu Expert</item>
+        <item>Tarot Card Reader</item>
+        <item>Lal Kitab Expert</item>
+        <item>Mobile Numerologist</item>
+        <item>Palmist</item>
+        <item>Hindu Rituals</item>
+    </string-array>
+
 </resources>
