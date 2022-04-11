@@ -18,8 +18,7 @@
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"></androidx.appcompat.widget.Toolbar>
+            android:layout_height="?attr/actionBarSize"></androidx.appcompat.widget.Toolbar>
 
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -29,45 +28,57 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/appbar"
-        app:layout_constraintTop_toBottomOf="@+id/appbar"
-        app:layout_scrollFlags="scroll|enterAlways"
-        app:tabMode="auto">
+        app:layout_constraintEnd_toEndOf="@+id/appbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabMode="scrollable">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="house" />
+            android:text="astrology" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="career" />
+            android:text="laalKitaab" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="health" />
+            android:text="HinduRituals" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="foriegnTravel" />
+            android:text="MobileNumerology" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabItem2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="studies" />
+            android:text="Numerology" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabItem3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="loveMatters" />
+            android:text="palmistory" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tarotCardReader" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VastuExpert" />
+
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2

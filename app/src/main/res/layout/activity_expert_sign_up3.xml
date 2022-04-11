@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/finalbg"
-    tools:context=".ExpertSignUp3">
+    tools:context=".loginSignupSeRelated.ExpertSignUp3">
 
 
     <LinearLayout
@@ -79,8 +79,6 @@
             android:orientation="vertical">
 
 
-
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,7 +95,7 @@
                     android:background="@drawable/textviewbg"
                     android:backgroundTint="#F6F7FA"
                     android:ems="10"
-                    android:hint="Enter The Amount You Expect:"
+                    android:hint="Rate per minute"
                     android:inputType="textPersonName"
                     android:shadowColor="#EFE1E1"
                     android:textColor="#090909"
@@ -109,22 +107,28 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="@color/white"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="248dp">
 
+
                 <EditText
-                    android:id="@+id/exupinumber"
+                    android:id="@+id/experience"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:autoText="true"
                     android:background="@drawable/textviewbg"
                     android:backgroundTint="#F6F7FA"
                     android:ems="10"
-                    android:hint="Upi Number"
-                    android:textColor="#090909" />
-
+                    android:hint="Experience"
+                    android:inputType="textPersonName"
+                    android:shadowColor="#EFE1E1"
+                    android:textColor="#090909"
+                    android:textColorHighlight="#090909"
+                    android:textColorHint="#777575"
+                    android:textColorLink="#FAF3F3"
+                    android:textStyle="normal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <RelativeLayout
@@ -151,17 +155,19 @@
                     android:textStyle="bold" />
 
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/certi"
+                    android:layout_width="38dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="94dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_toEndOf="@+id/Certificate"
                     android:gravity="center"
                     android:src="@drawable/ic_baseline_attachment_24">
 
-                </ImageButton>
+                </ImageView>
 
             </RelativeLayout>
 
@@ -189,17 +195,20 @@
                     android:textStyle="bold" />
 
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/adh"
+                    android:layout_width="47dp"
+                    android:layout_height="39dp"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
+                    android:layout_marginStart="89dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_toEndOf="@+id/AadhaarCard"
                     android:gravity="center"
                     android:src="@drawable/ic_baseline_attachment_24">
 
-                </ImageButton>
+                </ImageView>
 
             </RelativeLayout>
             <RelativeLayout
@@ -226,9 +235,10 @@
                     android:textStyle="bold" />
 
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/pancard"
+                    android:layout_width="47dp"
+                    android:layout_height="39dp"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
@@ -236,11 +246,29 @@
                     android:gravity="center"
                     android:src="@drawable/ic_baseline_attachment_24">
 
-                </ImageButton>
+                </ImageView>
 
             </RelativeLayout>
 
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/white"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="248dp">
+
+                <EditText
+                    android:id="@+id/expassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textviewbg"
+                    android:backgroundTint="#F6F7FA"
+                    android:ems="10"
+                    android:hint="password"
+                    android:textColor="#090909" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"

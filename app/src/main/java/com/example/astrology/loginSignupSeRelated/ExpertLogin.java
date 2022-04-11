@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.astrology.Activities.MainActivity;
 import com.example.astrology.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -19,24 +18,33 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class  Login extends AppCompatActivity {
+public class ExpertLogin extends AppCompatActivity {
+
     Button login;
     TextView dontHaveacc,GoToExpert;
     FirebaseAuth mAuth;
     FirebaseUser user;
-EditText email,pass;
+    EditText email,pass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_expert_login);
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
-        email= findViewById(R.id.fullnamel);
+        email= findViewById(R.id.Exfullname);
         GoToExpert= findViewById(R.id.GoToExpert);
-        pass = findViewById(R.id.pass);
-        login= findViewById(R.id.yo);
-        dontHaveacc= findViewById(R.id.dontHaveacc);
+        pass = findViewById(R.id.Expass);
+        login= findViewById(R.id.Exlogin);
+        dontHaveacc= findViewById(R.id.ExdontHaveacc);
+
+        dontHaveacc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ExpertLogin.this, ExpertSignUp1.class));
+            }
+        });
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,20 +54,6 @@ EditText email,pass;
 
 
 
-        dontHaveacc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Login.this, SignUp1.class));
-            }
-        });
-        GoToExpert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Login.this, ExpertLogin.class));
-            }
-        });
-
-
     }
 
     private void loginuser() {
@@ -67,15 +61,10 @@ EditText email,pass;
         mAuth.signInWithEmailAndPassword(email.getText().toString(),pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                Toast.makeText(Login.this, "Logged in succesfully", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Login.this, MainActivity.class));
+                Toast.makeText(ExpertLogin.this, "Logged in succesfully", Toast.LENGTH_SHORT).show();
+               // startActivity(new Intent(ExpertLogin.this, MainActivity.class));
 
             }
         });
     }
 }
-
-
-
-
-

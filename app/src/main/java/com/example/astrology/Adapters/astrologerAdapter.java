@@ -4,16 +4,18 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.astrology.astrologerFragementDirectory.Home;
-import com.example.astrology.astrologerFragementDirectory.careerFragement;
-import com.example.astrology.astrologerFragementDirectory.foriegnTravel;
-import com.example.astrology.astrologerFragementDirectory.health;
-import com.example.astrology.astrologerFragementDirectory.loveMatters;
-import com.example.astrology.astrologerFragementDirectory.studies;
+import com.example.astrology.astrologerFragementDirectory.astrologerfragement;
+import com.example.astrology.astrologerFragementDirectory.hinduRituals;
+import com.example.astrology.astrologerFragementDirectory.lalkitabexpert;
+import com.example.astrology.astrologerFragementDirectory.mobilenumerologist;
+import com.example.astrology.astrologerFragementDirectory.numerologist;
+import com.example.astrology.astrologerFragementDirectory.palmist;
+import com.example.astrology.astrologerFragementDirectory.tarotcardreader;
+import com.example.astrology.astrologerFragementDirectory.vastuexpert;
 
 public class astrologerAdapter extends FragmentStateAdapter {
 
-    private String[] titles = new String[]{"home","love","career","health","studies","foriegn travel"};
+    private String[] titles = new String[]{"astrology","laalKitaab","HinduRituals","MobileNumerology","Numerology","palmistory ","tarotCardReader","VastuExpert"};
 
     public astrologerAdapter (FragmentActivity fm){
         super(fm);
@@ -24,29 +26,37 @@ public class astrologerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                Home home= new Home();
-                return home;
+                astrologerfragement as = new astrologerfragement();
+                return as;
             case 1:
-               careerFragement cf= new careerFragement();
-                return cf;
+               lalkitabexpert le= new lalkitabexpert();
+                return le;
             case 2:
-              health h= new health();
-                return h;
+              hinduRituals hr= new hinduRituals();
+                return hr;
             case 3:
-               foriegnTravel ft= new foriegnTravel();
-                return ft;
+               mobilenumerologist mn= new mobilenumerologist();
+                return mn;
 
             case 4:
-                studies s= new studies();
-                return s;
+                numerologist n= new numerologist();
+                return n;
 
                 case 5:
-                loveMatters lm= new loveMatters();
-                return lm;
+                palmist p= new palmist();
+                return p;
+
+            case 6:
+                tarotcardreader tcr= new tarotcardreader();
+                return tcr;
+
+            case 7:
+                vastuexpert ve= new vastuexpert();
+                return ve;
 
                 default:
-                Home homee= new Home();
-                return homee;
+                astrologerfragement a= new astrologerfragement();
+                return a;
         }
     }
 

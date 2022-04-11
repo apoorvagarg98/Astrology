@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.astrology.ExpertSignUp2;
-import com.example.astrology.ExpertSignUp3;
 import com.example.astrology.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -31,7 +29,7 @@ public class SignUp1 extends AppCompatActivity {
         alreadyHaveacc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SignUp1.this, ExpertSignUp3.class));
+                startActivity(new Intent(SignUp1.this, Login.class));
             }
         });
 

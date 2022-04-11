@@ -10,17 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Astrology">
         <activity
-            android:name=".ExpertSignUp3"
+            android:name=".Activities.bookingPage"
+            android:exported="true" />
+        <activity
+            android:name=".viewHollders.item"
+            android:exported="true" />
+        <activity
+            android:name=".loginSignupSeRelated.ExpertSignUp3"
             android:exported="false" />
         <activity
-            android:name=".ExpertSignUp2"
+            android:name=".loginSignupSeRelated.ExpertSignUp2"
             android:exported="false" />
         <activity
-            android:name=".ExpertSignUp1"
+            android:name=".loginSignupSeRelated.ExpertSignUp1"
             android:exported="false" />
         <activity
-            android:name=".ExpertLogin"
+            android:name=".loginSignupSeRelated.ExpertLogin"
             android:exported="false" />
+        <activity
+            android:name=".loginSignupSeRelated.ExpertSignUp"
+            android:exported="true" />
         <activity
             android:name=".Activities.astrologer"
             android:exported="true" />

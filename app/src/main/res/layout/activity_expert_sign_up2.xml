@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/finalbg"
-    tools:context=".ExpertSignUp2">
+    tools:context=".loginSignupSeRelated.ExpertSignUp2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -80,7 +80,7 @@
 
 
             <TextView
-                android:id="@+id/gender"
+                android:id="@+id/exgender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -94,14 +94,14 @@
                 android:textStyle="bold" />
 
             <RadioGroup
-                android:id="@+id/radio"
+                android:id="@+id/exradio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/male"
+                    android:id="@+id/exmale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -110,7 +110,7 @@
                     android:text="Male"></RadioButton>
 
                 <RadioButton
-                    android:id="@+id/female"
+                    android:id="@+id/exfemale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -132,7 +132,7 @@
 
 
                 <EditText
-                    android:id="@+id/Birthdate"
+                    android:id="@+id/exBirthdate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autoText="true"
@@ -202,7 +202,7 @@
 
 
             <Spinner
-                android:id="@+id/spinner2"
+                android:id="@+id/exspinner2"
                 android:layout_width="match_parent"
                 android:padding="2dp"
                 android:backgroundTintMode="src_in"
@@ -258,7 +258,7 @@
                     android:textSize="14dp" />
 
                 <TextView
-                    android:id="@+id/dontHaveacc"
+                    android:id="@+id/exdontHaveacc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"

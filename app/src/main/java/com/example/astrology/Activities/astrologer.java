@@ -13,7 +13,7 @@ public class astrologer extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
 
-    private String[] titles = new String[]{"home","love","career","health","studies","foriegn travel"};
+    private String[] titles = new String[]{"astrology","laalKitaab","HinduRituals","MobileNumerology","Numerology","palmistory ","tarotCardReader","VastuExpert"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
