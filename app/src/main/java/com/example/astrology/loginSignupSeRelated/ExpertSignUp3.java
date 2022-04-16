@@ -175,7 +175,7 @@ public class ExpertSignUp3 extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    expertModel em  = new expertModel(exnames,exmobile, exemails,userId ,selection ,exadress ,expincode ,exbirthdate,stamt,gender,imageUriadhar.toString(),imageUripan.toString(),imageUricertificate.toString(),stexperience);
+                    expertModel em  = new expertModel(exnames,exmobile, exemails,userId ,selection ,exadress ,expincode ,exbirthdate,stamt,gender,imageUriadhar.toString(),imageUripan.toString(),imageUricertificate.toString(),stexperience.toString());
 
                     expert.child(selection).child(mAuth.getUid()).setValue(em).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override

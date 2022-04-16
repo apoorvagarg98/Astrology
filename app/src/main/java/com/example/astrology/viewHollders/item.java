@@ -18,7 +18,7 @@ public class item extends RecyclerView.ViewHolder {
         super(itemView);
         expertname = itemView.findViewById(R.id.expertname);
         ratepermin = itemView.findViewById(R.id.expertratePerminute);
-        experience = itemView.findViewById(R.id.experience);
+        experience = itemView.findViewById(R.id.exp);
         book = itemView.findViewById(R.id.book);
 
     }

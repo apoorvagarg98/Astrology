@@ -68,7 +68,7 @@ public class lalkitabexpert extends Fragment {
 
                 holder.expertname.setText(model.getExnames());
                 holder.ratepermin.setText(model.getStamt()+ " rs/min");
-               // holder.experience.setText(model.getExperience() + " yrs");
+                holder.experience.setText(model.getExperience()+ " yrs");
                 holder.book.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
