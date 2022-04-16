@@ -1,310 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:gravity="center"
     tools:context=".Activities.bookingPage">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="5dp"
-        android:padding="5dp"
-        android:orientation="vertical">
+    <EditText
+        android:id="@+id/dateOfBooking"
+        android:layout_width="151dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Date of Booking"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="367dp" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/hindiname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/aclonica"
-                    android:textColor="#D100D1"
-                    android:gravity="center"
-                    android:text="आदि शक्ति एस्ट्रो"
-
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/englishname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:gravity="center"
-                    android:text="AADI SHAKTII ASTRO"
-                    android:fontFamily="@font/aclonica"
-                    android:textColor="#D100D1"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-
-                    android:gravity="center"
-                    android:text="Booking Appointment"
-                    android:fontFamily="@font/aclonica"
-                    android:textColor="#D100D1"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <ImageView
-                android:id="@+id/topicon"
-                android:layout_width="58dp"
-                android:layout_height="60dp"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="center"
-
-
-                android:src="@drawable/mainlogo"
-                android:text="AADISHAKTI" />
-        </RelativeLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            tools:layout_editor_absoluteX="92dp"
-            tools:layout_editor_absoluteY="248dp">
-
-        <TextView
-            android:id="@+id/NAmeofExpert"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Name:"
-            android:padding="2dp"
-            android:textColor="#0C0C0C"
-            android:textStyle="bold"
-            android:textSize="16dp"
-           />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            tools:layout_editor_absoluteX="92dp"
-            tools:layout_editor_absoluteY="248dp">
-
-            <TextView
-                android:id="@+id/experiencebig"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Experience"
-                android:textSize="16dp"
-                android:padding="2dp"
-                tools:layout_editor_absoluteX="126dp"
-                tools:layout_editor_absoluteY="68dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            tools:layout_editor_absoluteX="92dp"
-            tools:layout_editor_absoluteY="248dp">
-
-            <TextView
-                android:id="@+id/allselections"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Selections"
-                android:padding="2dp"
-                tools:layout_editor_absoluteX="126dp"
-                tools:layout_editor_absoluteY="97dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            tools:layout_editor_absoluteX="92dp"
-            tools:layout_editor_absoluteY="248dp">
-
-
-        <TextView
-            android:id="@+id/ratepmin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Rate"
-            android:textSize="16dp"
-            android:padding="2dp"
-           />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/durationOfbooking"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="68dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="239dp" />
 
-        android:orientation="horizontal">
-        <TextView
+    <EditText
+        android:id="@+id/duraOfBook"
+        android:layout_width="153dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="duration "
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/durationOfbooking"
+        tools:layout_editor_absoluteY="230dp" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="Please enter the desired timing"
-            android:textColor="#D100D1"
-            android:textSize="12dp" />
+    <EditText
+        android:id="@+id/timeOfBooking"
+        android:layout_width="148dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="time of booking"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="307dp" />
 
-        <EditText
-            android:id="@+id/timeOfBooking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="8"
-            android:layout_marginBottom="5dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:inputType="textPersonName"
-            android:hint="Time of Booking"
-         />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
-        <TextView
+        android:text="hrs"
+        tools:layout_editor_absoluteX="340dp"
+        tools:layout_editor_absoluteY="239dp" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="Please enter the date of booking"
-            android:textColor="#D100D1"
-            android:textSize="12dp" />
+    <TextView
+        android:id="@+id/totalAmountToBePaid"
+        android:layout_width="79dp"
+        android:layout_height="38dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="252dp"
+        tools:layout_editor_absoluteY="440dp" />
 
-
-        <EditText
-            android:id="@+id/dateOfBooking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="8"
-
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:inputType="textPersonName"
-            android:hint="Date of Booking"
-             />
-
-    </LinearLayout>
-        <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Total amount to be Paid"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="449dp" />
 
-        android:orientation="horizontal">
+    <Button
+        android:id="@+id/pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821" />
 
+    <TextView
+        android:id="@+id/NAmeofExpert"
+        android:layout_width="95dp"
+        android:layout_height="29dp"
+        android:text="name"
+        android:textColor="#0C0C0C"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="40dp" />
 
-        <TextView
-            android:id="@+id/durationOfbooking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="Please enter the desired duration"
-            android:textColor="#D100D1"
-            android:textSize="12dp" />
+    <TextView
+        android:id="@+id/experiencebig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="experience"
+        app:layout_constraintEnd_toEndOf="@+id/NAmeofExpert"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/NAmeofExpert"
+        app:layout_constraintTop_toBottomOf="@+id/NAmeofExpert" />
 
-        <EditText
-            android:id="@+id/duraOfBook"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:hint="Duration "
-            android:inputType="textPersonName"
-            android:textColor="#D100D1" />
+    <TextView
+        android:id="@+id/ratepmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="rate"
+        app:layout_constraintEnd_toEndOf="@+id/allselections"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/allselections"
+        app:layout_constraintTop_toBottomOf="@+id/allselections" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="hour"
-            android:padding="5dp"
-            android:textColor="#D100D1"
-            tools:layout_editor_absoluteX="340dp"
-            tools:layout_editor_absoluteY="239dp" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/allselections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="selections"
+        app:layout_constraintEnd_toEndOf="@+id/experiencebig"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/experiencebig"
+        app:layout_constraintTop_toBottomOf="@+id/experiencebig" />
 
+    <TextView
+        android:id="@+id/pho"
+        android:layout_width="89dp"
+        android:layout_height="28dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="659dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chat"
+        tools:layout_editor_absoluteX="237dp"
+        tools:layout_editor_absoluteY="647dp" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="10dp"
-                android:textStyle="bold"
-                android:textSize="16dp"
-                android:textColor="#D100D1"
-                android:text="Total amount to be Paid:" />
-
-            <TextView
-                android:id="@+id/totalAmountToBePaid"
-                android:layout_width="79dp"
-                android:layout_height="38dp"
-                android:padding="10dp"
-                android:text="TextView" />
-
-        </LinearLayout>
-
-
-        <Button
-            android:id="@+id/pay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pay"
-            android:textAllCaps="false"
-            android:background="@drawable/box"
-            app:backgroundTint="#4DBFF0"
-            android:textStyle="bold"
-            android:fontFamily="@font/aclonica"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            tools:layout_editor_absoluteX="160dp"
-            tools:layout_editor_absoluteY="553dp" />
-
-
-
-
-
-    </LinearLayout>
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
