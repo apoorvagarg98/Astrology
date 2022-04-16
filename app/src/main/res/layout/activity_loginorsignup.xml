@@ -35,9 +35,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/aclonica"
                     android:gravity="center"
-                    android:text="आदिशक्ति:"
+                    android:text="आदि शक्ति एस्ट्रो"
                     android:textColor="#D100D1"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -47,9 +47,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/aclonica"
                     android:gravity="center"
-                    android:text="AADISHAKTI"
+                    android:text="AADI SHAKTII ASTRO"
                     android:textColor="#D100D1"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -146,7 +146,7 @@
             android:textSize="16sp"
             android:textStyle="normal"
             android:visibility="visible"
-            app:backgroundTint="#33F3EF"
+            app:backgroundTint="#4DBFF0"
            />
 
 
@@ -169,7 +169,7 @@
             android:textSize="16sp"
             android:textStyle="normal"
             android:visibility="visible"
-            app:backgroundTint="#33F3EF"
+            app:backgroundTint="#4DBFF0"
            />
 
     </LinearLayout>
