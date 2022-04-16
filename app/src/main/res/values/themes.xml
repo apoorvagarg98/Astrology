@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Astrology" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#D500F9</item>
+        <item name="colorPrimary">#D100D1</item>
         <item name="colorPrimaryVariant">#4DBFF0</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
