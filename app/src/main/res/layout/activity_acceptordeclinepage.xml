@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/finalbg"
+    tools:context=".acceptordeclinepage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/aclonica"
+                    android:gravity="center"
+                    android:text="Dear Expert,"
+                    android:textColor="#D100D1"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/englishname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/aclonica"
+                    android:gravity="center"
+                    android:text="You Have New Requests Pending"
+                    android:textColor="#D100D1"
+
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/topicon"
+                android:layout_width="58dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/mainlogo"
+                android:text="AADISHAKTI" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="140dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Name:"
+            android:textColor="#D100D1"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:padding="5dp"
+            android:text="Gender"
+            android:textColor="#D100D1"
+            android:textSize="16dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:padding="5dp"
+            android:text="Date-of-Birth"
+            android:textColor="#D100D1"
+            android:textSize="16dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:padding="5dp"
+            android:text="Birth-place"
+            android:textColor="#D100D1"
+            android:textSize="16dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/box"
+
+                android:singleLine="true"
+                android:text="✔ Accept"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:backgroundTint="#4DBFF0" />
+
+
+            <Button
+                android:id="@+id/Decline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+
+                android:layout_weight="0.2"
+                android:background="@drawable/box"
+
+                android:singleLine="true"
+                android:text="❎ Decline"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:visibility="visible"
+                app:backgroundTint="#4DBFF0" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
