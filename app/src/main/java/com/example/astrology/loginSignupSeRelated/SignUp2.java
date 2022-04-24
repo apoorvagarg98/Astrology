@@ -20,6 +20,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+
 public class SignUp2 extends AppCompatActivity {
     EditText dateofbirth,placeofbirth,birthtime,passs;
     RadioGroup radioGroup;
@@ -60,14 +62,14 @@ public class SignUp2 extends AppCompatActivity {
                                                   }
                                               }
                                           });
-                                          preregisterUser(gender);
+                                          preregisterUser();
                                       }
                                   }
         );
 
     }
 
-    private void preregisterUser(String gender) {
+    private void preregisterUser( ) {
 
         mAuth = FirebaseAuth.getInstance();
         String namespre,phonespre,emailspre,passwordspre,dateofbirthst,placeofbirthst,birthtimest;
@@ -78,12 +80,15 @@ public class SignUp2 extends AppCompatActivity {
         dateofbirthst = dateofbirth.getText().toString();
         placeofbirthst = placeofbirth.getText().toString();
         birthtimest = birthtime.getText().toString();
+
         DatabaseReference user = FirebaseDatabase.getInstance().getReference("users");
 
         mAuth.createUserWithEmailAndPassword(emailspre,passwordspre).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+
+
                     userModel pr = new userModel(namespre,dateofbirthst,placeofbirthst,birthtimest,emailspre,phonespre,gender);
 
                     user.child(mAuth.getUid()).setValue(pr).addOnCompleteListener(new OnCompleteListener<Void>() {

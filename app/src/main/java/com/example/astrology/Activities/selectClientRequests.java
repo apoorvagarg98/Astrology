@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.astrology.Notifications.Token;
 import com.example.astrology.R;
 import com.example.astrology.models.expertModel;
 import com.example.astrology.models.requestModel;
@@ -23,6 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class selectClientRequests extends AppCompatActivity {
     public RecyclerView recyclerView;
@@ -38,9 +40,15 @@ public class selectClientRequests extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         expertuser = FirebaseAuth.getInstance().getCurrentUser();
         client = FirebaseDatabase.getInstance().getReference("request").child(expertuser.getUid());
-
+        updateToken(FirebaseInstanceId.getInstance().getToken());
         loadParticipant();
 
+    }
+    private void updateToken(String token)
+    {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Tokens");
+        Token token1 = new Token(token);
+        ref.child(expertuser.getUid()).setValue(token1);
     }
     private void loadParticipant() {
 
@@ -59,20 +67,27 @@ public class selectClientRequests extends AppCompatActivity {
 
             @Override
             protected void onBindViewHolder(@NonNull item holder, @SuppressLint("RecyclerView") int position, @NonNull requestModel model) {
+if(model.getStatus().equals("pending")) {
+    holder.expertname.setText(model.getName());
+    holder.ratepermin.setText(model.getDateOfBooking());
+    holder.experience.setText(model.getTotalAmount() + " rs");
+    holder.book.setText("view Request");
 
-                holder.expertname.setText(model.getName());
-                holder.ratepermin.setText(model.getDateOfBooking());
-                holder.experience.setText(String.valueOf(model.getTotalAmount()) + " rs");
-                //holder.book.setText("view Request");
+    holder.book.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(selectClientRequests.this, acceptordeclinepage.class);
+            intent.putExtra("useruid", getRef(position).getKey().toString());
+            startActivity(intent);
+        }
+    });
+}
+else {
+    holder.itemView.setVisibility(View.GONE);
+    holder.itemView.setLayoutParams(new RecyclerView.LayoutParams(0,0));
+}
 
-                holder.book.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(selectClientRequests.this, acceptordeclinepage.class);
-                        intent.putExtra("useruid",getRef(position).getKey().toString());
-                        startActivity(intent);
-                    }
-                });
+
             }
         };
 
