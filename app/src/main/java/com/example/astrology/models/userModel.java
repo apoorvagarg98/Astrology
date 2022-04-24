@@ -13,6 +13,10 @@ public class userModel {
         this.mobile = mobile;
         this.gender = gender;
     }
+    public userModel()
+    {
+
+    }
 
     public String getName() {
         return name;

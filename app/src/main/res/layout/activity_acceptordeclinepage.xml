@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/finalbg"
-    tools:context=".acceptordeclinepage">
+    tools:context=".Activities.acceptordeclinepage">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,6 +68,7 @@
 
 
         <TextView
+            android:id="@+id/nameinreq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -80,7 +81,9 @@
             android:textColor="#D100D1"
             android:textSize="20dp"></TextView>
 
+
         <TextView
+            android:id="@+id/genderinreq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -93,6 +96,7 @@
             android:textSize="16dp"></TextView>
 
         <TextView
+            android:id="@+id/dobinreq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -105,6 +109,7 @@
             android:textSize="16dp"></TextView>
 
         <TextView
+            android:id="@+id/birthplaceinreq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -115,6 +120,80 @@
             android:text="Birth-place"
             android:textColor="#D100D1"
             android:textSize="16dp"></TextView>
+
+        <TextView
+            android:id="@+id/birthtimeinreq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:padding="5dp"
+            android:text="birth-time"
+            android:textColor="#D100D1"
+            android:textSize="16dp"></TextView>
+
+
+        <TextView
+            android:id="@+id/timeinreq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:padding="5dp"
+            android:text="TIME"
+            android:textColor="#D100D1"
+            android:textSize="16dp"></TextView>
+
+
+        <TextView
+            android:id="@+id/durationinreq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:padding="5dp"
+            android:text="duration"
+            android:textColor="#D100D1"
+            android:textSize="16dp"></TextView>
+
+        <TextView
+            android:id="@+id/dateinreq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:padding="5dp"
+            android:text="date"
+            android:textColor="#D100D1"
+            android:textSize="16dp"></TextView>
+
+
+        <TextView
+            android:id="@+id/totalAmountinreq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:padding="5dp"
+            android:text="total Amount"
+            android:textColor="#D100D1"
+            android:textSize="16dp"></TextView>
+
+
+
+
+
+
 
         <LinearLayout
             android:layout_width="match_parent"

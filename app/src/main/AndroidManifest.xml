@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.astrology">
 
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Astrology">
         <activity
-            android:name=".acceptordeclinepage"
+            android:name=".Activities.selectClientRequests"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.requestacceptanceandpay"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.acceptordeclinepage"
             android:exported="false" />
         <activity
             android:name=".Activities.bookingPage"
@@ -59,6 +67,15 @@
         <activity
             android:name=".Activities.MainActivity"
             android:exported="true" />
+
+        <service
+            android:name=".Notifications.MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
         <meta-data
             android:name="preloaded_fonts"

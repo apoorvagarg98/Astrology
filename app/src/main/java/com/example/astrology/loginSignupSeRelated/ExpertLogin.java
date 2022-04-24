@@ -11,12 +11,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.astrology.Activities.selectClientRequests;
+import com.example.astrology.Notifications.Token;
 import com.example.astrology.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 public class ExpertLogin extends AppCompatActivity {
 
@@ -24,6 +29,7 @@ public class ExpertLogin extends AppCompatActivity {
     TextView dontHaveacc,GoToExpert;
     FirebaseAuth mAuth;
     FirebaseUser user;
+
     EditText email,pass;
 
     @Override
@@ -52,17 +58,26 @@ public class ExpertLogin extends AppCompatActivity {
             }
         });
 
-
+        updateToken(FirebaseInstanceId.getInstance().getToken());
 
     }
+
+    private void updateToken(String token)
+    {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Tokens");
+        Token token1 = new Token(token);
+        ref.child(user.getUid()).setValue(token1);
+    }
+
 
     private void loginuser() {
 
         mAuth.signInWithEmailAndPassword(email.getText().toString(),pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+               
                 Toast.makeText(ExpertLogin.this, "Logged in succesfully", Toast.LENGTH_SHORT).show();
-               // startActivity(new Intent(ExpertLogin.this, MainActivity.class));
+                startActivity(new Intent(ExpertLogin.this, selectClientRequests.class));
 
             }
         });

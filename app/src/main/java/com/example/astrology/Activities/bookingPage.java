@@ -1,21 +1,36 @@
 package com.example.astrology.Activities;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.example.astrology.Notifications.APIService;
+import com.example.astrology.Notifications.Client;
+import com.example.astrology.Notifications.Data;
+import com.example.astrology.Notifications.MyResponse;
+import com.example.astrology.Notifications.Sender;
+import com.example.astrology.Notifications.Token;
+import com.example.astrology.models.userModel;
 import com.google.android.material.datepicker.MaterialDatePicker;
+import com.google.firebase.database.Query;
+import com.google.firebase.firestore.auth.User;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.internal.FirebaseInstanceIdInternal;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -34,14 +49,26 @@ import com.google.firebase.database.ValueEventListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.HashMap;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class bookingPage extends AppCompatActivity implements View.OnClickListener {
-    String expertid,selection,r,email;
-    DatabaseReference dbr;
-    TextView name,exp,rpm,expertise,dateOfBooking,timeOfBooking,duration,totalAmountToBePaid;
-    Button pay,pickdate,picktime,pickDuration;
+    String expertid,selection,r,email,userid,nameofuser,date,time,phone;
+    DatabaseReference dbr,requestdb;
+    TextView name,exp,rpm,expertise,dateOfBooking,timeOfBooking,duration,totalAmountToBePaid,showstatus;
+    Button pay,pickdate,picktime,pickDuration,request,newBooking;
+    ConstraintLayout cly1,cly2;
+    ImageView show;
+
+    APIService apiService;
+
+    boolean notify = false;
 
     private int mYear, mMonth, mDay, mHour, mMinute,hour,minutes,rs,totalmin;
     private FirebaseAuth mAuth;
@@ -55,6 +82,9 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
         selection = getIntent().getStringExtra("selection").toString();
         expertid = getIntent().getStringExtra("expertuid").toString();
 
+        apiService = Client.getClient("https://fcm.googleapis.com/").create(APIService.class);
+
+
 
         name = findViewById(R.id.NAmeofExpert);
         exp = findViewById(R.id.experiencebig);
@@ -65,6 +95,16 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
         pickdate = findViewById(R.id.pickdate);
         picktime = findViewById(R.id.picktime);
         pickDuration = findViewById(R.id.pickduratiion);
+        request = findViewById(R.id.request);
+        cly1 = findViewById(R.id.cly);
+        cly2 = findViewById(R.id.cly2);
+        showstatus = findViewById(R.id.showstatus);
+        newBooking = findViewById(R.id.newBooking);
+        show = findViewById(R.id.imageView3);
+
+
+
+
 
         dateOfBooking = findViewById(R.id.dateOfBooking);
         timeOfBooking = findViewById(R.id.timeOfBooking);
@@ -76,7 +116,79 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
+        userid =  user.getUid().toString();
         dbr = FirebaseDatabase.getInstance().getReference().child("Experts").child(selection).child(expertid);
+        requestdb = FirebaseDatabase.getInstance().getReference().child("request").child(expertid).child(userid);
+
+        requestdb.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    if (snapshot.child("status").getValue().toString().equals("Accepted")) {
+                        cly2.setVisibility(View.VISIBLE);
+                        cly1.setVisibility(View.GONE);
+
+                        newBooking.setVisibility(View.GONE);
+                        showstatus.setText("your request is accepted kindly pay the amount");
+
+                        pay.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Checkout checkout = new Checkout();
+                                checkout.setKeyID("rzp_test_rfooZLYQbv7p5h");
+                                checkout.setImage(R.drawable.mainlogo);
+                                JSONObject object = new JSONObject();
+                                try {
+                                    object.put("name","Aadishakti");
+                                    object.put("description","payment for"+selection);
+                                    object.put("theme.color","#0093DD");
+                                    object.put("currency","INR");
+                                    object.put("amount",Integer.valueOf(snapshot.child("totalAmount").getValue().toString())*100);
+                                    object.put("prefill.contact","9711445734");
+                                    object.put("prefill.email",email);
+                                    checkout.open(bookingPage.this,object);
+
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+
+                            }
+                        });
+                    }
+                    else if(snapshot.child("status").getValue().toString().equals("Declined"))
+                    {
+                        cly2.setVisibility(View.VISIBLE);
+                        cly1.setVisibility(View.GONE);
+
+                        pay.setVisibility(View.GONE);
+                        show.setImageResource(R.drawable.ic_declined);
+                        showstatus.setText("your request has been declined pls try some other time or other expert");
+                        newBooking.setVisibility(View.VISIBLE);
+                    }
+                    else if(snapshot.child("status").getValue().toString().equals("Paid"))
+                    {
+                        cly1.setVisibility(View.GONE);
+                        cly2.setVisibility(View.VISIBLE);
+                        newBooking.setVisibility(View.VISIBLE);
+                        showstatus.setText("your request is accepted kindly pay the amount");
+
+                    }
+
+
+
+                }
+                else {
+                    cly2.setVisibility(View.GONE);
+                    cly1.setVisibility(View.VISIBLE);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         dbr.addValueEventListener(new ValueEventListener() {
             @Override
@@ -85,7 +197,9 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
                 {
                      r = snapshot.child("stexperience").getValue().toString();
                      email = snapshot.child("exemails").getValue().toString();
-                    name.setText(snapshot.child("exnames").getValue().toString());
+                     nameofuser = snapshot.child("exnames").getValue().toString();
+                     phone = snapshot.child("exmobile").getValue().toString();
+                    name.setText(nameofuser);
                     exp.setText(r);
                     rpm.setText(snapshot.child("stamt").getValue().toString());
                     expertise.setText(snapshot.child("selection").getValue().toString());
@@ -95,28 +209,70 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
             public void onCancelled(@NonNull DatabaseError error) {
             }});
 
-
-        pay.setOnClickListener(new View.OnClickListener() {
+        newBooking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Checkout checkout = new Checkout();
-                checkout.setKeyID("rzp_test_rfooZLYQbv7p5h");
-                checkout.setImage(R.drawable.mainlogo);
-                JSONObject object = new JSONObject();
-                try {
-                    object.put("name","Aadishakti");
-                    object.put("description","payment for"+selection);
-                    object.put("theme.color","#0093DD");
-                    object.put("currency","INR");
-                    object.put("amount",rs*100);
-                    object.put("prefill.contact","9711445734");
-                    object.put("prefill.email",email);
-                    checkout.open(bookingPage.this,object);
+                cly1.setVisibility(View.VISIBLE);
+                cly2.setVisibility(View.GONE);
+            }
+        });
+
+        request.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onClick(View view) {
+                notify = true;
+            HashMap hashMap = new HashMap();
+            hashMap.put("name",nameofuser);
+            hashMap.put("email",email);
+            hashMap.put("phone",phone);
+            hashMap.put("bookedYouFor",selection);
+            hashMap.put("durationInMin",String.valueOf(totalmin));
+            hashMap.put("DateOfBooking",date);
+            hashMap.put("timeOfBooking",time);
+            hashMap.put("totalAmount",rs);
+            hashMap.put("status","pending");
+            hashMap.put("paymenmtStatus","pending");
 
 
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+                //DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+              //  LocalDateTime now = LocalDateTime.now();
+              //  System.out.println(dtf.format(now));
+
+                requestdb.updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull Task task) {
+                       if(task.isSuccessful())
+
+                       {
+                           Toast.makeText(bookingPage.this, "request sent sucesfully kindly wait for acceptance", Toast.LENGTH_SHORT).show();
+                           request.setVisibility(View.GONE);
+
+
+                       }
+                    }
+                });
+
+                requestdb = FirebaseDatabase.getInstance().getReference("users").child(user.getUid());
+                requestdb.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        userModel user = dataSnapshot.getValue(userModel.class);
+                        if (notify) {
+                            sendNotifiaction(expertid, user.getName(), "new request ");
+                        }
+                        notify = false;
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+
+
+
 
             }
         });
@@ -124,9 +280,50 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
 
 
 
+
+
     }
 
+    private void sendNotifiaction(String receiver,final String username, final String message) {
 
+        DatabaseReference tokens = FirebaseDatabase.getInstance().getReference("Tokens");
+        Query query = tokens.orderByKey().equalTo(receiver);
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                    Token token = snapshot.getValue(Token.class);
+                    Data data = new Data(user.getUid(), R.mipmap.ic_launcher, username+": "+message, "New Message",
+                            expertid);
+
+                    Sender sender = new Sender(data, token.getToken());
+
+                    apiService.sendNotification(sender)
+                            .enqueue(new Callback<MyResponse>() {
+                                @Override
+                                public void onResponse(Call<MyResponse> call, Response<MyResponse> response) {
+                                    if (response.code() == 200){
+                                        if (response.body().success != 1){
+                                            Toast.makeText(bookingPage.this, "Failed!", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                }
+
+                                @Override
+                                public void onFailure(Call<MyResponse> call, Throwable t) {
+
+                                }
+                            });
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }
 
 
     public void onPaymentSuccess(String s) {
@@ -141,6 +338,8 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
     public void onPaymentError(int i, String s) {
         Toast.makeText(getApplicationContext(), "payment failed"+s, Toast.LENGTH_SHORT).show();
     }
+
+
 
     @Override
     public void onClick(View v) {
@@ -161,8 +360,10 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
                         @Override
                         public void onDateSet(DatePicker view, int year,
                                               int monthOfYear, int dayOfMonth) {
+                            date = dayOfMonth + "-" + (monthOfYear + 1) + "-" + year;
 
-                            dateOfBooking.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                            dateOfBooking.setText(date);
+
 
                         }
                     }, mYear, mMonth, mDay);
@@ -182,8 +383,9 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
                         @Override
                         public void onTimeSet(TimePicker view, int hourOfDay,
                                               int minute) {
+                            time = hourOfDay + ":" + minute;
 
-                            timeOfBooking.setText(hourOfDay + ":" + minute);
+                            timeOfBooking.setText(time);
                         }
                     }, mHour, mMinute, false);
             timePickerDialog.show();
@@ -211,7 +413,7 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
         int hrintomin =0;
          hrintomin = sHour*60;
          totalmin = hrintomin + sMinute;
-         rs =  Integer.valueOf(r) * totalmin;
+         rs =  Integer.valueOf(r)*10 * totalmin;
          totalAmountToBePaid.setText(String.valueOf(rs));
 
 
