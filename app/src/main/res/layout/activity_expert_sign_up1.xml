@@ -84,10 +84,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
-                android:fontFamily="@font/poppins_light"
+                android:fontFamily="@font/aclonica"
                 android:gravity="center"
                 android:text="Help Us With A Little Info"
-                android:textColor="#D100D1"
+                android:textColor="#4F3DEF"
                 android:textSize="20sp"
                 />
 
@@ -114,7 +114,7 @@
                     android:hint="Name:"
                     android:inputType="textPersonName"
                     android:shadowColor="#EFE1E1"
-                    android:textColor="#090909"
+                    android:textColor="#4F3DEF"
                     android:textColorHighlight="#090909"
                     android:textColorHint="#777575"
                     android:textColorLink="#FAF3F3"
@@ -138,7 +138,7 @@
                     android:backgroundTint="#F6F7FA"
                     android:ems="10"
                     android:hint="Mobile Number:"
-                    android:textColor="#090909" />
+                    android:textColor="#4F3DEF" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -158,7 +158,7 @@
                     android:backgroundTint="#F6F7FA"
                     android:ems="10"
                     android:hint="Email Id:"
-                    android:textColor="#090909" />
+                    android:textColor="#4F3DEF" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -202,7 +202,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/aclonica"
                     android:gravity="center"
                     android:text="Alredy have an account?"
                     android:textColor="@color/black"
@@ -213,10 +213,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/aclonica"
                     android:gravity="center"
                     android:text="Please Sign In Here"
-                    android:textColor="#4DBFF0"
+                    android:textColor="#4F3DEF"
                     android:textSize="14dp"
                     android:textStyle="bold" />
 

@@ -22,7 +22,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="55dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -32,7 +32,7 @@
                     android:fontFamily="@font/aclonica"
                     android:gravity="center"
                     android:text="Dear Expert,"
-                    android:textColor="#D100D1"
+                    android:textColor="#4F3DEF"
                     android:textSize="22sp"
                     android:textStyle="bold" />
 
@@ -44,7 +44,8 @@
                     android:fontFamily="@font/aclonica"
                     android:gravity="center"
                     android:text="You Have New Requests Pending"
-                    android:textColor="#D100D1"
+                    android:textColor="#4F3DEF"
+                    android:layout_marginTop="5dp"
 
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -78,7 +79,7 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="Name:"
-            android:textColor="#D100D1"
+            android:textColor="#4F3DEF"
             android:textSize="20dp"></TextView>
 
 
@@ -92,7 +93,7 @@
             android:backgroundTint="#F6F7FA"
             android:padding="5dp"
             android:text="Gender"
-            android:textColor="#D100D1"
+            android:textColor="#4F3DEF"
             android:textSize="16dp"></TextView>
 
         <TextView
@@ -105,7 +106,7 @@
             android:backgroundTint="#F6F7FA"
             android:padding="5dp"
             android:text="Date-of-Birth"
-            android:textColor="#D100D1"
+            android:textColor="#4F3DEF"
             android:textSize="16dp"></TextView>
 
         <TextView
@@ -118,7 +119,7 @@
             android:backgroundTint="#F6F7FA"
             android:padding="5dp"
             android:text="Birth-place"
-            android:textColor="#D100D1"
+            android:textColor="#4F3DEF"
             android:textSize="16dp"></TextView>
 
         <TextView
@@ -131,7 +132,7 @@
             android:backgroundTint="#F6F7FA"
             android:padding="5dp"
             android:text="birth-time"
-            android:textColor="#D100D1"
+            android:textColor="#4F3DEF"
             android:textSize="16dp"></TextView>
 
 
@@ -144,8 +145,8 @@
             android:background="@drawable/textviewbg"
             android:backgroundTint="#F6F7FA"
             android:padding="5dp"
-            android:text="TIME"
-            android:textColor="#D100D1"
+            android:text="Appointment Time"
+            android:textColor="#4F3DEF"
             android:textSize="16dp"></TextView>
 
 
@@ -158,8 +159,8 @@
             android:background="@drawable/textviewbg"
             android:backgroundTint="#F6F7FA"
             android:padding="5dp"
-            android:text="duration"
-            android:textColor="#D100D1"
+            android:text="Booking Duration"
+            android:textColor="#4F3DEF"
             android:textSize="16dp"></TextView>
 
         <TextView
@@ -171,8 +172,8 @@
             android:background="@drawable/textviewbg"
             android:backgroundTint="#F6F7FA"
             android:padding="5dp"
-            android:text="date"
-            android:textColor="#D100D1"
+            android:text="Booking Date"
+            android:textColor="#4F3DEF"
             android:textSize="16dp"></TextView>
 
 
@@ -185,8 +186,8 @@
             android:background="@drawable/textviewbg"
             android:backgroundTint="#F6F7FA"
             android:padding="5dp"
-            android:text="total Amount"
-            android:textColor="#D100D1"
+            android:text="Total Amount"
+            android:textColor="#4F3DEF"
             android:textSize="16dp"></TextView>
 
 
@@ -209,11 +210,12 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="0.2"
-                android:background="@drawable/box"
+
 
                 android:singleLine="true"
                 android:text="✔ Accept"
                 android:textAllCaps="false"
+                android:background="@drawable/box"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="bold"

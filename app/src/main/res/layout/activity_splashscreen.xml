@@ -9,12 +9,10 @@
     android:background="@drawable/finalbg"
     tools:context=".loginSignupSeRelated.Splashscreen">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -29,15 +27,14 @@
                 android:layout_marginTop="40dp"
                 android:orientation="vertical">
 
-
-            <TextView
+                <TextView
                     android:id="@+id/hindiname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/aclonica"
                     android:gravity="center"
-                    android:text="आदिशक्ति:"
+                    android:text="आदि शक्ति एस्ट्रो"
                     android:textColor="#D100D1"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -47,10 +44,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_light"
-                    android:gravity="center"
-                    android:text="AADISHAKTI"
+                    android:fontFamily="@font/aclonica"
                     android:textColor="#D100D1"
+                    android:gravity="center"
+                    android:text="AADI SHAKTII ASTRO"
+
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -68,9 +66,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/photo"
-                android:text="AADISHAKTI"
-                android:textColor="#E9E83141"
-                android:textSize="32sp" />
+                android:text="AADISHAKTI" />
         </RelativeLayout>
 
 

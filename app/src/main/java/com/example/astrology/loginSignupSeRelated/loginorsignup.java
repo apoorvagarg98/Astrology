@@ -21,7 +21,7 @@ public class loginorsignup extends AppCompatActivity {
     Animation topAnimation,bottomAnimation,middleAnimation;
     Button signupbutton,signinbutton;
     TextView topline1,hindiname,englishname;
-    ImageView topicon,swagat;
+    ImageView topicon,swagat,mainlogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class loginorsignup extends AppCompatActivity {
 
         signupbutton= findViewById(R.id.signupbutton);
         signinbutton= findViewById(R.id.signinbutton);
+        mainlogo= findViewById(R.id.mainlogo);
         topline1= findViewById(R.id.topline1);
         englishname= findViewById(R.id.englishname);
         hindiname= findViewById(R.id.hindiname);
@@ -45,6 +46,7 @@ public class loginorsignup extends AppCompatActivity {
 
 
         topicon.setAnimation(topAnimation);
+        mainlogo.setAnimation(middleAnimation);
         englishname.setAnimation(topAnimation);
         hindiname.setAnimation(topAnimation);
         swagat.setAnimation(middleAnimation);

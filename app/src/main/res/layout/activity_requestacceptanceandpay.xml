@@ -1,24 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.requestacceptanceandpay">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="152dp"
-        android:layout_height="144dp"
-        app:srcCompat="@drawable/ic_accepted"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="89dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="156dp"
-        android:layout_height="72dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="446dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/cong" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:textColor="#D100D1"
+            android:text="Your Request has been Accepted."></TextView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/box"
+            android:text="Pay To Proceed"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:backgroundTint="#4DBFF0"
+
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
