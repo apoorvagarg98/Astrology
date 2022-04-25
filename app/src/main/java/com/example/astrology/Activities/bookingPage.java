@@ -13,23 +13,17 @@ import com.example.astrology.Notifications.MyResponse;
 import com.example.astrology.Notifications.Sender;
 import com.example.astrology.Notifications.Token;
 import com.example.astrology.models.userModel;
-import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.firebase.database.Query;
-import com.google.firebase.firestore.auth.User;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.internal.FirebaseInstanceIdInternal;
 import com.razorpay.Checkout;
-import com.razorpay.PaymentResultListener;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -49,8 +43,6 @@ import com.google.firebase.database.ValueEventListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.HashMap;
 
@@ -61,8 +53,8 @@ import retrofit2.Response;
 public class bookingPage extends AppCompatActivity implements View.OnClickListener {
     String expertid,selection,r,email,userid,nameofuser,date,time,phone;
     DatabaseReference dbr,requestdb;
-    TextView name,exp,rpm,expertise,dateOfBooking,timeOfBooking,duration,totalAmountToBePaid,showstatus;
-    Button pay,pickdate,picktime,pickDuration,request,newBooking;
+    TextView name,exp,rpm,expertise,dateOfBooking,timeOfBooking,duration,totalAmountToBePaid,showstatus,phoneNumber;
+    Button pay,pickdate,picktime,pickDuration,request,newBooking,chat;
     ConstraintLayout cly1,cly2;
     ImageView show;
 
@@ -101,6 +93,8 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
         showstatus = findViewById(R.id.showstatus);
         newBooking = findViewById(R.id.newBooking);
         show = findViewById(R.id.imageView3);
+        phoneNumber = findViewById(R.id.phonenumber);
+        chat = findViewById(R.id.chat);
 
 
 
@@ -167,17 +161,35 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
                         showstatus.setText("your request has been declined pls try some other time or other expert");
                         newBooking.setVisibility(View.VISIBLE);
                     }
-                    else if(snapshot.child("status").getValue().toString().equals("Paid"))
+                    else if(snapshot.child("paymentStatus").getValue().toString().equals("paymentCompleted"))
                     {
                         cly1.setVisibility(View.GONE);
                         cly2.setVisibility(View.VISIBLE);
                         newBooking.setVisibility(View.VISIBLE);
-                        showstatus.setText("your request is accepted kindly pay the amount");
+                        showstatus.setText("Now you can call or chat with your expert");
+                        dbr.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                phoneNumber.setText(snapshot.child("exmobile").getValue().toString());
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
+                        chat.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(bookingPage.this, chatActivity.class);
+                                intent.putExtra("expertid",expertid);
+                                startActivity(intent);
+
+                            }
+                        });
+
 
                     }
-
-
-
                 }
                 else {
                     cly2.setVisibility(View.GONE);
@@ -330,13 +342,19 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("paymment ID");
-        builder.setMessage(s    );
+        builder.setMessage(s);
         builder.show();
+        requestdb.child("paymentStatus").setValue("paymentCompleted").addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+            }
+        });
 
 
     }
     public void onPaymentError(int i, String s) {
-        Toast.makeText(getApplicationContext(), "payment failed"+s, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "payment failed please try again after some time"+s, Toast.LENGTH_SHORT).show();
     }
 
 

@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Astrology">
         <activity
+            android:name=".Activities.chatActivity"
+            android:exported="true" />
+        <activity
             android:name=".Activities.selectClientRequests"
             android:exported="true" />
         <activity

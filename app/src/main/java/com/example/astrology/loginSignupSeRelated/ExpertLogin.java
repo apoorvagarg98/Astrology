@@ -58,16 +58,11 @@ public class ExpertLogin extends AppCompatActivity {
             }
         });
 
-        updateToken(FirebaseInstanceId.getInstance().getToken());
+
 
     }
 
-    private void updateToken(String token)
-    {
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Tokens");
-        Token token1 = new Token(token);
-        ref.child(user.getUid()).setValue(token1);
-    }
+
 
 
     private void loginuser() {
