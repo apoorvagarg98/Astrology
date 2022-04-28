@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/finalbg"
+    android:background="@drawable/backgroundtrial"
     tools:context=".loginSignupSeRelated.ExpertSignUp2">
 
     <LinearLayout
@@ -30,10 +30,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_light"
-                    android:gravity="center"
-                    android:text="आदिशक्ति:"
+                    android:fontFamily="@font/aclonica"
                     android:textColor="#D100D1"
+                    android:gravity="center"
+                    android:text="आदि शक्ति एस्ट्रो"
+
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -42,9 +43,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_light"
+
                     android:gravity="center"
-                    android:text="AADISHAKTII"
+                    android:text="AADI SHAKTII ASTRO"
+                    android:fontFamily="@font/aclonica"
                     android:textColor="#D100D1"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -58,14 +60,12 @@
                 android:layout_height="60dp"
                 android:layout_alignParentRight="true"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/mainlogo"
+                android:src="@drawable/photo"
                 android:text="AADISHAKTI" />
         </RelativeLayout>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="70dp"
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="center"
@@ -211,6 +211,43 @@
                 android:backgroundTint="#51A8C3"
                 android:layout_centerHorizontal="true"
                 android:layout_height="50dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+
+                    android:text="By signing up you accept the "
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+
+                    android:textStyle="bold"
+                    android:text="Terms of Service and Privacy Policy"
+                    android:textColor="#4DBFF0"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
+
+
 
 
 

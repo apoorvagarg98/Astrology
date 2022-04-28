@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/finalbg"
+    android:background="@drawable/backgroundtrial"
     android:layout_gravity="center"
     android:gravity="center"
     tools:context=".loginSignupSeRelated.loginorsignup">
@@ -63,11 +63,10 @@
                 android:layout_height="60dp"
                 android:layout_alignParentRight="true"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/photo"
+                android:src="@drawable/rudraaksha"
                 android:text="AADISHAKTI"
                 android:textColor="#E9E83141"
                 android:textSize="32sp" />
@@ -85,7 +84,7 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/mainlogo" />
 
@@ -110,6 +109,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
+                android:background="@drawable/box"
+                android:backgroundTint="#FBF7EC"
+                android:padding="4dp"
                 android:text=" 🙏🏻जय श्री गणेशाय नमः🌹🕉️💯🙏🏻 🐚🌹ॐ नमः शिवाय🌹अतुल्यशिव 🌹 🙏🏻❤️🕉️༺❤️हर_हर_महादेव ❤️༻🕉️❤️🙏🏻🌹 मां 🌹पार्वत्यै🌹 देवीया: नमः🌹🐚🙏🏻🌹 जय हिंद❤ वंदे मांतरम❤🇮🇳❤🙏😇 ❤🕉️💯🙏🏻😍🥰🕉😇🌹🌎🕉"
                 android:textColor="#131111"
                 android:textSize="14sp"
@@ -123,7 +125,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="30dp"
         android:layout_alignParentBottom="true"
         >
 
@@ -133,7 +135,7 @@
             android:layout_height="wrap_content"
 
             android:layout_gravity="center"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="0.3"
             android:background="@drawable/box"
@@ -157,7 +159,7 @@
             android:layout_gravity="center"
 
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="8dp"
 
             android:layout_weight="0.3"
             android:background="@drawable/box"

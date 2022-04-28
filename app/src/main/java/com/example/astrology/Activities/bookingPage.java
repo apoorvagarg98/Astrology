@@ -88,13 +88,13 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
         picktime = findViewById(R.id.picktime);
         pickDuration = findViewById(R.id.pickduratiion);
         request = findViewById(R.id.request);
-        cly1 = findViewById(R.id.cly);
-        cly2 = findViewById(R.id.cly2);
+        //cly1 = findViewById(R.id.cly);
+        //cly2 = findViewById(R.id.cly2);
         showstatus = findViewById(R.id.showstatus);
         newBooking = findViewById(R.id.newBooking);
         show = findViewById(R.id.imageView3);
-        phoneNumber = findViewById(R.id.phonenumber);
-        chat = findViewById(R.id.chat);
+        //phoneNumber = findViewById(R.id.phonenumber);
+        //chat = findViewById(R.id.chat);
 
 
 

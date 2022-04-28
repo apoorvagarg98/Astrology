@@ -183,8 +183,10 @@
                 android:id="@+id/picktime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:text="Pick Time"
-                android:layout_weight="0.2"
+                android:layout_marginEnd="10dp"
+
                 android:layout_marginStart="5dp"
 
                 android:textAllCaps="false"
@@ -203,9 +205,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="8"
+                android:padding="10dp"
                 android:textSize="16dp"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F6F7FA"
                 android:textColor="#4F3DEF"
-                android:layout_marginBottom="5dp"
+
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:inputType="textPersonName"
@@ -229,8 +234,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_weight="0.1"
+
                 android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
                 android:background="@drawable/box"
                 android:fontFamily="@font/aclonica"
                 android:text="Pick Date"
@@ -246,7 +252,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="8"
+                android:padding="10dp"
                 android:textSize="16dp"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F6F7FA"
                 android:gravity="center"
                 android:hint="Date of Booking"
                 android:inputType="textPersonName"
@@ -270,8 +279,9 @@
                 android:singleLine="true"
                 android:background="@drawable/box"
                 app:backgroundTint="#4DBFF0"
+                android:layout_marginEnd="10dp"
                 android:textStyle="bold"
-                android:layout_weight="0.2"
+
                 android:layout_marginStart="5dp"
                 android:fontFamily="@font/aclonica"
                 android:layout_gravity="center"
@@ -289,6 +299,8 @@
                 android:textSize="16dp"
                 android:hint="Duration "
                 android:textColor="#4F3DEF"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F6F7FA"
 
                 android:inputType="textPersonName"
                 />
@@ -377,22 +389,22 @@
             android:id="@+id/showstatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/aclonica"
+            android:text="show status"
+
             android:textColor="#4F3DEF"
             android:textSize="18dp"
-            android:layout_marginTop="15dp"
-
-            android:fontFamily="@font/aclonica"
-            android:textStyle="bold"
-            android:text="show status" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/pay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pay To Proceed"
-            android:layout_marginTop="15dp"
             android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="40dp"
+            android:text="Pay To Proceed"
             android:visibility="visible"
             tools:layout_editor_absoluteX="161dp"
             tools:layout_editor_absoluteY="393dp" />
@@ -411,31 +423,31 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/aclonica"
+            android:text="Phone Number"
+
+
             android:textColor="#4F3DEF"
             android:textSize="18dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="10dp"
-
-            android:fontFamily="@font/aclonica"
-            android:textStyle="bold"
-            android:text="Phone Number"
-             />
+            android:textStyle="bold" />
 
 
         <Button
             android:id="@+id/button10"
 
-            android:text="👉 Chat With Your Expert: 👉"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="25dp"
+            android:layout_marginEnd="60dp"
             android:background="@drawable/box"
             android:fontFamily="@font/aclonica"
+            android:text="👉 Chat With Your Expert: 👉"
 
             android:textAllCaps="false"
             android:textSize="17dp"

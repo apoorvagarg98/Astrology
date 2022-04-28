@@ -86,7 +86,7 @@
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="center"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="90dp"
                 android:text="Sign In To Continue"
                 android:textColor="#D100D1"
                 android:textSize="24sp"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/finalbg"
+    android:background="@drawable/backgroundtrial"
     tools:context=".loginSignupSeRelated.SignUp2">
 
     <LinearLayout
@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
+            android:layout_marginBottom="40dp"
             android:layout_marginTop="5dp">
 
             <LinearLayout
@@ -30,10 +31,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_light"
-                    android:gravity="center"
-                    android:text="आदिशक्ति:"
+                    android:fontFamily="@font/aclonica"
                     android:textColor="#D100D1"
+                    android:gravity="center"
+                    android:text="आदि शक्ति एस्ट्रो"
+
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -42,9 +44,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_light"
+
                     android:gravity="center"
-                    android:text="AADISHAKTII"
+                    android:text="AADI SHAKTII ASTRO"
+                    android:fontFamily="@font/aclonica"
                     android:textColor="#D100D1"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -58,11 +61,10 @@
                 android:layout_height="60dp"
                 android:layout_alignParentRight="true"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/mainlogo"
+                android:src="@drawable/photo"
                 android:text="AADISHAKTI" />
         </RelativeLayout>
 
@@ -79,49 +81,6 @@
 
 
 
-            <TextView
-                android:id="@+id/gender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="2dp"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="center"
-                android:text="Please Select Your Gender"
-                android:textColor="#D100D1"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <RadioGroup
-                android:id="@+id/radio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/male"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/button_bg"
-                    android:padding="2dp"
-                    android:text="Male"></RadioButton>
-
-                <RadioButton
-                    android:id="@+id/female"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/button_bg"
-                    android:padding="2dp"
-                    android:text="Female">
-
-                </RadioButton>
-
-
-            </RadioGroup>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -188,11 +147,13 @@
                     android:textColor="#090909" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/white"
+                android:layout_marginTop="15dp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#4DBFF0"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="248dp">
 
@@ -203,7 +164,7 @@
                     android:background="@drawable/textviewbg"
                     android:backgroundTint="#F6F7FA"
                     android:ems="10"
-                    android:hint="password"
+                    android:hint="Password"
                     android:inputType="textPassword"
                     android:textColor="#090909" />
 
@@ -221,10 +182,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
                     android:singleLine="true"
+
                     android:src="@drawable/ic_rightt"
                     android:text="Log In"
                     android:visibility="visible"
@@ -232,7 +194,41 @@
 
             </RelativeLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
 
+                <CheckBox
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+
+                    android:text="By signing up you accept the "
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+
+                    android:textStyle="bold"
+                    android:text="Terms of Service and Privacy Policy"
+                    android:textColor="#4DBFF0"
+                    android:textSize="14dp" />
+
+
+            </LinearLayout>
             <LinearLayout
 
                 android:layout_width="match_parent"
