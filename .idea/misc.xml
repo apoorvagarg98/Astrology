@@ -45,22 +45,26 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/drawable/textviewbg.xml" value="0.11145833333333334" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_acceptordeclinepage.xml" value="0.5" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_astrologer.xml" value="0.251984126984127" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_booking_page.xml" value="0.22" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_login.xml" value="0.5" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_sign_up1.xml" value="0.67" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_sign_up2.xml" value="0.67" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_booking_page.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_login.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_sign_up1.xml" value="0.5" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_sign_up2.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_sign_up3.xml" value="0.22" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_item.xml" value="0.33" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_item.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_login.xml" value="0.67" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_loginactivity.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_loginorsignup.xml" value="0.5" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_requestacceptanceandpay.xml" value="0.4746987951807229" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_select_client_requests.xml" value="0.5" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_sign_up1.xml" value="0.7303030303030303" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_sign_up2.xml" value="0.75" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_sign_up1.xml" value="0.5" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_sign_up2.xml" value="0.5424242424242425" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_splashscreen.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_acceptedreq.xml" value="0.45550351288056207" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_astrologerfragement.xml" value="0.5" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_completedreq.xml" value="0.45550351288056207" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_hindu_rituals.xml" value="0.21420704845814978" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_lalkitabexpert.xml" value="0.251984126984127" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_tarotcardreader.xml" value="0.21420704845814978" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/login_tab_fragment.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/signup_tab_fragment.xml" value="0.22" />
       </map>

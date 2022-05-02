@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:animationCache="true"
         android:background="@drawable/backgroundd"
-        android:backgroundTint="#76ff7a"
+        android:backgroundTint="#FBEBDA"
         android:clickable="true"
         android:clipToPadding="true"
         app:cardCornerRadius="5dp"
