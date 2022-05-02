@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/finalbg"
+    android:background="@drawable/backgroundtrial"
     tools:context=".loginSignupSeRelated.ExpertLogin">
 
 
@@ -64,7 +64,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/photo"
+                android:src="@drawable/rudraaksha"
                 android:text="AADISHAKTI" />
         </RelativeLayout>
 
@@ -100,7 +100,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/aclonica"
-                android:textColor="#D100D1"
+                android:textColor="#4F3DEF"
                 android:gravity="center"
                 android:text="Expert Sign In"
                 android:textSize="24sp"
@@ -180,12 +180,13 @@
                 android:id="@+id/exforgotPassword2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="center"
                 android:layout_gravity="center"
+
                 android:text="Forgot Password?"
-                android:textColor="#4DBFF0"
+                android:textColor="#4F3DEF"
                 android:textStyle="bold"
                 android:textSize="16dp" />
 
@@ -218,7 +219,7 @@
                     android:fontFamily="@font/poppins_light"
                     android:gravity="center"
                     android:text="Please Sign Up Here"
-                    android:textColor="#4DBFF0"
+                    android:textColor="#4F3DEF"
                     android:textSize="14dp"
                     android:textStyle="bold" />
 

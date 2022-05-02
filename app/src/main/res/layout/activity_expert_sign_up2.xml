@@ -15,6 +15,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_marginTop="5dp">
@@ -63,7 +64,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/photo"
+                android:src="@drawable/rudraaksha"
                 android:text="AADISHAKTI" />
         </RelativeLayout>
 
@@ -79,49 +80,6 @@
 
 
 
-            <TextView
-                android:id="@+id/exgender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="70dp"
-                android:layout_marginBottom="2dp"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="center"
-                android:text="Please Select Your Gender"
-                android:textColor="#D100D1"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <RadioGroup
-                android:id="@+id/exradio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/exmale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/button_bg"
-                    android:padding="2dp"
-                    android:text="Male"></RadioButton>
-
-                <RadioButton
-                    android:id="@+id/exfemale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/button_bg"
-                    android:padding="2dp"
-                    android:text="Female">
-
-                </RadioButton>
-
-
-            </RadioGroup>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -195,8 +153,8 @@
               android:textSize="14dp"
               android:layout_marginTop="10dp"
               android:gravity="center"
-              android:textColor="#D100D1"
-              android:text="Choose Your Profession From Below">
+              android:textColor="#4F3DEF"
+              android:text=" ↓ Choose Your Profession From Below ↓ ">
 
                  </TextView>
 
@@ -238,10 +196,12 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:gravity="center"
+                    android:fontFamily="@font/aclonica"
+
 
                     android:textStyle="bold"
                     android:text="Terms of Service and Privacy Policy"
-                    android:textColor="#4DBFF0"
+                    android:textColor="#4F3DEF"
                     android:textSize="14dp" />
 
 
@@ -288,7 +248,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/aclonica"
                     android:gravity="center"
                     android:text="Already have an account?"
                     android:textColor="@color/black"
@@ -299,10 +259,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:fontFamily="@font/poppins_light"
+                    android:fontFamily="@font/aclonica"
                     android:gravity="center"
+
                     android:text="Sign In"
-                    android:textColor="#4DBFF0"
+                    android:textColor="#4F3DEF"
                     android:textSize="14dp"
                     android:textStyle="bold" />
 

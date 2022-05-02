@@ -17,6 +17,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_marginTop="5dp">
@@ -168,6 +169,55 @@
                     android:textColor="#4F3DEF" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:text="💮 Please Select Your Gender 💮"
+                android:textColor="#4F3DEF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/exradio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/exmale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/box"
+                    android:backgroundTint="#F6F7FA"
+
+                    android:paddingEnd="14dp"
+                    android:text="Male ♂️"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/exfemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/box"
+                    android:backgroundTint="#F6F7FA"
+                    android:padding="2dp"
+                    android:paddingEnd="4dp"
+                    android:text="Female ♀️">
+
+                </RadioButton>
+
+
+            </RadioGroup>
 
 
 
