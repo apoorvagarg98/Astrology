@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.astrology.R;
+import com.example.astrology.models.JSONPlaceholder;
+import com.example.astrology.models.Post;
 import com.example.astrology.models.requestModel;
 import com.example.astrology.models.userModel;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,10 +24,20 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class acceptordeclinepage extends AppCompatActivity {
 TextView name,gender,dob,duration,time,date,birthplace,totalAmount,birthTime;
 Button accept ,decline;
 String expertuid,userid;
+    JSONPlaceholder jsonPlaceholder;
 public FirebaseAuth mAuth;
     public FirebaseUser user;
     public DatabaseReference request,usersdb,Acceptedrequest,Declinedrequest;
@@ -167,10 +180,42 @@ request.addValueEventListener(new ValueEventListener() {
 
             }
         });
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://json.astrologyapi.com/v1/").addConverterFactory(GsonConverterFactory.create()).build();
 
+     jsonPlaceholder= retrofit.create(JSONPlaceholder.class);
+        createPost();
 
 
 
     }
+
+    private void createPost() {
+
+        Post post = new Post(2022f,3f,2f,12f,23f);
+        Call<Post> call = jsonPlaceholder.createPost(post,"b4312492c2db498dfb4cb96f23e122be");
+        call.enqueue(new Callback<Post>() {
+            @Override
+            public void onResponse(Call<Post> call, Response<Post> response) {
+                if(!response.isSuccessful()){
+                    Toast.makeText(acceptordeclinepage.this, response.code(), Toast.LENGTH_SHORT).show();
+                    return;
+
+                }
+                List<Post> postList = new ArrayList<>();
+                postList.add(response.body());
+                Toast.makeText(acceptordeclinepage.this, response.toString(), Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onFailure(Call<Post> call, Throwable t) {
+                Toast.makeText(acceptordeclinepage.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+
 }
 

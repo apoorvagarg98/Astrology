@@ -72,7 +72,9 @@ public class ExpertLogin extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                
                 Toast.makeText(ExpertLogin.this, "Logged in succesfully", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(ExpertLogin.this, selectClientRequests.class));
+                Intent intent = new Intent(ExpertLogin.this, selectClientRequests.class);
+                intent.putExtra("id",mAuth.getUid());
+                startActivity(intent);
 
             }
         });
