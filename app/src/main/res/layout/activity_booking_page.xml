@@ -392,8 +392,8 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             app:srcCompat="@drawable/cong" />
 
         <TextView
