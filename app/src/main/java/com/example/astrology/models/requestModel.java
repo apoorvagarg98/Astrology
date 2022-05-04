@@ -1,10 +1,10 @@
 package com.example.astrology.models;
 
 public class requestModel {
-    String name,email,phone,bookedYouFor,durationInMin,DateOfBooking,timeOfBooking,status,paymenmtStatus;
-    int totalAmount;
+    private String name,email,phone,bookedYouFor,durationInMin,DateOfBooking,timeOfBooking,status,paymentStatus;
+    public int totalAmount;
 
-    public requestModel(String name, String email, String phone, String bookedYouFor, String durationInMin, String DateOfBooking, String timeOfBooking, int totalAmount, String status, String paymenmtStatus) {
+    public requestModel(String name, String email, String phone, String bookedYouFor, String durationInMin, String DateOfBooking, String timeOfBooking, int totalAmount, String status, String paymentStatus) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -14,7 +14,7 @@ public class requestModel {
         this.timeOfBooking = timeOfBooking;
         this.totalAmount = totalAmount;
         this.status = status;
-        this.paymenmtStatus = paymenmtStatus;
+        this.paymentStatus = paymentStatus;
     }
     public requestModel(){}
 
@@ -54,8 +54,8 @@ public class requestModel {
         return status;
     }
 
-    public String getPaymenmtStatus() {
-        return paymenmtStatus;
+    public String getPaymentStatus() {
+        return paymentStatus;
     }
 
     public void setStatus(String status) {

@@ -70,11 +70,15 @@ public class ExpertLogin extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(email.getText().toString(),pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-               
+               if(task.isSuccessful()){
                 Toast.makeText(ExpertLogin.this, "Logged in succesfully", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ExpertLogin.this, selectClientRequests.class);
                 intent.putExtra("id",mAuth.getUid());
-                startActivity(intent);
+                startActivity(intent);}
+               else {
+                   Toast.makeText(ExpertLogin.this, task.getException().toString(), Toast.LENGTH_LONG).show();
+
+               }
 
             }
         });

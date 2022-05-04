@@ -67,8 +67,14 @@ EditText email,pass;
         mAuth.signInWithEmailAndPassword(email.getText().toString(),pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                Toast.makeText(Login.this, "Logged in succesfully", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Login.this, MainActivity.class));
+                if(task.isSuccessful()) {
+                    Toast.makeText(Login.this, "Logged in succesfully", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(Login.this, MainActivity.class));
+                }
+                else {
+                    Toast.makeText(Login.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+
+                }
 
             }
         });

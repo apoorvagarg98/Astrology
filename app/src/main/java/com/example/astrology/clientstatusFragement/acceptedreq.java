@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.astrology.Activities.acceptordeclinepage;
 import com.example.astrology.Notifications.Token;
@@ -38,7 +39,6 @@ public class acceptedreq extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
       View view = inflater.inflate(R.layout.fragment_acceptedreq, container, false);
-
         recyclerView = view.findViewById(R.id.acpreq);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         expertuser = FirebaseAuth.getInstance().getCurrentUser();
@@ -71,7 +71,7 @@ public class acceptedreq extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull item holder, @SuppressLint("RecyclerView") int position, @NonNull requestModel model) {
-               // if(model.getStatus().equals("Accepted")) {
+                if(model.getStatus().equals("Accepted")) {
                     holder.expertname.setText(model.getName());
                     holder.ratepermin.setText(model.getDateOfBooking());
                     holder.experience.setText(model.getTotalAmount() + " rs");
@@ -85,11 +85,11 @@ public class acceptedreq extends Fragment {
                             startActivity(intent);
                         }
                     });
-            //    }
-            /*    else {
+                }
+                else {
                     holder.itemView.setVisibility(View.GONE);
                     holder.itemView.setLayoutParams(new RecyclerView.LayoutParams(0,0));
-                }*/
+                }
 
 
             }

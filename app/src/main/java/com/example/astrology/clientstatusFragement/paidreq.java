@@ -69,7 +69,7 @@ public class paidreq extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull item holder, @SuppressLint("RecyclerView") int position, @NonNull requestModel model) {
-                if(model.getPaymenmtStatus().equals("paymentCompleted")) {
+                if(model.getPaymentStatus().equals("paymentCompleted")) {
                     holder.expertname.setText(model.getName());
                     holder.ratepermin.setText(model.getDateOfBooking());
                     holder.experience.setText(model.getTotalAmount() + " rs");
