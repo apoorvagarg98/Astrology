@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+
     android:gravity="center"
     tools:context=".Activities.bookingPage">
 
@@ -60,7 +61,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
 
                     android:gravity="center"
                     android:text="🌷 ✍🏻 Booking Appointment ✍🏻 🔮"
@@ -84,77 +86,62 @@
                 android:text="AADISHAKTI" />
         </RelativeLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            tools:layout_editor_absoluteX="92dp"
-            tools:layout_editor_absoluteY="248dp">
+
 
             <TextView
                 android:id="@+id/NAmeofExpert"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16dp"
+                android:layout_marginTop="5dp"
+
                 android:hint="Name:"
                 android:background="@drawable/textviewbg"
                 android:backgroundTint="#F6F7FA"
-                android:padding="2dp"
+                android:padding="10dp"
                 android:textColor="#4F3DEF"
                 android:textStyle="bold"
 
                 />
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            tools:layout_editor_absoluteX="92dp"
-            tools:layout_editor_absoluteY="248dp">
+
+
 
             <TextView
                 android:id="@+id/experiencebig"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Experience"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
                 android:textColor="#4F3DEF"
                 android:background="@drawable/textviewbg"
                 android:backgroundTint="#F6F7FA"
                 android:textSize="16dp"
-                android:padding="2dp"
+
                 tools:layout_editor_absoluteX="126dp"
                 tools:layout_editor_absoluteY="68dp" />
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            tools:layout_editor_absoluteX="92dp"
-            tools:layout_editor_absoluteY="248dp">
+
+
 
             <TextView
                 android:id="@+id/allselections"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Selections"
-                android:padding="2dp"
+                android:textSize="16dp"
+                android:layout_marginTop="8dp"
+
+                android:padding="10dp"
                 android:textColor="#4F3DEF"
                 android:background="@drawable/textviewbg"
                 android:backgroundTint="#F6F7FA"
                 tools:layout_editor_absoluteX="126dp"
                 tools:layout_editor_absoluteY="97dp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="5dp"
-            tools:layout_editor_absoluteX="92dp"
-            tools:layout_editor_absoluteY="248dp">
+
 
 
             <TextView
@@ -162,13 +149,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Rate"
+                android:layout_marginTop="8dp"
                 android:textColor="#4F3DEF"
+                android:padding="10dp"
                 android:background="@drawable/textviewbg"
                 android:backgroundTint="#F6F7FA"
                 android:textSize="16dp"
-                android:padding="2dp"
+
                 />
-        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/box"
+            android:backgroundTint="#FDF8F2"
+
+            android:gravity="center"
+            android:text=" 🕒  Please Pick Time &amp; Date  📅 "
+            android:fontFamily="@font/aclonica"
+            android:textColor="#4F3DEF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
 
 
         <LinearLayout
@@ -181,10 +187,12 @@
 
             <Button
                 android:id="@+id/picktime"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Pick Time"
-                android:layout_weight="0.2"
+
+                android:text="Time 🕒"
+                android:layout_marginEnd="10dp"
+
                 android:layout_marginStart="5dp"
 
                 android:textAllCaps="false"
@@ -203,9 +211,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="8"
+                android:padding="10dp"
                 android:textSize="16dp"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F6F7FA"
                 android:textColor="#4F3DEF"
-                android:layout_marginBottom="5dp"
+
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:inputType="textPersonName"
@@ -226,14 +237,15 @@
 
             <Button
                 android:id="@+id/pickdate"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_weight="0.1"
+
                 android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
                 android:background="@drawable/box"
                 android:fontFamily="@font/aclonica"
-                android:text="Pick Date"
+                android:text="Date 📅"
                 android:textAllCaps="false"
                 android:textStyle="bold"
                 app:backgroundTint="#4DBFF0"
@@ -246,7 +258,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="8"
+                android:padding="10dp"
                 android:textSize="16dp"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F6F7FA"
                 android:gravity="center"
                 android:hint="Date of Booking"
                 android:inputType="textPersonName"
@@ -263,15 +278,16 @@
 
             <Button
                 android:id="@+id/pickduratiion"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Pick Duration"
+                android:text="Duration ⏱️"
                 android:textAllCaps="false"
                 android:singleLine="true"
                 android:background="@drawable/box"
                 app:backgroundTint="#4DBFF0"
+                android:layout_marginEnd="10dp"
                 android:textStyle="bold"
-                android:layout_weight="0.2"
+
                 android:layout_marginStart="5dp"
                 android:fontFamily="@font/aclonica"
                 android:layout_gravity="center"
@@ -281,7 +297,7 @@
 
             <EditText
                 android:id="@+id/duraOfBook"
-                android:layout_width="130dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:ems="8"
@@ -289,6 +305,8 @@
                 android:textSize="16dp"
                 android:hint="Duration "
                 android:textColor="#4F3DEF"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F6F7FA"
 
                 android:inputType="textPersonName"
                 />
@@ -298,8 +316,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="hour"
-                android:padding="5dp"
+                android:text="Hour"
+
+               android:layout_marginStart="2dp"
                 android:textColor="#4F3DEF"
                 tools:layout_editor_absoluteX="340dp"
                 tools:layout_editor_absoluteY="239dp" />
@@ -311,7 +330,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -326,8 +345,11 @@
 
             <TextView
                 android:id="@+id/totalAmountToBePaid"
-                android:layout_width="79dp"
-                android:layout_height="38dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="#4F3DEF"
                 android:padding="10dp"
                 android:text="TextView" />
 
@@ -342,13 +364,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/box"
-            android:fontFamily="@font/aclonica"
+            android:layout_marginTop="10dp"
+
 
             android:textAllCaps="false"
             android:textSize="17dp"
             android:textStyle="bold"
+            android:background="@drawable/box"
+            android:fontFamily="@font/aclonica"
             app:backgroundTint="#4DBFF0"
             tools:layout_editor_absoluteX="160dp"
             tools:layout_editor_absoluteY="553dp" />
@@ -369,40 +392,49 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="171dp"
-            android:layout_height="171dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             app:srcCompat="@drawable/cong" />
 
         <TextView
             android:id="@+id/showstatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#4F3DEF"
-            android:textSize="18dp"
             android:layout_marginTop="15dp"
-
+            android:layout_marginBottom="15dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_gravity="center"
             android:fontFamily="@font/aclonica"
-            android:textStyle="bold"
-            android:text="show status" />
+            android:text="Show status"
+
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/pay"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@drawable/box"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aclonica"
+            app:backgroundTint="#4DBFF0"
             android:text="Pay To Proceed"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
             android:visibility="visible"
             tools:layout_editor_absoluteX="161dp"
             tools:layout_editor_absoluteY="393dp" />
 
         <Button
             android:id="@+id/newBooking"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"
+            android:padding="5dp"
+            android:background="@drawable/box"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aclonica"
+            app:backgroundTint="#4DBFF0"
             android:text="Please Book Again"
             android:visibility="invisible" />
 
@@ -411,34 +443,35 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Phone Number"
+
+
             android:textColor="#4F3DEF"
             android:textSize="18dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="10dp"
-
-            android:fontFamily="@font/aclonica"
-            android:textStyle="bold"
-            android:text="Phone Number"
-             />
+            android:textStyle="bold" />
 
 
         <Button
-            android:id="@+id/chat"
+            android:id="@+id/button10"
 
-            android:text="👉 Chat With Your Expert: 👉"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="25dp"
+            android:layout_marginEnd="60dp"
+            android:singleLine="true"
             android:background="@drawable/box"
             android:fontFamily="@font/aclonica"
+            android:text="Chat With Your Expert: 👉"
 
             android:textAllCaps="false"
-            android:textSize="17dp"
+            android:textSize="15dp"
             android:textStyle="bold"
             app:backgroundTint="#4DBFF0" />
 
