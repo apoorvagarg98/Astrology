@@ -259,7 +259,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
-                    android:fontFamily="@font/aclonica"
+
                     android:gravity="center"
                     android:text="Alredy have an account?"
                     android:textColor="@color/black"
@@ -269,13 +269,14 @@
                     android:id="@+id/ExalreadyHaveacc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
+                    android:layout_margin="2dp"
                     android:fontFamily="@font/aclonica"
                     android:gravity="center"
+                    android:singleLine="true"
                     android:text="Please Sign In Here"
                     android:textColor="#4F3DEF"
-                    android:textSize="14dp"
-                    android:textStyle="bold" />
+                    android:textSize="12dp"
+                     />
 
             </LinearLayout>
 
