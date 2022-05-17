@@ -25,7 +25,7 @@ public class astrologer extends AppCompatActivity {
         final astrologerAdapter adapter= new astrologerAdapter( this);
         viewPager2.setAdapter(adapter);
         new TabLayoutMediator(tabLayout,viewPager2,((tab, position) -> tab.setText(titles[position]))).attach();
-        tabLayout.setTranslationY(300);
+
 
     }
 }

@@ -13,9 +13,13 @@
         android:id="@+id/cly1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
         android:padding="5dp"
-        android:orientation="vertical">
+        android:visibility="visible">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -36,9 +40,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/aclonica"
-                    android:textColor="#D100D1"
                     android:gravity="center"
                     android:text="आदि शक्ति एस्ट्रो"
+                    android:textColor="#D100D1"
 
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -49,9 +53,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
 
+                    android:fontFamily="@font/aclonica"
                     android:gravity="center"
                     android:text="AADI SHAKTII ASTRO"
-                    android:fontFamily="@font/aclonica"
                     android:textColor="#D100D1"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -64,9 +68,9 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
 
+                    android:fontFamily="@font/aclonica"
                     android:gravity="center"
                     android:text="🌷 ✍🏻 Booking Appointment ✍🏻 🔮"
-                    android:fontFamily="@font/aclonica"
                     android:textColor="#4F3DEF"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -87,76 +91,68 @@
         </RelativeLayout>
 
 
+        <TextView
+            android:id="@+id/NAmeofExpert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/textviewbg"
 
-            <TextView
-                android:id="@+id/NAmeofExpert"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:layout_marginTop="5dp"
+            android:backgroundTint="#F6F7FA"
+            android:hint="Name:"
+            android:padding="10dp"
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
+            android:textStyle="bold"
 
-                android:hint="Name:"
-                android:background="@drawable/textviewbg"
-                android:backgroundTint="#F6F7FA"
-                android:padding="10dp"
-                android:textColor="#4F3DEF"
-                android:textStyle="bold"
-
-                />
-
+            />
 
 
+        <TextView
+            android:id="@+id/experiencebig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:hint="Experience"
+            android:padding="10dp"
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
 
-            <TextView
-                android:id="@+id/experiencebig"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Experience"
-                android:padding="10dp"
-                android:layout_marginTop="8dp"
-                android:textColor="#4F3DEF"
-                android:background="@drawable/textviewbg"
-                android:backgroundTint="#F6F7FA"
-                android:textSize="16dp"
-
-                tools:layout_editor_absoluteX="126dp"
-                tools:layout_editor_absoluteY="68dp" />
-
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="68dp" />
 
 
+        <TextView
+            android:id="@+id/allselections"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
 
-            <TextView
-                android:id="@+id/allselections"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Selections"
-                android:textSize="16dp"
-                android:layout_marginTop="8dp"
-
-                android:padding="10dp"
-                android:textColor="#4F3DEF"
-                android:background="@drawable/textviewbg"
-                android:backgroundTint="#F6F7FA"
-                tools:layout_editor_absoluteX="126dp"
-                tools:layout_editor_absoluteY="97dp" />
-
+            android:hint="Selections"
+            android:padding="10dp"
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="97dp" />
 
 
+        <TextView
+            android:id="@+id/ratepmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:hint="Rate"
+            android:padding="10dp"
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
 
-
-            <TextView
-                android:id="@+id/ratepmin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Rate"
-                android:layout_marginTop="8dp"
-                android:textColor="#4F3DEF"
-                android:padding="10dp"
-                android:background="@drawable/textviewbg"
-                android:backgroundTint="#F6F7FA"
-                android:textSize="16dp"
-
-                />
+            />
 
 
         <TextView
@@ -168,13 +164,12 @@
             android:background="@drawable/box"
             android:backgroundTint="#FDF8F2"
 
+            android:fontFamily="@font/aclonica"
             android:gravity="center"
             android:text=" 🕒  Please Pick Time &amp; Date  📅 "
-            android:fontFamily="@font/aclonica"
             android:textColor="#4F3DEF"
             android:textSize="18sp"
             android:textStyle="bold" />
-
 
 
         <LinearLayout
@@ -190,39 +185,36 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
 
-                android:text="Time 🕒"
-                android:layout_marginEnd="10dp"
-
+                android:layout_gravity="center"
                 android:layout_marginStart="5dp"
 
-                android:textAllCaps="false"
-                android:background="@drawable/box"
-                app:backgroundTint="#4DBFF0"
-                android:textStyle="bold"
-                android:fontFamily="@font/aclonica"
-                android:layout_gravity="center"
-                tools:layout_editor_absoluteX="160dp"
-                tools:layout_editor_absoluteY="553dp"  />
+                android:layout_marginEnd="10dp"
 
+                android:background="@drawable/box"
+                android:fontFamily="@font/aclonica"
+                android:text="Time 🕒"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:backgroundTint="#4DBFF0"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="553dp" />
 
 
             <EditText
                 android:id="@+id/timeOfBooking"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="8"
-                android:padding="10dp"
-                android:textSize="16dp"
+                android:layout_gravity="center"
                 android:background="@drawable/textviewbg"
                 android:backgroundTint="#F6F7FA"
-                android:textColor="#4F3DEF"
-
+                android:ems="8"
                 android:gravity="center"
-                android:layout_gravity="center"
-                android:inputType="textPersonName"
                 android:hint="Time of Booking"
-                />
 
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#4F3DEF"
+                android:textSize="16dp" />
 
 
         </LinearLayout>
@@ -257,17 +249,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:ems="8"
-                android:padding="10dp"
-                android:textSize="16dp"
                 android:background="@drawable/textviewbg"
                 android:backgroundTint="#F6F7FA"
+                android:ems="8"
                 android:gravity="center"
                 android:hint="Date of Booking"
                 android:inputType="textPersonName"
-                android:textColor="#4F3DEF" />
+                android:padding="10dp"
+                android:textColor="#4F3DEF"
+                android:textSize="16dp" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -280,45 +273,43 @@
                 android:id="@+id/pickduratiion"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Duration ⏱️"
-                android:textAllCaps="false"
-                android:singleLine="true"
-                android:background="@drawable/box"
-                app:backgroundTint="#4DBFF0"
-                android:layout_marginEnd="10dp"
-                android:textStyle="bold"
-
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/aclonica"
                 android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/box"
+                android:fontFamily="@font/aclonica"
+                android:singleLine="true"
+                android:text="Duration ⏱️"
+
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:backgroundTint="#4DBFF0"
                 tools:layout_editor_absoluteX="160dp"
-                tools:layout_editor_absoluteY="553dp"
-                />
+                tools:layout_editor_absoluteY="553dp" />
 
             <EditText
                 android:id="@+id/duraOfBook"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:ems="8"
-                android:padding="10dp"
-                android:textSize="16dp"
-                android:hint="Duration "
-                android:textColor="#4F3DEF"
                 android:background="@drawable/textviewbg"
                 android:backgroundTint="#F6F7FA"
-
+                android:ems="8"
+                android:hint="Duration "
                 android:inputType="textPersonName"
-                />
+                android:padding="10dp"
+                android:textColor="#4F3DEF"
+
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="Hour"
+                android:layout_marginStart="2dp"
 
-               android:layout_marginStart="2dp"
+                android:text="Hour"
                 android:textColor="#4F3DEF"
                 tools:layout_editor_absoluteX="340dp"
                 tools:layout_editor_absoluteY="239dp" />
@@ -329,8 +320,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
             android:layout_marginTop="5dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
@@ -338,46 +329,43 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="10dp"
-                android:textStyle="bold"
-                android:textSize="16dp"
+                android:text="Total amount to be Paid:"
                 android:textColor="#4F3DEF"
-                android:text="Total amount to be Paid:" />
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/totalAmountToBePaid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textSize="16dp"
-                android:textColor="#4F3DEF"
                 android:padding="10dp"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textColor="#4F3DEF"
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
 
         <Button
             android:id="@+id/request"
-            android:text="Request"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/box"
 
 
+            android:fontFamily="@font/aclonica"
+            android:text="Request"
             android:textAllCaps="false"
             android:textSize="17dp"
             android:textStyle="bold"
-            android:background="@drawable/box"
-            android:fontFamily="@font/aclonica"
             app:backgroundTint="#4DBFF0"
             tools:layout_editor_absoluteX="160dp"
             tools:layout_editor_absoluteY="553dp" />
-
-
-
 
 
     </LinearLayout>
@@ -400,12 +388,12 @@
             android:id="@+id/showstatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            android:padding="5dp"
-            android:gravity="center"
-            android:layout_gravity="center"
             android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:padding="5dp"
             android:text="Show status"
 
             android:textColor="#4F3DEF"
@@ -416,13 +404,13 @@
             android:id="@+id/pay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:background="@drawable/box"
             android:layout_gravity="center"
+            android:background="@drawable/box"
             android:fontFamily="@font/aclonica"
-            app:backgroundTint="#4DBFF0"
+            android:padding="5dp"
             android:text="Pay To Proceed"
             android:visibility="visible"
+            app:backgroundTint="#4DBFF0"
             tools:layout_editor_absoluteX="161dp"
             tools:layout_editor_absoluteY="393dp" />
 
@@ -430,13 +418,13 @@
             android:id="@+id/newBooking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:background="@drawable/box"
             android:layout_gravity="center"
+            android:background="@drawable/box"
             android:fontFamily="@font/aclonica"
-            app:backgroundTint="#4DBFF0"
+            android:padding="5dp"
             android:text="Please Book Again"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            app:backgroundTint="#4DBFF0" />
 
 
         <TextView
@@ -457,7 +445,7 @@
 
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/chat"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -465,9 +453,9 @@
             android:layout_marginStart="60dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="60dp"
-            android:singleLine="true"
             android:background="@drawable/box"
             android:fontFamily="@font/aclonica"
+            android:singleLine="true"
             android:text="Chat With Your Expert: 👉"
 
             android:textAllCaps="false"

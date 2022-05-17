@@ -2,9 +2,9 @@ package com.example.astrology.models;
 
 public class userModel {
 
-    String gender,name,dateofbirth,placeofbirth,birthtime,email,mobile;
+    String gender,name,dateofbirth,placeofbirth,birthtime,email,mobile,link;
 
-    public userModel(String name, String dateofbirth, String placeofbirth, String birthtime, String email, String mobile,String gender) {
+    public userModel(String name, String dateofbirth, String placeofbirth, String birthtime, String email, String mobile,String gender,String link) {
         this.name = name;
         this.dateofbirth = dateofbirth;
         this.placeofbirth = placeofbirth;
@@ -12,6 +12,7 @@ public class userModel {
         this.email = email;
         this.mobile = mobile;
         this.gender = gender;
+        this.link = link;
     }
     public userModel()
     {
@@ -20,6 +21,9 @@ public class userModel {
 
     public String getName() {
         return name;
+    }
+    public String getLink() {
+        return link;
     }
 
     public String getDateofbirth() {

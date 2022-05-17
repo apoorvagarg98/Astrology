@@ -45,7 +45,7 @@ public class selectClientRequests extends AppCompatActivity {
         final selectClientAdapter adapter= new selectClientAdapter( this);
         viewPager2.setAdapter(adapter);
         new TabLayoutMediator(tabLayout,viewPager2,((tab, position) -> tab.setText(titles[position]))).attach();
-        tabLayout.setTranslationY(300);
+
 
 
     }

@@ -180,9 +180,13 @@ public class ExpertSignUp3 extends AppCompatActivity {
                     expert.child(selection).child(mAuth.getUid()).setValue(em).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful())
+                            {
+                                Toast.makeText(ExpertSignUp3.this, "Expert Registered succesfully, Please Login", Toast.LENGTH_SHORT).show();
+
+                            }
                         }
                     });
-                    Toast.makeText(ExpertSignUp3.this, "Expert Registered succesfully, Please Login", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Toast.makeText(ExpertSignUp3.this, task.getException().toString(), Toast.LENGTH_SHORT).show();

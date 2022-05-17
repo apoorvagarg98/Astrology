@@ -79,7 +79,7 @@ public class paidreq extends Fragment {
                         @Override
                         public void onClick(View view) {
                             Intent intent = new Intent(getActivity(), acceptordeclinepage.class);
-                            intent.putExtra("useruid", getRef(position).getKey().toString());
+                            intent.putExtra("userid", getRef(position).getKey().toString());
                             startActivity(intent);
                         }
                     });

@@ -87,15 +87,14 @@
             android:orientation="horizontal">
 
 
-
             <Button
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vastu Expert"
                 android:layout_marginEnd="5dp"
-                android:textSize="11dp"
                 android:backgroundTint="#4DBFF0"
+                android:text="Vastu Expert"
+                android:textSize="11dp"
 
                 />
 
@@ -103,10 +102,10 @@
                 android:id="@+id/button6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="#4DBFF0"
                 android:text="Tarot Card"
                 android:textSize="11dp"
-                android:backgroundTint="#4DBFF0"
-                android:layout_marginEnd="5dp"
 
                 />
         </LinearLayout>

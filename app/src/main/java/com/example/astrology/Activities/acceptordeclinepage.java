@@ -4,14 +4,17 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.astrology.R;
-import com.example.astrology.models.JSONPlaceholder;
-import com.example.astrology.models.Post;
+import com.example.astrology.models.APITask;
+import com.example.astrology.models.IAPITaskCallBack;
 import com.example.astrology.models.requestModel;
 import com.example.astrology.models.userModel;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,6 +26,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.okhttp.FormEncodingBuilder;
+import com.squareup.okhttp.RequestBody;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,11 +41,15 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class acceptordeclinepage extends AppCompatActivity {
-TextView name,gender,dob,duration,time,date,birthplace,totalAmount,birthTime;
+public class acceptordeclinepage extends AppCompatActivity  {
+
+
+TextView name,gender,dob,txtAstroDetails,duration,time,date,birthplace,totalAmount,birthTime;
 Button accept ,decline;
 String expertuid,userid;
-    JSONPlaceholder jsonPlaceholder;
+
+
+
 public FirebaseAuth mAuth;
     public FirebaseUser user;
     public DatabaseReference request,usersdb,Acceptedrequest,Declinedrequest;
@@ -45,12 +57,14 @@ public FirebaseAuth mAuth;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acceptordeclinepage);
+
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
         expertuid = user.getUid();
-        userid = getIntent().getStringExtra("useruid");
-
+        userid = getIntent().getStringExtra("userid");
         name = findViewById(R.id.nameinreq);
+        txtAstroDetails = (TextView) findViewById(R.id.txtAstroDetails);
+        JSONObject object = new JSONObject();
         gender = findViewById(R.id.genderinreq);
         dob = findViewById(R.id.dobinreq);
         duration = findViewById(R.id.durationinreq);
@@ -90,6 +104,7 @@ public FirebaseAuth mAuth;
                                 gender.setText("Gender - " +um.getGender());
                                 birthplace.setText("birthPlace - " + um.getPlaceofbirth());
                                 birthTime.setText("birthTime - " + um.getBirthtime());
+                                txtAstroDetails.setText(um.getLink());
 
 
                             }
@@ -180,41 +195,16 @@ request.addValueEventListener(new ValueEventListener() {
 
             }
         });
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://json.astrologyapi.com/v1/").addConverterFactory(GsonConverterFactory.create()).build();
 
-     jsonPlaceholder= retrofit.create(JSONPlaceholder.class);
-        createPost();
+
+
 
 
 
     }
 
-    private void createPost() {
 
-        Post post = new Post(2022f,3f,2f,12f,23f);
-        Call<Post> call = jsonPlaceholder.createPost(post,"b4312492c2db498dfb4cb96f23e122be");
-        call.enqueue(new Callback<Post>() {
-            @Override
-            public void onResponse(Call<Post> call, Response<Post> response) {
-                if(!response.isSuccessful()){
-                    Toast.makeText(acceptordeclinepage.this, response.code(), Toast.LENGTH_SHORT).show();
-                    return;
 
-                }
-                List<Post> postList = new ArrayList<>();
-                postList.add(response.body());
-                Toast.makeText(acceptordeclinepage.this, response.toString(), Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onFailure(Call<Post> call, Throwable t) {
-                Toast.makeText(acceptordeclinepage.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
 
 
 }
