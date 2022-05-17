@@ -153,6 +153,7 @@
               android:textSize="14dp"
               android:layout_marginTop="10dp"
               android:gravity="center"
+                android:layout_marginBottom="10dp"
               android:textColor="#4F3DEF"
               android:text=" ↓ Choose Your Profession From Below ↓ ">
 
@@ -163,10 +164,11 @@
                 android:id="@+id/exspinner2"
                 android:layout_width="match_parent"
                 android:padding="2dp"
+                android:background="@drawable/textviewbg"
                 android:backgroundTintMode="src_in"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:backgroundTint="#51A8C3"
+                android:backgroundTint="#F6F7FA"
                 android:layout_centerHorizontal="true"
                 android:layout_height="50dp" />
             <LinearLayout
@@ -186,12 +188,13 @@
 
                     android:text="By signing up you accept the "
                     android:textColor="@color/black"
-                    android:textSize="13dp" />
+                    android:textSize="12dp" />
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:singleLine="true"
 
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
@@ -202,7 +205,7 @@
                     android:textStyle="bold"
                     android:text="Terms of Service and Privacy Policy"
                     android:textColor="#4F3DEF"
-                    android:textSize="14dp" />
+                    android:textSize="12dp" />
 
 
             </LinearLayout>
@@ -248,7 +251,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aclonica"
+
                     android:gravity="center"
                     android:text="Already have an account?"
                     android:textColor="@color/black"
@@ -261,7 +264,7 @@
                     android:layout_margin="2dp"
                     android:fontFamily="@font/aclonica"
                     android:gravity="center"
-
+                    android:singleLine="true"
                     android:text="Sign In"
                     android:textColor="#4F3DEF"
                     android:textSize="14dp"
