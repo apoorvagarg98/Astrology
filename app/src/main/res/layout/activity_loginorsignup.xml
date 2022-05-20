@@ -30,14 +30,15 @@
                 android:orientation="vertical">
 
 
-            <TextView
+                <TextView
                     android:id="@+id/hindiname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
                     android:text="आदि शक्ति एस्ट्रो"
+                    android:layout_marginBottom="10dp"
                     android:textColor="#D100D1"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -47,29 +48,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
                     android:text="AADI SHAKTII ASTRO"
                     android:textColor="#D100D1"
+
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
 
-            <ImageView
-                android:id="@+id/topicon"
-                android:layout_width="58dp"
-                android:layout_height="60dp"
-                android:layout_alignParentRight="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/rudraaksha"
-                android:text="AADISHAKTI"
-                android:textColor="#E9E83141"
-                android:textSize="32sp" />
+
         </RelativeLayout>
 
 
@@ -109,8 +99,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
-                android:background="@drawable/box"
-                android:backgroundTint="#FBF7EC"
+
                 android:padding="4dp"
                 android:text=" 🙏🏻जय श्री गणेशाय नमः🌹🕉️💯🙏🏻 🐚🌹ॐ नमः शिवाय🌹अतुल्यशिव 🌹 🙏🏻❤️🕉️༺❤️हर_हर_महादेव ❤️༻🕉️❤️🙏🏻🌹 मां 🌹पार्वत्यै🌹 देवीया: नमः🌹🐚🙏🏻🌹 जय हिंद❤ वंदे मांतरम❤🇮🇳❤🙏😇 ❤🕉️💯🙏🏻😍🥰🕉😇🌹🌎🕉"
                 android:textColor="#131111"
@@ -137,7 +126,7 @@
             android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="10dp"
-            android:layout_weight="0.3"
+            android:layout_weight="0.2"
             android:background="@drawable/box"
             android:gravity="center"
 
@@ -161,7 +150,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="8dp"
 
-            android:layout_weight="0.3"
+            android:layout_weight="0.2"
             android:background="@drawable/box"
             android:gravity="center"
 

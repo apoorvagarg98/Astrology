@@ -31,9 +31,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
                     android:text="आदि शक्ति एस्ट्रो"
+                    android:layout_marginBottom="10dp"
                     android:textColor="#D100D1"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -43,10 +44,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/aclonica"
-                    android:textColor="#D100D1"
+                    android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
                     android:text="AADI SHAKTII ASTRO"
+                    android:textColor="#D100D1"
 
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -58,7 +59,7 @@
                 android:id="@+id/topicon"
                 android:layout_width="58dp"
                 android:layout_height="60dp"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"

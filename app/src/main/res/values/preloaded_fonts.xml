@@ -4,6 +4,8 @@
         <item>@font/aclonica</item>
         <item>@font/alfa_slab_one</item>
         <item>@font/baloo</item>
+        <item>@font/open_sans</item>
+        <item>@font/open_sans_bold</item>
         <item>@font/poppins_light</item>
     </array>
 </resources>

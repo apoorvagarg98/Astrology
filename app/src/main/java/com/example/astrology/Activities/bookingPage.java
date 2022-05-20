@@ -25,7 +25,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -54,9 +53,9 @@ import retrofit2.Response;
 public class bookingPage extends AppCompatActivity implements View.OnClickListener {
     String expertid,selection,r,email,userid,nameofuser,date,time,phone;
     DatabaseReference dbr,requestdb;
-    TextView name,exp,rpm,expertise,dateOfBooking,timeOfBooking,duration,totalAmountToBePaid,showstatus;
+    TextView name,exp,rpm,expertise,dateOfBooking,timeOfBooking,duration,totalAmountToBePaid,showstatus,phoneNumber;
     Button pay,pickdate,picktime,pickDuration,request,newBooking,chat;
-    LinearLayout cly1,cly2;
+    ConstraintLayout cly1,cly2;
     ImageView show;
 
     APIService apiService;
@@ -89,13 +88,13 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
         picktime = findViewById(R.id.picktime);
         pickDuration = findViewById(R.id.pickduratiion);
         request = findViewById(R.id.request);
-        cly1 = findViewById(R.id.cly1);
-        cly2 = findViewById(R.id.cly2);
+//        cly1 = findViewById(R.id.cly);
+     //   cly2 = findViewById(R.id.cly2);
         showstatus = findViewById(R.id.showstatus);
         newBooking = findViewById(R.id.newBooking);
         show = findViewById(R.id.imageView3);
-
-        chat = findViewById(R.id.chat);
+   //     phoneNumber = findViewById(R.id.phonenumber);
+      //  chat = findViewById(R.id.chat);
 
 
 
@@ -168,7 +167,17 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
                         cly2.setVisibility(View.VISIBLE);
                         newBooking.setVisibility(View.VISIBLE);
                         showstatus.setText("Now you can call or chat with your expert");
+                        dbr.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                phoneNumber.setText(snapshot.child("exmobile").getValue().toString());
+                            }
 
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+                            }
+                        });
                         chat.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -235,7 +244,7 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
             hashMap.put("timeOfBooking",time);
             hashMap.put("totalAmount",rs);
             hashMap.put("status","pending");
-            hashMap.put("paymentStatus","pending");
+            hashMap.put("paymenmtStatus","pending");
 
 
                 //DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
