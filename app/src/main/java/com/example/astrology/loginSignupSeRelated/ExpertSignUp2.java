@@ -24,7 +24,7 @@ public class ExpertSignUp2 extends AppCompatActivity {
    Spinner spinner2;
    FloatingActionButton Exsignuppage3;
 
-    EditText dateofbirth,pincode,exadress;
+    EditText dateofbirth,pincode,exadress,exabtyr;
     RadioGroup radioGroup;
     String gender,exnames,exphones,exemails,selection;
     FloatingActionButton signup;
@@ -40,7 +40,8 @@ public class ExpertSignUp2 extends AppCompatActivity {
         exadress =findViewById(R.id.exadress);
         signup = findViewById(R.id.Exsignuppage3);
         radioGroup = findViewById(R.id.exradio);
-        pincode = findViewById(R.id.expincode);
+        pincode = findViewById(R.id.exabtyr);
+        exabtyr = findViewById(R.id.exabtyrslf);
 
         exnames = getIntent().getStringExtra("exname").toString();
         exphones =getIntent().getStringExtra("exmobile").toString();
@@ -76,6 +77,7 @@ public class ExpertSignUp2 extends AppCompatActivity {
                                           intent.putExtra("selection",selection);
                                           intent.putExtra("exadress",exadress.getText().toString());
                                           intent.putExtra("expincode",pincode.getText().toString());
+                                          intent.putExtra("exabtyrslf",exabtyr.getText().toString());
                                           intent.putExtra("exbirthdate",dateofbirth.getText().toString());
                                           startActivity(intent);
                                       }

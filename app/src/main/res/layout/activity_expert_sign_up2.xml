@@ -135,7 +135,7 @@
                 tools:layout_editor_absoluteY="248dp">
 
                 <EditText
-                    android:id="@+id/expincode"
+                    android:id="@+id/exabtyr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/textviewbg"
@@ -171,6 +171,26 @@
                 android:backgroundTint="#F6F7FA"
                 android:layout_centerHorizontal="true"
                 android:layout_height="50dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/white"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="248dp">
+
+                <EditText
+                    android:id="@+id/exabtyrslf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textviewbg"
+                    android:backgroundTint="#F6F7FA"
+                    android:ems="10"
+                    android:hint="About yourself"
+                    android:textColor="#090909" />
+
+            </com.google.android.material.textfield.TextInputLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

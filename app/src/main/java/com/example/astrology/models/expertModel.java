@@ -7,9 +7,9 @@ public class expertModel {
     public String exnames,exmobile, exemails,userId ,selection ,exadress ,expincode ,exbirthdate,stamt,gender;
     public String imageUriadhar;
     public String imageUripan;
-    public String imageUricertificate,stexperience;
+    public String imageUricertificate,stexperience,exabtyrslf;
 
-    public expertModel(String exnames, String exmobile, String exemails, String userId, String selection, String exadress, String expincode, String exbirthdate, String stamt, String gender, String imageUriadhar, String imageUripan, String imageUricertificate, String stexperience) {
+    public expertModel(String exnames, String exmobile, String exemails, String userId, String selection, String exadress, String expincode, String exbirthdate, String stamt, String gender, String imageUriadhar, String imageUripan, String imageUricertificate, String stexperience,String exabtyrslf) {
         this.exnames = exnames;
         this.exmobile = exmobile;
         this.exemails = exemails;
@@ -24,6 +24,7 @@ public class expertModel {
         this.imageUripan = imageUripan;
         this.imageUricertificate = imageUricertificate;
         this.stexperience = stexperience;
+        this.exabtyrslf = exabtyrslf;
     }
     public expertModel(){
 
@@ -36,7 +37,7 @@ public class expertModel {
     public String getExperience() {
         return stexperience;
     }
-
+public String getExabtyrslf(){return exabtyrslf;}
     public String getExmobile() {
         return exmobile;
     }

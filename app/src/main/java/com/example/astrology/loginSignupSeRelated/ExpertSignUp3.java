@@ -39,7 +39,7 @@ public class ExpertSignUp3 extends AppCompatActivity {
 
     public static Uri imageUricertificate,imageUriadhar,imageUripan;
     StorageReference postImageRef;
-    String exnames,exmobile, exemails,userId ,gender ,selection ,exadress ,expincode ,exbirthdate,stamt,stpass;
+    String exnames,exmobile, exemails,userId ,gender ,selection ,exadress ,expincode ,exbirthdate,stamt,stpass,exabtyrslf;
     EditText amt,password,experience;
     private FirebaseAuth mAuth;
     FirebaseUser user;
@@ -58,6 +58,7 @@ public class ExpertSignUp3 extends AppCompatActivity {
         exadress  =getIntent().getStringExtra("exadress").toString();
         expincode =getIntent().getStringExtra("expincode").toString();
         exbirthdate =getIntent().getStringExtra("exbirthdate").toString();
+        exabtyrslf =getIntent().getStringExtra("exabtyrslf").toString();
         postImageRef = FirebaseStorage.getInstance().getReference().child("postImages");
 
         amt = findViewById(R.id.amount);
@@ -171,11 +172,11 @@ public class ExpertSignUp3 extends AppCompatActivity {
 
 
 
-        mAuth.createUserWithEmailAndPassword(exemails,stpass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(exemails.trim(),stpass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    expertModel em  = new expertModel(exnames,exmobile, exemails,userId ,selection ,exadress ,expincode ,exbirthdate,stamt,gender,imageUriadhar.toString(),imageUripan.toString(),imageUricertificate.toString(),stexperience.toString());
+                    expertModel em  = new expertModel(exnames,exmobile, exemails,userId ,selection ,exadress ,expincode ,exbirthdate,stamt,gender,imageUriadhar.toString(),imageUripan.toString(),imageUricertificate.toString(),stexperience.toString(),exabtyrslf);
 
                     expert.child(selection).child(mAuth.getUid()).setValue(em).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override

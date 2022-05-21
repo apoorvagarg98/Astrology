@@ -125,6 +125,21 @@
 
 
         <TextView
+            android:id="@+id/aboutme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:hint="About me"
+            android:padding="10dp"
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
+
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="68dp" />
+
+        <TextView
             android:id="@+id/allselections"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -359,7 +374,7 @@
 
 
             android:fontFamily="@font/aclonica"
-            android:text="Request"
+            android:text="Pay To Request"
             android:textAllCaps="false"
             android:textSize="17dp"
             android:textStyle="bold"

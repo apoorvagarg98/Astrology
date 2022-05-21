@@ -3,6 +3,7 @@ package com.example.astrology.Activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -47,6 +48,7 @@ public class acceptordeclinepage extends AppCompatActivity  {
 TextView name,gender,dob,txtAstroDetails,duration,time,date,birthplace,totalAmount,birthTime;
 Button accept ,decline;
 String expertuid,userid;
+String durationoftimer;
 
 
 
@@ -64,7 +66,6 @@ public FirebaseAuth mAuth;
         userid = getIntent().getStringExtra("userid");
         name = findViewById(R.id.nameinreq);
         txtAstroDetails = (TextView) findViewById(R.id.txtAstroDetails);
-        JSONObject object = new JSONObject();
         gender = findViewById(R.id.genderinreq);
         dob = findViewById(R.id.dobinreq);
         duration = findViewById(R.id.durationinreq);
@@ -82,13 +83,16 @@ public FirebaseAuth mAuth;
         Declinedrequest = FirebaseDatabase.getInstance().getReference().child("Declinedrequest").child(expertuid).child(userid);
         usersdb = FirebaseDatabase.getInstance().getReference().child("users").child(userid);
 
+
+
+
         request.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists())
                 {
                     requestModel rm =  snapshot.getValue(requestModel.class);
-
+durationoftimer = rm.getDurationInMin();
                     duration.setText("Duration - "+rm.getDurationInMin()+"min");
                     time.setText("Time - "+rm.getTimeOfBooking());
                     date.setText("Date - "+rm.getDateOfBooking());
@@ -135,6 +139,8 @@ public FirebaseAuth mAuth;
                 request.child("status").setValue("Accepted").addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+
 request.addValueEventListener(new ValueEventListener() {
     @Override
     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -153,7 +159,12 @@ request.addValueEventListener(new ValueEventListener() {
 
     }
 });
-                    }
+Intent intent = new Intent(acceptordeclinepage.this,chatActivity.class);
+intent.putExtra("Duration of Timer",durationoftimer);
+intent.putExtra("userid",userid);
+                              startActivity(intent);
+
+                    }}
                 });
 
             }
