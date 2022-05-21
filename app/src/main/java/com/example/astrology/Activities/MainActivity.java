@@ -12,8 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.SearchView;
 
-import com.denzcoskun.imageslider.ImageSlider;
-import com.denzcoskun.imageslider.models.SlideModel;
+//import com.denzcoskun.imageslider.ImageSlider;
+//import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.astrology.R;
 
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageSlider imageSlider = findViewById(R.id.slider);
+      /*  ImageSlider imageSlider = findViewById(R.id.slider);
 
         List<SlideModel> slideModels = new ArrayList<>();
         slideModels.add(new SlideModel("https://5.imimg.com/data5/ANDROID/Default/2021/2/CL/AS/MJ/48693369/product-jpeg-500x500.jpg", "1 Image"));
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         slideModels.add(new SlideModel("https://thehindutimes.in/static/c1e/client/89706/migrated/f13b42b0689041873d096a5b3d447a7d.jpg", "3 Image"));
         slideModels.add(new SlideModel("https://www.pavitrajyotish.com/wp-content/uploads/2015/12/Indian-Vedic-Astrology-Hindi.jpg", "4 Image"));
         slideModels.add(new SlideModel("https://m.facebook.com/619462814750696/photos/a.619469904749987/1264677913562513/?type=3&source=44", "5 Image"));
-        imageSlider.setImageList(slideModels,true);
+        imageSlider.setImageList(slideModels,true);*/
 
     }
 

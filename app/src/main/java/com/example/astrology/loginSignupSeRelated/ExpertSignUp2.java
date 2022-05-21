@@ -53,21 +53,7 @@ public class ExpertSignUp2 extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
                                       @Override
                                       public void onClick(View view) {
-                                          radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                                              @Override
-                                              public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                                                  switch (i){
-                                                      case R.id.male:
-                                                          gender = "male";
-                                                          break;
-                                                      case  R.id.female:
-                                                          gender = "female";
-                                                          break;
 
-
-                                                  }
-                                              }
-                                          });
                                           selection = String.valueOf(spinner2.getSelectedItem());
                                           Intent intent =  new Intent(ExpertSignUp2.this,ExpertSignUp3.class);
                                           intent.putExtra("exname2",exnames);

@@ -45,7 +45,7 @@ public class loginorsignup extends AppCompatActivity {
         swagat=findViewById(R.id.swagat);
 
 
-        topicon.setAnimation(topAnimation);
+//        topicon.setAnimation(topAnimation);
         mainlogo.setAnimation(middleAnimation);
         englishname.setAnimation(topAnimation);
         hindiname.setAnimation(topAnimation);

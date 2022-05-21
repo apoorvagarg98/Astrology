@@ -7,14 +7,7 @@
     android:orientation="vertical"
     tools:context=".Activities.MainActivity">
 
-    <com.denzcoskun.imageslider.ImageSlider
-        android:layout_width="match_parent"
-        android:id="@+id/slider"
 
-
-        android:layout_height="210dp">
-
-    </com.denzcoskun.imageslider.ImageSlider>
 
     <Button
         android:id="@+id/astro"
