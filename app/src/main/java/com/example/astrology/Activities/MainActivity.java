@@ -2,10 +2,15 @@ package com.example.astrology.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.example.astrology.R.menu.search;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SearchView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
@@ -39,7 +44,36 @@ public class MainActivity extends AppCompatActivity {
         imageSlider.setImageList(slideModels,true);
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        getMenuInflater().inflate(search,menu);
+
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setQueryHint("Search Astrology,Numerologist.....");
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+            @Override
+            public boolean onQueryTextSubmit(String query){
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+
+
+                return true;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
+
+    }
 }
+
+
+
 
 
 
