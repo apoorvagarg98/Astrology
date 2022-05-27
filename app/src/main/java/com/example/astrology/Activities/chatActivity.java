@@ -33,14 +33,14 @@ DatabaseReference req;
         timer = findViewById(R.id.Timer);
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
-        uid = user.getUid();
+        uid = getIntent().getStringExtra("expertid");
         String durationOfTimer = getIntent().getStringExtra("Duration of Timer");
         clientid =getIntent().getStringExtra("userid");
         req = FirebaseDatabase.getInstance().getReference().child("request").child(uid).child(clientid);
 
 
         long dot = Integer.valueOf(durationOfTimer);
-        new CountDownTimer(dot, 1000) {
+        CountDownTimer cd = new CountDownTimer(40000000, 1000) {
             @Override
             public void onTick(long l) {
 
@@ -62,12 +62,16 @@ DatabaseReference req;
                     }
                 });
 
-                startActivity(new Intent(chatActivity.this,selectClientRequests.class));
+              //  startActivity(new Intent(chatActivity.this,selectClientRequests.class));
 
             }
-        };
-
+        }.start();
 
     }
+
+
 }
+
+
+
 

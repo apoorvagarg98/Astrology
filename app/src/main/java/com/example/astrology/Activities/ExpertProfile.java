@@ -60,7 +60,7 @@ public class ExpertProfile extends AppCompatActivity implements AdapterView.OnIt
         spinner.setOnItemSelectedListener(this);
 
 
-        exprofile = FirebaseDatabase.getInstance().getReference().child("Experts").child(expertuid);
+        exprofile = FirebaseDatabase.getInstance().getReference().child("Experts").child("Lal Kitab Expert").child(expertuid);
         exprofile.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
