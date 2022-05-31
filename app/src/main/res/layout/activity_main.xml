@@ -23,7 +23,8 @@
         android:id="@+id/astro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
         android:backgroundTint="#4DBFF0"
         android:layout_below="@id/slider"
         android:text="Astrologer"
@@ -45,5 +46,10 @@
         android:layout_margin="5dp"
         android:layout_below="@+id/offers"/>
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4DBFF0">
+    </androidx.appcompat.widget.Toolbar>
 
 </RelativeLayout>
