@@ -374,4 +374,100 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/cly2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/cong" />
+
+        <TextView
+            android:id="@+id/showstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Show status"
+
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/box"
+            android:fontFamily="@font/aclonica"
+            android:padding="5dp"
+            android:text="Pay To Proceed"
+            android:visibility="visible"
+            app:backgroundTint="#4DBFF0"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="393dp" />
+
+        <Button
+            android:id="@+id/newBooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/box"
+            android:fontFamily="@font/aclonica"
+            android:padding="5dp"
+            android:text="Please Book Again"
+            android:visibility="invisible"
+            app:backgroundTint="#4DBFF0" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Phone Number"
+
+
+            android:textColor="#4F3DEF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/chat"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/box"
+            android:fontFamily="@font/aclonica"
+            android:singleLine="true"
+            android:text="Chat With Your Expert: 👉"
+
+            android:textAllCaps="false"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:backgroundTint="#4DBFF0" />
+
+
+    </LinearLayout>
+
 </RelativeLayout>

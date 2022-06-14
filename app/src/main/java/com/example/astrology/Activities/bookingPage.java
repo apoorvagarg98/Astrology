@@ -226,7 +226,7 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
                     object.put("description","payment for"+selection);
                     object.put("theme.color","#0093DD");
                     object.put("currency","INR");
-                    object.put("amount",rs);
+                    object.put("amount",rs*100);
                     object.put("prefill.contact","9711445734");
                     object.put("prefill.email",email);
                     checkout.open(bookingPage.this,object);
@@ -306,7 +306,13 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
                 if(task.isSuccessful())
 
                 {
-                    Toast.makeText(bookingPage.this, "request sent sucesfully kindly wait for acceptance", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(bookingPage.this,chatActivity.class);
+                    intent.putExtra("userid",user.getUid());
+                    intent.putExtra("expertid",expertid);
+                    intent.putExtra("Duration of Timer",String.valueOf(totalmin));
+
+                    startActivity(intent);
+
                 }
             }
         });
@@ -328,7 +334,6 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
             }
         });
 
-startActivity(new Intent(bookingPage.this,chatActivity.class));
      //   AlertDialog.Builder builder = new AlertDialog.Builder(this);
      //   builder.setTitle("paymment ID");
      //   builder.setMessage(s);
