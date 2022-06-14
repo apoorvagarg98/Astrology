@@ -6,63 +6,149 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
+    android:background="#FFFFFF"
     tools:context=".Activities.ExpertProfile">
 
 
+    <TextView
+        android:id="@+id/experttitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:text="Expert Profile" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_profile"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
 
     <TextView
         android:id="@+id/exprname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="name" />
+        android:textSize="28sp"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/textbox1"
+        android:hint="Name" />
 
     <TextView
         android:id="@+id/exprdob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="dob" />
+        android:textSize="28sp"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/textbox2"
+        android:hint="Dob" />
 
     <TextView
         android:id="@+id/expremail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="mail" />
+        android:textSize="28sp"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/textbox1"
+        android:hint="Email" />
 
     <TextView
         android:id="@+id/expraddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="adress" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/textbox2"
+        android:hint="Address"
+        android:padding="3dp"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/exprpincode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="postal address" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/textbox1"
+        android:hint="Postal Address"
+        android:padding="3dp"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/exprexperty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="expertise" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/textbox2"
+        android:hint="Expertise"
+        android:padding="3dp"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/exprexperience"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="experience" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/textbox1"
+        android:hint="Experience"
+        android:padding="3dp"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/expramt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="amount to be paid" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/textbox2"
+        android:hint="Amount to be paid"
+        android:padding="3dp"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+
 
     <Spinner
         android:id="@+id/expryesno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/textbox1"
         android:minHeight="48dp" />
 
 

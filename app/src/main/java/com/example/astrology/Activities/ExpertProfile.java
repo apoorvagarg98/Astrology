@@ -40,6 +40,7 @@ public class ExpertProfile extends AppCompatActivity implements AdapterView.OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expert_profile);
 
+
         name = findViewById(R.id.exprname);
         email= findViewById(R.id.expremail);
         pin= findViewById(R.id.exprpincode);
@@ -60,14 +61,14 @@ public class ExpertProfile extends AppCompatActivity implements AdapterView.OnIt
         spinner.setOnItemSelectedListener(this);
 
 
-        exprofile = FirebaseDatabase.getInstance().getReference().child("Experts").child(expertuid);
+        exprofile = FirebaseDatabase.getInstance().getReference().child("Experts").child("Lal Kitab Expert").child(expertuid);
         exprofile.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists())
                 {
                     expertModel gandu = snapshot.getValue(expertModel.class);
-                    name.setText("Name-" +gandu.getExnames());
+                    name.setText("Name - " +gandu.getExnames());
                     dob.setText("Date Of Birth -"+ gandu.getExbirthdate());
                     email.setText("Expert Email id -"+gandu.exemails);
                     address.setText("Expert address - "+gandu.exadress);

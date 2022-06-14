@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vastuExpertBookingPage">
+
+
+    <TextView
+        android:id="@+id/venameofexpert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+        android:hint="Name:"
+        android:padding="10dp"
+        android:textColor="#4F3DEF"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/veexperiencebig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+        android:hint="Experience"
+        android:padding="10dp"
+        android:textColor="#4F3DEF"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/venameofexpert"
+        tools:layout_editor_absoluteX="16dp"/>
+
+    <TextView
+        android:id="@+id/veaboutme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+        android:hint="About me"
+        android:padding="10dp"
+        android:textColor="#4F3DEF"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/veexperiencebig"
+        tools:layout_editor_absoluteX="16dp"/>
+
+    <TextView
+        android:id="@+id/veallselections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+        android:hint="Selections"
+        android:padding="10dp"
+        android:textColor="#4F3DEF"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/veaboutme"
+        tools:layout_editor_absoluteX="16dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/areaofproperty"
+        android:hint="Area of Property (in sq.ft)"
+        app:layout_constraintTop_toBottomOf="@+id/veallselections"
+        tools:layout_editor_absoluteX="16dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalfloors"
+        android:hint="Total Floors"
+        app:layout_constraintTop_toBottomOf="@+id/areaofproperty"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalrooms"
+        android:hint="Total Rooms"
+        app:layout_constraintTop_toBottomOf="@+id/totalfloors"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/kitchendine"
+        android:hint="Total Kitchen, Dine and Dinning"
+        app:layout_constraintTop_toBottomOf="@+id/totalrooms"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/washrooms"
+        android:hint="Total Washrooms"
+        app:layout_constraintTop_toBottomOf="@+id/kitchendine"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/basement"
+        android:hint="Basement"
+        app:layout_constraintTop_toBottomOf="@+id/washrooms"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:hint="Address (with Pincode)"
+        app:layout_constraintTop_toBottomOf="@+id/basement"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/remarks"
+        android:hint="Total Rooms"
+        app:layout_constraintTop_toBottomOf="@+id/address"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/verpm"
+        app:layout_constraintTop_toBottomOf="@+id/remarks"
+        tools:layout_editor_absoluteX="16dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/verequest"
+        android:text="Request"
+        app:layout_constraintTop_toBottomOf="@+id/verpm"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

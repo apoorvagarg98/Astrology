@@ -15,8 +15,8 @@
         <item>Hindu Rituals</item>
     </string-array>
     <string-array name="request">
-        <item>Accept</item>
-        <item>Decline</item>
+        <item>Available</item>
+        <item>Unavailable</item>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

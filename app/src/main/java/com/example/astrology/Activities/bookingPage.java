@@ -55,7 +55,7 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
     String expertid,selection,r,email,userid,nameofuser,date,time,phone,exabtyrslf;
     DatabaseReference dbr,requestdb;
     TextView name,exp,rpm,expertise,dateOfBooking,timeOfBooking,duration,totalAmountToBePaid,showstatus,exabtyrslftxtvw;
-    Button pay,pickdate,picktime,pickDuration,request,newBooking,chat;
+    Button pickDuration,request;
     LinearLayout cly1,cly2;
     ImageView show;
 
@@ -84,18 +84,11 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
         rpm = findViewById(R.id.ratepmin);
         totalAmountToBePaid = findViewById(R.id.totalAmountToBePaid);
         expertise = findViewById(R.id.allselections);
-        pay = findViewById(R.id.pay);
-        pickdate = findViewById(R.id.pickdate);
-        picktime = findViewById(R.id.picktime);
+
         pickDuration = findViewById(R.id.pickduratiion);
         request = findViewById(R.id.request);
         cly1 = findViewById(R.id.cly1);
-        cly2 = findViewById(R.id.cly2);
-        showstatus = findViewById(R.id.showstatus);
-        newBooking = findViewById(R.id.newBooking);
-        show = findViewById(R.id.imageView3);
 
-        chat = findViewById(R.id.chat);
 
 
 
@@ -105,8 +98,7 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
         timeOfBooking = findViewById(R.id.timeOfBooking);
         duration = findViewById(R.id.duraOfBook);
 
-        picktime.setOnClickListener(this);
-        pickdate.setOnClickListener( this);
+
         pickDuration.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
@@ -145,7 +137,7 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists())
                 {
-                     r = snapshot.child("stexperience").getValue().toString();
+                     r = snapshot.child("experience").getValue().toString();
                      email = snapshot.child("exemails").getValue().toString();
                      nameofuser = snapshot.child("exnames").getValue().toString();
                      phone = snapshot.child("exmobile").getValue().toString();
@@ -161,13 +153,6 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
             public void onCancelled(@NonNull DatabaseError error) {
             }});
 
-        newBooking.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cly1.setVisibility(View.VISIBLE);
-                cly2.setVisibility(View.GONE);
-            }
-        });
 
        /* request.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
@@ -353,6 +338,48 @@ startActivity(new Intent(bookingPage.this,chatActivity.class));
 
     }
     public void onPaymentError(int i, String s) {
+        notify = true;
+        HashMap hashMap = new HashMap();
+        hashMap.put("name",nameofuser);
+        hashMap.put("email",email);
+        hashMap.put("phone",phone);
+        hashMap.put("bookedYouFor",selection);
+        hashMap.put("durationInMin",String.valueOf(totalmin));
+        hashMap.put("DateOfBooking",date);
+        hashMap.put("timeOfBooking",time);
+        hashMap.put("totalAmount",rs);
+        hashMap.put("status","pending");
+        hashMap.put("paymentStatus","completed");
+
+        requestdb.updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+            @Override
+            public void onComplete(@NonNull Task task) {
+                if(task.isSuccessful())
+
+                {
+                    Toast.makeText(bookingPage.this, "request sent sucesfully kindly wait for acceptance", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        requestdb = FirebaseDatabase.getInstance().getReference("users").child(user.getUid());
+        requestdb.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                userModel user = dataSnapshot.getValue(userModel.class);
+                if (notify) {
+                    sendNotifiaction(expertid, user.getName(), "new request ");
+                }
+                notify = false;
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        startActivity(new Intent(bookingPage.this,chatActivity.class));
         Toast.makeText(getApplicationContext(), "payment failed please try again after some time"+s, Toast.LENGTH_SHORT).show();
     }
 
@@ -362,51 +389,8 @@ startActivity(new Intent(bookingPage.this,chatActivity.class));
     public void onClick(View v) {
 
 
-        if (v == pickdate) {
-
-            // Get Current Date
-            final Calendar c = Calendar.getInstance();
-            mYear = c.get(Calendar.YEAR);
-            mMonth = c.get(Calendar.MONTH);
-            mDay = c.get(Calendar.DAY_OF_MONTH);
 
 
-            DatePickerDialog datePickerDialog = new DatePickerDialog(this,
-                    new DatePickerDialog.OnDateSetListener() {
-
-                        @Override
-                        public void onDateSet(DatePicker view, int year,
-                                              int monthOfYear, int dayOfMonth) {
-                            date = dayOfMonth + "-" + (monthOfYear + 1) + "-" + year;
-
-                            dateOfBooking.setText(date);
-
-
-                        }
-                    }, mYear, mMonth, mDay);
-            datePickerDialog.show();
-        }
-        if (v == picktime) {
-
-            // Get Current Time
-            final Calendar c = Calendar.getInstance();
-            mHour = c.get(Calendar.HOUR_OF_DAY);
-            mMinute = c.get(Calendar.MINUTE);
-
-            // Launch Time Picker Dialog
-            TimePickerDialog timePickerDialog = new TimePickerDialog(this,
-                    new TimePickerDialog.OnTimeSetListener() {
-
-                        @Override
-                        public void onTimeSet(TimePicker view, int hourOfDay,
-                                              int minute) {
-                            time = hourOfDay + ":" + minute;
-
-                            timeOfBooking.setText(time);
-                        }
-                    }, mHour, mMinute, false);
-            timePickerDialog.show();
-        }
         if (v==pickDuration)
         {
             final Calendar cldr = Calendar.getInstance();
