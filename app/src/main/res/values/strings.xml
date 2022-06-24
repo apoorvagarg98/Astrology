@@ -18,6 +18,25 @@
         <item>Available</item>
         <item>Unavailable</item>
     </string-array>
+    <string-array name="hrpujatype">
+        <item>Garbhadhan (Conception), Rs 2000/-</item>
+        <item>Punsavana (Fetus protection), Rs 2000/-</item>
+        <item>Simantonayana (Satisfying the wishes of pragnent mother), Rs 2000/-</item>
+        <item>Jatakarma (Birth rituals), Rs 2000/-</item>
+        <item>Nakaran (Name-giving), Rs 2000/-</item>
+        <item>Nishkarmana (Taking the child outdoors), Rs 2000/-</item>
+        <item>Annaprashana (giving the child solid food), Rs 2000/-</item>
+        <item>Chudakarna,Mundan (Hair cutting), Rs 2000/-</item>
+        <item>Karnvedh (Ear peircing), Rs 2000/-</item>
+        <item>Upanayana or Yagyopaveet (Sacred thread), Rs 2000/-</item>
+        <item>Vedarambh (Study of vedas and scriptures), Rs 2000/-</item>
+        <item>Samavartana (Completing Education), Rs 2000/-</item>
+        <item>Vivaha (The marriage), Rs 2000/-</item>
+        <item>Vanprastha (Preparing for renouncing), Rs 2000/-</item>
+        <item>Sanyasa, Rs 2000/-</item>
+        <item>Antyeshti (Last rite), Rs 2000/-</item>
+    </string-array>
+    \
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

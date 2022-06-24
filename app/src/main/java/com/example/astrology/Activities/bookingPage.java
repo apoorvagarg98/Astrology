@@ -88,12 +88,6 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
         pickDuration = findViewById(R.id.pickduratiion);
         request = findViewById(R.id.request);
         cly1 = findViewById(R.id.cly1);
-
-
-
-
-
-
         dateOfBooking = findViewById(R.id.dateOfBooking);
         timeOfBooking = findViewById(R.id.timeOfBooking);
         duration = findViewById(R.id.duraOfBook);

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hinduritualsbookingpage"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/hrnameofExpert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+        android:hint="Name:"
+        android:padding="10dp"
+        android:textColor="#4F3DEF"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hrexperiencebig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+        android:hint="Experience"
+        android:padding="10dp"
+        android:textColor="#4F3DEF"
+        android:textSize="16dp"
+        android:layout_below="@+id/hrnameofExpert"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="68dp" />
+
+
+    <TextView
+        android:id="@+id/hraboutme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hrexperiencebig"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+        android:hint="About me"
+        android:padding="10dp"
+        android:textColor="#4F3DEF"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="68dp" />
+
+    <TextView
+        android:id="@+id/hrallselections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+        android:layout_below="@+id/hraboutme"
+        android:hint="Selections"
+        android:padding="10dp"
+        android:textColor="#4F3DEF"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+
+    <TextView
+        android:id="@+id/hrratepmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+        android:hint="Rate"
+        android:padding="10dp"
+        android:textColor="#4F3DEF"
+        android:textSize="16dp"
+        android:layout_below="@+id/hrallselections"
+
+        />
+
+
+    <EditText
+        android:id="@+id/dateforritual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hrratepmin"
+        android:layout_marginStart="-155dp"
+        android:layout_toEndOf="@+id/selectdate"
+        android:text="Date for Hindu ritual" />
+
+    <EditText
+        android:id="@+id/timeforritual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateforritual"
+        android:layout_alignEnd="@+id/dateforritual"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="-290dp"
+        android:layout_marginEnd="-167dp"
+        android:layout_toEndOf="@+id/selecttime"
+        android:text="Time for Hindu ritual" />
+
+    <Button
+        android:id="@+id/selectdate"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/box"
+        android:fontFamily="@font/aclonica"
+        android:text="Date 📅"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:backgroundTint="#4DBFF0"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="553dp" />
+
+    <Button
+        android:id="@+id/selecttime"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectdate"
+        android:layout_gravity="center"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/box"
+
+        android:fontFamily="@font/aclonica"
+        android:singleLine="true"
+        android:text="Time ⏱️"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:backgroundTint="#4DBFF0"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="553dp" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/typeofpuja"
+        android:layout_below="@id/selecttime"
+        />
+
+    <Button
+        android:id="@+id/request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request"
+        android:layout_below="@id/typeofpuja"/>
+
+
+</RelativeLayout>
