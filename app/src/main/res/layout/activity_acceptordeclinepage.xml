@@ -137,20 +137,6 @@
 
 
         <TextView
-            android:id="@+id/timeinreq"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/textviewbg"
-            android:backgroundTint="#F6F7FA"
-            android:padding="5dp"
-            android:text="Appointment Time"
-            android:textColor="#4F3DEF"
-            android:textSize="16dp"></TextView>
-
-
-        <TextView
             android:id="@+id/durationinreq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -2,74 +2,188 @@ package com.example.astrology.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.astrology.Adapters.MessageAdapter;
 import com.example.astrology.R;
+import com.example.astrology.models.Chat;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class chatActivity extends AppCompatActivity {
-TextView timer;
-FirebaseAuth mAuth;
-FirebaseUser user;
-String uid,clientid;
-DatabaseReference req;
+TextView timer,nametv;
+ImageButton btn_send;
+EditText text_send;
+FirebaseUser fuser;
+String uid,clientid,name;
+MessageAdapter messageAdapter;
+List<Chat> mChat;
+RecyclerView recyclerView;
+
+DatabaseReference reference;
+private boolean timerRunning = false;
+private int duration = 120;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+        btn_send = findViewById(R.id.btn_send);
+        text_send = findViewById(R.id.text_send);
+        recyclerView = findViewById(R.id.rvChat);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
         timer = findViewById(R.id.Timer);
-        mAuth = FirebaseAuth.getInstance();
-        user = mAuth.getCurrentUser();
+        nametv = findViewById(R.id.username);
+        fuser = FirebaseAuth.getInstance().getCurrentUser();
         uid = getIntent().getStringExtra("expertid");
-        String durationOfTimer = getIntent().getStringExtra("Duration of Timer");
+       // String durationOfTimer = getIntent().getStringExtra("Duration of Timer");
         clientid =getIntent().getStringExtra("userid");
-        req = FirebaseDatabase.getInstance().getReference().child("request").child(uid).child(clientid);
+        reference = FirebaseDatabase.getInstance().getReference().child("request");
+name = getIntent().getStringExtra("name");
+nametv.setText(name);
 
+        Toast.makeText(chatActivity.this, "uid-"+clientid , Toast.LENGTH_SHORT).show();
+        Toast.makeText(chatActivity.this, "uid-"+clientid , Toast.LENGTH_LONG).show();
+btn_send.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        String msg = text_send.getText().toString();
+        if(!msg.equals(""))
+        {
+            sendMessage(clientid,uid,msg);
+        }
+        else {
+            Toast.makeText(chatActivity.this, "Pls Type a msg to send", Toast.LENGTH_SHORT).show();
+        }
+        text_send.setText("");
+    }
+});
+readMessages(clientid,uid);
 
-        long dot = Integer.valueOf(durationOfTimer);
-        CountDownTimer cd = new CountDownTimer(40000000, 1000) {
-            @Override
-            public void onTick(long l) {
-
-                String sDuration = String.format(Locale.ENGLISH, "%02d : %02d", TimeUnit.MILLISECONDS.toMinutes(1), TimeUnit.MILLISECONDS.toSeconds(1) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(1)));
-                timer.setText(sDuration);
-
-            }
-
-            @Override
-            public void onFinish() {
-
-                req.child("status").setValue("completed").addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(chatActivity.this, "your time period has ended", Toast.LENGTH_SHORT).show();
-
-                        }
-                    }
-                });
-
-              //  startActivity(new Intent(chatActivity.this,selectClientRequests.class));
-
-            }
-        }.start();
-
+reference.child(uid).child(clientid).addValueEventListener(new ValueEventListener() {
+    @Override
+    public void onDataChange(@NonNull DataSnapshot snapshot) {
+        if(snapshot.child("status").getValue().toString().equals("Accepted"))
+        {
+            startTimer();
+        }
     }
 
 
+    @Override
+    public void onCancelled(@NonNull DatabaseError error) {
+
+    }
+});
+
+
+
+
+    }
+  private void sendMessage(String client,String expert,String message)
+  {
+      DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+      HashMap hashMap = new HashMap();
+      hashMap.put("expert",expert);
+      hashMap.put("client",client);
+      hashMap.put("message",message);
+      ref.child("Chats").push().setValue(hashMap);
+
+
+  }
+
+  private void readMessages(String myid,String userid )
+  {
+      mChat = new ArrayList<>();
+      reference = FirebaseDatabase.getInstance().getReference("Chats");
+      reference.addValueEventListener(new ValueEventListener() {
+          @Override
+          public void onDataChange(@NonNull DataSnapshot datasnapshot) {
+              mChat.clear();
+              for (DataSnapshot snapshot: datasnapshot.getChildren()){
+                  Chat chat = snapshot.getValue(Chat.class);
+                  if(chat.getExpert().equals(userid) && chat.getClient().equals(myid) || chat.getExpert().equals(myid) && chat.getClient().equals(userid)){
+                      mChat.add(chat);
+                  }
+                  messageAdapter = new MessageAdapter(chatActivity.this,mChat);
+                  recyclerView.setAdapter(messageAdapter);
+
+              }
+          }
+
+          @Override
+          public void onCancelled(@NonNull DatabaseError error) {
+
+          }
+      });
+
+  }
+
+    private void startTimer() {
+
+
+            CountDownTimer cd =new CountDownTimer(duration*1000 , 1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            String time =  String.format(Locale.getDefault(),"%02d:%02d:%02d",TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
+                                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)-
+                                            TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
+                                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished)-
+                                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)));
+                            final String[] hourMinSec = time.split(":");
+
+                            timer.setText(time);
+                        }
+                    });
+
+                }
+                @Override
+                public void onFinish() {
+                    reference.child("status").setValue("completed").addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                Toast.makeText(chatActivity.this, "your time period has ended", Toast.LENGTH_SHORT).show();
+
+                              }
+                          }
+                     });
+                    timerRunning=false;
+                 }
+            }.start();
+       }
 }
 
 

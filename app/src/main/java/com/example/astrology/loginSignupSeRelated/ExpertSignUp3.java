@@ -163,11 +163,11 @@ public class ExpertSignUp3 extends AppCompatActivity {
         stpass= password.getText().toString();
         String stexperience = experience.getText().toString();
         mAuth = FirebaseAuth.getInstance();
+
         Date date = new Date();
-
         @SuppressLint({"NewApi", "LocalSuppress"}) SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-YYYY hh:mm:ss");
-
         String strDate = formatter.format(date);
+
         DatabaseReference expert = FirebaseDatabase.getInstance().getReference("Experts");
 
 

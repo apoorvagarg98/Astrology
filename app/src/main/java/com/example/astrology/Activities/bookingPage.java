@@ -54,7 +54,7 @@ import retrofit2.Response;
 public class bookingPage extends AppCompatActivity implements View.OnClickListener {
     String expertid,selection,r,email,userid,nameofuser,date,time,phone,exabtyrslf;
     DatabaseReference dbr,requestdb;
-    TextView name,exp,rpm,expertise,dateOfBooking,timeOfBooking,duration,totalAmountToBePaid,showstatus,exabtyrslftxtvw;
+    TextView name,exp,rpm,expertise,duration,totalAmountToBePaid,showstatus,exabtyrslftxtvw;
     Button pickDuration,request;
     LinearLayout cly1,cly2;
     ImageView show;
@@ -88,8 +88,11 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
         pickDuration = findViewById(R.id.pickduratiion);
         request = findViewById(R.id.request);
         cly1 = findViewById(R.id.cly1);
-        dateOfBooking = findViewById(R.id.dateOfBooking);
-        timeOfBooking = findViewById(R.id.timeOfBooking);
+
+
+
+
+
         duration = findViewById(R.id.duraOfBook);
 
 
@@ -303,6 +306,7 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
                     Intent intent = new Intent(bookingPage.this,chatActivity.class);
                     intent.putExtra("userid",user.getUid());
                     intent.putExtra("expertid",expertid);
+                    intent.putExtra("name",nameofuser);
                     intent.putExtra("Duration of Timer",String.valueOf(totalmin));
 
                     startActivity(intent);

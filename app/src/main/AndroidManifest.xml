@@ -22,6 +22,9 @@
             android:name=".vastuExpertBookingPage"
             android:exported="false" />
         <activity
+            android:name=".chatRight"
+            android:exported="false" />
+        <activity
             android:name=".homescreenexpertdetails"
             android:exported="false" />
         <activity

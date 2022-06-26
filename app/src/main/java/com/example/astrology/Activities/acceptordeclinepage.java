@@ -45,10 +45,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class acceptordeclinepage extends AppCompatActivity  {
 
 
-TextView name,gender,dob,txtAstroDetails,duration,time,date,birthplace,totalAmount,birthTime;
+TextView name,gender,dob,txtAstroDetails,duration,date,birthplace,totalAmount,birthTime;
 Button accept ,decline;
 String expertuid,userid;
-String durationoftimer;
+String durationoftimer,nameofuser;
 
 
 
@@ -69,7 +69,7 @@ public FirebaseAuth mAuth;
         gender = findViewById(R.id.genderinreq);
         dob = findViewById(R.id.dobinreq);
         duration = findViewById(R.id.durationinreq);
-        time = findViewById(R.id.timeinreq);
+
         date = findViewById(R.id.dateinreq);
         birthplace = findViewById(R.id.birthplaceinreq);
         totalAmount = findViewById(R.id.totalAmountinreq);
@@ -92,9 +92,9 @@ public FirebaseAuth mAuth;
                 if(snapshot.exists())
                 {
                     requestModel rm =  snapshot.getValue(requestModel.class);
-durationoftimer = rm.getDurationInMin();
+                    durationoftimer = rm.getDurationInMin();
                     duration.setText("Duration - "+rm.getDurationInMin()+"min");
-                    time.setText("Time - "+rm.getTimeOfBooking());
+
                     date.setText("Date - "+rm.getDateOfBooking());
                     totalAmount.setText("Toatl Amount - "+rm.getTotalAmount());
                     usersdb.addValueEventListener(new ValueEventListener() {
@@ -103,7 +103,8 @@ durationoftimer = rm.getDurationInMin();
                             if(snapshot.exists())
                             {
                                 userModel um = snapshot.getValue(userModel.class);
-                                name.setText("Name - "+um.getName());
+                                nameofuser = um.getName();
+                                name.setText("Name - "+ nameofuser);
                                 dob.setText("Date Of Birth - " + um.getDateofbirth());
                                 gender.setText("Gender - " +um.getGender());
                                 birthplace.setText("birthPlace - " + um.getPlaceofbirth());
@@ -163,11 +164,10 @@ Intent intent = new Intent(acceptordeclinepage.this,chatActivity.class);
 intent.putExtra("Duration of Timer",durationoftimer);
 intent.putExtra("userid",userid);
 intent.putExtra("expertid",user.getUid());
+intent.putExtra("name",nameofuser);
                               startActivity(intent);
-
-                    }}
+                        }}
                 });
-
             }
         });
         decline.setOnClickListener(new View.OnClickListener() {

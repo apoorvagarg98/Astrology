@@ -180,7 +180,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
 
     }
 
-    private void sendNotification(String receiver, final String username, final String message) {
+    /*private void sendNotification(String receiver, final String username, final String message) {
         DatabaseReference tokens = FirebaseDatabase.getInstance().getReference("Tokens");
         Query query = tokens.orderByKey().equalTo(receiver);
         query.addValueEventListener(new ValueEventListener() {
@@ -214,7 +214,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
 
             }
         });
-    }
+    }*/
 
     public void onPaymentSuccess(String s) {
         notify = true;
@@ -250,7 +250,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userModel user = snapshot.getValue(userModel.class);
                 if (notify){
-                    sendNotification(expertid, user.getName(),"new request");
+                  //  sendNotification(expertid, user.getName(),"new request");
                 }
                 notify = false;
             }
@@ -293,7 +293,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userModel user = snapshot.getValue(userModel.class);
                 if (notify) {
-                    sendNotification(expertid,user.getName(),"new request");
+                   // sendNotification(expertid,user.getName(),"new request");
                 }
                 notify = false;
             }
