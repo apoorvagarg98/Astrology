@@ -53,14 +53,14 @@ import retrofit2.Response;
 public class hinduritualsbookingpage extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
 
     Spinner typeofpuja;
-    String userid,selection,expertid,r,email,nameofuser,exabtyrslf,totalmin,date,time,rs;
+    String userid,selection,expertid,r,email,nameofuser,exabtyrslf,totalmin,date,time;
     Button selecttime,selectdate,request;
     TextView hrratepmin,hrallselections,hraboutme,hrexperiencebig,hrnameofExpert,name,exp,rpm,expertise,exabtyrslftxtvw;
     EditText timeforritual,dateforritual,dateofevent,eventtime;
     FirebaseUser user;
     TimePickerDialog picker;
     private FirebaseAuth mAuth;
-    private int mYear,mMonth,mDay,mHour,mMinute;
+    private int mYear,mMonth,mDay,mHour,mMinute,price;
     DatabaseReference dbr,requestdb;
     APIService apiService;
     Boolean notify;
@@ -226,7 +226,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
         hashMap.put("durationinmin",String.valueOf(totalmin));
         hashMap.put("dateofbooking",date);
         hashMap.put("timeofbooking",time);
-        hashMap.put("totalamount",rs);
+        hashMap.put("totalamount",price);
         hashMap.put("status","pending");
         hashMap.put("paymentstatus","completed");
         requestdb.updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
@@ -274,7 +274,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
         hashMap.put("durationInMin",String.valueOf(totalmin));
         hashMap.put("DateOfBooking",date);
         hashMap.put("timeOfBooking",time);
-        hashMap.put("totalAmount",rs);
+        hashMap.put("totalAmount",price);
         hashMap.put("status","pending");
         hashMap.put("paymentStatus","completed");
 
@@ -361,6 +361,58 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String text = adapterView.getItemAtPosition(i).toString();
+        Toast.makeText(adapterView.getContext(), text, Toast.LENGTH_SHORT).show();
+        if(i==0)
+        {
+            price = 0;
+
+        }
+        else if(i==1){
+            price = 1;
+        }
+        else if(i==2){
+            price = 2;
+        }
+        else if(i==3){
+            price = 3;
+        }
+        else if(i==4){
+            price = 4;
+        }
+        else if(i==5){
+            price = 5;
+        }
+        else if(i==6){
+            price = 6;
+        }
+        else if(i==7){
+            price = 7;
+        }
+        else if(i==8){
+            price = 8;
+        }
+        else if(i==9){
+            price = 9;
+        }
+        else if(i==10){
+            price = 10;
+        }
+        else if(i==11){
+            price = 11;
+        }
+        else if(i==12){
+            price = 12;
+        }
+        else if(i==13){
+            price = 13;
+        }
+        else if(i==14){
+            price = 14;
+        }
+        else if(i==15){
+            price = 15;
+        }
 
     }
 

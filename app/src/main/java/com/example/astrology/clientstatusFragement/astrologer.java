@@ -28,7 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 
-public class acceptedreq extends Fragment {
+public class astrologer extends Fragment {
     public RecyclerView recyclerView;
     public FirebaseUser expertuser;
     public DatabaseReference client;
@@ -71,7 +71,7 @@ public class acceptedreq extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull item holder, @SuppressLint("RecyclerView") int position, @NonNull requestModel model) {
-                if(model.getStatus().equals("Accepted")) {
+                if(model.getBookedYouFor().equals("Astrologer")) {
                     holder.expertname.setText(model.getName());
                     holder.ratepermin.setText(model.getDateOfBooking());
                     holder.experience.setText(model.getTotalAmount() + " rs");
