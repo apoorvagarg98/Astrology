@@ -82,7 +82,7 @@ public class hinduritualsaexpert extends Fragment {
                         public void onClick(View view) {
                             Intent intent = new Intent(getActivity(), acceptordeclinepage.class);
                             intent.putExtra("userid", getRef(position).getKey().toString());
-                            startActivity(intent);
+                            startActivity (intent);
                         }
                     });
                 }
