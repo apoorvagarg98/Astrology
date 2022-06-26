@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.astrology.clientstatusFragement.astrologer;
+import com.example.astrology.clientstatusFragement.hinduritualsaexpert;
 
 
 public class selectClientAdapter extends FragmentStateAdapter {
@@ -24,7 +24,7 @@ public class selectClientAdapter extends FragmentStateAdapter {
                 pendingRequests pr = new pendingRequests();
                 return pr;
             case 1:
-                astrologer ar= new astrologer();
+                hinduritualsaexpert ar= new hinduritualsaexpert();
                 return ar;
             case 2:
                  paidreq paidr= new paidreq();

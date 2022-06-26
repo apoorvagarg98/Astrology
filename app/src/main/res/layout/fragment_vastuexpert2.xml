@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".clientstatusFragement.hinduritualsaexpert">
+    tools:context=".clientstatusFragement.vastuexpert">
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/acpreq"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:padding="5dp"/>
+        android:id="@+id/vefragment"/>
+
 </FrameLayout>

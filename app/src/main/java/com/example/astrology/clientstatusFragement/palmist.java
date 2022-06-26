@@ -28,7 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 
 
-public class hinduritualsaexpert extends Fragment {
+public class palmist extends Fragment {
     public RecyclerView recyclerView;
     public FirebaseUser expertuser;
     public DatabaseReference client;
@@ -38,8 +38,8 @@ public class hinduritualsaexpert extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_hinduritualsaexpert, container, false);
-        recyclerView = view.findViewById(R.id.acpreq);
+        View view = inflater.inflate(R.layout.fragment_palmist, container, false);
+        recyclerView = view.findViewById(R.id.pfragment);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         expertuser = FirebaseAuth.getInstance().getCurrentUser();
         client = FirebaseDatabase.getInstance().getReference("request").child(expertuser.getUid());
@@ -71,7 +71,7 @@ public class hinduritualsaexpert extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull item holder, @SuppressLint("RecyclerView") int position, @NonNull requestModel model) {
-                if(model.getBookedYouFor().equals("Hindu Rituals")){
+                if(model.getBookedYouFor().equals("Palmist")) {
                     holder.expertname.setText(model.getName());
                     holder.ratepermin.setText(model.getDateOfBooking());
                     holder.experience.setText(model.getTotalAmount() + " rs");

@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".clientstatusFragement.hinduritualsaexpert">
+    tools:context=".clientstatusFragement.palmist">
 
+    <!-- TODO: Update blank fragment layout -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/acpreq"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:padding="5dp"/>
+        android:id="@+id/pfragment"
+        android:text="@string/hello_blank_fragment" />
+
 </FrameLayout>
