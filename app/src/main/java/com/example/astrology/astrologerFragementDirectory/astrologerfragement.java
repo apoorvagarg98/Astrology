@@ -74,6 +74,7 @@ public class astrologerfragement extends Fragment {
                     public void onClick(View view) {
                         Intent intent = new Intent(getActivity(), bookingPage.class);
                         intent.putExtra("expertuid",getRef(position).getKey().toString());
+                        intent.putExtra("selection","Astrologer");
                         startActivity(intent);
                     }
                 });
