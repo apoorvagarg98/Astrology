@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.example.astrology.Activities.bookingPage;
 import com.example.astrology.Notifications.Token;
+import com.example.astrology.hinduritualsbookingpage;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
@@ -83,8 +84,8 @@ public class hinduRituals extends Fragment {
                 holder.book.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(getActivity(), bookingPage.class);
-                        intent.putExtra("expertuid",getRef(position).getKey().toString());
+                        Intent intent = new Intent(getActivity(), hinduritualsbookingpage.class);
+                        intent.putExtra("expertid",getRef(position).getKey().toString());
                         intent.putExtra("selection","Hindu Rituals");
                         startActivity(intent);
                     }

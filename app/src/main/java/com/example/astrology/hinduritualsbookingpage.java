@@ -60,7 +60,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
     FirebaseUser user;
     TimePickerDialog picker;
     private FirebaseAuth mAuth;
-    private int mYear,mMonth,mDay,mHour,mMinute,price;
+    private int mYear,mMonth,mDay,mHour,mMinute,price=0;
     DatabaseReference dbr,requestdb;
     APIService apiService;
     Boolean notify;
@@ -84,8 +84,14 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
         timeforritual = findViewById(R.id.timeforritual);
         dateforritual = findViewById(R.id.dateforritual);
         request = findViewById(R.id.request);
-
+        expertise = findViewById(R.id.hrallselections);
+                rpm = findViewById(R.id.hrratepmin);
+name = findViewById(R.id.hrnameofExpert);
+exp = findViewById(R.id.hrexperiencebig);
+        exabtyrslftxtvw = findViewById(R.id.hraboutme);
         selecttime.setOnClickListener(this);
+        selection = getIntent().getStringExtra("selection");
+        expertid = getIntent().getStringExtra("expertid");
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();

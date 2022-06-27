@@ -12,31 +12,32 @@
         android:id="@+id/hrnameofExpert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:background="@drawable/textviewbg"
         android:backgroundTint="#F6F7FA"
         android:hint="Name:"
         android:padding="10dp"
         android:textColor="#4F3DEF"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="0dp"
         android:textSize="16dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/hrexperiencebig"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_below="@+id/hrnameofExpert"
+        android:layout_marginTop="50dp"
         android:background="@drawable/textviewbg"
         android:backgroundTint="#F6F7FA"
         android:hint="Experience"
         android:padding="10dp"
         android:textColor="#4F3DEF"
         android:textSize="16dp"
-        android:layout_below="@+id/hrnameofExpert"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="50dp" />
+        app:layout_constraintEnd_toEndOf="@+id/hrnameofExpert"
+        app:layout_constraintStart_toStartOf="@+id/hrnameofExpert"
+        app:layout_constraintTop_toTopOf="@+id/hrnameofExpert" />
 
 
     <TextView
@@ -44,45 +45,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/hrexperiencebig"
+        android:layout_marginTop="50dp"
         android:background="@drawable/textviewbg"
         android:backgroundTint="#F6F7FA"
         android:hint="About me"
         android:padding="10dp"
         android:textColor="#4F3DEF"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="100dp" />
+        app:layout_constraintEnd_toEndOf="@+id/hrexperiencebig"
+        app:layout_constraintStart_toStartOf="@+id/hrexperiencebig"
+        app:layout_constraintTop_toTopOf="@+id/hrexperiencebig" />
 
     <TextView
         android:id="@+id/hrallselections"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/hraboutme"
+        android:layout_marginTop="16dp"
         android:background="@drawable/textviewbg"
         android:backgroundTint="#F6F7FA"
         android:hint="Selections"
         android:padding="10dp"
         android:textColor="#4F3DEF"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="0126dp"
-        tools:layout_editor_absoluteY="150dp" />
+        app:layout_constraintEnd_toEndOf="@+id/hraboutme"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/hraboutme"
+        app:layout_constraintTop_toBottomOf="@+id/hraboutme" />
 
     <TextView
         android:id="@+id/hrratepmin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_below="@+id/hrallselections"
+        android:layout_marginTop="43dp"
         android:background="@drawable/textviewbg"
         android:backgroundTint="#F6F7FA"
         android:hint="Rate"
         android:padding="10dp"
         android:textColor="#4F3DEF"
         android:textSize="16dp"
-        android:layout_below="@+id/hrallselections"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="200dp"
 
-        />
+        app:layout_constraintEnd_toEndOf="@+id/hrallselections"
+        app:layout_constraintStart_toStartOf="@+id/hrallselections"
+        app:layout_constraintTop_toTopOf="@+id/hrallselections" />
 
 
     <EditText
@@ -90,11 +96,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/hrratepmin"
-        android:layout_marginStart="-155dp"
+        android:layout_marginTop="12dp"
         android:layout_toEndOf="@+id/selectdate"
-        android:text="Date for Hindu ritual"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="250dp" />
+        android:hint="Date for Hindu ritual"
+        app:layout_constraintEnd_toStartOf="@+id/selectdate"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/hrratepmin"
+        app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
 
     <EditText
         android:id="@+id/timeforritual"
@@ -102,13 +110,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/dateforritual"
         android:layout_alignEnd="@+id/dateforritual"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="-290dp"
-        android:layout_marginEnd="-167dp"
+        android:layout_marginTop="92dp"
         android:layout_toEndOf="@+id/selecttime"
-        android:text="Time for Hindu ritual"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="300dp" />
+        android:hint="Time for Hindu ritual"
+        app:layout_constraintEnd_toStartOf="@+id/selecttime"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintStart_toStartOf="@+id/dateforritual"
+        app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
 
     <Button
         android:id="@+id/selectdate"
@@ -116,16 +124,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
 
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="10dp"
         android:background="@drawable/box"
         android:fontFamily="@font/aclonica"
         android:text="Date 📅"
         android:textAllCaps="false"
         android:textStyle="bold"
         app:backgroundTint="#4DBFF0"
-        tools:layout_editor_absoluteX="240dp"
-        tools:layout_editor_absoluteY="250dp" />
+        app:layout_constraintEnd_toEndOf="@+id/hrratepmin"
+        app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
 
     <Button
         android:id="@+id/selecttime"
@@ -133,34 +139,42 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/selectdate"
         android:layout_gravity="center"
-        android:layout_marginTop="9dp"
-        android:background="@drawable/box"
+        android:layout_marginTop="84dp"
 
+        android:background="@drawable/box"
         android:fontFamily="@font/aclonica"
         android:singleLine="true"
         android:text="Time ⏱️"
         android:textAllCaps="false"
         android:textStyle="bold"
         app:backgroundTint="#4DBFF0"
-        tools:layout_editor_absoluteX="240dp"
-        tools:layout_editor_absoluteY="300dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
+
     <Spinner
+        android:id="@+id/typeofpuja"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/typeofpuja"
         android:layout_below="@id/selecttime"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="350dp"
-        />
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="@+id/timeforritual"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="@+id/timeforritual"
+        app:layout_constraintTop_toBottomOf="@+id/timeforritual" />
 
     <Button
         android:id="@+id/request"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/typeofpuja"
+        android:layout_marginTop="160dp"
         android:text="Request"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="400dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/selecttime"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="@+id/typeofpuja"
+        app:layout_constraintTop_toBottomOf="@+id/selecttime"
+        app:layout_constraintVertical_bias="0.028" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
