@@ -60,7 +60,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
     FirebaseUser user;
     TimePickerDialog picker;
     private FirebaseAuth mAuth;
-    private int mYear,mMonth,mDay,mHour,mMinute,price=0;
+    private int mYear,mMonth,mDay,mHour,mMinute,price;
     DatabaseReference dbr,requestdb;
     APIService apiService;
     Boolean notify;
@@ -92,6 +92,7 @@ exp = findViewById(R.id.hrexperiencebig);
         selecttime.setOnClickListener(this);
         selection = getIntent().getStringExtra("selection");
         expertid = getIntent().getStringExtra("expertid");
+        selectdate.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
@@ -316,7 +317,7 @@ exp = findViewById(R.id.hrexperiencebig);
 
     @Override
     public void onClick(View view) {
-        if (view == dateofevent) {
+        if (view == selectdate) {
 
             // Get Current Date
             final Calendar c = Calendar.getInstance();
@@ -340,7 +341,7 @@ exp = findViewById(R.id.hrexperiencebig);
                     }, mYear, mMonth, mDay);
             datePickerDialog.show();
         }
-        if (view == eventtime) {
+        if (view == selecttime) {
 
             // Get Current Time
             final Calendar c = Calendar.getInstance();
