@@ -86,6 +86,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
         request = findViewById(R.id.request);
 
         selecttime.setOnClickListener(this);
+        selectdate.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
@@ -310,7 +311,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
 
     @Override
     public void onClick(View view) {
-        if (view == dateofevent) {
+        if (view == selectdate) {
 
             // Get Current Date
             final Calendar c = Calendar.getInstance();
@@ -334,7 +335,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
                     }, mYear, mMonth, mDay);
             datePickerDialog.show();
         }
-        if (view == eventtime) {
+        if (view == selecttime) {
 
             // Get Current Time
             final Calendar c = Calendar.getInstance();
