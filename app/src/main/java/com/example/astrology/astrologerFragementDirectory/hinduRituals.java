@@ -1,66 +1,97 @@
 package com.example.astrology.astrologerFragementDirectory;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.astrology.Activities.bookingPage;
+import com.example.astrology.Notifications.Token;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.astrology.R;
+import com.example.astrology.viewHollders.item;
+import com.example.astrology.models.expertModel;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link hinduRituals#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class hinduRituals extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public hinduRituals() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment hinduRituals.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static hinduRituals newInstance(String param1, String param2) {
-        hinduRituals fragment = new hinduRituals();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    public RecyclerView recyclerView;
+    public FirebaseUser user;
+    public DatabaseReference expert;
+    FirebaseRecyclerAdapter<expertModel, item> adapter;
+    FirebaseRecyclerOptions<expertModel> options;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_hindu_rituals, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hindu_rituals, container, false);
+        recyclerView = view.findViewById(R.id.userhindurituals);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        expert = FirebaseDatabase.getInstance().getReference("Experts").child("Hindu Rituals");
+
+        loadParticipant();
+
+        updateToken(FirebaseInstanceId.getInstance().getToken());
+
+        return view;
+    }
+
+    private void updateToken(String token)
+    {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Tokens");
+        Token token1 = new Token(token);
+        ref.child(user.getUid()).setValue(token1);
+    }
+
+    private void loadParticipant() {
+
+
+
+        options = new FirebaseRecyclerOptions.Builder<expertModel>().setQuery(expert,expertModel.class).build();
+        adapter =  new FirebaseRecyclerAdapter<expertModel,item>(options){
+            @NonNull
+            @Override
+            public item onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_item,parent,false);
+
+                return new item(view);
+
+            }
+
+            @Override
+            protected void onBindViewHolder(@NonNull item holder, @SuppressLint("RecyclerView") int position, @NonNull expertModel model) {
+
+                holder.expertname.setText(model.getExnames());
+                holder.ratepermin.setText(model.getStamt()+ " rs/min");
+                holder.experience.setText(model.getExperience()+ " yrs");
+                holder.book.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getActivity(), bookingPage.class);
+                        intent.putExtra("expertuid",getRef(position).getKey().toString());
+                        intent.putExtra("selection","Hindu Rituals");
+                        startActivity(intent);
+                    }
+                });
+            }
+        };
+        adapter.startListening();
+        recyclerView.setAdapter(adapter);
     }
 }
