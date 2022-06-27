@@ -6,9 +6,10 @@
     tools:context=".clientstatusFragement.hinduritualsaexpert">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/hrefragment"
         android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>

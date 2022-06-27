@@ -39,7 +39,7 @@ public class hinduritualsaexpert extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_hinduritualsaexpert, container, false);
-        recyclerView = view.findViewById(R.id.acpreq);
+        recyclerView = view.findViewById(R.id.hrefragment);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         expertuser = FirebaseAuth.getInstance().getCurrentUser();
         client = FirebaseDatabase.getInstance().getReference("request").child(expertuser.getUid());
