@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,6 +18,8 @@
         android:hint="Name:"
         android:padding="10dp"
         android:textColor="#4F3DEF"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="0dp"
         android:textSize="16dp"
         android:textStyle="bold" />
 
@@ -34,7 +36,7 @@
         android:textSize="16dp"
         android:layout_below="@+id/hrnameofExpert"
         tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="68dp" />
+        tools:layout_editor_absoluteY="50dp" />
 
 
     <TextView
@@ -42,7 +44,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/hrexperiencebig"
-        android:layout_marginTop="8dp"
         android:background="@drawable/textviewbg"
         android:backgroundTint="#F6F7FA"
         android:hint="About me"
@@ -50,23 +51,21 @@
         android:textColor="#4F3DEF"
         android:textSize="16dp"
         tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="68dp" />
+        tools:layout_editor_absoluteY="100dp" />
 
     <TextView
         android:id="@+id/hrallselections"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_below="@+id/hraboutme"
         android:background="@drawable/textviewbg"
         android:backgroundTint="#F6F7FA"
-        android:layout_below="@+id/hraboutme"
         android:hint="Selections"
         android:padding="10dp"
         android:textColor="#4F3DEF"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="97dp" />
-
+        tools:layout_editor_absoluteX="0126dp"
+        tools:layout_editor_absoluteY="150dp" />
 
     <TextView
         android:id="@+id/hrratepmin"
@@ -80,6 +79,8 @@
         android:textColor="#4F3DEF"
         android:textSize="16dp"
         android:layout_below="@+id/hrallselections"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="200dp"
 
         />
 
@@ -91,7 +92,9 @@
         android:layout_below="@id/hrratepmin"
         android:layout_marginStart="-155dp"
         android:layout_toEndOf="@+id/selectdate"
-        android:text="Date for Hindu ritual" />
+        android:text="Date for Hindu ritual"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="250dp" />
 
     <EditText
         android:id="@+id/timeforritual"
@@ -103,7 +106,9 @@
         android:layout_marginTop="-290dp"
         android:layout_marginEnd="-167dp"
         android:layout_toEndOf="@+id/selecttime"
-        android:text="Time for Hindu ritual" />
+        android:text="Time for Hindu ritual"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="300dp" />
 
     <Button
         android:id="@+id/selectdate"
@@ -119,8 +124,8 @@
         android:textAllCaps="false"
         android:textStyle="bold"
         app:backgroundTint="#4DBFF0"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="553dp" />
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="250dp" />
 
     <Button
         android:id="@+id/selecttime"
@@ -137,21 +142,25 @@
         android:textAllCaps="false"
         android:textStyle="bold"
         app:backgroundTint="#4DBFF0"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="553dp" />
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="300dp" />
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/typeofpuja"
         android:layout_below="@id/selecttime"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="350dp"
         />
 
     <Button
         android:id="@+id/request"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/typeofpuja"
         android:text="Request"
-        android:layout_below="@id/typeofpuja"/>
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="400dp" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
