@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+
         android:layout_marginRight="10dp"
         android:layout_height="wrap_content">
 
@@ -17,9 +19,11 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:orientation="vertical">
 
         <ImageView
@@ -29,7 +33,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="5dp"
             android:layout_margin="10dp"
-            android:layout_marginBottom="20dp"
+
             android:src="@drawable/ic_baseline_people_24">
 
             
@@ -41,22 +45,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                  android:layout_gravity="center"
+                android:textColor="#F8162D"
                 android:fontFamily="@font/open_sans"
-                android:text="Rating">
+                android:text="⭐ Rating">
             </TextView>
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:orientation="vertical">
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:fontFamily="@font/open_sans"
             android:text="Name">
 
@@ -66,8 +74,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/open_sans"
                 android:text="Area of Expertise">
 
@@ -78,8 +88,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:fontFamily="@font/open_sans"
+                android:textColor="@color/black"
                 android:text="Experience">
 
             </TextView>
@@ -89,14 +100,85 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginBottom="5dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/open_sans"
                 android:text="Charge/min">
 
             </TextView>
 
         </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="start"
+
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/box"
+                        android:src="@drawable/ic_baseline_local_phone_24"></ImageButton>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Call">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_gravity="start"
+
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/box"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_baseline_chat_24"
+                    android:layout_height="60dp">
+
+                    </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Chat">
+
+                </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
 
 

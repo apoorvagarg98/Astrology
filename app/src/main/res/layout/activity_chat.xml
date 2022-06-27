@@ -21,30 +21,29 @@
             app:popupTheme="@style/MenuStyle">
 
 
+
             <TextView
-                android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
-                android:text="Name"
-                android:textColor="#fff"
+                android:id="@+id/username"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:layout_marginLeft="25dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginStart="25dp" />
 
         </androidx.appcompat.widget.Toolbar>
 
         <TextView
             android:id="@+id/Timer"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Your timer goes here"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvChat"
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottom"
