@@ -38,7 +38,7 @@ public class tarotcardreader extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_tarotcardreader, container, false);
+        View view = inflater.inflate(R.layout.fragment_tarotcardreader2, container, false);
         recyclerView = view.findViewById(R.id.tcrfragment);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         expertuser = FirebaseAuth.getInstance().getCurrentUser();
