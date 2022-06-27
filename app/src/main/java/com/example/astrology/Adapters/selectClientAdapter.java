@@ -18,7 +18,7 @@ import com.example.astrology.clientstatusFragement.vastuexpert;
 
 
 public class selectClientAdapter extends FragmentStateAdapter {
-    private String[] titles = new String[]{"pending","Accepted","Paid","Completed"};
+    private String[] titles = new String[]{"Astrologer","Numerologist","Vastu Expert","Tarot Card Reader","Lal Kitab Exper","Mobile Numerologist","Palmist","Hindu Rituals"};
 
     public selectClientAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);

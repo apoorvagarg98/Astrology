@@ -39,7 +39,7 @@ public class Numerologistexpert extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_numerologistexpert, container, false);
-        recyclerView = view.findViewById(R.id.mnfragment);
+        recyclerView = view.findViewById(R.id.numex);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         expertuser = FirebaseAuth.getInstance().getCurrentUser();
         client = FirebaseDatabase.getInstance().getReference("request").child(expertuser.getUid());
