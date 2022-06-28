@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,173 +8,303 @@
     android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/hrnameofExpert"
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/textviewbg"
-        android:backgroundTint="#F6F7FA"
-        android:hint="Name:"
-        android:padding="10dp"
-        android:textColor="#4F3DEF"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp">
 
-    <TextView
-        android:id="@+id/hrexperiencebig"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hindiname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:text="AADI SHAKTII ASTRO"
+                android:textColor="#D100D1"
+
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/englishname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:text="Hindu Rituals Booking:"
+                android:textColor="#D100D1"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/title12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:text="────────────────────────────"
+
+                android:textColor="#D100D1"
+
+                android:textSize="18sp"
+                />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/topicon"
+            android:layout_width="58dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+
+            android:src="@drawable/mainlogo" />
+    </RelativeLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/hrnameofExpert"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/textviewbg"
-        android:backgroundTint="#F6F7FA"
-        android:hint="Experience"
-        android:padding="10dp"
-        android:textColor="#4F3DEF"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/hrnameofExpert"
-        app:layout_constraintStart_toStartOf="@+id/hrnameofExpert"
-        app:layout_constraintTop_toTopOf="@+id/hrnameofExpert" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/hraboutme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/hrexperiencebig"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/textviewbg"
-        android:backgroundTint="#F6F7FA"
-        android:hint="About me"
-        android:padding="10dp"
-        android:textColor="#4F3DEF"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/hrexperiencebig"
-        app:layout_constraintStart_toStartOf="@+id/hrexperiencebig"
-        app:layout_constraintTop_toTopOf="@+id/hrexperiencebig" />
+        <TextView
+            android:id="@+id/hrnameofExpert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:hint="Name:"
+            android:padding="10dp"
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/hrallselections"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/hraboutme"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/textviewbg"
-        android:backgroundTint="#F6F7FA"
-        android:hint="Selections"
-        android:padding="10dp"
-        android:textColor="#4F3DEF"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/hraboutme"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/hraboutme"
-        app:layout_constraintTop_toBottomOf="@+id/hraboutme" />
-
-    <TextView
-        android:id="@+id/hrratepmin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/hrallselections"
-        android:layout_marginTop="43dp"
-        android:background="@drawable/textviewbg"
-        android:backgroundTint="#F6F7FA"
-        android:hint="Rate"
-        android:padding="10dp"
-        android:textColor="#4F3DEF"
-        android:textSize="16dp"
-
-        app:layout_constraintEnd_toEndOf="@+id/hrallselections"
-        app:layout_constraintStart_toStartOf="@+id/hrallselections"
-        app:layout_constraintTop_toTopOf="@+id/hrallselections" />
+        <TextView
+            android:id="@+id/hrexperiencebig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hrnameofExpert"
+            android:layout_margin="5dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:hint="Experience"
+            android:padding="10dp"
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/hrnameofExpert"
+            app:layout_constraintStart_toStartOf="@+id/hrnameofExpert"
+            app:layout_constraintTop_toTopOf="@+id/hrnameofExpert" />
 
 
-    <EditText
-        android:id="@+id/dateforritual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/hrratepmin"
-        android:layout_marginTop="12dp"
-        android:layout_toEndOf="@+id/selectdate"
-        android:hint="Date for Hindu ritual"
-        app:layout_constraintEnd_toStartOf="@+id/selectdate"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="@+id/hrratepmin"
-        app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
+        <TextView
+            android:id="@+id/hraboutme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hrexperiencebig"
+            android:layout_margin="5dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:hint="About me"
+            android:padding="10dp"
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/hrexperiencebig"
+            app:layout_constraintStart_toStartOf="@+id/hrexperiencebig"
+            app:layout_constraintTop_toTopOf="@+id/hrexperiencebig" />
 
-    <EditText
-        android:id="@+id/timeforritual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/dateforritual"
-        android:layout_alignEnd="@+id/dateforritual"
-        android:layout_marginTop="92dp"
-        android:layout_toEndOf="@+id/selecttime"
-        android:hint="Time for Hindu ritual"
-        app:layout_constraintEnd_toStartOf="@+id/selecttime"
-        app:layout_constraintHorizontal_bias="0.162"
-        app:layout_constraintStart_toStartOf="@+id/dateforritual"
-        app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
+        <TextView
+            android:id="@+id/hrallselections"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hraboutme"
+            android:layout_margin="5dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:hint="Selections"
+            android:padding="10dp"
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/hraboutme"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/hraboutme"
+            app:layout_constraintTop_toBottomOf="@+id/hraboutme" />
 
-    <Button
-        android:id="@+id/selectdate"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        <TextView
+            android:id="@+id/hrratepmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hrallselections"
+            android:layout_margin="5dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:hint="Rate"
+            android:padding="10dp"
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
 
-        android:background="@drawable/box"
-        android:fontFamily="@font/aclonica"
-        android:text="Date 📅"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        app:backgroundTint="#4DBFF0"
-        app:layout_constraintEnd_toEndOf="@+id/hrratepmin"
-        app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
+            app:layout_constraintEnd_toEndOf="@+id/hrallselections"
+            app:layout_constraintStart_toStartOf="@+id/hrallselections"
+            app:layout_constraintTop_toTopOf="@+id/hrallselections" />
 
-    <Button
-        android:id="@+id/selecttime"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/selectdate"
-        android:layout_gravity="center"
-        android:layout_marginTop="84dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textSize="16dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Please Choose Your Puja">
 
-        android:background="@drawable/box"
-        android:fontFamily="@font/aclonica"
-        android:singleLine="true"
-        android:text="Time ⏱️"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        app:backgroundTint="#4DBFF0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
+        </TextView>
+        <Spinner
+            android:id="@+id/typeofpuja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:layout_below="@id/selecttime"
 
-    <Spinner
-        android:id="@+id/typeofpuja"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/selecttime"
-        android:layout_marginTop="68dp"
-        app:layout_constraintEnd_toEndOf="@+id/timeforritual"
-        app:layout_constraintHorizontal_bias="0.544"
-        app:layout_constraintStart_toStartOf="@+id/timeforritual"
-        app:layout_constraintTop_toBottomOf="@+id/timeforritual" />
+            app:layout_constraintEnd_toEndOf="@+id/timeforritual"
+            app:layout_constraintHorizontal_bias="0.544"
+            app:layout_constraintStart_toStartOf="@+id/timeforritual"
+            app:layout_constraintTop_toBottomOf="@+id/timeforritual" />
 
-    <Button
-        android:id="@+id/request"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/typeofpuja"
-        android:layout_marginTop="160dp"
-        android:text="Request"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/selecttime"
-        app:layout_constraintHorizontal_bias="0.351"
-        app:layout_constraintStart_toStartOf="@+id/typeofpuja"
-        app:layout_constraintTop_toBottomOf="@+id/selecttime"
-        app:layout_constraintVertical_bias="0.0" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/dateforritual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:hint="Date for Hindu ritual"
+                app:layout_constraintEnd_toStartOf="@+id/selectdate"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="@+id/hrratepmin"
+                app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
+
+            <Button
+                android:id="@+id/selectdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:background="@drawable/box"
+                android:fontFamily="sans-serif"
+                android:text="Date 📅"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:backgroundTint="#4DBFF0"
+                app:layout_constraintEnd_toEndOf="@+id/hrratepmin"
+                app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/timeforritual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateforritual"
+                android:layout_alignEnd="@+id/dateforritual"
+               android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/selecttime"
+                android:hint="Time for Hindu ritual"
+                app:layout_constraintEnd_toStartOf="@+id/selecttime"
+                app:layout_constraintHorizontal_bias="0.162"
+                app:layout_constraintStart_toStartOf="@+id/dateforritual"
+                app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/selecttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selectdate"
+                android:layout_gravity="center"
+
+                android:background="@drawable/box"
+               android:fontFamily="sans-serif"
+                android:singleLine="true"
+                android:text="Time ⏱️"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:backgroundTint="#4DBFF0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hrratepmin" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/typeofpuja"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Request"
+            android:background="@drawable/box"
+            app:backgroundTint="#4DBFF0"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/selecttime"
+            app:layout_constraintHorizontal_bias="0.351"
+            app:layout_constraintStart_toStartOf="@+id/typeofpuja"
+            app:layout_constraintTop_toBottomOf="@+id/selecttime"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </LinearLayout>
+
+</LinearLayout>
+    </ScrollView>
+
