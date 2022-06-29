@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundd"
+    tools:context=".VastuExpertBookingPage2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hindiname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:text="AADI SHAKTII ASTRO"
+                android:textColor="#D100D1"
+
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:text="Welcome To Vastu Sashtra"
+                android:textColor="#D100D1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/title12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:text="────────────────────────────"
+
+                android:textColor="#D100D1"
+
+                android:textSize="18sp"
+                />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/topicon"
+            android:layout_width="58dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:src="@drawable/mainlogo"
+            />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:gravity="center"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/englishname"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#EEEBEB"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:text="Confirm Your Booking:"
+        android:textColor="#1856F5"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/venameofexpert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/textviewbg"
+
+        android:backgroundTint="#F6F7FA"
+        android:hint="Name:"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"></TextView>
+
+
+    <TextView
+        android:id="@+id/veexperiencebig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+        android:hint="Experience"
+        android:padding="10dp"
+
+        android:textColor="@color/black"
+        android:textSize="16dp"
+
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="68dp" />
+    <TextView
+        android:id="@+id/veaboutme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+        android:hint="About me"
+
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="68dp" />
+
+    <TextView
+        android:id="@+id/veallselections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textviewbg"
+        android:backgroundTint="#F6F7FA"
+
+        android:hint="Selections"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/verpm"
+        app:layout_constraintTop_toBottomOf="@+id/remarks"
+        tools:layout_editor_absoluteX="16dp"/>
+
+    <Button
+        android:id="@+id/verequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/box"
+        android:fontFamily="@font/open_sans_bold"
+
+        android:text="Book Now"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        android:textStyle="bold"
+
+        app:backgroundTint="#4DBFF0"
+
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="553dp" />
+
+
+
+</LinearLayout>
+
+</RelativeLayout>
+

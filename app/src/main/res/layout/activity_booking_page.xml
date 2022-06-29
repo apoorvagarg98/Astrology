@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
 
-
+    android:background="@drawable/backgroundd"
 
     tools:context=".Activities.bookingPage">
 
@@ -97,8 +97,7 @@
                 android:layout_gravity="center"
 
 
-                android:src="@drawable/mainlogo"
-                />
+                android:src="@drawable/mainlogo" />
         </RelativeLayout>
 
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundd"
     tools:context=".hinduritualsbookingpage"
     android:orientation="vertical">
 
@@ -18,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+
         android:layout_alignParentRight="true"
         android:layout_marginTop="5dp">
 
@@ -25,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+
             android:orientation="vertical">
 
             <TextView
@@ -92,6 +95,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
         android:orientation="vertical">
 
 
@@ -103,8 +108,9 @@
             android:background="@drawable/textviewbg"
             android:backgroundTint="#F6F7FA"
             android:hint="Name:"
+
             android:padding="10dp"
-            android:textColor="#4F3DEF"
+            android:textColor="#000000"
             android:textSize="16dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -122,7 +128,7 @@
             android:backgroundTint="#F6F7FA"
             android:hint="Experience"
             android:padding="10dp"
-            android:textColor="#4F3DEF"
+            android:textColor="#111111"
             android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="@+id/hrnameofExpert"
             app:layout_constraintStart_toStartOf="@+id/hrnameofExpert"
@@ -140,7 +146,7 @@
             android:backgroundTint="#F6F7FA"
             android:hint="About me"
             android:padding="10dp"
-            android:textColor="#4F3DEF"
+            android:textColor="#141414"
             android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="@+id/hrexperiencebig"
             app:layout_constraintStart_toStartOf="@+id/hrexperiencebig"
@@ -157,7 +163,7 @@
             android:backgroundTint="#F6F7FA"
             android:hint="Selections"
             android:padding="10dp"
-            android:textColor="#4F3DEF"
+            android:textColor="#141414"
             android:textSize="16dp"
             app:layout_constraintEnd_toEndOf="@+id/hraboutme"
             app:layout_constraintHorizontal_bias="0.0"
@@ -174,7 +180,7 @@
             android:backgroundTint="#F6F7FA"
             android:hint="Rate"
             android:padding="10dp"
-            android:textColor="#4F3DEF"
+            android:textColor="#181818"
             android:textSize="16dp"
 
             app:layout_constraintEnd_toEndOf="@+id/hrallselections"
@@ -187,11 +193,15 @@
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="5dp"
-            android:textColor="@color/black"
+            android:textColor="#141414"
             android:layout_gravity="center"
             android:textSize="16dp"
+            android:padding="6dp"
+
+            android:background="@drawable/box"
+
             android:fontFamily="@font/open_sans"
-            android:text="Please Choose Your Puja">
+            android:text="Please Choose Your Puja From Below">
 
         </TextView>
         <Spinner
@@ -200,8 +210,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:padding="20dp"
+            android:background="@drawable/box"
             android:layout_below="@id/selecttime"
-
             app:layout_constraintEnd_toEndOf="@+id/timeforritual"
             app:layout_constraintHorizontal_bias="0.544"
             app:layout_constraintStart_toStartOf="@+id/timeforritual"
@@ -219,6 +229,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
+                android:textSize="16dp"
                 android:hint="Date for Hindu ritual"
                 app:layout_constraintEnd_toStartOf="@+id/selectdate"
                 app:layout_constraintHorizontal_bias="0.505"
@@ -230,7 +241,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:textSize="14dp"
                 android:background="@drawable/box"
                 android:fontFamily="sans-serif"
                 android:text="Date 📅"
@@ -256,6 +267,7 @@
                 android:layout_below="@+id/dateforritual"
                 android:layout_alignEnd="@+id/dateforritual"
                android:layout_marginEnd="10dp"
+                android:textSize="16dp"
                 android:layout_toEndOf="@+id/selecttime"
                 android:hint="Time for Hindu ritual"
                 app:layout_constraintEnd_toStartOf="@+id/selecttime"
@@ -270,9 +282,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/selectdate"
                 android:layout_gravity="center"
-
+                android:textSize="14dp"
                 android:background="@drawable/box"
-               android:fontFamily="sans-serif"
+               android:fontFamily="sans-serif-black"
                 android:singleLine="true"
                 android:text="Time ⏱️"
                 android:textAllCaps="false"
@@ -290,12 +302,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/typeofpuja"
             android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             android:text="Request"
             android:background="@drawable/box"
-            app:backgroundTint="#4DBFF0"
+            app:backgroundTint="#55C7F8"
             android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/selecttime"
             app:layout_constraintHorizontal_bias="0.351"
