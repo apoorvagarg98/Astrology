@@ -54,7 +54,7 @@ private int duration = 120;
         setContentView(R.layout.activity_chat);
         btn_send = findViewById(R.id.btn_send);
         text_send = findViewById(R.id.text_send);
-        recyclerView = findViewById(R.id.rvChat);
+        recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         linearLayoutManager.setStackFromEnd(true);
