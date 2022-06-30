@@ -24,11 +24,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
 
     private List<expertModel> mExperts;
     private Context mContext;
-    FirebaseUser fuser;
+    private FirebaseAuth firebaseAuth;
     public MessageAdapter(Context mContext, List<Chat> mChat)
     {
         this.mChat = mChat;
         this.mContext = mContext;
+        firebaseAuth = FirebaseAuth.getInstance();
     }
 
 
@@ -71,12 +72,15 @@ holder.show_message.setText(chat.getMessage());
 
     @Override
     public int getItemViewType(int position) {
-       fuser = FirebaseAuth.getInstance().getCurrentUser();
-       if(mChat.get(position).getSender().equals(fuser.getUid())){
+
+       if(mChat.get(position).getSender().equals(firebaseAuth.getUid())){
            return MSG_TYPE_RIGHT;
-       } else {
-           return MSG_TYPE_LEFT;
        }
+       else
+           return MSG_TYPE_LEFT;
+
+
+
     }
 }
 
