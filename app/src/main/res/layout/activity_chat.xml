@@ -98,7 +98,7 @@
             <EditText
                 android:id="@+id/text_send"
                 android:padding="@dimen/_5sdp"
-                android:layout_width="@dimen/_300sdp"
+                android:layout_width="@dimen/_250sdp"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:fontFamily="robo"
@@ -112,7 +112,7 @@
         </ScrollView>
 
         <ImageButton
-            android:id="@+id/btnsend"
+            android:id="@+id/btn_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
