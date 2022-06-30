@@ -22,7 +22,6 @@
         >
 
 
-
         <TextView
             android:id="@+id/show_message"
 
@@ -36,7 +35,7 @@
             android:paddingLeft="@dimen/_5sdp"
             android:text="The message"
             android:textColor="@color/black"
-            android:textSize="@dimen/_13sdp"/>
+            android:textSize="@dimen/_13sdp" />
 
     </LinearLayout>
 </RelativeLayout>
