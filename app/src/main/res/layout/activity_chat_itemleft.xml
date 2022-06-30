@@ -15,7 +15,7 @@
 
         android:layout_width="283dp"
         android:layout_height="wrap_content"
-        android:background="#E8EEF4"
+        android:background="@drawable/textbox4"
 
         android:orientation="vertical">
 

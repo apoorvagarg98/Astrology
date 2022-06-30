@@ -6,74 +6,96 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:background="#FFFFFF"
+    android:background="@drawable/bgg"
     tools:context=".Activities.ExpertProfile">
 
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:text="────────────────────────────"
+
+        android:textColor="#4DBFF0"
+
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/experttitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
         android:layout_marginRight="3dp"
         android:layout_marginLeft="3dp"
         android:textSize="28sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:text="Expert Profile" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/profile_image"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_marginLeft="155dp"
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="130dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/ic_profile"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:text="────────────────────────────"
 
+        android:textColor="#4DBFF0"
 
-        tools:ignore="MissingClass" />
+        android:textSize="18sp" />
+
 
     <TextView
         android:id="@+id/exprname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:padding="3dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/textbox1"
-        android:hint="Name" />
+        android:text="Name" />
 
     <TextView
         android:id="@+id/exprdob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:padding="3dp"
         android:textStyle="bold"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/textbox2"
-        android:hint="Dob" />
+        android:text="Dob"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/expremail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:padding="3dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/textbox1"
-        android:hint="Email" />
+        android:text="Email" />
 
     <TextView
         android:id="@+id/expraddress"
@@ -83,9 +105,10 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/textbox2"
-        android:hint="Address"
+        android:text="Address"
         android:padding="3dp"
-        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
@@ -96,9 +119,10 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/textbox1"
-        android:hint="Postal Address"
+        android:text="Postal Address"
         android:padding="3dp"
-        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
@@ -109,9 +133,10 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/textbox2"
-        android:hint="Expertise"
+        android:text="Expertise"
+        android:textColor="@color/black"
         android:padding="3dp"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
@@ -122,9 +147,10 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/textbox1"
-        android:hint="Experience"
+        android:text="Experience"
+        android:textColor="@color/black"
         android:padding="3dp"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
@@ -135,9 +161,10 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/textbox2"
-        android:hint="Amount to be paid"
+        android:text="Amount to be paid"
         android:padding="3dp"
-        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
 
@@ -148,6 +175,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="10dp"
+        android:textColor="@color/black"
         android:layout_marginLeft="10dp"
         android:background="@drawable/textbox1"
         android:minHeight="48dp" />
