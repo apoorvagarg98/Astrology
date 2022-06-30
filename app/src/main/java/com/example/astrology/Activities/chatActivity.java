@@ -5,11 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -39,7 +37,7 @@ TextView timer,nametv;
 ImageButton btn_send;
 EditText text_send;
 FirebaseUser fuser;
-String uid,clientid,name;
+String recieverId, senderId,name;
 MessageAdapter messageAdapter;
 List<Chat> mChat;
 RecyclerView recyclerView;
@@ -63,22 +61,22 @@ private int duration = 120;
         timer = findViewById(R.id.Timer);
         nametv = findViewById(R.id.username);
         fuser = FirebaseAuth.getInstance().getCurrentUser();
-        uid = getIntent().getStringExtra("expertid");
+        recieverId = getIntent().getStringExtra("expertid");
        // String durationOfTimer = getIntent().getStringExtra("Duration of Timer");
-        clientid =getIntent().getStringExtra("userid");
+        senderId =getIntent().getStringExtra("userid");
         reference = FirebaseDatabase.getInstance().getReference().child("request");
 name = getIntent().getStringExtra("name");
 nametv.setText(name);
 
-        Toast.makeText(chatActivity.this, "uid-"+clientid , Toast.LENGTH_SHORT).show();
-        Toast.makeText(chatActivity.this, "uid-"+clientid , Toast.LENGTH_LONG).show();
+        Toast.makeText(chatActivity.this, "uid-"+ senderId, Toast.LENGTH_SHORT).show();
+        Toast.makeText(chatActivity.this, "uid-"+ senderId, Toast.LENGTH_LONG).show();
 btn_send.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
         String msg = text_send.getText().toString();
         if(!msg.equals(""))
         {
-            sendMessage(clientid,uid,msg);
+            sendMessage(senderId, recieverId,msg);
         }
         else {
             Toast.makeText(chatActivity.this, "Pls Type a msg to send", Toast.LENGTH_SHORT).show();
@@ -86,12 +84,12 @@ btn_send.setOnClickListener(new View.OnClickListener() {
         text_send.setText("");
     }
 });
-readMessages(clientid,uid);
+readMessages(fuser.getUid(), recieverId);
 
-reference.child(uid).child(clientid).addValueEventListener(new ValueEventListener() {
+/*reference.child(uid).child(clientid).addValueEventListener(new ValueEventListener() {
     @Override
     public void onDataChange(@NonNull DataSnapshot snapshot) {
-        if(snapshot.child("status").getValue().toString().equals("Accepted"))
+        if(snapshot.child("status").getValue().equals("Accepted"))
         {
             startTimer();
         }
@@ -103,17 +101,17 @@ reference.child(uid).child(clientid).addValueEventListener(new ValueEventListene
 
     }
 });
-
+*/
 
 
 
     }
-  private void sendMessage(String client,String expert,String message)
+  private void sendMessage(String sender,String reciever,String message)
   {
       DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
       HashMap hashMap = new HashMap();
-      hashMap.put("expert",expert);
-      hashMap.put("client",client);
+      hashMap.put("sender",sender);
+      hashMap.put("reciever",reciever);
       hashMap.put("message",message);
       ref.child("Chats").push().setValue(hashMap);
 
@@ -130,7 +128,7 @@ reference.child(uid).child(clientid).addValueEventListener(new ValueEventListene
               mChat.clear();
               for (DataSnapshot snapshot: datasnapshot.getChildren()){
                   Chat chat = snapshot.getValue(Chat.class);
-                  if(chat.getExpert().equals(userid) && chat.getClient().equals(myid) || chat.getExpert().equals(myid) && chat.getClient().equals(userid)){
+                  if(chat.getReciever().equals(myid) && chat.getSender().equals(userid) || chat.getReciever().equals(userid) && chat.getSender().equals(myid)){
                       mChat.add(chat);
                   }
                   messageAdapter = new MessageAdapter(chatActivity.this,mChat);

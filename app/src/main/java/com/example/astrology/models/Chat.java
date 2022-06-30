@@ -1,29 +1,29 @@
 package com.example.astrology.models;
 
 public class Chat {
-    private String client,expert,message;
+    private String sender, reciever,message;
 public Chat(){}
 
-    public Chat(String client, String expert, String message) {
-        this.client = client;
-        this.expert = expert;
+    public Chat(String sender, String reciever, String message) {
+        this.sender = sender;
+        this.reciever = reciever;
         this.message = message;
     }
 
-    public String getClient() {
-        return client;
+    public String getSender() {
+        return sender;
     }
 
-    public void setClient(String client) {
-        this.client = client;
+    public void setSender(String sender) {
+        this.sender = sender;
     }
 
-    public String getExpert() {
-        return expert;
+    public String getReciever() {
+        return reciever;
     }
 
-    public void setExpert(String expert) {
-        this.expert = expert;
+    public void setReciever(String reciever) {
+        this.reciever = reciever;
     }
 
     public String getMessage() {

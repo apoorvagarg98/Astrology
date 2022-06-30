@@ -33,30 +33,37 @@ public class selectClientAdapter extends FragmentStateAdapter {
                 astrologer ar = new astrologer();
                 return ar;
             case 1:
-                hinduritualsaexpert hr= new hinduritualsaexpert();
-                return hr;
-            case 2:
-                 lalkitabexpert lke= new lalkitabexpert();
-                return lke;
-            case 3:
-                mobilenumerologist mn= new mobilenumerologist();
-                return mn;
-            case 4:
                 Numerologistexpert ne= new Numerologistexpert();
                 return ne;
 
-            case 5:
-                palmist pm= new palmist();
-                return pm;
-
-
-            case 6:
+            case 2:
+                vastuexpert ve= new vastuexpert();
+                return ve;
+            case 3:
                 tarotcardreader tce= new tarotcardreader();
                 return tce;
 
+            case 4:
+                lalkitabexpert lke= new lalkitabexpert();
+                return lke;
+            case 5:
+                mobilenumerologist mn= new mobilenumerologist();
+                return mn;
+
+
+            case 6:
+                palmist pm= new palmist();
+                return pm;
+
             case 7:
-                vastuexpert ve= new vastuexpert();
-                return ve;
+                hinduritualsaexpert hr= new hinduritualsaexpert();
+                return hr;
+
+
+
+
+
+
 
 
             default:

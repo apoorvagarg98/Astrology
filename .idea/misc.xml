@@ -5,11 +5,15 @@
       <map>
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_astrologer.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_booking_page.xml" value="0.22" />
+        <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_chat.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_chat_itemleft.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_chat_right.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_login.xml" value="0.22" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_sign_up.xml" value="0.16530797101449277" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_sign_up1.xml" value="0.22" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_sign_up2.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_sign_up3.xml" value="0.28" />
+        <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_hinduritualsbookingpage.xml" value="0.1" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_item.xml" value="0.22" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_loginactivity.xml" value="0.1" />
@@ -18,12 +22,15 @@
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_sign_up1.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_sign_up2.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_splashscreen.xml" value="0.1" />
+        <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_vastu_expert_booking_page.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_vastu_expert_booking_page2.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_astrologer_fragement.xml" value="0.1272644927536232" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_astrologerfragement.xml" value="0.13360507246376813" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_career_fragement.xml" value="0.17239583333333333" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_foriegn_travel.xml" value="0.17239583333333333" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_health.xml" value="0.17239583333333333" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_hindu_rituals.xml" value="0.1" />
+        <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_hinduritualsaexpert.xml" value="0.11911231884057971" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_lalkitabexpert.xml" value="0.1" />
         <entry key="..\:/Users/Apoorva Garg/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_love_matters.xml" value="0.17239583333333333" />
@@ -70,12 +77,8 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/signup_tab_fragment.xml" value="0.22" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/drawable/textbox1.xml" value="0.1" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/drawable/textbox2.xml" value="0.229" />
-        <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/drawable/textbox3.xml" value="0.1745" />
-        <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/drawable/textbox4.xml" value="0.1745" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_booking_page.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_chat.xml" value="0.264" />
-        <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_chat_itemleft.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_chat_right.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_chat.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_profile.xml" value="0.264" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_expert_sign_up3.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_hinduritualsbookingpage.xml" value="0.264" />

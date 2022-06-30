@@ -17,7 +17,7 @@ public class selectClientRequests extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     Button profile ;
-    private String[] titles = new String[]{"Astrologer","Numerologist","Vastu Expert","Tarot Card Reader","Lal Kitab Exper","Mobile Numerologist","Palmist","Hindu Rituals"};
+    private String[] titles = new String[]{"Astrologer","Numerologist","Vastu Expert","Tarot Card Reader","Lal Kitab Expert","Mobile Numerologist","Palmist","Hindu Rituals"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -104,30 +104,7 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
         dbr = FirebaseDatabase.getInstance().getReference().child("Experts").child(selection).child(expertid);
         requestdb = FirebaseDatabase.getInstance().getReference().child("request").child(expertid).child(userid);
 
-        requestdb.addValueEventListener(new ValueEventListener() {
 
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
-                    if (snapshot.child("status").getValue().toString().equals("Accepted")) {
-                        startActivity(new Intent(bookingPage.this,chatActivity.class));
-
-                    }
-                    else if(snapshot.child("status").getValue().toString().equals("Declined"))
-                    {
-
-                    }
-
-                }
-                else {
-
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
 
         dbr.addValueEventListener(new ValueEventListener() {
             @Override
@@ -360,7 +337,14 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
                 if(task.isSuccessful())
 
                 {
-                    Toast.makeText(bookingPage.this, "request sent sucesfully kindly wait for acceptance", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(bookingPage.this,chatActivity.class);
+                    intent.putExtra("userid",user.getUid());
+                    intent.putExtra("expertid",expertid);
+                    intent.putExtra("name",nameofuser);
+                    intent.putExtra("Duration of Timer",String.valueOf(totalmin));
+
+                    startActivity(intent);
+
                 }
             }
         });
@@ -381,9 +365,6 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
 
             }
         });
-
-        startActivity(new Intent(bookingPage.this,chatActivity.class));
-        Toast.makeText(getApplicationContext(), "payment failed please try again after some time"+s, Toast.LENGTH_SHORT).show();
     }
 
 

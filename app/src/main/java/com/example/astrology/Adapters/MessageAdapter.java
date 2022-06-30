@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.astrology.R;
 import com.example.astrology.models.Chat;
 import com.example.astrology.models.expertModel;
-import com.example.astrology.models.userModel;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -73,7 +72,7 @@ holder.show_message.setText(chat.getMessage());
     @Override
     public int getItemViewType(int position) {
        fuser = FirebaseAuth.getInstance().getCurrentUser();
-       if(mChat.get(position).getClient().equals(fuser.getUid())){
+       if(mChat.get(position).getSender().equals(fuser.getUid())){
            return MSG_TYPE_RIGHT;
        } else {
            return MSG_TYPE_LEFT;
