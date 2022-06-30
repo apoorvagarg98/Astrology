@@ -72,7 +72,7 @@ public class astrologer extends Fragment {
                     holder.expertname.setText(model.getName());
                     holder.ratepermin.setText(model.getDateOfBooking());
                     holder.experience.setText(model.getTotalAmount() + " rs");
-                    holder.book.setText("view Request");
+                    holder.bla.setText("view Request");
 
                     holder.book.setOnClickListener(new View.OnClickListener() {
                         @Override

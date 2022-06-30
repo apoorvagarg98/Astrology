@@ -43,12 +43,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                 android:layout_gravity="center"
-                android:textColor="#F8162D"
                 android:fontFamily="@font/open_sans"
-                android:text="⭐ Rating">
-            </TextView>
+                android:text="⭐ 4.5"
+                android:textColor="#F8162D"></TextView>
 
         </LinearLayout>
         <LinearLayout
@@ -66,7 +65,9 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:fontFamily="@font/open_sans"
-            android:text="Name">
+            android:text="Name"
+
+            >
 
         </TextView>
 
@@ -119,62 +120,33 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="start"
-
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:background="@drawable/box"
-                        android:src="@drawable/ic_baseline_local_phone_24"></ImageButton>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/open_sans"
-                        android:text="Call">
-
-                    </TextView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageButton
-                    android:layout_width="60dp"
-                    android:layout_gravity="start"
+                        android:layout_width="102dp"
+                        android:layout_height="60dp"
 
-                    android:layout_marginStart="5dp"
-                    android:background="@drawable/box"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="5dp"
                         android:layout_marginTop="5dp"
-                        android:src="@drawable/ic_baseline_chat_24"
-                    android:layout_height="60dp">
+                        android:background="@drawable/box"
+                        android:src="@drawable/ic_baseline_chat_24">
 
                     </ImageButton>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/open_sans"
-                    android:text="Chat">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Book Now"
+                        android:textColor="@color/black">
 
-                </TextView>
+                    </TextView>
 
                 </LinearLayout>
 
