@@ -84,7 +84,7 @@ btn_send.setOnClickListener(new View.OnClickListener() {
         text_send.setText("");
     }
 });
-readMessages(fuser.getUid(), recieverId);
+readMessages(senderId, recieverId);
 
 /*reference.child(uid).child(clientid).addValueEventListener(new ValueEventListener() {
     @Override
