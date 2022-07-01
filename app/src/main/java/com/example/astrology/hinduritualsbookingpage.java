@@ -173,7 +173,7 @@ exp = findViewById(R.id.hrexperiencebig);
                     object.put("description","payment for " + selection );
                     object.put("theme.color", "#0093DD");
                     object.put("Currency","INR");
-                    object.put("amount",2000);
+                    object.put("amount",price*100);
                     object.put("prefill.contact","9484658468");
                     object.put("prefill.email",email);
                     checkout.open(hinduritualsbookingpage.this,object);

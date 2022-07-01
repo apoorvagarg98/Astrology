@@ -16,9 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Astrology">
         <activity
-            android:name=".VastuExpertBookingPage2"
-            android:exported="false" />
-        <activity
             android:name=".hinduritualsbookingpage"
             android:exported="false" />
         <activity

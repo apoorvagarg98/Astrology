@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -45,10 +46,10 @@ import retrofit2.Response;
 
 public class vastuExpertBookingPage extends AppCompatActivity {
     EditText areaofproperty,totalfloors,totalrooms,kitchendine,washrooms,basement,address,remarks;
-    TextView venameofexpert,veexperiencebig,veaboutme,veallselections,totalAmountToBePaid,rpm;
+    TextView totalAmountToBePaid,rpm;
     String propertyname,userid,selection,expertid,nameofuser,expe,exabtyrslf,sareaofproperty,stotalfloors,stotalrooms,skitchendine,swashrooms,sbasement,saddress,sremarks,srpm;
     DatabaseReference dbr,requestdb;
-    Button verequest,pickduration;
+    ImageButton verequest;
     APIService apiService;
     Boolean notify=false;
     private int rs,totalmin;
@@ -60,8 +61,12 @@ public class vastuExpertBookingPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vastu_expert_booking_page);
+
+
         selection = getIntent().getStringExtra("selection").toString();
         expertid = getIntent().getStringExtra("expertuid").toString();
+        propertyname = getIntent().getStringExtra("propertyname").toString();
+
         areaofproperty = findViewById(R.id.areaofproperty);
         totalfloors = findViewById(R.id.totalfloors);
         totalrooms = findViewById(R.id.totalrooms);
@@ -70,21 +75,14 @@ public class vastuExpertBookingPage extends AppCompatActivity {
         basement = findViewById(R.id.basement);
         address = findViewById(R.id.address);
         remarks = findViewById(R.id.remarks);
-        venameofexpert = findViewById(R.id.venameofexpert);
-        veexperiencebig = findViewById(R.id.veexperiencebig);
-        veaboutme = findViewById(R.id.veaboutme);
-        veallselections = findViewById(R.id.veallselections);
-        rpm = findViewById(R.id.verpm);
         verequest = findViewById(R.id.verequest);
-
-        propertyname = getIntent().getStringExtra("propertyname").toString();
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
         userid = user.getUid().toString();
+
+        requestdb = FirebaseDatabase.getInstance().getReference().child("request").child(expertid).child(userid);
         dbr = FirebaseDatabase.getInstance().getReference().child("Experts").child(selection).child(expertid);
-
-
         dbr.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -93,13 +91,7 @@ public class vastuExpertBookingPage extends AppCompatActivity {
                     nameofuser = snapshot.child("exnames").getValue().toString();
                     expe = snapshot.child("experience").getValue().toString();
                     exabtyrslf = snapshot.child("exabtyrslf").getValue().toString();
-                    venameofexpert.setText ("Name- "+nameofuser);
-                    veexperiencebig.setText ("Experience- "+expe +"yrs");
-                    veaboutme.setText("About Expert- "+exabtyrslf);
-                    veallselections.setText("Booking for "+snapshot.child("selection").getValue().toString());
                     srpm = snapshot.child("stamt").getValue().toString();
-                    rpm.setText("Rate Per Min - "+ srpm +"rs/min");
-
                 }
             }
 
@@ -109,9 +101,12 @@ public class vastuExpertBookingPage extends AppCompatActivity {
             }
         });
 
+
+
         verequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 sareaofproperty=areaofproperty.getText().toString();
                 stotalfloors = totalfloors.getText().toString();
                 stotalrooms = totalrooms.getText().toString();
@@ -120,6 +115,9 @@ public class vastuExpertBookingPage extends AppCompatActivity {
                 sbasement = basement.getText().toString();
                 saddress = address.getText().toString();
                 sremarks = remarks.getText().toString();
+
+
+
                 getamounttobepaid();
 
                 Checkout checkout = new Checkout();
@@ -181,7 +179,63 @@ public class vastuExpertBookingPage extends AppCompatActivity {
             });
     }
 
+
     private void onPaymentSuccess(String s) {
+
+        notify = true;
+        HashMap hashMap = new HashMap();
+        hashMap.put("name", nameofuser);
+        hashMap.put("email","shivamtza1y@gmail.com");
+        hashMap.put("phone","7691019045");
+        hashMap.put("bookedyoufor", selection);
+        hashMap.put("totalAmount",rs );
+        hashMap.put("status","pending");
+        hashMap.put("paymentStatus", "completed");
+        hashMap.put("Totalareaofproperty",sareaofproperty);
+        hashMap.put("totalfloors",stotalfloors);
+        hashMap.put("totalrooms",stotalrooms);
+        hashMap.put("totalkitchendine",skitchendine);
+        hashMap.put("washrooms",swashrooms);
+        hashMap.put("basements",sbasement);
+        hashMap.put("address",saddress);
+        hashMap.put("remarks",sremarks);
+        requestdb.updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+            @Override
+            public void onComplete(@NonNull Task task) {
+                if(task.isSuccessful())
+
+                {
+                    Intent intent = new Intent(vastuExpertBookingPage.this,chatActivity.class);
+                    intent.putExtra("userid",user.getUid());
+                    intent.putExtra("expertid",expertid);
+                    intent.putExtra("name",nameofuser);
+                    intent.putExtra("Duration of Timer",String.valueOf(totalmin));
+
+                    startActivity(intent);
+
+                }
+            }
+        });
+
+        requestdb = FirebaseDatabase.getInstance().getReference("users").child(user.getUid());
+        requestdb.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                userModel user = dataSnapshot.getValue(userModel.class);
+                if (notify) {
+                    sendNotification(expertid, user.getName(), "new request ");
+                }
+                notify = false;
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    public void onPaymentError(int i, String s) {
         notify = true;
         HashMap hashMap = new HashMap();
         hashMap.put("name", nameofuser);
@@ -203,43 +257,45 @@ public class vastuExpertBookingPage extends AppCompatActivity {
         requestdb.updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
-                if (task.isSuccessful())
+                if(task.isSuccessful())
+
                 {
-                    Toast.makeText(vastuExpertBookingPage.this,"Request sent successfully kindly wait for acceptance",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(vastuExpertBookingPage.this,chatActivity.class);
+                    intent.putExtra("userid",user.getUid());
+                    intent.putExtra("expertid",expertid);
+                    intent.putExtra("name",nameofuser);
+                    intent.putExtra("Duration of Timer",String.valueOf(totalmin));
+
+                    startActivity(intent);
+
                 }
             }
         });
+
         requestdb = FirebaseDatabase.getInstance().getReference("users").child(user.getUid());
         requestdb.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                userModel user = snapshot.getValue(userModel.class);
-                if (notify){
-                    sendNotification(expertid,user.getName(),"new request");
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                userModel user = dataSnapshot.getValue(userModel.class);
+                if (notify) {
+                    sendNotification(expertid, user.getName(), "new request ");
                 }
-                notify= false;
+                notify = false;
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });
-        startActivity(new Intent(vastuExpertBookingPage.this, chatActivity.class));
-        Toast.makeText(getApplicationContext(),"Payment failed please try again later"+s,Toast.LENGTH_SHORT).show();
-
-
     }
 
 
 
 
     private void getamounttobepaid() {
-        rs =  Integer.valueOf(srpm)*(Integer.valueOf(stotalrooms)+Integer.valueOf(skitchendine)+Integer.valueOf(sbasement)+Integer.valueOf(swashrooms));
+        rs = ( Integer.valueOf(srpm)*(Integer.valueOf(stotalrooms))+Integer.valueOf(skitchendine)+Integer.valueOf(sbasement)+Integer.valueOf(swashrooms));
         totalAmountToBePaid.setText(String.valueOf(rs));
-
-
-
 
     }
 
