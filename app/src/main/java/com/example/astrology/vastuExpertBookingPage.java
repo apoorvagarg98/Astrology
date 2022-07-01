@@ -49,7 +49,7 @@ public class vastuExpertBookingPage extends AppCompatActivity {
     TextView totalAmountToBePaid,rpm;
     String propertyname,userid,selection,expertid,nameofuser,expe,exabtyrslf,sareaofproperty,stotalfloors,stotalrooms,skitchendine,swashrooms,sbasement,saddress,sremarks,srpm;
     DatabaseReference dbr,requestdb;
-    ImageButton verequest;
+    Button verequest;
     APIService apiService;
     Boolean notify=false;
     private int rs,totalmin;
@@ -76,6 +76,8 @@ public class vastuExpertBookingPage extends AppCompatActivity {
         address = findViewById(R.id.address);
         remarks = findViewById(R.id.remarks);
         verequest = findViewById(R.id.verequest);
+        totalAmountToBePaid = findViewById(R.id.totalamountinvastu);
+
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
@@ -102,11 +104,9 @@ public class vastuExpertBookingPage extends AppCompatActivity {
         });
 
 
-
         verequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 sareaofproperty=areaofproperty.getText().toString();
                 stotalfloors = totalfloors.getText().toString();
                 stotalrooms = totalrooms.getText().toString();
@@ -116,25 +116,28 @@ public class vastuExpertBookingPage extends AppCompatActivity {
                 saddress = address.getText().toString();
                 sremarks = remarks.getText().toString();
 
-
-
-                getamounttobepaid();
+                rs = Integer.valueOf(srpm)*(Integer.valueOf(stotalrooms)+Integer.valueOf(skitchendine)+Integer.valueOf(sbasement)+Integer.valueOf(swashrooms));
+                totalAmountToBePaid.setText(String.valueOf(rs));
 
                 Checkout checkout = new Checkout();
                 checkout.setKeyID("rzp_test_rfooZLYQbv7p5h");
                 checkout.setImage(R.drawable.mainlogo);
                 JSONObject object = new JSONObject();
-                try{
-                    object.put("Name" , "Aadishakti");
-                    object.put("Descryption", "payment for " +selection);
-                    object.put("theme.color","0093DD");
-                    object.put("Currency ","INR");
-                    object.put("amount", rs);
+                try {
+                    object.put("name","Aadishakti");
+                    object.put("description","payment for"+selection);
+                    object.put("theme.color","#0093DD");
+                    object.put("currency","INR");
+                    object.put("amount",rs*100);
                     object.put("prefill.contact","9711445734");
-                    object.put("prefill.email","shivamtza1y@gmail.com");
+                    object.put("prefill.email","shivamkumar@gmail.com");
+                    checkout.open(vastuExpertBookingPage.this,object);
+
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
             }
         });
 
@@ -293,10 +296,6 @@ public class vastuExpertBookingPage extends AppCompatActivity {
 
 
 
-    private void getamounttobepaid() {
-        rs = ( Integer.valueOf(srpm)*(Integer.valueOf(stotalrooms))+Integer.valueOf(skitchendine)+Integer.valueOf(sbasement)+Integer.valueOf(swashrooms));
-        totalAmountToBePaid.setText(String.valueOf(rs));
 
-    }
 
 }
