@@ -22,20 +22,6 @@
                 android:layout_height="wrap_content"
                 android:background="#4DBFF0">
 
-                <Button
-                    android:id="@+id/astro"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/slider"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:backgroundTint="#4DBFF0"
-                    android:text="Find Your Desired Experts:"
-                    android:textAllCaps="false"
-                    android:textSize="11dp"
-
-                    />
             </androidx.appcompat.widget.Toolbar>
 
             <com.denzcoskun.imageslider.ImageSlider
@@ -52,37 +38,29 @@
                 app:delay="0"
                 app:error_image="@drawable/backgroundd"
                 app:period="3000"
-                app:placeholder="@color/black" />
+                app:placeholder="@color/black" >
+
+            </com.denzcoskun.imageslider.ImageSlider>
 
 
+            <Button
+                android:id="@+id/astro"
+                android:layout_width="382dp"
+                android:layout_height="68dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#4DBFF0"
+                android:text="Find Your Desired Experts:"
+                android:textAllCaps="false"
+                android:textSize="11dp"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="2dp"
-                android:layout_marginStart="5dp"
-                android:fontFamily="sans-serif"
-                android:text="Special Offers:"
-                android:textColor="@color/black"
-                android:textSize="18dp"></TextView>
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/offers"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_below="@+id/astro"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp" />
-
+                />
 
             <TextView
 
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="42dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/open_sans_bold"
@@ -95,7 +73,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="37dp"
                 android:layout_gravity="center"
                 android:layout_margin="2dp"
                 android:layout_marginStart="5dp"
@@ -108,7 +86,7 @@
             <TextView
                 android:id="@+id/title122"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/open_sans_bold"

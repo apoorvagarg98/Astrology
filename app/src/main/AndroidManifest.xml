@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Astrology">
         <activity
+            android:name=".specialofferCardView"
+            android:exported="false" />
+        <activity
             android:name=".hinduritualsbookingpage"
             android:exported="false" />
         <activity
