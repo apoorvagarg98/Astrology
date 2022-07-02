@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="navigation_open">Open Navigaton drawer</string>
+    <string name="navigation_close">Close Navigaton drawer</string>
+
+
 
     <string name="app_name">MyAndroidApp</string>
-    <string name="profession_prompt">Choose a country</string>
+    <string name="profession_prompt">Choose a Profession</string>
 
     <string-array name="profession_arrays">
         <item>Astrologer</item>

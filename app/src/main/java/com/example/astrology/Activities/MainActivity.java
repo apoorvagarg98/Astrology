@@ -1,7 +1,11 @@
 package com.example.astrology.Activities;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SearchView;
 
+
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.astrology.R;
@@ -25,6 +30,7 @@ import com.example.astrology.models.expertModel;
 import com.example.astrology.viewHollders.item;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -34,11 +40,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
+
+
     public RecyclerView recyclerView;
     public FirebaseUser user;
     public DatabaseReference expert;
     FirebaseRecyclerAdapter<expertModel, item> adapter;
     FirebaseRecyclerOptions<expertModel> options;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,13 +61,29 @@ public class MainActivity extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
         expert = FirebaseDatabase.getInstance().getReference("Experts").child("Astrologer");
 
+
+        drawerLayout = findViewById(R.id.drawerlayout);
+        navigationView = findViewById(R.id.navigationview);
+        toolbar = findViewById(R.id.toolbar);
+
+
+        setSupportActionBar(toolbar);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this
+                ,drawerLayout,toolbar,R.string.navigation_open,R.string.navigation_close);
+
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+
+
         loadParticipant();
 
         Button astro = findViewById(R.id.astro);
         astro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,astrologer.class));
+                startActivity(new Intent(MainActivity.this, astrologer.class));
             }
         });
 
@@ -68,19 +97,19 @@ public class MainActivity extends AppCompatActivity {
         slideModels.add(new SlideModel("https://thehindutimes.in/static/c1e/client/89706/migrated/f13b42b0689041873d096a5b3d447a7d.jpg", "Vaastu"));
         slideModels.add(new SlideModel("https://www.pavitrajyotish.com/wp-content/uploads/2015/12/Indian-Vedic-Astrology-Hindi.jpg", "Neumerology"));
         slideModels.add(new SlideModel("https://m.facebook.com/619462814750696/photos/a.619469904749987/1264677913562513/?type=3&source=44", "Tarot Card"));
-        imageSlider.setImageList(slideModels,true);
+        imageSlider.setImageList(slideModels, true);
 
     }
+
     private void loadParticipant() {
 
 
-
-        options = new FirebaseRecyclerOptions.Builder<expertModel>().setQuery(expert,expertModel.class).build();
-        adapter =  new FirebaseRecyclerAdapter<expertModel,item>(options){
+        options = new FirebaseRecyclerOptions.Builder<expertModel>().setQuery(expert, expertModel.class).build();
+        adapter = new FirebaseRecyclerAdapter<expertModel, item>(options) {
             @NonNull
             @Override
             public item onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_item,parent,false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_item, parent, false);
 
                 return new item(view);
 
@@ -96,8 +125,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(MainActivity.this, bookingPage.class);
-                        intent.putExtra("expertuid",getRef(position).getKey().toString());
-                        intent.putExtra("selection","Astrologer");
+                        intent.putExtra("expertuid", getRef(position).getKey().toString());
+                        intent.putExtra("selection", "Astrologer");
                         startActivity(intent);
                     }
                 });
@@ -108,16 +137,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
 
-        getMenuInflater().inflate(search,menu);
+        getMenuInflater().inflate(search, menu);
 
         MenuItem menuItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) menuItem.getActionView();
         searchView.setQueryHint("Search Astrology,Numerologist.....");
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String query){
+            public boolean onQueryTextSubmit(String query) {
                 return false;
             }
 
