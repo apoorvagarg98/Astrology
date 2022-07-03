@@ -16,6 +16,8 @@
         android:id="@+id/navigationview"
         app:headerLayout="@layout/headerfile"
         app:menu="@menu/sidemenu"
+        app:itemIconTint="#4DBFF0"
+        app:itemTextColor="#D100D1"
         android:layout_gravity="start"></com.google.android.material.navigation.NavigationView>
 
 
