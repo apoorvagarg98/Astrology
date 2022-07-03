@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class aboutteam extends Fragment {
-    ImageButton acharyabtn,atuldevbtn,prashantbtn,apoorvabtn,durjoybtn,shivambtn;
+    ImageButton acharyabtn,atuldevbtn,apoorvabtn,durjoybtn,shivambtn;
     public aboutteam() {
 
     }
@@ -26,21 +26,21 @@ public class aboutteam extends Fragment {
         View rootview=inflater.inflate(R.layout.activity_aboutteam, container, false);
         acharyabtn=rootview.findViewById(R.id.acharyalnk);
         atuldevbtn=rootview.findViewById(R.id.atuldevlnk);
-        prashantbtn=rootview.findViewById(R.id.prashantlnk);
         apoorvabtn=rootview.findViewById(R.id.apoorvalnk);
         durjoybtn=rootview.findViewById(R.id.durjoylnk);
         shivambtn=rootview.findViewById(R.id.shivamlnk);
         acharyabtn.setOnClickListener(v->openacharyaln());
         atuldevbtn.setOnClickListener(v->openatullnk());
-        prashantbtn.setOnClickListener(v->openprashantlnk());
-        apoorvabtn.setOnClickListener(v->openradhikalnk());
-        durjoybtn.setOnClickListener(v->openchetnlnk());
-        shivambtn.setOnClickListener(v->openhasrahlnk());
+        apoorvabtn.setOnClickListener(v->openapoorvalnk());
+        durjoybtn.setOnClickListener(v->opendurjoylnk());
+        shivambtn.setOnClickListener(v->openshivamlnk());
         return rootview;
     }
 
-    private void openprashantlnk() {
-        String theurl = "http://google.com";
+
+
+    private void opendurjoylnk() {
+        String theurl = "https://www.linkedin.com/in/durjoy-barua-8240671ab";
         Uri urlstr = Uri.parse(theurl);
         Intent urlintent = new Intent();
         urlintent.setData(urlstr);
@@ -48,17 +48,8 @@ public class aboutteam extends Fragment {
         startActivity(urlintent);
     }
 
-    private void openchetnlnk() {
-        String theurl = "http://google.com";
-        Uri urlstr = Uri.parse(theurl);
-        Intent urlintent = new Intent();
-        urlintent.setData(urlstr);
-        urlintent.setAction(Intent.ACTION_VIEW);
-        startActivity(urlintent);
-    }
-
-    private void openradhikalnk() {
-        String theurl = "http://google.com";
+    private void openapoorvalnk() {
+        String theurl = "https://www.linkedin.com/in/apoorva-garg-23a9bb205";
         Uri urlstr = Uri.parse(theurl);
         Intent urlintent = new Intent();
         urlintent.setData(urlstr);
@@ -67,7 +58,7 @@ public class aboutteam extends Fragment {
     }
 
     private void openatullnk() {
-        String theurl = "http://google.com";
+        String theurl = "https://www.linkedin.com/in/atuldev-arora-541070183";
         Uri urlstr = Uri.parse(theurl);
         Intent urlintent = new Intent();
         urlintent.setData(urlstr);
@@ -76,7 +67,7 @@ public class aboutteam extends Fragment {
     }
 
     private void openacharyaln() {
-        String theurl = "http://google.com";
+        String theurl = "https://www.linkedin.com/company/rudraksha-welfare-foundation/";
         Uri urlstr = Uri.parse(theurl);
         Intent urlintent = new Intent();
         urlintent.setData(urlstr);
@@ -84,8 +75,8 @@ public class aboutteam extends Fragment {
         startActivity(urlintent);
     }
 
-    private void openhasrahlnk() {
-        String theurl = "http://google.com";
+    private void openshivamlnk() {
+        String theurl = "https://www.linkedin.com/in/shivam-kumar-singh-a87189208";
         Uri urlstr = Uri.parse(theurl);
         Intent urlintent = new Intent();
         urlintent.setData(urlstr);
