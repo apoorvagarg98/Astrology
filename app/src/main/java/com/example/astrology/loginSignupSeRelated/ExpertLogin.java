@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,13 +24,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
 
+import java.util.regex.Pattern;
+
 public class ExpertLogin extends AppCompatActivity {
 
     Button login;
     TextView dontHaveacc,GoToExpert;
     FirebaseAuth mAuth;
     FirebaseUser user;
-
+   String emailstring,passtring;
     EditText email,pass;
 
     @Override
@@ -54,9 +57,21 @@ public class ExpertLogin extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loginuser();
-            }
-        });
+                emailstring = email.getText().toString().trim();
+                passtring = pass.getText().toString();
+                if(!Patterns.EMAIL_ADDRESS.matcher(emailstring).matches() && emailstring.equals("") )
+                {  email.setError("Enter email properly");
+                    email.requestFocus();
+                }
+                else if(passtring.length()<=7 && passtring.equals("")){
+                    pass.setError("password should be minimum  7 digits");
+                    pass.requestFocus();
+                }
+                else {
+                    loginuser();
+                }
+
+        }});
 
 
 
@@ -67,7 +82,7 @@ public class ExpertLogin extends AppCompatActivity {
 
     private void loginuser() {
 
-        mAuth.signInWithEmailAndPassword(email.getText().toString().trim(),pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(emailstring,passtring).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                if(task.isSuccessful()){

@@ -32,7 +32,7 @@ public class ExpertProfile extends AppCompatActivity implements AdapterView.OnIt
 
     public FirebaseAuth mAuth;
     public FirebaseUser user;
-    public DatabaseReference exprofile;
+    public DatabaseReference exprofile,dekhte;
     String expertuid;
 
     @Override
@@ -61,7 +61,23 @@ public class ExpertProfile extends AppCompatActivity implements AdapterView.OnIt
         spinner.setOnItemSelectedListener(this);
 
 
+        dekhte = FirebaseDatabase.getInstance().getReference().child("Experts");
+        dekhte.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot childSnapshot : dataSnapshot.getChildren()){
+                    String parent = childSnapshot.getRef().getParent().child(expertuid).toString();
+                Toast.makeText(ExpertProfile.this, parent, Toast.LENGTH_SHORT).show();
+            }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         exprofile = FirebaseDatabase.getInstance().getReference().child("Experts").child("Lal Kitab Expert").child(expertuid);
+
         exprofile.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -76,9 +92,6 @@ public class ExpertProfile extends AppCompatActivity implements AdapterView.OnIt
                     expertise.setText("Expertize - "+gandu.selection);
                     amt.setText("Amount to be Paid - "+ gandu.stamt);
                     exp.setText("Experience (in years) - " +gandu.stexperience);
-
-
-
 
                 }
             }
