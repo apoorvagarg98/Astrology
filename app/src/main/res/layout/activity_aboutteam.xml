@@ -24,7 +24,7 @@
 
                 android:orientation="vertical"
                 android:layout_width="300dp"
-                android:layout_height="280dp"
+                android:layout_height="300dp"
                 android:background="@color/white"
                 android:gravity="center"
                 android:padding="16dp">
@@ -71,12 +71,13 @@
                     android:textSize="20sp"
                     android:textStyle="normal|bold" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="click"
+                <ImageButton
                     android:id="@+id/acharyalnk"
-                    />
+                    android:layout_width="120dp"
+
+
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_1" />
 
             </LinearLayout>
 
@@ -99,7 +100,7 @@
 
                 android:orientation="vertical"
                 android:layout_width="300dp"
-                android:layout_height="280dp"
+                android:layout_height="300dp"
                 android:background="@color/white"
                 android:gravity="center"
                 android:padding="16dp">
@@ -146,93 +147,18 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="normal|bold" />
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+
+                <ImageButton
                     android:id="@+id/atuldevlnk"
-                    />
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_1" />
             </LinearLayout>
 
 
 
 
         </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_marginTop="30dp"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
-
-            android:elevation="6dp"
-            android:layout_gravity="center"
-            >
-
-            <LinearLayout
-
-                android:orientation="vertical"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:padding="16dp">
-
-
-                <TextView
-                    android:id="@+id/textView21"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Graphics By"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="normal|bold" />
-
-                <ImageView
-                    android:textAlignment="center"
-                    android:id="@+id/imageView22"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/fprashant" />
-
-                <TextView
-                    android:id="@+id/textVieww23"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Mr. Prashant Suryakant Vhatkar"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView24"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Adobe Designer"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="normal|bold" />
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/prashantlnk"
-                    />
-            </LinearLayout>
-
-
-
-
-        </androidx.cardview.widget.CardView>
-
-
-
 
 
         <androidx.cardview.widget.CardView
@@ -295,9 +221,10 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="normal|bold" />
-                <Button
-                    android:layout_width="wrap_content"
+                <ImageButton
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/img_1"
                     android:id="@+id/apoorvalnk"
                     />
             </LinearLayout>
@@ -344,7 +271,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/fchetan" />
+                    android:src="@drawable/durjoy" />
 
                 <TextView
 
@@ -367,9 +294,10 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="normal|bold" />
-                <Button
-                    android:layout_width="wrap_content"
+                <ImageButton
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/img_1"
                     android:id="@+id/durjoylnk"
                     />
             </LinearLayout>
@@ -394,7 +322,7 @@
 
                 android:orientation="vertical"
                 android:layout_width="300dp"
-                android:layout_height="250dp"
+                android:layout_height="300dp"
                 android:background="@color/white"
                 android:gravity="center"
                 android:padding="16dp">
@@ -440,9 +368,10 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="normal|bold" />
-                <Button
-                    android:layout_width="wrap_content"
+                <ImageButton
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/img_1"
                     android:id="@+id/shivamlnk"
                     />
             </LinearLayout>
