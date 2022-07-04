@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/backgroundtrial"
+    android:background="@drawable/finalbackground"
     android:layout_gravity="center"
     android:gravity="center"
     tools:context=".loginSignupSeRelated.loginorsignup">
@@ -26,7 +26,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
 
@@ -39,7 +39,7 @@
                     android:gravity="center"
                     android:text="आदि शक्ति एस्ट्रो"
                     android:layout_marginBottom="10dp"
-                    android:textColor="#D100D1"
+                    android:textColor="#8b008b"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -51,7 +51,7 @@
                     android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
                     android:text="AADI SHAKTII ASTRO"
-                    android:textColor="#D100D1"
+                    android:textColor="#8b008b"
 
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -74,7 +74,7 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/mainlogo" />
 

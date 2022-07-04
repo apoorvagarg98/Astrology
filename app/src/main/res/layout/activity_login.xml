@@ -35,7 +35,7 @@
                     android:gravity="center"
                     android:text="आदि शक्ति एस्ट्रो"
 
-                    android:textColor="#D100D1"
+                    android:textColor="#8b008b"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -45,9 +45,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/open_sans_bold"
+                    android:textColor="#8b008b"
                     android:gravity="center"
                     android:text="AADI SHAKTII ASTRO"
-                    android:textColor="#D100D1"
+
 
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -86,13 +87,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="sans-serif"
                 android:gravity="center"
                 android:background="@drawable/box"
                 android:backgroundTint="#FFFFFF"
-                android:text="💮 Sign In To Continue 💮"
-                android:textColor="#D100D1"
+                android:textAlignment="center"
+                android:text="Sign In To Continue"
+                android:textColor="#8b008b"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -110,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:autoText="true"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
                     android:hint="Email Id:"
                     android:inputType="textPersonName"
@@ -128,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 app:passwordToggleEnabled="true"
-                app:passwordToggleTint="#4DBFF0"
+                app:passwordToggleTint="#8b008b"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="248dp">
 
@@ -137,7 +139,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
                     android:hint="Password"
                     android:inputType="textPassword"
@@ -148,7 +150,7 @@
 
             <Button
                 android:id="@+id/yo"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
 
@@ -156,8 +158,8 @@
                 android:background="@drawable/box"
                 android:gravity="center"
                 android:ems="5"
-                android:minWidth="120dp"
-                android:padding="10dp"
+                android:minWidth="220dp"
+                android:padding="5dp"
                 android:shadowColor="#525253"
                 android:singleLine="true"
                 android:text="Log In"
@@ -174,9 +176,10 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="center"
-                android:text="Forgot Password?"
-                android:textColor="#4DBFF0"
-                android:textSize="12dp" />
+                android:text="Forgot Your Password?"
+                android:textColor="#8b008b"
+                android:textStyle="bold"
+                android:textSize="14dp" />
 
 
             <LinearLayout
@@ -221,7 +224,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="───────────── Or ─────────────"
-                android:textColor="#8A8888"
+                android:textColor="#8b008b"
                 android:textSize="14dp"></TextView>
 
             <LinearLayout

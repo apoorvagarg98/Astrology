@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".expertdetails">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/experttoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4DBFF0"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@color/white"
+        app:titleMarginStart="10dp"
+        android:layout_marginBottom="5dp">
+
+
+
+        <ImageButton
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:backgroundTint="#4DBFF0"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            ></ImageButton>
+
+
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="15dp"
+
+                android:src="@drawable/ic_baseline_people_24">
+
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:fontFamily="@font/open_sans"
+                android:text="⭐ 4.5"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:background="@drawable/box"
+                android:backgroundTint="#4DBFF0"
+                android:textColor="#000000"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Name"
+                android:textColor="@color/black"
+
+                android:textSize="18sp"
+
+                >
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Area of Expertise"
+                android:textColor="@color/black">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Experience"
+                android:textColor="@color/black">
+
+            </TextView>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+         </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:backgroundTint="#2F2F2F"
+            android:background="@drawable/box"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Consultation Fees"
+                android:textAlignment="center"
+                android:textColor="#2F2F2F"
+                android:textSize="@dimen/_10sdp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginStart="5dp"
+
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="@dimen/_11sdp"
+                android:text="Charge/min"
+                android:textColor="@color/black">
+            </TextView>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/_11sdp"
+                    android:text="About Me"
+                    android:textColor="@color/black">
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="#EDEBEB"
+
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="@dimen/_11sdp"
+                    android:text="About Me"
+                    android:textColor="#2F2F2F">
+                </TextView>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/box"
+                android:gravity="center"
+                android:ems="3"
+                app:backgroundTint="#4DBFF0"
+                android:minWidth="150dp"
+                android:singleLine="true"
+                android:text="Book Now"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif-medium"
+                android:drawableLeft="@drawable/ic_baseline_chat_24"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableTint="@color/white"
+
+
+                android:textColor="#FFFEFE"
+                 ></Button>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

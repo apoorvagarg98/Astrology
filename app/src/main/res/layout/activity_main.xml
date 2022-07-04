@@ -19,7 +19,7 @@
         app:headerLayout="@layout/headerfile"
         app:menu="@menu/sidemenu"
         app:itemIconTint="#4DBFF0"
-        app:itemTextColor="#D100D1"
+        app:itemTextColor="#8b008b"
         android:layout_gravity="start"></com.google.android.material.navigation.NavigationView>
 
 
@@ -54,14 +54,14 @@
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-
-                android:layout_marginBottom="10dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="2dp"
                 app:auto_cycle="true"
                 app:corner_radius="20"
+                android:elevation="@dimen/_20sdp"
                 app:delay="0"
                 app:error_image="@drawable/backgroundd"
                 app:period="3000"

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="#5BC9F8"
+    android:layout_height="210dp"
+    android:background="#ACF2F7"
     android:gravity="bottom"
     android:orientation="vertical"
     android:padding="20dp">
@@ -10,29 +10,33 @@
     <ImageView
         android:layout_width="200dp"
         android:layout_height="100dp"
+        android:layout_gravity="start"
         android:src="@drawable/mainlogo" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="21dp"
         android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/open_sans_bold"
         android:paddingLeft="20sp"
         android:paddingRight="20sp"
         android:text="AADI SHAKTII ASTRO"
-        android:textColor="#DD16DD"
+        android:textColor="#8b008b"
         android:textSize="17sp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="10sp"
-        android:paddingRight="10sp"
+
         android:layout_marginTop="@dimen/_5sdp"
         android:text="WWW.RUDRAKSHA.ORG.IN"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-
+        android:textColor="#8b008b"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
 
         android:textStyle="bold" />
 
