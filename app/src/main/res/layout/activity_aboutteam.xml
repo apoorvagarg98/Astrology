@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/liist"
     tools:context=".aboutteam">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <androidx.cardview.widget.CardView
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
+            android:layout_gravity="center"
             android:layout_margin="100dp"
             android:elevation="6dp"
-            android:layout_gravity="center"
-            >
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
 
-                android:orientation="vertical"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:background="@color/white"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="16dp">
 
 
@@ -82,27 +81,24 @@
             </LinearLayout>
 
 
-
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_marginTop="-70dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-70dp"
 
             android:elevation="6dp"
-            android:layout_gravity="center"
-            >
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
 
-                android:orientation="vertical"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:background="@color/white"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="16dp">
 
 
@@ -118,12 +114,12 @@
                     android:textStyle="normal|bold" />
 
                 <ImageView
-                    android:textAlignment="center"
                     android:id="@+id/atulimage"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/fatuldev" />
+                    android:src="@drawable/fatuldev"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/atulname"
@@ -156,28 +152,25 @@
             </LinearLayout>
 
 
-
-
         </androidx.cardview.widget.CardView>
 
 
         <androidx.cardview.widget.CardView
-            android:layout_marginTop="30dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
 
             android:elevation="6dp"
-            android:layout_gravity="center"
-            >
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
 
-                android:orientation="vertical"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:background="@color/white"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="16dp">
 
 
@@ -193,12 +186,12 @@
                     android:textStyle="normal|bold" />
 
                 <ImageView
-                    android:textAlignment="center"
                     android:id="@+id/apoorvaimage"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/apoorva" />
+                    android:src="@drawable/apoorva"
+                    android:textAlignment="center" />
 
                 <TextView
 
@@ -221,36 +214,33 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="normal|bold" />
+
                 <ImageButton
+                    android:id="@+id/apoorvalnk"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/img_1"
-                    android:id="@+id/apoorvalnk"
-                    />
+                    android:background="@drawable/img_1" />
             </LinearLayout>
-
-
 
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_marginTop="30dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
 
             android:elevation="6dp"
-            android:layout_gravity="center"
-            >
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
 
-                android:orientation="vertical"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:background="@color/white"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="16dp">
 
 
@@ -266,12 +256,12 @@
                     android:textStyle="normal|bold" />
 
                 <ImageView
-                    android:textAlignment="center"
                     android:id="@+id/durjoyimage"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/durjoy" />
+                    android:src="@drawable/durjoy"
+                    android:textAlignment="center" />
 
                 <TextView
 
@@ -294,37 +284,34 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="normal|bold" />
+
                 <ImageButton
+                    android:id="@+id/durjoylnk"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/img_1"
-                    android:id="@+id/durjoylnk"
-                    />
+                    android:background="@drawable/img_1" />
             </LinearLayout>
-
-
 
 
         </androidx.cardview.widget.CardView>
 
 
         <androidx.cardview.widget.CardView
-            android:layout_marginTop="30dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
 
             android:elevation="6dp"
-            android:layout_gravity="center"
-            >
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
 
-                android:orientation="vertical"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:background="@color/white"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="16dp">
 
 
@@ -340,12 +327,12 @@
                     android:textStyle="normal|bold" />
 
                 <ImageView
-                    android:textAlignment="center"
                     android:id="@+id/shivamimage"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/shivam" />
+                    android:src="@drawable/shivam"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/shivamname"
@@ -368,20 +355,16 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="normal|bold" />
+
                 <ImageButton
+                    android:id="@+id/shivamlnk"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/img_1"
-                    android:id="@+id/shivamlnk"
-                    />
+                    android:background="@drawable/img_1" />
             </LinearLayout>
 
 
-
-
         </androidx.cardview.widget.CardView>
-
-
 
 
     </LinearLayout>
