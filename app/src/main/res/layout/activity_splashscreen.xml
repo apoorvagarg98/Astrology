@@ -36,8 +36,8 @@
                     android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
                     android:text="आदि शक्ति एस्ट्रो"
-                    android:layout_marginBottom="10dp"
-                    android:textColor="#D100D1"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#8b008b"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -49,7 +49,7 @@
                     android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
                     android:text="AADI SHAKTII ASTRO"
-                    android:textColor="#D100D1"
+                    android:textColor="#8b008b"
 
                     android:textSize="24sp"
                     android:textStyle="bold" />
