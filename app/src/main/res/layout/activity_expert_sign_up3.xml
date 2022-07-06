@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundtrial"
+    android:background="@drawable/finalbackground"
     tools:context=".loginSignupSeRelated.ExpertSignUp3">
 
 
@@ -33,9 +33,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/aclonica"
-                    android:textColor="#D100D1"
                     android:gravity="center"
                     android:text="आदि शक्ति एस्ट्रो"
+                    android:textColor="#D100D1"
 
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -46,9 +46,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
 
+                    android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
                     android:text="AADI SHAKTII ASTRO"
-                    android:fontFamily="@font/aclonica"
                     android:textColor="#D100D1"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -60,12 +60,12 @@
                 android:id="@+id/topicon"
                 android:layout_width="58dp"
                 android:layout_height="60dp"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/photo"
+                android:src="@drawable/mainlogo"
                 android:text="AADISHAKTI" />
         </RelativeLayout>
 
@@ -74,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
@@ -95,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:autoText="true"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
                     android:hint="Rate per minute"
                     android:inputType="textPersonName"
@@ -109,7 +109,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="248dp">
@@ -121,7 +121,7 @@
                     android:layout_height="match_parent"
                     android:autoText="true"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
                     android:hint="Experience"
                     android:inputType="textPersonName"
@@ -133,52 +133,60 @@
                     android:textStyle="normal" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:backgroundTint="#F6F7FA"
-                android:gravity="center">
+                android:orientation="horizontal">
 
 
                 <TextView
                     android:id="@+id/Certificate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
                     android:layout_gravity="center"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
 
 
-                    android:gravity="center"
                     android:text="📄 Attach Your Certificate Of Profession ➢"
                     android:textColor="#D100D1"
-                    android:textSize="12dp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
 
 
                 <ImageView
                     android:id="@+id/certi"
-                    android:layout_width="38dp"
-                    android:layout_height="40dp"
+                    android:layout_width="47dp"
+                    android:layout_height="39dp"
+
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
-                    android:layout_marginStart="94dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="10dp"
+
                     android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="10dp"
+
+
                     android:layout_toEndOf="@+id/Certificate"
                     android:gravity="center"
                     android:src="@drawable/ic_baseline_attachment_24">
 
                 </ImageView>
 
-            </RelativeLayout>
+            </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:backgroundTint="#F6F7FA"
-                android:gravity="center">
+                android:orientation="horizontal">
 
 
                 <TextView
@@ -186,14 +194,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
 
 
-                    android:gravity="center"
                     android:text="📄 Attach Your Aadhaar Card Scan Copy ➢"
                     android:textColor="#D100D1"
-                    android:textSize="12dp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
 
 
@@ -203,22 +210,25 @@
                     android:layout_height="39dp"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
-                    android:layout_marginStart="89dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_toEndOf="@+id/AadhaarCard"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+
+
                     android:gravity="center"
                     android:src="@drawable/ic_baseline_attachment_24">
 
                 </ImageView>
 
-            </RelativeLayout>
-            <RelativeLayout
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:backgroundTint="#F6F7FA"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
 
                 <TextView
@@ -226,14 +236,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+
 
 
                     android:gravity="center"
                     android:text="📄 Attach Your Pan Card Scan Copy ➢"
                     android:textColor="#D100D1"
-                    android:textSize="12dp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
 
 
@@ -243,16 +254,17 @@
                     android:layout_height="39dp"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginStart="110dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+
+
                     android:gravity="center"
-                    android:layout_toEndOf="@+id/PanCard"
                     android:src="@drawable/ic_baseline_attachment_24">
 
                 </ImageView>
 
-            </RelativeLayout>
+            </LinearLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -260,7 +272,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 app:passwordToggleEnabled="true"
-                app:passwordToggleTint="#4DBFF0"
+                app:passwordToggleTint="#D100D1"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="248dp">
 
@@ -270,7 +282,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
                     android:ems="10"
                     android:hint="Password"
                     android:inputType="textPassword"
@@ -281,9 +292,9 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 app:passwordToggleEnabled="true"
-                app:passwordToggleTint="#4DBFF0"
+                app:passwordToggleTint="#D100D1"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="248dp">
 
@@ -293,7 +304,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
                     android:hint="Confirm Password"
                     android:inputType="textPassword"
@@ -323,8 +334,6 @@
                     app:backgroundTint="#44B4E4" />
 
             </RelativeLayout>
-
-
 
 
             <LinearLayout
@@ -367,4 +376,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>

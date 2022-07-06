@@ -41,6 +41,7 @@
                     android:id="@+id/developers"
                     android:icon="@drawable/ic_baseline_developer_mode_24"
                     android:iconTint="#4DBFF0"
+
                     android:title="Developers"></item>
 
 
