@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundtrial"
+    android:background="@drawable/finalbackground"
     tools:context=".loginSignupSeRelated.ExpertSignUp1">
 
 
@@ -46,7 +46,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
                     android:text="AADI SHAKTII ASTRO"
                     android:textColor="#D100D1"
@@ -60,12 +60,12 @@
                 android:id="@+id/topicon"
                 android:layout_width="58dp"
                 android:layout_height="60dp"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/rudraaksha"
+                android:src="@drawable/mainlogo"
                 android:text="AADISHAKTI"
                 android:textColor="#E9E83141"
                 android:textSize="32sp" />
@@ -88,13 +88,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:padding="@dimen/_10sdp"
                 android:layout_marginBottom="20dp"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/open_sans_bold"
                 android:gravity="center"
                 android:background="@drawable/box"
                 android:backgroundTint="#FDFCFA"
-                android:text="🏵 Help Us With A Little Info 🏵"
+                android:text="Help Us With A Little Info"
                 android:textColor="#4F3DEF"
                 android:textSize="20sp"
                 />
