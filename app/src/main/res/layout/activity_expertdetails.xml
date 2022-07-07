@@ -81,37 +81,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:fontFamily="@font/open_sans"
-                android:text="⭐ 4.5"
-                android:paddingTop="@dimen/_2sdp"
-                android:paddingBottom="@dimen/_2sdp"
-                android:paddingStart="@dimen/_5sdp"
-                android:paddingEnd="@dimen/_5sdp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/box"
-                android:backgroundTint="#4DBFF0"
-                android:textColor="#000000"></TextView>
-
+                android:backgroundTint="#DC128A"
+                android:fontFamily="@font/open_sans"
+                android:padding="@dimen/_3sdp"
+                android:text="⭐ 4.5"
+                android:textColor="@color/white"></TextView>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
 
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="vertical"
+
+            android:padding="10dp">
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-black"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/open_sans"
                 android:text="Name"
-                android:textColor="@color/black"
-
-                android:textSize="18sp"
+                android:textSize="17dp"
+                android:textColor="#DC128A"
+                android:textStyle="bold"
 
                 >
 
@@ -121,11 +121,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                android:fontFamily="sans-serif-light"
-                android:text="Area of Expertise"
+
+                android:fontFamily="@font/open_sans"
+                android:text="Expertise"
                 android:textColor="@color/black">
 
             </TextView>
@@ -134,18 +133,28 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-light"
+
+                android:fontFamily="@font/open_sans"
                 android:text="Experience"
+                android:textSize="13dp"
                 android:textColor="@color/black">
 
             </TextView>
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
 
+                android:fontFamily="@font/open_sans_bold"
+                android:text="Charge/min"
+                android:textSize="13dp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
 
-
+            </TextView>
 
         </LinearLayout>
 

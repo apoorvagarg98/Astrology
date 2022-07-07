@@ -18,7 +18,7 @@
             android:id="@+id/toolbar2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_700"
+            android:background="#2BD4DD"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme" />
 
@@ -87,8 +87,8 @@
 
     <Button
         android:id="@+id/openProfile"
-        android:layout_width="66dp"
-        android:layout_height="48dp"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
         android:theme="@style/Button.White"
         android:textColor="@color/white"
         android:background="@drawable/ic_profile"

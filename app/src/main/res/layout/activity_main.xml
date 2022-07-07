@@ -70,57 +70,22 @@
 
             <Button
                 android:id="@+id/astro"
-                android:layout_width="354dp"
-                android:layout_height="65dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/slider"
 
-                android:layout_marginLeft="25dp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:backgroundTint="#4DBFF0"
                 android:gravity="center"
+                android:fontFamily="@font/alata"
 
                 android:text="Find Your Desired Experts:"
                 android:textAllCaps="false"
-                android:textSize="11dp" />
+                android:textSize="14dp" />
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="2dp"
-                android:fontFamily="@font/open_sans_bold"
-                android:gravity="center"
-                android:text="────────────────────────────"
-                android:textColor="#4DBFF0"
-                android:textSize="18sp"
-                />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="2dp"
-                android:layout_marginStart="5dp"
-                android:fontFamily="sans-serif"
-                android:text="Top Experts:"
-                android:textColor="@color/black"
-                android:textSize="18dp">
-            </TextView>
-
-
-            <TextView
-                android:id="@+id/title122"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="2dp"
-                android:fontFamily="@font/open_sans_bold"
-                android:gravity="center"
-                android:text="────────────────────────────"
-
-                android:textColor="#4DBFF0"
-
-                android:textSize="18sp" />
 
 
             <androidx.recyclerview.widget.RecyclerView
