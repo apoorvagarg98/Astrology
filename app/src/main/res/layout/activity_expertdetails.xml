@@ -246,15 +246,15 @@
                 android:gravity="center"
                 android:ems="3"
                 app:backgroundTint="#4DBFF0"
-                android:minWidth="150dp"
+                android:minWidth="200dp"
                 android:singleLine="true"
                 android:text="Book Now"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal"
                 android:fontFamily="sans-serif-medium"
-                android:drawableLeft="@drawable/ic_baseline_chat_24"
-                android:drawablePadding="@dimen/_10sdp"
+                android:drawableLeft="@drawable/book_now"
+                android:drawablePadding="@dimen/_5sdp"
                 android:drawableTint="@color/white"
 
 
