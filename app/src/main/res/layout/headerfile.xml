@@ -22,7 +22,7 @@
         android:paddingLeft="20sp"
         android:paddingRight="20sp"
         android:text="AADI SHAKTII ASTRO"
-        android:textColor="#8b008b"
+        android:textColor="#DC128A"
         android:textSize="17sp"
         android:textStyle="bold" />
 
@@ -32,7 +32,7 @@
 
         android:layout_marginTop="@dimen/_5sdp"
         android:text="WWW.RUDRAKSHA.ORG.IN"
-        android:textColor="#8b008b"
+        android:textColor="#DC128A"
         android:textAlignment="center"
         android:textSize="14sp"
         android:paddingLeft="20sp"
