@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundtrial"
+    android:background="@drawable/finalbackground"
     tools:context=".loginSignupSeRelated.SignUp2">
 
     <LinearLayout
@@ -17,8 +17,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="40dp"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="40dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -31,10 +31,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/aclonica"
-                    android:textColor="#D100D1"
+                    android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
+
                     android:text="आदि शक्ति एस्ट्रो"
+                    android:textColor="#8b008b"
 
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -45,10 +46,11 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
 
+                    android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
                     android:text="AADI SHAKTII ASTRO"
-                    android:fontFamily="@font/aclonica"
-                    android:textColor="#D100D1"
+                    android:textColor="#8b008b"
+
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -59,12 +61,13 @@
                 android:id="@+id/topicon"
                 android:layout_width="58dp"
                 android:layout_height="60dp"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:layout_gravity="center"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/photo"
+                android:src="@drawable/mainlogo"
                 android:text="AADISHAKTI" />
         </RelativeLayout>
 
@@ -78,8 +81,6 @@
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:orientation="vertical">
-
-
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -96,9 +97,9 @@
                     android:layout_height="wrap_content"
                     android:autoText="true"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
-                    android:hint="Birth Date:"
+                    android:hint="Birth Date: DD/MM/YYYY"
                     android:inputType="textPersonName"
                     android:shadowColor="#EFE1E1"
                     android:textColor="#090909"
@@ -121,9 +122,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
-                    android:hint="Birth Time:"
+                    android:hint="Birth Time:(eg 4.15am)"
                     android:textColor="#090909" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -182,7 +183,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
                     android:hint="Birth Place:"
                     android:textColor="#090909" />
@@ -203,37 +204,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
-                    android:hint="Password"
+                    android:hint="Password:(Must be upto 8 characters)"
                     android:inputType="textPassword"
                     android:textColor="#090909" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/signuppage3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:singleLine="true"
-
-                    android:src="@drawable/ic_rightt"
-                    android:text="Log In"
-                    android:visibility="visible"
-                    app:backgroundTint="#44B4E4" />
-
-            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -263,13 +240,39 @@
                     android:layout_marginBottom="10dp"
                     android:gravity="center"
 
-                    android:textStyle="bold"
                     android:text="Terms of Service and Privacy Policy"
                     android:textColor="#4DBFF0"
-                    android:textSize="14dp" />
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/signuppage3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="10dp"
+                    android:singleLine="true"
+
+                    android:src="@drawable/ic_rightt"
+                    android:text="Log In"
+                    android:visibility="visible"
+                    app:backgroundTint="#44B4E4" />
+
+            </RelativeLayout>
+
+
             <LinearLayout
 
                 android:layout_width="match_parent"

@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundd"
+    android:background="@drawable/finalbackground"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
     tools:context=".astrologerFragementDirectory.astrologerfragement">
 
     <!-- TODO: Update blank fragment layout -->
@@ -12,7 +14,8 @@
         android:id="@+id/rva"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:padding="5dp"/>
 
 </FrameLayout>

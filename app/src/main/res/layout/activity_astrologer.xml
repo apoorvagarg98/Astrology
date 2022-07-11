@@ -20,7 +20,35 @@
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#1E88E5"></androidx.appcompat.widget.Toolbar>
+
+            android:background="#4DBFF0">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/mainlogo">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/alata"
+                android:padding="@dimen/_5sdp"
+                android:text="AADI SHAKTII ASTRO"
+                android:textColor="@color/white"
+                android:textSize="21dp"></TextView>
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#4DBFF0"
+                android:src="@drawable/ic_profile"></ImageButton>
+
+        </androidx.appcompat.widget.Toolbar>
 
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -29,16 +57,15 @@
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="@+id/appbar"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tabIconTint="@color/purple_500"
-        app:tabIndicatorColor="#1E88E5"
+        app:tabIndicatorColor="#4DBFF0"
         app:tabMode="scrollable"
-        app:tabTextColor="#090909">
+        app:tabTextColor="#DC128A">
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/home"
@@ -49,18 +76,18 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="laalKitaab" />
+            android:text="Laal Kitaab" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HinduRituals" />
+            android:text="Hindu Rituals" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MobileNumerology" />
+            android:text="Mobile Numerology" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabItem2"
@@ -72,19 +99,19 @@
             android:id="@+id/tabItem3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="palmistory" />
+            android:text="Palmistry" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabItem8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="tarotCardReader" />
+            android:text="Tarot Card Reader" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabItem9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="VastuExpert" />
+            android:text="Vastu Expert" />
 
     </com.google.android.material.tabs.TabLayout>
 

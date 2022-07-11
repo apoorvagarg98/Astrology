@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -26,6 +27,10 @@ import android.widget.SearchView;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.astrology.R;
+import com.example.astrology.aboutteam;
+import com.example.astrology.aboutus;
+import com.example.astrology.faqs;
+import com.example.astrology.legalPolicy;
 import com.example.astrology.models.expertModel;
 import com.example.astrology.viewHollders.item;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -39,7 +44,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -64,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout = findViewById(R.id.drawerlayout);
         navigationView = findViewById(R.id.navigationview);
+        navigationView.setNavigationItemSelectedListener(this);
         toolbar = findViewById(R.id.toolbar);
 
 
@@ -99,6 +105,37 @@ public class MainActivity extends AppCompatActivity {
         slideModels.add(new SlideModel("https://m.facebook.com/619462814750696/photos/a.619469904749987/1264677913562513/?type=3&source=44", "Tarot Card"));
         imageSlider.setImageList(slideModels, true);
 
+    }
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.home_menu:
+                startActivity(new Intent(MainActivity.this, aboutus.class));
+                break;
+            case R.id.dashboard_menu:
+                startActivity(new Intent(MainActivity.this, faqs.class));
+                break;
+            case R.id.course_menu:
+                startActivity(new Intent(MainActivity.this, legalPolicy.class));
+                break;
+            case R.id.developers:
+                startActivity(new Intent(MainActivity.this, aboutteam.class));
+                break;
+
+
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        if(drawerLayout.isDrawerOpen(GravityCompat.START))
+        {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else {
+            super.onBackPressed();
+        }
     }
 
     private void loadParticipant() {
@@ -136,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(search, menu);
@@ -160,7 +197,9 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onCreateOptionsMenu(menu);
 
-    }
+    }*/
+
+
 }
 
 

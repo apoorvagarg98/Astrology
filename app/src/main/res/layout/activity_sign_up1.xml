@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundtrial"
+    android:background="@drawable/finalbackground"
     tools:context=".loginSignupSeRelated.SignUp1">
+
+
 
 
     <LinearLayout
@@ -24,7 +26,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical">
 
 
@@ -34,10 +36,11 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/open_sans_bold"
+                    android:textColor="#8b008b"
                     android:gravity="center"
                     android:text="आदि शक्ति एस्ट्रो"
                     android:layout_marginBottom="10dp"
-                    android:textColor="#D100D1"
+
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -47,9 +50,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/open_sans_bold"
+                    android:textColor="#8b008b"
                     android:gravity="center"
                     android:text="AADI SHAKTII ASTRO"
-                    android:textColor="#D100D1"
+
 
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -63,10 +67,10 @@
                 android:layout_height="60dp"
                 android:layout_alignParentLeft="true"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/rudraaksha"
+                android:src="@drawable/mainlogo"
                 android:text="AADISHAKTI"
                 android:textColor="#E9E83141"
                 android:textSize="32sp" />
@@ -79,6 +83,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
+            android:textAlignment="center"
             android:layout_marginEnd="20dp"
             android:gravity="center"
             android:orientation="vertical">
@@ -90,14 +95,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/box"
                 android:backgroundTint="#FFFFFF"
-                android:fontFamily="@font/open_sans"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="#8b008b"
                 android:gravity="center"
-                android:text="🏵 Help Us With A Little Info 🏵"
-                android:textColor="#D100D1"
+                android:text="Help Us With A Little Info"
+
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -119,7 +125,7 @@
 
                     android:autoText="true"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
                     android:hint="Name:"
                     android:inputType="textPersonName"
@@ -145,7 +151,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
                     android:hint="Mobile Number:"
                     android:textColor="#090909" />
@@ -165,7 +171,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
+
                     android:ems="10"
                     android:hint="Email Id:"
                     android:textColor="#090909" />
@@ -181,8 +187,8 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="center"
-                android:text="💮 Please Select Your Gender 💮"
-                android:textColor="#D100D1"
+                android:text="♂ Please Select Your Gender ♀"
+                android:textColor="#8b008b"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -199,8 +205,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="6dp"
-                    android:background="@drawable/box"
-                    android:backgroundTint="#F6F7FA"
+                    android:background="@drawable/textviewbg"
+
 
                     android:paddingEnd="14dp"
                     android:text="Male ♂️"></RadioButton>
@@ -210,8 +216,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:background="@drawable/box"
-                    android:backgroundTint="#F6F7FA"
+                    android:background="@drawable/textviewbg"
+
                     android:padding="2dp"
                     android:paddingEnd="4dp"
                     android:text="Female ♀️">
@@ -236,11 +242,13 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
+                    android:background="@drawable/textviewbg"
                     android:singleLine="true"
                     android:src="@drawable/ic_rightt"
                     android:text="Log In"
                     android:visibility="visible"
-                    app:backgroundTint="#5DC7F4" />
+
+                   />
 
             </RelativeLayout>
 
@@ -249,7 +257,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingLeft="10dp"
