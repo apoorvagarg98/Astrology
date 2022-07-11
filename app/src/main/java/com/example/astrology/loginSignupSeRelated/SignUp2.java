@@ -10,16 +10,20 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.example.astrology.Activities.acceptordeclinepage;
-import com.example.astrology.Activities.bookingPage;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.astrology.R;
 import com.example.astrology.models.APITask;
 import com.example.astrology.models.IAPITaskCallBack;
@@ -32,23 +36,31 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.squareup.okhttp.FormEncodingBuilder;
 import com.squareup.okhttp.RequestBody;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Calendar;
-import java.util.HashMap;
 
 public class SignUp2 extends AppCompatActivity implements View.OnClickListener, IAPITaskCallBack {
-    EditText dateofbirth,placeofbirth,birthtime,passs;
+    EditText dateofbirth,placeofbirth,birthtime,passs,pinCodeEdt;
     private int mYear, mMonth, mDay, mHour, mMinute,hour,minutes;
     private String USER_ID = "4545"; // eg "4545"
     private String API_KEY = "ByVOIaODH57QRVi6CqswHXGlcpDvj7tZBRoorY";  // eg "hdkbcsjcn157618678habdkjbck"
     private String API_END_POINT = "https://pdf.astrologyapi.com/v1/";
     FirebaseUser user1;
     private Handler handler;
-    String gender,date,time,link;
-    FloatingActionButton signup;
+
+    String gender,date,time,link,pinCode;
+    FloatingActionButton signup,getDataBtn;
     private FirebaseAuth mAuth;
+    private RequestQueue mRequestQueue;
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
@@ -68,11 +80,29 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
         birthtime =findViewById(R.id.birthtime);
         signup = findViewById(R.id.signuppage3);
 
+        pinCodeEdt = findViewById(R.id.idedtPinCode);
+        getDataBtn = findViewById(R.id.idBtnGetCityandState);
+
+        mRequestQueue = Volley.newRequestQueue(SignUp2.this);
+
         placeofbirth = findViewById(R.id.birthplace);
         mAuth = FirebaseAuth.getInstance();
         user1 = mAuth.getCurrentUser();
         dateofbirth.setOnClickListener(this);
         birthtime.setOnClickListener( this);
+
+        getDataBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pinCode = pinCodeEdt.getText().toString();
+                if (TextUtils.isEmpty(pinCode)) {
+                    Toast.makeText(SignUp2.this, "Please enter valid pincode", Toast.LENGTH_SHORT).show();
+                } else{
+                    getDataFromPinCode(pinCode);
+                }
+            }
+        });
+
         signup.setOnClickListener(new View.OnClickListener() {
                                       @Override
                                       public void onClick(View view) {
@@ -82,6 +112,74 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
                                   }
         );
 
+    }
+
+    private void getDataFromPinCode(String pinCode) {
+
+        // clearing our cache of request queue.
+        mRequestQueue.getCache().clear();
+
+        // below is the url from where we will be getting
+        // our response in the json format.
+        String url = "https://api.postalpincode.in/pincode/"+ pinCode;
+
+        // below line is use to initialize our request queue.
+        RequestQueue queue = Volley.newRequestQueue(SignUp2.this);
+
+        // in below line we are creating a
+        // object request using volley.
+        JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                // inside this method we will get two methods
+                // such as on response method
+                // inside on response method we are extracting
+                // data from the json format.
+                try {
+                    // we are getting data of post office
+                    // in the form of JSON file.
+                    JSONArray postOfficeArray = response.getJSONArray("PostOffice");
+                    if (response.getString("Status").equals("Error")) {
+                        // validating if the response status is success or failure.
+                        // in this method the response status is having error and
+                        // we are setting text to TextView as invalid pincode.
+                        placeofbirth.setText("Pin code is not valid.");
+                    } else {
+                        // if the status is success we are calling this method
+                        // in which we are getting data from post office object
+                        // here we are calling first object of our json array.
+                        JSONObject obj = postOfficeArray.getJSONObject(0);
+
+                        // inside our json array we are getting district name,
+                        // state and country from our data.
+                        String district = obj.getString("District");
+                        String state = obj.getString("State");
+                        String country = obj.getString("Country");
+
+                        // after getting all data we are setting this data in
+                        // our text view on below line.
+                        placeofbirth.setText(postOfficeArray.getString(0));
+                    }
+                } catch (JSONException e) {
+                    // if we gets any error then it
+                    // will be printed in log cat.
+                    e.printStackTrace();
+                    placeofbirth.setText("Pin code is not valid");
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                // below method is called if we get
+                // any error while fetching data from API.
+                // below line is use to display an error message.
+                Toast.makeText(SignUp2.this, "Pin code is not valid.", Toast.LENGTH_SHORT).show();
+                placeofbirth.setText(error.toString());
+            }
+        });
+        // below line is use for adding object
+        // request to our request queue.
+        queue.add(objectRequest);
     }
     public void onClick(View v) {
 

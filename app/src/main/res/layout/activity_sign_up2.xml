@@ -128,6 +128,47 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="248dp">
+            <EditText
+                android:id="@+id/idedtPinCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F6F7FA"
+                android:layout_margin="20dp"
+                android:hint="Enter pin code"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/idBtnGetCityandState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="190dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:src="@drawable/ic_rightt"
+                    android:text="place"
+                    android:visibility="visible"
+                    app:backgroundTint="#44B4E4" />
+            </LinearLayout>
+
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
