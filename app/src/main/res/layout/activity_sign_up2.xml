@@ -129,31 +129,35 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:backgroundTint="@color/white"
                 tools:layout_editor_absoluteX="92dp"
                 tools:layout_editor_absoluteY="248dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
             <EditText
                 android:id="@+id/idedtPinCode"
-                android:layout_width="match_parent"
+                android:layout_width="315dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/textviewbg"
-                android:backgroundTint="#F6F7FA"
-                android:layout_margin="20dp"
+                android:ems="10"
+
                 android:hint="Enter pin code"
                 android:importantForAutofill="no"
                 android:inputType="number"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textColor="#090909"/>
 
-            </com.google.android.material.textfield.TextInputLayout>
+
 
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -167,7 +171,8 @@
                     android:text="place"
                     android:visibility="visible"
                     app:backgroundTint="#44B4E4" />
-            </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
