@@ -218,7 +218,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="8dp"
                     android:background="#EDEBEB"
 
@@ -253,7 +253,7 @@
                 android:textSize="16sp"
                 android:textStyle="normal"
                 android:fontFamily="sans-serif-medium"
-                android:drawableLeft="@drawable/book_now"
+                android:drawableRight="@drawable/book_now"
                 android:drawablePadding="@dimen/_5sdp"
                 android:drawableTint="@color/white"
 

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.astrology.Adapters.selectClientAdapter;
 import com.example.astrology.R;
@@ -17,7 +18,7 @@ import com.google.firebase.database.DatabaseReference;
 public class selectClientRequests extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
-    Button profile;
+    ImageButton profile;
     public FirebaseAuth mAuth;
     public FirebaseUser user;
     public DatabaseReference exprofile;
