@@ -95,7 +95,7 @@
                 android:background="@drawable/box"
                 android:backgroundTint="#FDFCFA"
                 android:text="Help Us With A Little Info"
-                android:textColor="#4F3DEF"
+                android:textColor="#4DBFF0"
                 android:textSize="20sp"
                 />
 
@@ -179,8 +179,8 @@
                 android:layout_marginBottom="2dp"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="center"
-                android:text="💮 Please Select Your Gender 💮"
-                android:textColor="#4F3DEF"
+                android:text="Select Your Gender"
+                android:textColor="#DC128A"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -229,17 +229,17 @@
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/Exsignup2"
+                    android:layout_centerInParent="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
                     android:singleLine="true"
-                    android:src="@drawable/ic_rightt"
+
+                    android:src="@drawable/ic_baseline_arrow_forward"
                     android:text="Log In"
                     android:visibility="visible"
-                    app:backgroundTint="#44B4E4" />
+                    app:backgroundTint="#DC128A" />
 
             </RelativeLayout>
 
@@ -270,11 +270,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="@font/open_sans_bold"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:text="Please Sign In Here"
-                    android:textColor="#4F3DEF"
+
+                    android:text="Sign In"
+                    android:textColor="#4DBFF0"
                     android:textSize="12dp"
                      />
 
