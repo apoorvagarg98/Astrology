@@ -2,7 +2,9 @@
 <resources>
     <string name="navigation_open">Open Navigaton drawer</string>
     <string name="navigation_close">Close Navigaton drawer</string>
-
+    <string name="sign_in">
+        <u>Sign In</u>.
+    </string>
 
     <string name="app_name">MyAndroidApp</string>
     <string name="profession_prompt">Choose a Profession</string>

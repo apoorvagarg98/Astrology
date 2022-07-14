@@ -58,8 +58,8 @@
 
             <ImageView
                 android:id="@+id/topicon"
-                android:layout_width="58dp"
-                android:layout_height="60dp"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_alignParentLeft="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
@@ -77,9 +77,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -88,8 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:padding="@dimen/_10sdp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="2dp"
                 android:fontFamily="@font/open_sans_bold"
                 android:gravity="center"
                 android:background="@drawable/box"
@@ -235,8 +234,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:singleLine="true"
-
-                    android:src="@drawable/ic_baseline_arrow_forward"
+                    app:tint="@color/white"
+                    android:src="@drawable/ic_rightt"
                     android:text="Log In"
                     android:visibility="visible"
                     app:backgroundTint="#DC128A" />
@@ -274,7 +273,7 @@
                     android:gravity="center"
                     android:singleLine="true"
 
-                    android:text="Sign In"
+                    android:text="@string/sign_in"
                     android:textColor="#4DBFF0"
                     android:textSize="12dp"
                      />
