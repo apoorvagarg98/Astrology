@@ -6,168 +6,164 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/bgg"
+    android:background="@drawable/finalbackground"
+
     tools:context=".Activities.ExpertProfile">
-
-
-    <TextView
-
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/open_sans_bold"
-        android:gravity="center"
-        android:text="────────────────────────────"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-        android:textColor="#4DBFF0"
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#4DBFF0"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_left"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:titleTextColor="@color/white"
+                app:titleMarginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="EXPERT PROFILE"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
 
-        android:textSize="18sp" />
+        </androidx.appcompat.widget.Toolbar>
 
-    <TextView
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ImageView
         android:id="@+id/experttitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginBottom="1dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:paddingTop="30dp"
+        android:layout_gravity="center"
         android:layout_marginTop="1dp"
         android:layout_marginRight="3dp"
         android:layout_marginLeft="3dp"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:text="Expert Profile" />
-
-    <TextView
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="200dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/open_sans_bold"
-        android:gravity="center"
-        android:text="────────────────────────────"
-
-        android:textColor="#4DBFF0"
-
-        android:textSize="18sp" />
-
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/profilee"/>
 
     <TextView
         android:id="@+id/exprname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded"
         android:textSize="20sp"
-        android:padding="3dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginBottom="5dp"
+        android:padding="6dp"
+        android:textStyle="normal"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_marginBottom="8dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/textbox1"
-        android:text="Name" />
+        android:text="Name: "/>
 
     <TextView
         android:id="@+id/exprdob"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded"
         android:textSize="20sp"
-        android:padding="3dp"
-        android:textStyle="bold"
-        android:layout_marginBottom="5dp"
+        android:padding="6dp"
+        android:textStyle="normal"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_marginBottom="8dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/textbox2"
-        android:text="Dob"
-        android:textColor="@color/black"/>
+        android:text="DOB: "/>
 
     <TextView
         android:id="@+id/expremail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded"
         android:textSize="20sp"
-        android:padding="3dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginBottom="5dp"
+        android:padding="6dp"
+        android:textStyle="normal"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_marginBottom="8dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/textbox1"
-        android:text="Email" />
-
+        android:text="Email Id: "/>
     <TextView
         android:id="@+id/expraddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/textbox2"
-        android:text="Address"
-        android:padding="3dp"
-        android:textColor="@color/black"
+        android:background="@drawable/bg_rounded"
         android:textSize="20sp"
-        android:textStyle="bold" />
-
+        android:padding="6dp"
+        android:textStyle="normal"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Address: "/>
     <TextView
         android:id="@+id/exprpincode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/textbox1"
-        android:text="Postal Address"
-        android:padding="3dp"
-        android:textColor="@color/black"
+        android:background="@drawable/bg_rounded"
         android:textSize="20sp"
-        android:textStyle="bold" />
-
+        android:padding="6dp"
+        android:textStyle="normal"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Pincode: "/>
     <TextView
         android:id="@+id/exprexperty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/textbox2"
-        android:text="Expertise"
-        android:textColor="@color/black"
-        android:padding="3dp"
+        android:background="@drawable/bg_rounded"
         android:textSize="20sp"
-        android:textStyle="bold" />
-
+        android:padding="6dp"
+        android:textStyle="normal"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Expertise: "/>
     <TextView
         android:id="@+id/exprexperience"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/textbox1"
-        android:text="Experience"
-        android:textColor="@color/black"
-        android:padding="3dp"
+        android:background="@drawable/bg_rounded"
         android:textSize="20sp"
-        android:textStyle="bold" />
-
+        android:padding="6dp"
+        android:textStyle="normal"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Experience: "/>
     <TextView
         android:id="@+id/expramt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/textbox2"
-        android:text="Amount to be paid"
-        android:padding="3dp"
-        android:textColor="@color/black"
+        android:background="@drawable/bg_rounded"
         android:textSize="20sp"
-        android:textStyle="bold" />
-
-
+        android:padding="6dp"
+        android:textStyle="normal"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Charges/min: "/>
 
     <Spinner
         android:id="@+id/expryesno"
@@ -177,7 +173,7 @@
         android:layout_marginRight="10dp"
         android:textColor="@color/black"
         android:layout_marginLeft="10dp"
-        android:background="@drawable/textbox1"
+        android:background="@drawable/bg_rounded"
         android:minHeight="48dp" />
 
 
