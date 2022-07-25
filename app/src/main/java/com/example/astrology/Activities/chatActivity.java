@@ -5,15 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.astrology.Adapters.MessageAdapter;
+import com.example.astrology.BaseActivity;
+import com.example.astrology.PlaceCallActivity;
 import com.example.astrology.R;
 import com.example.astrology.models.Chat;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,15 +30,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-public class chatActivity extends AppCompatActivity {
+public class chatActivity extends AppCompatActivity  {
 TextView timer,nametv;
 ImageButton btn_send;
+    ImageButton callbutton;
 EditText text_send;
 FirebaseUser fuser;
 String recieverId, senderId,name;
@@ -51,6 +57,7 @@ private int duration = 120;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         btn_send = findViewById(R.id.btn_send);
+        callbutton = findViewById(R.id.call);
         text_send = findViewById(R.id.text_send);
         recyclerView = findViewById(R.id.rvChat);
         recyclerView.setHasFixedSize(true);
@@ -102,8 +109,14 @@ readMessages(senderId, recieverId);
     }
 });
 */
-
-
+callbutton.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(chatActivity.this, PlaceCallActivity.class);
+        intent.putExtra("id",fuser.getUid());
+        startActivity(intent);
+    }
+});
 
     }
   private void sendMessage(String sender,String reciever,String message)
@@ -114,8 +127,6 @@ readMessages(senderId, recieverId);
       hashMap.put("reciever",reciever);
       hashMap.put("message",message);
       ref.child("Chats").push().setValue(hashMap);
-
-
   }
 
   private void readMessages(String myid,String userid )
@@ -158,7 +169,7 @@ readMessages(senderId, recieverId);
                             String time =  String.format(Locale.getDefault(),"%02d:%02d:%02d",TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
                                     TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)-
                                             TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
-                                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished)-
+                                            TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished)-
                                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)));
                             final String[] hourMinSec = time.split(":");
 

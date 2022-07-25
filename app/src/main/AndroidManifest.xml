@@ -2,11 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.astrology">
-
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
 
     <application
         android:allowBackup="true"
@@ -15,6 +28,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Astrology">
+        <service android:name=".SinchService"/>
         <activity
             android:name=".expertdetails"
             android:exported="false" />
@@ -59,6 +73,17 @@
             android:name=".loginSignupSeRelated.ExpertSignUp3"
             android:exported="true" />
         <activity
+            android:name=".aboutus"
+            android:exported="true" />
+        <activity
+            android:name=".Activities.faqs"
+            android:exported="true" />
+
+        <activity
+            android:name=".Activities.aboutteam"
+            android:exported="true"
+           />
+        <activity
             android:name=".loginSignupSeRelated.ExpertSignUp2"
             android:exported="true" />
         <activity
@@ -70,6 +95,10 @@
         <activity
             android:name=".Activities.astrologer"
             android:exported="true" />
+        <activity android:name=".CallScreenActivity" android:screenOrientation="portrait"  android:exported="true" />
+        <activity android:name=".IncomingCallScreenActivity" android:screenOrientation="portrait"  android:exported="true" />
+        <activity android:name=".PlaceCallActivity" android:screenOrientation="portrait"  android:exported="true" />
+
         <activity
             android:name=".loginSignupSeRelated.Login"
             android:exported="true" />

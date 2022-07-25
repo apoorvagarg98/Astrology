@@ -16,11 +16,10 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:orientation="vertical">
-
 
 
             <TextView
@@ -53,6 +52,19 @@
         </LinearLayout>
 
     </Toolbar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="350dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/call"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/ic_baseline_call_24" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/up"

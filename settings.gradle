@@ -9,3 +9,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Astrology"
 include ':app'
+include ':sinch-rtc-sample-calling'

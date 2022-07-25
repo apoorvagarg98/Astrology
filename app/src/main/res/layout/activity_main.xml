@@ -12,16 +12,6 @@
     tools:context=".Activities.MainActivity"
     >
 
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/navigationview"
-        app:headerLayout="@layout/headerfile"
-        app:menu="@menu/sidemenu"
-        app:itemIconTint="#4DBFF0"
-        app:itemTextColor="#8b008b"
-        android:layout_gravity="start"></com.google.android.material.navigation.NavigationView>
-
 
 
 <ScrollView
@@ -111,4 +101,16 @@
     </RelativeLayout>
 
 </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationview"
+        app:headerLayout="@layout/headerfile"
+        app:menu="@menu/sidemenu"
+        app:itemIconTint="#4DBFF0"
+        app:itemTextColor="#8b008b"
+        android:layout_gravity="start"></com.google.android.material.navigation.NavigationView>
+
+
 </androidx.drawerlayout.widget.DrawerLayout>
