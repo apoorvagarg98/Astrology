@@ -49,15 +49,15 @@ import org.json.JSONObject;
 import java.util.Calendar;
 
 public class SignUp2 extends AppCompatActivity implements View.OnClickListener, IAPITaskCallBack {
-    EditText dateofbirth,placeofbirth,birthtime,passs,pinCodeEdt;
-    private int mYear, mMonth, mDay, mHour, mMinute,hour,minutes;
+    EditText dateofbirth,placeofbirth,birthtime,passs,pinCodeEdt,presentage;
+    private int mYear, mMonth, mDay, mHour, mMinute,currentage,hour,minutes;
     private String USER_ID = "4545"; // eg "4545"
     private String API_KEY = "ByVOIaODH57QRVi6CqswHXGlcpDvj7tZBRoorY";  // eg "hdkbcsjcn157618678habdkjbck"
     private String API_END_POINT = "https://pdf.astrologyapi.com/v1/";
     FirebaseUser user1;
     private Handler handler;
 
-    String gender,date,time,link,pinCode;
+    String gender,date,time,link,pinCode,present_age;
     FloatingActionButton signup,getDataBtn;
     private FirebaseAuth mAuth;
     private RequestQueue mRequestQueue;
@@ -79,7 +79,7 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
         passs =findViewById(R.id.passsignup);
         birthtime =findViewById(R.id.birthtime);
         signup = findViewById(R.id.signuppage3);
-
+        presentage = findViewById(R.id.presentage);
         pinCodeEdt = findViewById(R.id.idedtPinCode);
         getDataBtn = findViewById(R.id.idBtnGetCityandState);
 
@@ -106,11 +106,19 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
         signup.setOnClickListener(new View.OnClickListener() {
                                       @Override
                                       public void onClick(View view) {
+                                          present_age = presentage.getText().toString();
+                                          currentage=Integer.parseInt(present_age);
+                                          if (currentage>=18){
 
-                                          preregisterUser();
+                                          preregisterUser();}
+                                          else {
+                                              Toast.makeText(SignUp2.this, "You are not eligible to create account",Toast.LENGTH_SHORT).show();
+                                          }
                                       }
                                   }
         );
+
+
 
     }
 
