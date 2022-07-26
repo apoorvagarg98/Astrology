@@ -56,7 +56,7 @@
     <string name="aadhar_card">Attach Self Attested <b>AADHAR Card <font color='#DC128A'>(Masked)</font></b> </string>
     <string name="pan_card">Attach Self Attested <b>Pan Card</b> </string>
     <string name="already_have_an_account">Already have an account? <font color='#01C6DB'><b>Sign in</b></font></string>
-    <string name="you_have_new_request_pending">You Have New Request Pending</string>
+    <string name="you_have_new_request_pending">You Have<font color='#01C6DB'> New Request Pending</font></string>
     <string name="dear_expert">Dear Expert,</string>
 
 </resources>
