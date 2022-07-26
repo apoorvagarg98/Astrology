@@ -58,5 +58,6 @@
     <string name="already_have_an_account">Already have an account? <font color='#01C6DB'><b>Sign in</b></font></string>
     <string name="you_have_new_request_pending">You Have<font color='#01C6DB'> New Request Pending</font></string>
     <string name="dear_expert">Dear Expert,</string>
+    <string name="SelectOne">Please choose your puja drom below</string>
 
 </resources>
