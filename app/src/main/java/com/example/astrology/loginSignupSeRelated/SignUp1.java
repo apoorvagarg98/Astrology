@@ -44,7 +44,7 @@ public class SignUp1 extends AppCompatActivity {
                         gender = "male";
                         break;
                     case  R.id.female:
-                        gender = "female";
+                        gender =  "female";
                         break;
 
 
@@ -60,7 +60,7 @@ public class SignUp1 extends AppCompatActivity {
               intent.putExtra("name",name.getText().toString());
               intent.putExtra("email",email.getText().toString());
               intent.putExtra("mobile",mobile.getText().toString());
-              intent.putExtra("gender",gender);
+              intent.putExtra("gender", gender);
               startActivity(intent);
             }
         });
