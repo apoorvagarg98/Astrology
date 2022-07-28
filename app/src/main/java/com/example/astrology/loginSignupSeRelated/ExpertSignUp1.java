@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -16,7 +15,6 @@ public class ExpertSignUp1 extends AppCompatActivity {
     FloatingActionButton exsignup2;
     EditText exname,exmobile,exemail;
     TextView exalreadyHaveacc;
-    String emailstring,phonestring;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,31 +32,14 @@ public class ExpertSignUp1 extends AppCompatActivity {
             }
         });
 
-
-
         exsignup2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                emailstring = exemail.getText().toString().trim();
-                phonestring = exmobile.getText().toString();
-                if(!Patterns.EMAIL_ADDRESS.matcher(emailstring).matches() && emailstring.equals("") )
-                {  exemail.setError("Enter email properly");
-                    exemail.requestFocus();
-                }
-                else if(phonestring.length()==10 && phonestring.equals("")){
-                    exmobile.setError("Mobile number should be of 10 digits");
-                    exmobile.requestFocus();
-                }
-                else {
-
-
-                    Intent intent = new Intent(ExpertSignUp1.this, ExpertSignUp2.class);
-                    intent.putExtra("exname", exname.getText().toString());
-                    intent.putExtra("exemail", exemail.getText().toString());
-                    intent.putExtra("exmobile", exmobile.getText().toString());
-                    startActivity(intent);
-                }
-
+                Intent intent =  new Intent(ExpertSignUp1.this,ExpertSignUp2.class);
+                intent.putExtra("exname",exname.getText().toString());
+                intent.putExtra("exemail",exemail.getText().toString());
+                intent.putExtra("exmobile",exmobile.getText().toString());
+                startActivity(intent);
             }
         });
     }
