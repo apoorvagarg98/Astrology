@@ -193,7 +193,7 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
             public void onClick(View view) {
                 Checkout checkout = new Checkout();
                 checkout.setKeyID("rzp_test_rfooZLYQbv7p5h");
-                checkout.setImage(R.drawable.mainlogo);
+                checkout.setImage(R.drawable.rzp_logo);
                 JSONObject object = new JSONObject();
                 try {
                     object.put("name","Aadishakti");

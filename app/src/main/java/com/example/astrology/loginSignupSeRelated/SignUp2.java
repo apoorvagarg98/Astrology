@@ -42,11 +42,14 @@ import com.google.gson.JsonObject;
 import com.squareup.okhttp.FormEncodingBuilder;
 import com.squareup.okhttp.RequestBody;
 
+import org.abego.treelayout.internal.util.java.lang.string.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Calendar;
+import java.util.StringJoiner;
 
 public class SignUp2 extends AppCompatActivity implements View.OnClickListener, IAPITaskCallBack {
     EditText dateofbirth,placeofbirth,birthtime,passs,pinCodeEdt;
@@ -57,7 +60,7 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
     FirebaseUser user1;
     private Handler handler;
 
-    String gender,date,time,link,pinCode;
+    String gender,date,time,link,pinCode,pob;
     FloatingActionButton signup,getDataBtn;
     private FirebaseAuth mAuth;
     private RequestQueue mRequestQueue;
@@ -173,8 +176,11 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
                 // below method is called if we get
                 // any error while fetching data from API.
                 // below line is use to display an error message.
-                Toast.makeText(SignUp2.this, "Pin code is not valid.", Toast.LENGTH_SHORT).show();
-                placeofbirth.setText(error.toString());
+                String division = StringUtils.substringBetween(error.toString(),"Division\":\"","\",");
+                String state = StringUtils.substringBetween(error.toString(),"State\":\"","\",");
+                String country = StringUtils.substringBetween(error.toString(),"Country\":\"","\",");
+                pob = division + " , " + state + " , " + country;
+                placeofbirth.setText(pob);
             }
         });
         // below line is use for adding object
@@ -235,6 +241,8 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
 
     private void preregisterUser( ) {
 
+
+
         mAuth = FirebaseAuth.getInstance();
         String namespre,phonespre,emailspre,passwordspre,dateofbirthst,placeofbirthst,birthtimest;
         namespre = getIntent().getStringExtra("name").toString();
@@ -257,13 +265,12 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
                 .add("month" , String.valueOf(mMonth))
                 .add("year" , String.valueOf(mYear))
                 .add("hour" , String.valueOf(mHour))
-
                 .add("min" , String.valueOf(minutes))
                 .add("lat" , "19.231")
                 .add("lon" , "72.4242")
                 .add("language" , "hi")
                 .add("tzone" , "5.5")
-                .add("place" , placeofbirthst)
+                .add("place" , pob)
                 .add("chart_style" , "NORTH_INDIAN")
                 .add("footer_link" , "astrologyapi.com")
                 .add("logo_url" , String.valueOf(R.drawable.mainlogo))

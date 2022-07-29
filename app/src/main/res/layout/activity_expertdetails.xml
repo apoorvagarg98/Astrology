@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,262 +7,200 @@
     tools:context=".expertdetails">
 
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
+    <!--toolbar-->
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/experttoolbar"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4DBFF0"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:titleTextColor="@color/white"
-        app:titleMarginStart="10dp"
-        android:layout_marginBottom="5dp">
+        android:background="@color/sky_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-
-        <ImageButton
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:backgroundTint="#4DBFF0"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:src="@drawable/ic_baseline_arrow_back_ios_24"
-            ></ImageButton>
-
-
-
-
-
-
-    </androidx.appcompat.widget.Toolbar>
-
-
-
-
-
-
-
+    <!--profile and information-->
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
+        <!--profile image and rating-->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
+            android:layout_weight="0.7"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvProfileImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
-
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="15dp"
-
-                android:src="@drawable/ic_baseline_people_24">
-
-
-            </ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/box"
-                android:backgroundTint="#DC128A"
-                android:fontFamily="@font/open_sans"
-                android:padding="@dimen/_3sdp"
-                android:text="⭐ 4.5"
-                android:textColor="@color/white"></TextView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="20dp"
-
-            android:gravity="center"
-            android:orientation="vertical"
-
-            android:padding="10dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/open_sans"
-                android:text="Name"
-                android:textSize="17dp"
-                android:textColor="#DC128A"
-                android:textStyle="bold"
-
-                >
-
-            </TextView>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="5dp">
 
-                android:fontFamily="@font/open_sans"
-                android:text="Expertise"
-                android:textColor="@color/black">
-
-            </TextView>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-
-                android:fontFamily="@font/open_sans"
-                android:text="Experience"
-                android:textSize="13dp"
-                android:textColor="@color/black">
-
-            </TextView>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-
-                android:fontFamily="@font/open_sans_bold"
-                android:text="Charge/min"
-                android:textSize="13dp"
-                android:textColor="@color/black"
-                android:textStyle="bold">
-
-            </TextView>
-
-        </LinearLayout>
-
-
-         </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginEnd="@dimen/_5sdp"
-            app:backgroundTint="#2F2F2F"
-            android:background="@drawable/box"
-
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginBottom="5dp"
-                android:fontFamily="sans-serif-light"
-                android:text="Consultation Fees"
-                android:textAlignment="center"
-                android:textColor="#2F2F2F"
-                android:textSize="@dimen/_10sdp"></TextView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:layout_marginStart="5dp"
-
-                android:layout_marginBottom="5dp"
-                android:fontFamily="sans-serif-medium"
-                android:textSize="@dimen/_11sdp"
-                android:text="Charge/min"
-                android:textColor="@color/black">
-            </TextView>
-        </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-
-                    android:layout_marginBottom="5dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:textSize="@dimen/_11sdp"
-                    android:text="About Me"
-                    android:textColor="@color/black">
-                </TextView>
-
-
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="8dp"
-                    android:background="#EDEBEB"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_baseline_people_24" />
+            </androidx.cardview.widget.CardView>
 
-                    android:layout_marginBottom="5dp"
-                    android:fontFamily="sans-serif-light"
-                    android:textSize="@dimen/_11sdp"
-                    android:text="About Me"
-                    android:textColor="#2F2F2F">
-                </TextView>
-
-
-
-
-
-            </LinearLayout>
-
-
-
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/box"
-                android:gravity="center"
-                android:ems="3"
-                app:backgroundTint="#4DBFF0"
-                android:minWidth="200dp"
-                android:singleLine="true"
-                android:text="Book Now"
-                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rating_background_main"
+                android:paddingHorizontal="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/white"
                 android:textSize="16sp"
-                android:textStyle="normal"
-                android:fontFamily="sans-serif-medium"
-                android:drawableRight="@drawable/book_now"
-                android:drawablePadding="@dimen/_5sdp"
-                android:drawableTint="@color/white"
-
-
-                android:textColor="#FFFEFE"
-                 ></Button>
+                tools:text="⭐ 4.5" />
 
         </LinearLayout>
 
+        <!--Info-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:orientation="vertical">
 
-    </RelativeLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:text="Mr. Ravi"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/magenta"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvExpertise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Expertise"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvExperience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Experience"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvCharges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Charges: Per/min"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Consulting fees-->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/grey"
+        android:orientation="vertical"
+        android:paddingVertical="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Consulting Fees"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvConsultingFees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Charges: Per/min"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--About Me-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Me: "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etAboutMe"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/about_me_back"
+            android:gravity="start"
+            android:hint="About Me"
+            android:inputType="textMultiLine"
+            android:padding="5dp"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnBookNow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/btnBookNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/sky_blue"
+            android:drawableEnd="@drawable/book_now"
+            android:drawableTint="@color/white"
+            android:elevation="5dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="7dp"
+            android:text="Book Now"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,26 +10,20 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import static com.example.astrology.R.menu.search;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.SearchView;
 
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.astrology.R;
-import com.example.astrology.aboutteam;
 import com.example.astrology.aboutus;
-import com.example.astrology.faqs;
 import com.example.astrology.legalPolicy;
 import com.example.astrology.models.expertModel;
 import com.example.astrology.viewHollders.item;

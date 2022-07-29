@@ -4,352 +4,329 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
-    android:background="@drawable/finalbackground"
-
     tools:context=".Activities.bookingPage">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:gravity="center"
-
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center">
 
     <LinearLayout
-        android:id="@+id/cly1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
-        android:orientation="vertical"
-        android:padding="5dp"
-        android:visibility="visible">
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <RelativeLayout
+        <androidx.appcompat.widget.Toolbar
+
+            android:id="@+id/toolbar3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/hindiname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/open_sans_bold"
-                    android:gravity="center"
-                    android:text="आदि शक्ति एस्ट्रो"
-                    android:textColor="#D100D1"
-
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/englishname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:fontFamily="@font/open_sans_bold"
-                    android:gravity="center"
-                    android:text="AADI SHAKTII ASTRO"
-                    android:textColor="#D100D1"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/title12"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:fontFamily="@font/open_sans_bold"
-                    android:gravity="center"
-                    android:text="────────────────────────────"
-
-                    android:textColor="#D100D1"
-
-                    android:textSize="18sp"
-                    />
-
-
-
-
-
-
-            </LinearLayout>
-
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:background="#4DBFF0"
+            android:gravity="center"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <ImageView
                 android:id="@+id/topicon"
                 android:layout_width="58dp"
                 android:layout_height="60dp"
                 android:layout_alignParentLeft="true"
-                android:layout_gravity="center"
-
-
+                android:layout_gravity="left"
                 android:src="@drawable/mainlogo" />
-        </RelativeLayout>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="AADI SHAKTII ASTRO"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:title="AADI SHAKTII ASTRO"
+                app:titleMarginStart="10dp"
+                app:titleTextColor="@color/white" />
+
+            <ImageButton
+                android:id="@+id/openProfile"
+
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_marginEnd="10dp"
+                android:background="#4DBFF0"
+                android:src="@drawable/ic_baseline_person_pin_24"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+        </androidx.appcompat.widget.Toolbar>
 
 
         <LinearLayout
+            android:id="@+id/cly1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="visible">
 
-
-
-
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/ic_baseline_people_24"
-                android:padding="10dp"
-                android:layout_margin="10dp"
-            android:layout_gravity="center"></ImageView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:orientation="vertical">
-        <TextView
-            android:id="@+id/NAmeofExpert"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/textviewbg"
-
-            android:backgroundTint="#F6F7FA"
-            android:hint="Name:"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            android:textStyle="bold"
-
-            />
+                android:orientation="horizontal">
 
 
-        <TextView
-            android:id="@+id/experiencebig"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/textviewbg"
-            android:backgroundTint="#F6F7FA"
-            android:hint="Experience"
-            android:padding="10dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:orientation="vertical">
 
-            android:textColor="@color/black"
-            android:textSize="16dp"
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:src="@drawable/profilee"></ImageView>
+                <TextView
+                    android:id="@+id/NAmeofExpert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
 
-            tools:layout_editor_absoluteX="126dp"
-            tools:layout_editor_absoluteY="68dp" />
+                    android:backgroundTint="#F6F7FA"
+                    android:hint="Name:"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
 
+                    />
 
-        <TextView
-            android:id="@+id/aboutme"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/textviewbg"
-            android:backgroundTint="#F6F7FA"
-            android:hint="About me"
+                    <TextView
+                        android:id="@+id/experiencebig"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
 
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textSize="16dp"
+                        android:backgroundTint="#F6F7FA"
+                        android:hint="Experience"
+                        android:padding="14dp"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
 
-            tools:layout_editor_absoluteX="126dp"
-            tools:layout_editor_absoluteY="68dp" />
-
-        <TextView
-            android:id="@+id/allselections"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/textviewbg"
-            android:backgroundTint="#F6F7FA"
-
-            android:hint="Selections"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            tools:layout_editor_absoluteX="126dp"
-            tools:layout_editor_absoluteY="97dp" />
+                        tools:layout_editor_absoluteX="126dp"
+                        tools:layout_editor_absoluteY="68dp" />
 
 
-        <TextView
-            android:id="@+id/ratepmin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/textviewbg"
-            android:backgroundTint="#F6F7FA"
-            android:hint="Rate"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textSize="16dp"
 
-            />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="About Expert"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/alata"
+                        android:textSize="@dimen/_14sdp"
+                        ></TextView>
+
+
+                    <TextView
+                        android:id="@+id/aboutme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+
+                        android:hint="About me"
+
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+
+                        tools:layout_editor_absoluteX="126dp"
+                        tools:layout_editor_absoluteY="68dp" />
+
+
+
+                </LinearLayout>
 
             </LinearLayout>
 
-    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/allselections"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/box"
+                    android:fontFamily="@font/alata"
+                    android:backgroundTint="#F6F7FA"
+                    android:ems="9"
+
+                    android:hint="Selections"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    tools:layout_editor_absoluteX="126dp"
+                    tools:layout_editor_absoluteY="97dp" />
+
+
+                <TextView
+                    android:id="@+id/ratepmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/textviewbg"
+                    android:backgroundTint="#F6F7FA"
+                    android:fontFamily="@font/alata"
+                    android:hint="Rate/Minute"
+                    android:ems="9"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/pickduratiion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/box"
+                    android:fontFamily="@font/alata"
+                    android:singleLine="true"
+                    android:text="Time Slot(In Minutes)"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    app:backgroundTint="#4DBFF0"
+                    tools:layout_editor_absoluteX="160dp"
+                    tools:layout_editor_absoluteY="553dp" />
+
+                <EditText
+                    android:id="@+id/duraOfBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textviewbg"
+                    android:backgroundTint="#F2F2F4"
+                    android:ems="8"
+                    android:hint="Duration "
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:textColor="#4F3DEF"
+
+                    android:textSize="16dp" />
+
+            </LinearLayout>
 
 
 
-
-        <TextView
-            android:id="@+id/pick"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/box"
-            android:backgroundTint="#DEFEFE"
-
-            android:fontFamily="@font/open_sans"
-            android:gravity="center"
-            android:text="  🕒 Please Pick Duration 🕒  "
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-
-            <Button
-                android:id="@+id/pickduratiion"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/box"
-                android:fontFamily="@font/open_sans_bold"
-                android:singleLine="true"
-                android:text="Duration ⏱"
-                android:textAllCaps="false"
-                android:textStyle="bold"
-                app:backgroundTint="#4DBFF0"
-                tools:layout_editor_absoluteX="160dp"
-                tools:layout_editor_absoluteY="553dp" />
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/duraOfBook"
-                android:layout_width="120dp"
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:paddingRight="10dp"
+                    android:text="Total amount to be Paid:"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/totalAmountToBePaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="TextView"
+                    android:textColor="#4F3DEF"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/textviewbg"
-                android:backgroundTint="#F6F7FA"
-                android:ems="8"
-                android:hint="Duration "
-                android:inputType="textPersonName"
-                android:padding="10dp"
-                android:textColor="#4F3DEF"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-                android:textSize="16dp" />
+                <Button
+                    android:id="@+id/request"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
 
+                    android:layout_marginEnd="80dp"
+                    android:background="@drawable/box"
+                    android:fontFamily="@font/alata"
+
+                    android:text="Book Now"
+                    android:textAllCaps="false"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+
+                    app:backgroundTint="#4DBFF0"
+
+                    tools:layout_editor_absoluteX="160dp"
+                    tools:layout_editor_absoluteY="553dp" />
+
+
+            </LinearLayout>
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/title122"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="2dp"
-            android:fontFamily="@font/open_sans_bold"
-            android:gravity="center"
-            android:text="────────────────────────────"
-
-            android:textColor="#4DBFF0"
-
-            android:textSize="18sp"
-            />
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="2dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingRight="10dp"
-                android:layout_gravity="center"
-                android:fontFamily="@font/open_sans_bold"
-                android:text="Total amount to be Paid:"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                />
-
-            <TextView
-                android:id="@+id/totalAmountToBePaid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="TextView"
-                android:textColor="#4F3DEF"
-                android:textSize="16dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:orientation="horizontal">
-        <Button
-            android:id="@+id/request"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="40dp"
-
-            android:layout_marginEnd="40dp"
-            android:background="@drawable/box"
-            app:backgroundTint="#4DBFF0"
-
-            android:fontFamily="@font/open_sans_bold"
-            android:text="Book Now"
-            android:textAllCaps="false"
-            android:textSize="16dp"
-
-            android:textStyle="bold"
-
-            tools:layout_editor_absoluteX="160dp"
-            tools:layout_editor_absoluteY="553dp" />
-
-
-
-
-</LinearLayout>
-    </LinearLayout>
 
         <LinearLayout
             android:id="@+id/cly2"
@@ -448,6 +425,7 @@
 
         </LinearLayout>
 
+    </LinearLayout>
     </RelativeLayout>
 
 </ScrollView>

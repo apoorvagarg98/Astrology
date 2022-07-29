@@ -37,7 +37,7 @@ public class loginorsignup extends AppCompatActivity {
 
         signupbutton= findViewById(R.id.signupbutton);
         signinbutton= findViewById(R.id.signinbutton);
-        mainlogo= findViewById(R.id.mainlogo);
+        mainlogo= findViewById(R.id.astro_img);
         topline1= findViewById(R.id.topline1);
         englishname= findViewById(R.id.englishname);
         hindiname= findViewById(R.id.hindiname);
