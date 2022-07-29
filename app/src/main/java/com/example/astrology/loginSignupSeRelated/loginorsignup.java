@@ -46,7 +46,7 @@ public class loginorsignup extends AppCompatActivity {
 
 
 //        topicon.setAnimation(topAnimation);
-        mainlogo.setAnimation(middleAnimation);
+//        mainlogo.setAnimation(middleAnimation);
         englishname.setAnimation(topAnimation);
         hindiname.setAnimation(topAnimation);
         swagat.setAnimation(middleAnimation);
