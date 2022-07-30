@@ -334,6 +334,20 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/genderinreq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:padding="5dp"
+            android:text="Gender"
+            android:textColor="#4F3DEF"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
         <!--Your KUNDALI PDF-->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/txtAstroDetails"
