@@ -1,273 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layout_login"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/finalbackground"
-    tools:context=".loginSignupSeRelated.Login">
+    android:layout_height="match_parent">
 
+    <EditText
+      android:id="@+id/username"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="96dp"
+      android:layout_marginEnd="32dp"
+      android:hint="@string/prompt_username"
+      android:inputType="textEmailAddress"
+      android:selectAllOnFocus="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <EditText
+      android:id="@+id/roomid"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="32dp"
+      android:hint="@string/prompt_roomid"
+      android:selectAllOnFocus="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/username" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp">
+    <Button
+      android:id="@+id/login_video"
+      android:layout_width="256dp"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start"
+      android:text="@string/login_video"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/roomid"
+      app:layout_constraintVertical_bias="0.15" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:orientation="vertical">
+    <Button
+      android:id="@+id/login_audio"
+      android:layout_width="256dp"
+      android:layout_height="wrap_content"
+      android:layout_gravity="start"
+      android:text="@string/login_audio"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/roomid"
+      app:layout_constraintVertical_bias="0.3" />
 
-                <TextView
-                    android:id="@+id/hindiname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/open_sans_bold"
-                    android:gravity="center"
-                    android:text="आदि शक्ति एस्ट्रो"
-
-                    android:textColor="#8b008b"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/englishname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/open_sans_bold"
-                    android:textColor="#8b008b"
-                    android:gravity="center"
-                    android:text="AADI SHAKTII ASTRO"
-
-
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <ImageView
-                android:id="@+id/topicon"
-                android:layout_width="58dp"
-                android:layout_height="60dp"
-                android:layout_alignParentLeft="true"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/mainlogo"
-                android:text="AADISHAKTI" />
-        </RelativeLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/logintextview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="30dp"
-                android:fontFamily="sans-serif"
-                android:gravity="center"
-                android:background="@drawable/box"
-                android:backgroundTint="#FFFFFF"
-                android:textAlignment="center"
-                android:text="Sign In To Continue"
-                android:textColor="#8b008b"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="248dp">
-
-
-                <EditText
-                    android:id="@+id/fullnamel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoText="true"
-                    android:background="@drawable/textviewbg"
-
-                    android:ems="10"
-                    android:hint="Email Id:"
-                    android:inputType="textPersonName"
-                    android:shadowColor="#EFE1E1"
-                    android:textColor="#090909"
-                    android:textColorHighlight="#090909"
-                    android:textColorHint="#777575"
-                    android:textColorLink="#FAF3F3"
-                    android:textStyle="normal" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:passwordToggleEnabled="true"
-                app:passwordToggleTint="#8b008b"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="248dp">
-
-                <EditText
-                    android:id="@+id/pass"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/textviewbg"
-
-                    android:ems="10"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:textColor="#090909" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <Button
-                android:id="@+id/yo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-
-                android:layout_marginTop="30dp"
-                android:background="@drawable/box"
-                android:gravity="center"
-                android:ems="5"
-                android:minWidth="220dp"
-                android:padding="5dp"
-                android:shadowColor="#525253"
-                android:singleLine="true"
-                android:text="Log In"
-                android:textAllCaps="false"
-                android:textSize="16sp"
-                android:textStyle="normal"
-                android:visibility="visible"
-                app:backgroundTint="#4DBFF0"  />
-
-            <TextView
-                android:id="@+id/forgotPassword2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="center"
-                android:text="Forgot Your Password?"
-                android:textColor="#8b008b"
-                android:textStyle="bold"
-                android:textSize="14dp" />
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:gravity="center"
-                    android:text="Don't have an account?"
-                    android:textColor="@color/black"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/dontHaveacc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:gravity="center"
-                    android:text="Sign Up"
-                    android:textColor="#4DBFF0"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="───────────── Or ─────────────"
-                android:textColor="#8b008b"
-                android:textSize="14dp"></TextView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:orientation="horizontal"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:gravity="center"
-                    android:text="Are you an Expert?"
-                    android:textColor="@color/black"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/GoToExpert"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:gravity="center"
-                    android:text="Expert Sign In"
-                    android:textColor="#4DBFF0"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-
-
-</RelativeLayout>
+    <ProgressBar
+      android:id="@+id/loading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="64dp"
+      android:layout_marginBottom="64dp"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@+id/roomid"
+      app:layout_constraintStart_toStartOf="@+id/roomid"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.3" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

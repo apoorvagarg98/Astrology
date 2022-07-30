@@ -9,16 +9,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.astrology.Adapters.MessageAdapter;
-import com.example.astrology.BaseActivity;
-import com.example.astrology.PlaceCallActivity;
 import com.example.astrology.R;
+import com.example.astrology.login.LoginActivity;
 import com.example.astrology.models.Chat;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -40,7 +38,7 @@ import java.util.concurrent.TimeUnit;
 public class chatActivity extends AppCompatActivity  {
 TextView timer,nametv;
 ImageButton btn_send;
-    ImageButton callbutton;
+ImageButton callbutton;
 EditText text_send;
 FirebaseUser fuser;
 String recieverId, senderId,name;
@@ -112,8 +110,9 @@ readMessages(senderId, recieverId);
 callbutton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(chatActivity.this, PlaceCallActivity.class);
-        intent.putExtra("id",fuser.getUid());
+        Intent intent = new Intent(chatActivity.this, LoginActivity.class);
+        intent.putExtra("roomid",senderId);
+        intent.putExtra("name",name);
         startActivity(intent);
     }
 });

@@ -28,7 +28,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Astrology">
-        <service android:name=".SinchService"/>
         <activity
             android:name=".expertdetails"
             android:exported="false" />
@@ -44,6 +43,18 @@
         <activity
             android:name=".chatRight"
             android:exported="false" />
+        <activity
+            android:name=".login.AudioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="true"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".login.VideoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".homescreenexpertdetails"
             android:exported="false" />
@@ -95,9 +106,7 @@
         <activity
             android:name=".Activities.astrologer"
             android:exported="true" />
-        <activity android:name=".CallScreenActivity" android:screenOrientation="portrait"  android:exported="true" />
-        <activity android:name=".IncomingCallScreenActivity" android:screenOrientation="portrait"  android:exported="true" />
-        <activity android:name=".PlaceCallActivity" android:screenOrientation="portrait"  android:exported="true" />
+
 
         <activity
             android:name=".loginSignupSeRelated.Login"
