@@ -9,15 +9,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.astrology.Adapters.MessageAdapter;
-import com.example.astrology.BaseActivity;
-import com.example.astrology.PlaceCallActivity;
 import com.example.astrology.R;
 import com.example.astrology.models.Chat;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -57,7 +54,7 @@ private int duration = 120;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
         btn_send = findViewById(R.id.btn_send);
-        callbutton = findViewById(R.id.call);
+        //callbutton = findViewById(R.id.call);
         text_send = findViewById(R.id.text_send);
         recyclerView = findViewById(R.id.rvChat);
         recyclerView.setHasFixedSize(true);
@@ -109,14 +106,14 @@ readMessages(senderId, recieverId);
     }
 });
 */
-callbutton.setOnClickListener(new View.OnClickListener() {
+/*callbutton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(chatActivity.this, PlaceCallActivity.class);
+        Intent intent = new Intent(chatActivity.this, chatActivity.class);
         intent.putExtra("id",fuser.getUid());
         startActivity(intent);
     }
-});
+});*/
 
     }
   private void sendMessage(String sender,String reciever,String message)

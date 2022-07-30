@@ -41,6 +41,7 @@ import com.razorpay.Checkout;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -56,7 +57,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
     String userid,selection,expertid,r,email,nameofuser,exabtyrslf,totalmin,date,time;
     Button selecttime,selectdate,request;
     TextView hrratepmin,hrallselections,hraboutme,hrexperiencebig,hrnameofExpert,name,exp,rpm,expertise,exabtyrslftxtvw;
-    EditText timeforritual,dateforritual,dateofevent,eventtime;
+    TextView timeforritual,dateforritual,dateofevent,eventtime;
     FirebaseUser user;
     TimePickerDialog picker;
     private FirebaseAuth mAuth;
@@ -85,9 +86,9 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
         dateforritual = findViewById(R.id.dateforritual);
         request = findViewById(R.id.request);
         expertise = findViewById(R.id.hrallselections);
-                rpm = findViewById(R.id.hrratepmin);
-name = findViewById(R.id.hrnameofExpert);
-exp = findViewById(R.id.hrexperiencebig);
+        rpm = findViewById(R.id.hrratepmin);
+        name = findViewById(R.id.hrnameofExpert);
+        exp = findViewById(R.id.hrexperiencebig);
         exabtyrslftxtvw = findViewById(R.id.hraboutme);
         selecttime.setOnClickListener(this);
         selection = getIntent().getStringExtra("selection");
@@ -257,7 +258,7 @@ exp = findViewById(R.id.hrexperiencebig);
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userModel user = snapshot.getValue(userModel.class);
                 if (notify){
-                  //  sendNotification(expertid, user.getName(),"new request");
+                    //  sendNotification(expertid, user.getName(),"new request");
                 }
                 notify = false;
             }
@@ -288,10 +289,10 @@ exp = findViewById(R.id.hrexperiencebig);
         requestdb.updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
-               if (task.isSuccessful())
-               {
-                   Toast.makeText(hinduritualsbookingpage.this, "request sent successfully kindly wait for acceptance",Toast.LENGTH_SHORT).show();
-               }
+                if (task.isSuccessful())
+                {
+                    Toast.makeText(hinduritualsbookingpage.this, "request sent successfully kindly wait for acceptance",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         requestdb = FirebaseDatabase.getInstance().getReference("users").child(user.getUid());
@@ -300,7 +301,7 @@ exp = findViewById(R.id.hrexperiencebig);
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userModel user = snapshot.getValue(userModel.class);
                 if (notify) {
-                   // sendNotification(expertid,user.getName(),"new request");
+                    // sendNotification(expertid,user.getName(),"new request");
                 }
                 notify = false;
             }

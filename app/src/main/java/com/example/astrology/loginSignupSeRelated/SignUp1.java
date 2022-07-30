@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -15,7 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class SignUp1 extends AppCompatActivity {
    FloatingActionButton signup2;
     EditText name,mobile,email;
-    String gender;
+    String gender,emailstring;
     RadioGroup radioGroup;
    TextView alreadyHaveacc;
     @Override
@@ -55,13 +56,24 @@ public class SignUp1 extends AppCompatActivity {
         signup2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                emailstring = email.getText().toString().trim();
 
-              Intent intent =  new Intent(SignUp1.this, SignUp2.class);
-              intent.putExtra("name",name.getText().toString());
-              intent.putExtra("email",email.getText().toString());
-              intent.putExtra("mobile",mobile.getText().toString());
-              intent.putExtra("gender", gender);
-              startActivity(intent);
+                if(!Patterns.EMAIL_ADDRESS.matcher(emailstring).matches() || emailstring.equals("") )
+                {  email.setError("Enter email properly");
+                    email.requestFocus();
+                }
+                else if(mobile.length()!=10){
+                    mobile.setError("mobile number should be minimum  10 digits");
+                    mobile.requestFocus();
+                }
+                else {
+                    Intent intent = new Intent(SignUp1.this, SignUp2.class);
+                    intent.putExtra("name", name.getText().toString());
+                    intent.putExtra("email", email.getText().toString());
+                    intent.putExtra("mobile", mobile.getText().toString());
+                    intent.putExtra("gender", gender);
+                    startActivity(intent);
+                }
             }
         });
 

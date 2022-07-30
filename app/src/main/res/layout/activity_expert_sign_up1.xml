@@ -145,6 +145,7 @@
                     android:backgroundTint="#F6F7FA"
                     android:ems="10"
                     android:hint="Mobile Number:"
+                    android:inputType="phone"
                     android:textColor="#4F3DEF" />
 
             </com.google.android.material.textfield.TextInputLayout>

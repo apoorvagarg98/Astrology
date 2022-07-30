@@ -45,7 +45,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class acceptordeclinepage extends AppCompatActivity  {
 
 
-TextView name,gender,dob,txtAstroDetails,duration,date,birthplace,totalAmount,birthTime;
+TextView name,dob,txtAstroDetails,duration,date,birthplace,totalAmount,birthTime;
+//gender dalna hai
 Button accept ,decline;
 String expertuid,userid;
 String durationoftimer,nameofuser;
@@ -66,7 +67,7 @@ public FirebaseAuth mAuth;
         userid = getIntent().getStringExtra("userid");
         name = findViewById(R.id.nameinreq);
         txtAstroDetails = (TextView) findViewById(R.id.txtAstroDetails);
-        gender = findViewById(R.id.genderinreq);
+        /*gender = findViewById(R.id.genderinreq);*/
         dob = findViewById(R.id.dobinreq);
         duration = findViewById(R.id.durationinreq);
 
@@ -106,7 +107,7 @@ public FirebaseAuth mAuth;
                                 nameofuser = um.getName();
                                 name.setText("Name - "+ nameofuser);
                                 dob.setText("Date Of Birth - " + um.getDateofbirth());
-                                gender.setText("Gender - " +um.getGender());
+                                /*gender.setText("Gender - " +um.getGender());*/
                                 birthplace.setText("birthPlace - " + um.getPlaceofbirth());
                                 birthTime.setText("birthTime - " + um.getBirthtime());
                                 txtAstroDetails.setText(um.getLink());

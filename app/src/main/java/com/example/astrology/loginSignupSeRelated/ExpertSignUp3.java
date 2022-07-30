@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -39,8 +40,9 @@ public class ExpertSignUp3 extends AppCompatActivity {
 
     public static Uri imageUricertificate,imageUriadhar,imageUripan;
     StorageReference postImageRef;
-    String exnames,exmobile, exemails,userId ,gender ,selection ,exadress ,expincode ,exbirthdate,stamt,stpass,exabtyrslf;
-    EditText amt,password,experience;
+    String confirmpasss,exnames,exmobile, exemails,userId ,gender ,selection ,exadress ,expincode ,exbirthdate,stamt,stpass,exabtyrslf;
+    EditText amt,password,experience,confirmpass;
+    int iexperience;
     private FirebaseAuth mAuth;
     FirebaseUser user;
     FloatingActionButton signup;
@@ -58,6 +60,7 @@ public class ExpertSignUp3 extends AppCompatActivity {
         exadress  =getIntent().getStringExtra("exadress").toString();
         expincode =getIntent().getStringExtra("expincode").toString();
         exbirthdate =getIntent().getStringExtra("exbirthdate").toString();
+        confirmpasss= getIntent().getStringExtra("confirmpass").toString();
         exabtyrslf =getIntent().getStringExtra("exabtyrslf").toString();
         postImageRef = FirebaseStorage.getInstance().getReference().child("postImages");
 
@@ -68,6 +71,7 @@ public class ExpertSignUp3 extends AppCompatActivity {
         certi = findViewById(R.id.certi);
         adh = findViewById(R.id.adh);
         pancard = findViewById(R.id.pancard);
+        confirmpass = findViewById(R.id.exconfirmpassword);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -162,82 +166,99 @@ public class ExpertSignUp3 extends AppCompatActivity {
         stamt = amt.getText().toString();
         stpass= password.getText().toString();
         String stexperience = experience.getText().toString();
-        mAuth = FirebaseAuth.getInstance();
 
-        Date date = new Date();
-        @SuppressLint({"NewApi", "LocalSuppress"}) SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-YYYY hh:mm:ss");
-        String strDate = formatter.format(date);
+        if (iexperience < 18) {
+            experience.setError("Experience more than 3 is allowed only");
+            experience.requestFocus();
+        }
+        else if (stpass != confirmpasss) {
+            password.setError("Password and confirm password do not match. Try Again!");
+        }
+        else {
 
-        DatabaseReference expert = FirebaseDatabase.getInstance().getReference("Experts");
+
+            mAuth = FirebaseAuth.getInstance();
+
+            Date date = new Date();
+            @SuppressLint({"NewApi", "LocalSuppress"}) SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-YYYY hh:mm:ss");
+            String strDate = formatter.format(date);
+
+            DatabaseReference expert = FirebaseDatabase.getInstance().getReference("Experts");
 
 
+            mAuth.createUserWithEmailAndPassword(exemails.trim(), stpass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        expertModel em = new expertModel(exnames, exmobile, exemails, userId, selection, exadress, expincode, exbirthdate, stamt, gender, imageUriadhar.toString(), imageUripan.toString(), imageUricertificate.toString(), stexperience.toString(), exabtyrslf);
 
-        mAuth.createUserWithEmailAndPassword(exemails.trim(),stpass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    expertModel em  = new expertModel(exnames,exmobile, exemails,userId ,selection ,exadress ,expincode ,exbirthdate,stamt,gender,imageUriadhar.toString(),imageUripan.toString(),imageUricertificate.toString(),stexperience.toString(),exabtyrslf);
+                        expert.child(selection).child(mAuth.getUid()).setValue(em).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(ExpertSignUp3.this, "Expert Registered succesfully, Please Login", Toast.LENGTH_SHORT).show();
 
-                    expert.child(selection).child(mAuth.getUid()).setValue(em).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful())
-                            {
-                                Toast.makeText(ExpertSignUp3.this, "Expert Registered succesfully, Please Login", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    } else {
+                        Toast.makeText(ExpertSignUp3.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
+
+
+            postImageRef.child("certificates").child(exnames + user.getUid()).putFile(imageUricertificate).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                    if (task.isSuccessful()) {
+                        postImageRef.child("certificates").child(exnames + user.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                Toast.makeText(ExpertSignUp3.this, "certificate uploaded successfully", Toast.LENGTH_SHORT).show();
 
                             }
-                        }
-                    });
+                        });
+                    }
                 }
-                else {
-                    Toast.makeText(ExpertSignUp3.this, task.getException().toString(), Toast.LENGTH_SHORT).show();
+            });
+
+
+            postImageRef.child("Adhar card").child(exnames + user.getUid()).putFile(imageUriadhar).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                    if (task.isSuccessful()) {
+                        postImageRef.child("Adhar card").child(exnames + user.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                Toast.makeText(ExpertSignUp3.this, "Adhar card uploaded successfully", Toast.LENGTH_SHORT).show();
+
+                            }
+                        });
+                    }
                 }
+            });
 
-            }
-        });
+            postImageRef.child("pan card").child(exnames + user.getUid()).putFile(imageUripan).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                    if (task.isSuccessful()) {
+                        postImageRef.child("pan card").child(exnames + user.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
 
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                Toast.makeText(ExpertSignUp3.this, "pan card uploaded successfully", Toast.LENGTH_SHORT).show();
 
+                            }
+                        });
+                    }
+                }
+            });
 
-
-
-        postImageRef.child("certificates").child(exnames+user.getUid()).putFile( imageUricertificate).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                if(task.isSuccessful()){
-                    postImageRef.child("certificates").child(exnames+user.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-
-                        @Override
-                        public void onSuccess(Uri uri) {
-                            Toast.makeText(ExpertSignUp3.this, "certificate uploaded successfully", Toast.LENGTH_SHORT).show();
-
-                        }}); } }});
-
-
-        postImageRef.child("Adhar card").child(exnames+user.getUid()).putFile( imageUriadhar).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                if(task.isSuccessful()){
-                    postImageRef.child("Adhar card").child(exnames+user.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-
-                        @Override
-                        public void onSuccess(Uri uri) {
-                            Toast.makeText(ExpertSignUp3.this, "Adhar card uploaded successfully", Toast.LENGTH_SHORT).show();
-
-                        }}); } }});
-
-        postImageRef.child("pan card").child(exnames+user.getUid()).putFile( imageUripan).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                if(task.isSuccessful()){
-                    postImageRef.child("pan card").child(exnames+user.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-
-                        @Override
-                        public void onSuccess(Uri uri) {
-                            Toast.makeText(ExpertSignUp3.this, "pan card uploaded successfully", Toast.LENGTH_SHORT).show();
-
-                        }}); } }});
-
-
+        }
 
 
 

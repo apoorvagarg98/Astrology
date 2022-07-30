@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -24,10 +25,11 @@ public class ExpertSignUp2 extends AppCompatActivity {
    Spinner spinner2;
    FloatingActionButton Exsignuppage3;
 
-    EditText dateofbirth,pincode,exadress,exabtyr;
+    EditText dateofbirth,pincode,exadress,exabtyr,age;
     RadioGroup radioGroup;
     String gender,exnames,exphones,exemails,selection;
     FloatingActionButton signup;
+    int iage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class ExpertSignUp2 extends AppCompatActivity {
         radioGroup = findViewById(R.id.exradio);
         pincode = findViewById(R.id.exabtyr);
         exabtyr = findViewById(R.id.exabtyrslf);
+        age = findViewById(R.id.age);
 
         exnames = getIntent().getStringExtra("exname").toString();
         exphones =getIntent().getStringExtra("exmobile").toString();
@@ -54,18 +57,28 @@ public class ExpertSignUp2 extends AppCompatActivity {
                                       @Override
                                       public void onClick(View view) {
 
-                                          selection = String.valueOf(spinner2.getSelectedItem());
-                                          Intent intent =  new Intent(ExpertSignUp2.this,ExpertSignUp3.class);
-                                          intent.putExtra("exname2",exnames);
-                                          intent.putExtra("exemail2",exemails);
-                                          intent.putExtra("exmobile2",exphones);
-                                          intent.putExtra("gender",gender);
-                                          intent.putExtra("selection",selection);
-                                          intent.putExtra("exadress",exadress.getText().toString());
-                                          intent.putExtra("expincode",pincode.getText().toString());
-                                          intent.putExtra("exabtyrslf",exabtyr.getText().toString());
-                                          intent.putExtra("exbirthdate",dateofbirth.getText().toString());
-                                          startActivity(intent);
+                                          iage = Integer.parseInt(age.getText().toString());
+                                          if (iage < 17) {
+                                              age.setError("Age should be 18 or more to proceed");
+                                              age.requestFocus();
+                                          } else if (pincode.length() != 6) {
+                                              pincode.setError("Pincode should be exact of 6 digits");
+                                              pincode.requestFocus();
+                                          } else {
+
+                                              selection = String.valueOf(spinner2.getSelectedItem());
+                                              Intent intent = new Intent(ExpertSignUp2.this, ExpertSignUp3.class);
+                                              intent.putExtra("exname2", exnames);
+                                              intent.putExtra("exemail2", exemails);
+                                              intent.putExtra("exmobile2", exphones);
+                                              intent.putExtra("gender", gender);
+                                              intent.putExtra("selection", selection);
+                                              intent.putExtra("exadress", exadress.getText().toString());
+                                              intent.putExtra("expincode", pincode.getText().toString());
+                                              intent.putExtra("exabtyrslf", exabtyr.getText().toString());
+                                              intent.putExtra("exbirthdate", dateofbirth.getText().toString());
+                                              startActivity(intent);
+                                          }
                                       }
                                   }
         );

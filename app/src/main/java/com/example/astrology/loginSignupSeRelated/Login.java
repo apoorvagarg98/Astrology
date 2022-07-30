@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +26,7 @@ public class  Login extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser user;
 EditText email,pass;
+String emailstring,passtring;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +69,19 @@ EditText email,pass;
         mAuth.signInWithEmailAndPassword(email.getText().toString().trim(),pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
+                emailstring = email.getText().toString().trim();
+                passtring = pass.getText().toString();
+                if(!Patterns.EMAIL_ADDRESS.matcher(emailstring).matches() && emailstring.equals("") )
+                {  email.setError("Enter email properly");
+                    email.requestFocus();
+                }
+                else if(passtring.length()<=7 && passtring.equals("")){
+                    pass.setError("password should be minimum  7 digits");
+                    pass.requestFocus();
+                }
+                else {
+
                 if(task.isSuccessful()) {
                     Toast.makeText(Login.this, "Logged in succesfully", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(Login.this, MainActivity.class));
@@ -76,6 +91,7 @@ EditText email,pass;
 
                 }
 
+            }
             }
         });
     }

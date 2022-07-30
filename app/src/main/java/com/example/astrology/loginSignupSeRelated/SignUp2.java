@@ -7,11 +7,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -24,6 +26,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.astrology.Activities.MainActivity;
 import com.example.astrology.R;
 import com.example.astrology.models.APITask;
 import com.example.astrology.models.IAPITaskCallBack;
@@ -52,15 +55,16 @@ import java.util.Calendar;
 import java.util.StringJoiner;
 
 public class SignUp2 extends AppCompatActivity implements View.OnClickListener, IAPITaskCallBack {
-    EditText dateofbirth,placeofbirth,birthtime,passs,pinCodeEdt;
+    EditText dateofbirth,placeofbirth,birthtime,passs,pinCodeEdt,age;
     private int mYear, mMonth, mDay, mHour, mMinute,hour,minutes;
     private String USER_ID = "4545"; // eg "4545"
     private String API_KEY = "ByVOIaODH57QRVi6CqswHXGlcpDvj7tZBRoorY";  // eg "hdkbcsjcn157618678habdkjbck"
     private String API_END_POINT = "https://pdf.astrologyapi.com/v1/";
     FirebaseUser user1;
+    int iage;
     private Handler handler;
 
-    String gender,date,time,link,pinCode,pob;
+    String gender,date,time,link,pinCode,pob,passstring;
     FloatingActionButton signup,getDataBtn;
     private FirebaseAuth mAuth;
     private RequestQueue mRequestQueue;
@@ -82,11 +86,14 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
         passs =findViewById(R.id.passsignup);
         birthtime =findViewById(R.id.birthtime);
         signup = findViewById(R.id.signuppage3);
+        age = findViewById(R.id.presentage);
 
         pinCodeEdt = findViewById(R.id.idedtPinCode);
         getDataBtn = findViewById(R.id.idBtnGetCityandState);
 
         mRequestQueue = Volley.newRequestQueue(SignUp2.this);
+
+
 
         placeofbirth = findViewById(R.id.birthplace);
         mAuth = FirebaseAuth.getInstance();
@@ -241,7 +248,21 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
 
     private void preregisterUser( ) {
 
-
+iage = Integer.parseInt(age.getText().toString());
+        passstring = passs.getText().toString();
+        if(pinCode.length()!=6)
+        {  pinCodeEdt.setError("Enter pincode properly");
+            pinCodeEdt.requestFocus();
+        }
+        else if(passstring.length()<7 && passstring.equals("")){
+            passs.setError("password should be minimum  7 digits");
+            passs.requestFocus();
+        }
+        if (iage < 17) {
+            age.setError("Age should be 18 or more");
+            age.requestFocus();
+        }
+        else {
 
         mAuth = FirebaseAuth.getInstance();
         String namespre,phonespre,emailspre,passwordspre,dateofbirthst,placeofbirthst,birthtimest;
@@ -313,6 +334,8 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
                             if(task.isSuccessful())
                             {
                                 Toast.makeText(SignUp2.this, "User Registered succesfully, Please Login", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(SignUp2.this, Login.class));
+
 
                             }
                         }
@@ -324,6 +347,7 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
 
             }
         });
+    }
     }
 
     public void onSuccess(String response) {
@@ -354,6 +378,7 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
         Thread thread = new Thread(apiTask);
         thread.start();
     }
+
 
 
 }

@@ -107,6 +107,32 @@
                         android:backgroundTint="#ebeae8"
                         tools:layout_editor_absoluteX="16dp"/>
                 </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    tools:layout_editor_absoluteX="92dp"
+                    tools:layout_editor_absoluteY="248dp">
+
+
+                    <EditText
+                        android:id="@+id/age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textviewbg"
+                        android:ems="10"
+                        android:hint="Enter your age"
+                        android:inputType="textPersonName"
+                        android:textColor="#090909"
+                        android:textColorHighlight="#090909"
+                        android:textColorHint="#777575"
+                        android:textColorLink="#FAF3F3"
+                        android:textStyle="normal"
+                        android:backgroundTint="#ebeae8"
+                        tools:layout_editor_absoluteX="16dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
