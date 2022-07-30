@@ -41,6 +41,7 @@ import com.razorpay.Checkout;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.Calendar;
 import java.util.HashMap;
@@ -56,7 +57,7 @@ public class hinduritualsbookingpage extends AppCompatActivity implements View.O
     String userid,selection,expertid,r,email,nameofuser,exabtyrslf,totalmin,date,time;
     Button selecttime,selectdate,request;
     TextView hrratepmin,hrallselections,hraboutme,hrexperiencebig,hrnameofExpert,name,exp,rpm,expertise,exabtyrslftxtvw;
-    EditText timeforritual,dateforritual,dateofevent,eventtime;
+    TextView timeforritual,dateforritual,dateofevent,eventtime;
     FirebaseUser user;
     TimePickerDialog picker;
     private FirebaseAuth mAuth;

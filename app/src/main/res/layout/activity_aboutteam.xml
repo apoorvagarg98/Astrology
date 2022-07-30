@@ -1,686 +1,724 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/developerbackground"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Activities.aboutteam">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sky_blue"
+            android:minHeight="?attr/actionBarSize" />
 
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="50dp"
-            app:cardElevation="50dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-
-                <TextView
-                    android:id="@+id/directorhead"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="Directed By"
-                    android:textAlignment="center"
-                    android:textColor="#212020"
-                    android:textSize="25sp" />
-
-                <ImageView
-                    android:id="@+id/directorimage"
-                    android:layout_width="@dimen/_100sdp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/faacharyaji"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:id="@+id/directorname"
+                <!--01-->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:fontFamily="sans-serif-black"
+                    android:orientation="vertical">
 
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:text="Aacharya Yogesh Kumar Kaushik"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Directed By"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/directortitle"
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvProfileImage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/faacharyaji" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Acharya Yogesh Kumar Kaushik"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/magenta"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tvDesignation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Director"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/acharyalnk"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_linkedin"  />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+                        android:textColor="@color/sky_blue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--02-->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_2sdp"
-                    android:text="Respective Director"
-                    android:textAlignment="center"
-                    android:fontFamily="sans-serif-black"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                     />
-
-
-
-                <ImageButton
-                    android:id="@+id/acharyalnk"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/img_1" />
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="50dp"
-            app:cardElevation="50dp">
-
-            <LinearLayout
-
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-
-                <TextView
-                    android:id="@+id/atulhead"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Headed By"
-                    android:textAlignment="center"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="#212020"
-                    android:textSize="25sp"
-                     />
-
-                <ImageView
-                    android:id="@+id/atulimage"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/fatuldev"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:id="@+id/atulname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
                     android:layout_marginTop="5dp"
-                    android:text="Mr. Atul Dev Arora"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/atultitle"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Headed By"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/fatuldev" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Mr. Atul Dev Arora"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/magenta"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Founder and Managing Director"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/atuldevlnk"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_linkedin"  />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+                        android:textColor="@color/sky_blue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--03-->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
 
-                    android:text="Founder and Managing Director"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="normal|bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Developed By"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-                <ImageButton
-                    android:id="@+id/atuldevlnk"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/img_1" />
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/apoorva" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Ms.Apoorva Garg"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/magenta"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Android Developer"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/apoorvalnk"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_linkedin" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+                        android:textColor="@color/sky_blue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--04-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Designed By"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/durjoy" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Mr.Durjoy Barua"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/magenta"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="UI/UX Designer"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/durjoylnk"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_linkedin"  />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+                        android:textColor="@color/sky_blue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--05-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Developed By"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/shivam" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Mr.Shivam KumarSingh"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/magenta"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Android Developer"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/shivamlnk"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_linkedin" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+                        android:textColor="@color/sky_blue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--07-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Design By"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/shubheccha" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Ms.Shubhechha Sanyal"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/magenta"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="UI/UX Designer"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/shubhechhalnk"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_linkedin"  />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+                        android:textColor="@color/sky_blue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--08-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Design By"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/manika" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Ms.Manika Gupta"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/magenta"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Adobe Front-End Designer"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/manikalnk"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_linkedin" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+                        android:textColor="@color/sky_blue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--09-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Design By"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/srishty" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Ms.Shrishty Singh"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/magenta"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Adobe Front-End Designer"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/shrishtylnk"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_linkedin" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+                        android:textColor="@color/sky_blue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--10-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Design By"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/ic_launcher_round" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Ms.Ria Raina"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/magenta"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Adobe Front-End Designer"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/rialnk"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="5dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_linkedin" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+                        android:textColor="@color/sky_blue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
             </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="50dp"
-            app:cardElevation="50dp">
-
-            <LinearLayout
-
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-
-                <TextView
-                    android:id="@+id/apoorvahead"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Developed By"
-                    android:textAlignment="center"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="#212020"
-                    android:textSize="25sp" />
-
-                <ImageView
-                    android:id="@+id/apoorvaimage"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/apoorva"
-                    android:textAlignment="center" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Ms.Apoorva Garg"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="17sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/aoorvatitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Android Developer"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="normal|bold" />
-
-                <ImageButton
-                    android:id="@+id/apoorvalnk"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/img_1" />
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="50dp"
-            app:cardElevation="50dp">
-
-            <LinearLayout
-
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-
-                <TextView
-                    android:id="@+id/durjoyhead"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Designed By"
-                    android:textAlignment="center"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="#212020"
-                    android:textSize="25sp" />
-
-                <ImageView
-                    android:id="@+id/durjoyimage"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/durjoy"
-                    android:textAlignment="center" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Mr.Durjoy Barua"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="UI/UX Designer"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="normal|bold" />
-
-                <ImageButton
-                    android:id="@+id/durjoylnk"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/img_1" />
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="50dp"
-            app:cardElevation="50dp">
-
-            <LinearLayout
-
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Developed By"
-                    android:textAlignment="center"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="#212020"
-                    android:textSize="25sp" />
-
-                <ImageView
-                    android:id="@+id/shivamimage"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/shivam"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:id="@+id/shivamname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Mr.Shivam KumarSingh"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/shivamtitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Android Developer"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="normal|bold" />
-
-                <ImageButton
-                    android:id="@+id/shivamlnk"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/img_1" />
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="50dp"
-            app:cardElevation="50dp">
-
-            <LinearLayout
-
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-
-                <TextView
-                    android:id="@+id/shubhechha"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Design By"
-                    android:textAlignment="center"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="#212020"
-                    android:textSize="25sp" />
-
-                <ImageView
-                    android:id="@+id/shubhechhaimage"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/shubheccha"
-                    android:textAlignment="center" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Ms.Shubhechha Sanyal"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="UI/UX Designer"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="normal|bold" />
-
-                <ImageButton
-                    android:id="@+id/shubhechhalnk"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/img_1" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="50dp"
-            app:cardElevation="50dp">
-
-    <LinearLayout
-
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-
-        <TextView
-            android:id="@+id/manikahead"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:text="Design By"
-            android:textAlignment="center"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="#212020"
-            android:textSize="25sp" />
-
-        <ImageView
-            android:id="@+id/manikaimage"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/manika"
-            android:textAlignment="center" />
-
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:text="Ms.Manika Gupta"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:text="Adobe Front-End Designer"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="normal|bold" />
-
-        <ImageButton
-            android:id="@+id/manikalnk"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_gravity="center"
-            android:background="@drawable/img_1" />
+        </ScrollView>
     </LinearLayout>
-
-
-</androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="50dp"
-            app:cardElevation="50dp">
-
-            <LinearLayout
-
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-
-                <TextView
-                    android:id="@+id/shrishty"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Design By"
-                    android:textAlignment="center"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="#212020"
-                    android:textSize="25sp" />
-
-                <ImageView
-                    android:id="@+id/shrishtyimage"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/srishty"
-                    android:textAlignment="center" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Ms.Shrishty Singh"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Adobe Front-End Designer"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="normal|bold" />
-
-                <ImageButton
-                    android:id="@+id/shrishtylnk"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/img_1" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="50dp"
-            app:cardElevation="50dp">
-
-            <LinearLayout
-
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-
-                <TextView
-                    android:id="@+id/ria"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Design By"
-                    android:textAlignment="center"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="#212020"
-                    android:textSize="25sp" />
-
-                <ImageView
-                    android:id="@+id/riaimage"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/srishty"
-                    android:textAlignment="center" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Ms.Ria Raina"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Adobe Front-End Designer"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="normal|bold" />
-
-                <ImageButton
-                    android:id="@+id/rialnk"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/img_1" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-
-
-    </LinearLayout>
-</ScrollView>
+</FrameLayout>
