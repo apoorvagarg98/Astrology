@@ -69,5 +69,6 @@
     <string name="dear_expert">Dear Expert,</string>
     <string name="SelectOne">Please choose your puja drom below</string>
     <string name="enter_venue">Enter Venue</string>
+    <string name="are_you_new_expert_sign_up">Are you new Expert? <font color='#01C6DB'>Sign Up</font></string>
 
 </resources>

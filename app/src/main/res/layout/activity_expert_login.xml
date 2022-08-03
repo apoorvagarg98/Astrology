@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,216 +8,169 @@
     tools:context=".loginSignupSeRelated.ExpertLogin">
 
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/hindiname"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:gravity="center"
+        android:text="आदि शक्ति एस्ट्रो"
+        android:textColor="#DC128A"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RelativeLayout
+    <TextView
+        android:id="@+id/englishname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="AADI SHAKTII ASTRO"
+        android:textColor="#DC128A"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hindiname" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:src="@drawable/mainlogo"
+        android:text="Sign In To Continue"
+        android:textColor="#D100D1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/englishname" />
+
+    <TextView
+        android:id="@+id/Exlogintextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Expert Sign In"
+        android:textColor="#4DBFF0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/Exlogintextview"
+        app:layout_constraintStart_toStartOf="@+id/Exlogintextview"
+        app:layout_constraintTop_toBottomOf="@+id/Exlogintextview">
+
+
+        <EditText
+            android:id="@+id/Exfullname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp">
+            android:autoText="true"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:ems="10"
+            android:hint="Email Id:"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#4DBFF0">
 
-                <TextView
-                    android:id="@+id/hindiname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/aclonica"
-                    android:textColor="#DC128A"
-                    android:gravity="center"
-                    android:text="आदि शक्ति एस्ट्रो"
-
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/englishname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:gravity="center"
-                    android:text="AADI SHAKTII ASTRO"
-                    android:textColor="#DC128A"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/Expass"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="40dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewbg"
+            android:backgroundTint="#F6F7FA"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
 
-            <ImageView
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:src="@drawable/mainlogo"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="center"
-                android:layout_marginTop="50dp"
-                android:text="Sign In To Continue"
-                android:textColor="#D100D1"
-                android:textSize="24sp"
-                android:textStyle="bold"></ImageView>
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/Exlogintextview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="@font/open_sans"
-                android:textColor="#4DBFF0"
-                android:gravity="center"
-                android:text="Expert Sign In"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+    <Button
+        android:id="@+id/Exlogin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/box"
+        android:ems="5"
+        android:gravity="center"
+        android:minWidth="120dp"
+        android:padding="10dp"
+        android:shadowColor="#525253"
+        android:singleLine="true"
+        android:text="Log In"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:backgroundTint="#4DBFF0"
+        app:layout_constraintBottom_toTopOf="@+id/exforgotPassword2"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="248dp">
+    <TextView
+        android:id="@+id/exforgotPassword2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Forgot Password?"
+        android:textColor="#DC128A"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ExdontHaveacc"
+        app:layout_constraintEnd_toEndOf="@+id/ExdontHaveacc"
+        app:layout_constraintStart_toStartOf="@+id/ExdontHaveacc" />
 
-
-                <EditText
-                    android:id="@+id/Exfullname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoText="true"
-                    android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
-                    android:ems="10"
-                    android:hint="Email Id:"
-                    android:inputType="textPersonName"
-                    android:shadowColor="#EFE1E1"
-                    android:textColor="#090909"
-                    android:textColorHighlight="#090909"
-                    android:textColorHint="#777575"
-                    android:textColorLink="#FAF3F3"
-                    android:textStyle="normal" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:passwordToggleEnabled="true"
-                app:passwordToggleTint="#4DBFF0"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="248dp">
-
-                <EditText
-                    android:id="@+id/Expass"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/textviewbg"
-                    android:backgroundTint="#F6F7FA"
-                    android:ems="10"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:textColor="#090909" />
-
-            </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/ExdontHaveacc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/are_you_new_expert_sign_up"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
-            <Button
-                android:id="@+id/Exlogin"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/box"
-                android:gravity="center"
-                android:ems="5"
-                android:minWidth="120dp"
-                android:padding="10dp"
-                android:shadowColor="#525253"
-                android:singleLine="true"
-                android:text="Log In"
-                android:textAllCaps="false"
-                android:textSize="16sp"
-                android:textStyle="normal"
-                android:visibility="visible"
-                app:backgroundTint="#4DBFF0" />
-
-            <TextView
-                android:id="@+id/exforgotPassword2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:text="Forgot Password?"
-                android:textColor="#DC128A"
-                android:textSize="16dp" />
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:gravity="center"
-                    android:text="Are you new  Expert?"
-                    android:textColor="@color/black"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/ExdontHaveacc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:gravity="center"
-                    android:text="Sign Up"
-                    android:textColor="#4DBFF0"
-                    android:textSize="14dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
