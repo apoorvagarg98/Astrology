@@ -6,11 +6,13 @@
     android:background="@drawable/backgroundd"
     tools:context=".clientstatusFragement.hinduritualsaexpert">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hrefragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/hrefragment"
+        android:layout_margin="10dp"
+        android:paddingTop="5dp"
         android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>

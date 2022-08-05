@@ -68,7 +68,11 @@
     <string name="you_have_new_request_pending">You Have<font color='#01C6DB'> New Request Pending</font></string>
     <string name="dear_expert">Dear Expert,</string>
     <string name="SelectOne">Please choose your puja drom below</string>
+    <string name="total_amount_to_be_paid_textview">Total amount to be paid: <font color='#DC128A'>TextView</font></string>
+    <string name="rate_min_rs_30">Rate/Min:<font color='#DC128A'> Rs.30</font></string>
+    <string name="prime_services_astrologer">Prime Services: <font color='#DC128A'> Astrologer</font></string>
     <string name="enter_venue">Enter Venue</string>
     <string name="are_you_new_expert_sign_up">Are you new Expert? <font color='#01C6DB'>Sign Up</font></string>
+    <string name="already_have_an_account_sign_in">Already have an account?<font color='#01C6DB'> Sign In</font></string>
 
 </resources>

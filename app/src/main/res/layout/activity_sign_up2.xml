@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,341 +7,295 @@
     android:background="@drawable/finalbackground"
     tools:context=".loginSignupSeRelated.SignUp2">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <ImageView
+        android:id="@+id/topicon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:src="@drawable/mainlogo"
+        android:text="AADISHAKTI"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RelativeLayout
+    <TextView
+        android:id="@+id/hindiname"
+        android:layout_width="0dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="आदि शक्ति एस्ट्रो"
+        android:textColor="#8b008b"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/topicon"
+        app:layout_constraintTop_toTopOf="@+id/topicon" />
+
+    <TextView
+        android:id="@+id/englishname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:text="AADI SHAKTII ASTRO"
+        android:textColor="#8b008b"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/topicon"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/hindiname"
+        app:layout_constraintTop_toBottomOf="@+id/hindiname" />
+
+
+    <!--Values-->
+    <!--Date-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/englishname">
+
+
+        <EditText
+            android:id="@+id/Birthdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="40dp">
+            android:autoText="true"
+            android:background="@drawable/textviewbg"
+            android:ems="10"
+            android:hint="Birth Date: DD/MM/YYYY"
+            android:inputType="textPersonName"
+            android:shadowColor="#EFE1E1"
+            android:textColor="#090909"
+            android:textColorHighlight="#090909"
+            android:textColorHint="#777575"
+            android:textColorLink="#FAF3F3"
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/hindiname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/open_sans_bold"
-                    android:gravity="center"
-
-                    android:text="आदि शक्ति एस्ट्रो"
-                    android:textColor="#8b008b"
-
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/englishname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:fontFamily="@font/open_sans_bold"
-                    android:gravity="center"
-                    android:text="AADI SHAKTII ASTRO"
-                    android:textColor="#8b008b"
-
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
+    <!--Presen age-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
 
 
-            <ImageView
-                android:id="@+id/topicon"
-                android:layout_width="58dp"
-                android:layout_height="60dp"
-                android:layout_alignParentLeft="true"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/mainlogo"
-                android:text="AADISHAKTI" />
-        </RelativeLayout>
-
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/presentage"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:autoText="true"
+            android:background="@drawable/textviewbg"
+            android:ems="10"
+            android:hint="Present Age"
+            android:inputType="textPersonName"
+            android:shadowColor="#EFE1E1"
+            android:textColor="#090909"
+            android:textColorHighlight="#090909"
+            android:textColorHint="#777575"
+            android:textColorLink="#FAF3F3"
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Birth time-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout7"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+
+        <EditText
+            android:id="@+id/birthtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewbg"
+            android:ems="10"
+            android:hint="Birth Time:(eg 4.15am)"
+            android:textColor="#090909" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Pin code-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/idBtnGetCityandState"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout8"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8">
 
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="248dp">
+        <EditText
+            android:id="@+id/idedtPinCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewbg"
+            android:ems="10"
+            android:hint="Enter pin code"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#090909" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idBtnGetCityandState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_rightt"
+        android:tooltipText="place"
+        app:backgroundTint="#44B4E4"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout9"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout9"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout9" />
+
+    <!--birth place-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/idBtnGetCityandState"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout9"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout9">
+
+        <EditText
+            android:id="@+id/birthplace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewbg"
+            android:ems="10"
+            android:hint="Birth Place:"
+            android:textColor="#090909" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Password-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout10"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout10"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout10"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#4DBFF0">
+
+        <EditText
+            android:id="@+id/passsignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewbg"
+            android:ems="10"
+            android:hint="Password:(Must be upto 8 characters)"
+            android:inputType="textPassword"
+            android:textColor="#090909" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Check box-->
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="By signing up you accept the "
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView45"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout11"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout11" />
+
+    <!--Terms and conditions-->
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Terms of Service and Privacy Policy"
+        android:textColor="#4DBFF0"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBox"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintTop_toTopOf="@+id/checkBox" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/signuppage3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:elevation="10dp"
+        android:singleLine="true"
+        android:src="@drawable/ic_rightt"
+        android:text="Log In"
+        android:visibility="visible"
+        app:backgroundTint="#44B4E4"
+        app:layout_constraintBottom_toTopOf="@+id/dontHaveacc"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2" />
+
+    <!--Already have an account sign In-->
 
 
-                <EditText
-                    android:id="@+id/Birthdate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoText="true"
-                    android:background="@drawable/textviewbg"
+    <TextView
+        android:id="@+id/dontHaveacc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="@string/already_have_an_account_sign_in"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
-                    android:ems="10"
-                    android:hint="Birth Date: DD/MM/YYYY"
-                    android:inputType="textPersonName"
-                    android:shadowColor="#EFE1E1"
-                    android:textColor="#090909"
-                    android:textColorHighlight="#090909"
-                    android:textColorHint="#777575"
-                    android:textColorLink="#FAF3F3"
-                    android:textStyle="normal" />
-            </com.google.android.material.textfield.TextInputLayout>
+    <!--Guide lines-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="248dp">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
 
-
-                <EditText
-                    android:id="@+id/presentage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoText="true"
-                    android:background="@drawable/textviewbg"
-
-                    android:ems="10"
-                    android:hint="Present Age"
-                    android:inputType="textPersonName"
-                    android:shadowColor="#EFE1E1"
-                    android:textColor="#090909"
-                    android:textColorHighlight="#090909"
-                    android:textColorHint="#777575"
-                    android:textColorLink="#FAF3F3"
-                    android:textStyle="normal" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/white"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="248dp">
-
-                <EditText
-                    android:id="@+id/birthtime"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/textviewbg"
-
-                    android:ems="10"
-                    android:hint="Birth Time:(eg 4.15am)"
-                    android:textColor="#090909" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:backgroundTint="@color/white"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="248dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-            <EditText
-                android:id="@+id/idedtPinCode"
-                android:layout_width="315dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/textviewbg"
-                android:ems="10"
-
-                android:hint="Enter pin code"
-                android:importantForAutofill="no"
-                android:inputType="number"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:textColor="#090909"/>
-
-
-
-
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/idBtnGetCityandState"
-                    android:layout_width="wrap_content"
-                    android:layout_height="190dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_gravity="center_horizontal"
-                    android:singleLine="true"
-                    android:src="@drawable/ic_rightt"
-                    android:text="place"
-                    android:visibility="visible"
-                    app:backgroundTint="#44B4E4" />
-                </LinearLayout>
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:backgroundTint="@color/white"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="248dp">
-
-                <EditText
-                    android:id="@+id/birthplace"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/textviewbg"
-
-                    android:ems="10"
-                    android:hint="Birth Place:"
-                    android:textColor="#090909" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:passwordToggleEnabled="true"
-                app:passwordToggleTint="#4DBFF0"
-                tools:layout_editor_absoluteX="92dp"
-                tools:layout_editor_absoluteY="248dp">
-
-                <EditText
-                    android:id="@+id/passsignup"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/textviewbg"
-
-                    android:ems="10"
-                    android:hint="Password:(Must be upto 8 characters)"
-                    android:inputType="textPassword"
-                    android:textColor="#090909" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <CheckBox
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-
-                    android:text="By signing up you accept the "
-                    android:textColor="@color/black"
-                    android:textSize="13dp" />
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-
-                    android:text="Terms of Service and Privacy Policy"
-                    android:textColor="#4DBFF0"
-                    android:textSize="13dp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/signuppage3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:elevation="10dp"
-                    android:singleLine="true"
-
-                    android:src="@drawable/ic_rightt"
-                    android:text="Log In"
-                    android:visibility="visible"
-                    app:backgroundTint="#44B4E4" />
-
-            </RelativeLayout>
-
-
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_light"
-                    android:gravity="center"
-                    android:text="Already have an account?"
-                    android:textColor="@color/black"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/dontHaveacc"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:fontFamily="@font/poppins_light"
-                    android:gravity="center"
-                    android:text="Sign In"
-                    android:textColor="#4DBFF0"
-                    android:textSize="14dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

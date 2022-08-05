@@ -56,7 +56,6 @@ public class bookingPage extends AppCompatActivity implements View.OnClickListen
     DatabaseReference dbr,requestdb;
     TextView name,exp,rpm,expertise,duration,totalAmountToBePaid,showstatus,exabtyrslftxtvw;
     Button pickDuration,request;
-    LinearLayout cly1,cly2;
     ImageView show;
 
     APIService apiService;
@@ -87,7 +86,6 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
 
         pickDuration = findViewById(R.id.pickduratiion);
         request = findViewById(R.id.request);
-        cly1 = findViewById(R.id.cly1);
 
 
 

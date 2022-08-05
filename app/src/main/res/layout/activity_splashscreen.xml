@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,162 +9,137 @@
     android:background="@drawable/finalbackground"
     tools:context=".loginSignupSeRelated.Splashscreen">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/topicon"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/rudraaksha"
+        android:text="AADISHAKTI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="5dp">
+    <TextView
+        android:id="@+id/hindiname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/open_sans_bold"
+        android:gravity="center"
+        android:text="आदि शक्ति एस्ट्रो"
+        android:textColor="#8b008b"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/topicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/topicon"
+        app:layout_constraintTop_toTopOf="@+id/topicon"
+        app:layout_constraintVertical_bias="1.0" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:orientation="vertical">
+    <TextView
+        android:id="@+id/englishname"
+        android:fontFamily="@font/open_sans_bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="AADI SHAKTII ASTRO"
+        android:textColor="#8b008b"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/hindiname"
+        app:layout_constraintStart_toStartOf="@+id/hindiname"
+        app:layout_constraintTop_toBottomOf="@+id/hindiname" />
 
-                <TextView
-                    android:id="@+id/hindiname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/open_sans_bold"
-                    android:gravity="center"
-                    android:text="आदि शक्ति एस्ट्रो"
-                    android:layout_marginBottom="5dp"
-                    android:textColor="#8b008b"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/mainlogo"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_gravity="center"
+        android:layout_margin="90dp"
+        android:src="@drawable/mainlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/englishname" />
 
-                <TextView
-                    android:id="@+id/englishname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/open_sans_bold"
-                    android:gravity="center"
-                    android:text="AADI SHAKTII ASTRO"
-                    android:textColor="#8b008b"
-
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <ImageView
-                android:id="@+id/topicon"
-                android:layout_width="58dp"
-                android:layout_height="60dp"
-                android:layout_alignParentLeft="true"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/rudraaksha"
-                android:text="AADISHAKTI" />
-        </RelativeLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/mainlogo"
-                android:layout_width="190dp"
-                android:layout_height="190dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/mainlogo" />
-
-            <ImageView
-                android:id="@+id/swagat"
-                android:layout_width="200dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="30dp"
-                android:fontFamily="@font/baloo"
-                android:src="@drawable/swagat"
-                android:textColor="@color/white"
-                android:textSize="150sp" />
+    <ImageView
+        android:id="@+id/swagat"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/swagat"
+        android:textColor="@color/white"
+        android:textSize="150sp"
+        app:layout_constraintEnd_toEndOf="@+id/mainlogo"
+        app:layout_constraintStart_toStartOf="@+id/mainlogo"
+        app:layout_constraintTop_toBottomOf="@+id/mainlogo" />
 
 
-            <TextView
-                android:id="@+id/topline1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center"
-                android:fontFamily="@font/open_sans"
-                android:padding="4dp"
-                android:text=" 🙏🏻जय श्री गणेशाय नमः🌹🕉️💯🙏🏻 🐚🌹ॐ नमः शिवाय🌹अतुल्यशिव 🌹 🙏🏻❤️🕉️༺❤️हर_हर_महादेव ❤️༻🕉️❤️🙏🏻🌹 मां 🌹पार्वत्यै🌹 देवीया: नमः🌹🐚🙏🏻🌹 जय हिंद❤ वंदे मांतरम❤🇮🇳❤🙏😇 ❤🕉️💯🙏🏻😍🥰🕉😇🌹🌎🕉"
-                android:textColor="#131111"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+    <TextView
+        android:id="@+id/topline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text=" 🙏🏻जय श्री गणेशाय नमः🌹🕉️💯🙏🏻 🐚🌹ॐ नमः शिवाय🌹अतुल्यशिव 🌹 🙏🏻❤️🕉️༺❤️हर_हर_महादेव ❤️༻🕉️❤️🙏🏻🌹 मां 🌹पार्वत्यै🌹 देवीया: नमः🌹🐚🙏🏻🌹 जय हिंद❤ वंदे मांतरम❤🇮🇳❤🙏😇 ❤🕉️💯🙏🏻😍🥰🕉😇🌹🌎🕉"
+        android:textColor="#131111"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/headline"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        </LinearLayout>
+    <TextView
+        android:id="@+id/headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="An Occult Science Philanthrophic Initiative by "
+        android:fontFamily="@font/open_sans"
+        android:textColor="#FF7722"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/headline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
-    <LinearLayout
+    <TextView
+        android:id="@+id/headline2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="RUDRAKSHA WELFARE FOUNDATION..."
+        android:textColor="#FF7722"
+        android:fontFamily="@font/open_sans"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tagLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tagLine" />
+
+    <TextView
+        android:id="@+id/tagLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="12dp"
-        android:layout_alignParentBottom="true"
-        >
-
-
-        <TextView
-            android:id="@+id/headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/open_sans"
-            android:text="An Occult Science Philanthrophic Initiative by "
-            android:textColor="#FF7722"
-            android:textStyle="bold"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/headline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/open_sans"
-            android:gravity="center"
-            android:text="RUDRAKSHA WELFARE FOUNDATION..."
-            android:textColor="#FF7722"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+        android:gravity="center"
+        android:text="A Section 8 Company under Ministry of Corporate Affairs,GOI"
+        android:textColor="#DA000000"
+        android:textSize="12sp"
+        android:fontFamily="@font/open_sans"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 
-
-        <TextView
-            android:id="@+id/tagLine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:fontFamily="@font/open_sans"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:text="A Section 8 Company under Ministry of Corporate Affairs,GOI"
-            android:textColor="#DA000000"
-            android:textSize="12sp" />
-
-    </LinearLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

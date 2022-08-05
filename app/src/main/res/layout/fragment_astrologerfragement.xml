@@ -1,35 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background"
     tools:context=".astrologerFragementDirectory.astrologerfragement">
-    <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp">
+
         <androidx.cardview.widget.CardView
             android:id="@+id/astro_img"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            app:cardCornerRadius="30dp">
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="fitXY"
                 android:adjustViewBounds="true"
-                android:src="@drawable/astro_image"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/astro_image" />
         </androidx.cardview.widget.CardView>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rva"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_below="@+id/astro_img"
             android:layout_margin="10dp"
-            android:padding="5dp"/>
-    </RelativeLayout>
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/astro_img"
+            app:layout_constraintStart_toStartOf="@+id/astro_img"
+            app:layout_constraintTop_toBottomOf="@+id/astro_img" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
