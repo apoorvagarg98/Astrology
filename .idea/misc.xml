@@ -112,6 +112,30 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/fragment_tarotcardreader.xml" value="0.21420704845814978" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/login_tab_fragment.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Astrology/app/src/main/res/layout/signup_tab_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_aboutteam.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_aboutus.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_acceptordeclinepage.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_astrologer.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_audio.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_booking_page.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_chat.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_chat_itemleft.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_chat_right.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_expert_login.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_expert_sign_up1.xml" value="0.22" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_expert_sign_up2.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_expert_sign_up3.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_expertdetails.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_faqs.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_hinduritualsbookingpage.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_homescreenexpertdetails.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_item.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_legal_policy.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_login.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_loginorsignup.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/activity_vastu_expert_booking_page2.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/fragment_lalkitabexpert2.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/HP/Downloads/Internship/Astrology/app/src/main/res/layout/headerfile.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/drawable/textbox1.xml" value="0.1" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/drawable/textbox2.xml" value="0.229" />
         <entry key="..\:/Users/shiva/AndroidStudioProjects/Astrology/app/src/main/res/layout/activity_booking_page.xml" value="0.27447916666666666" />
@@ -139,7 +163,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
