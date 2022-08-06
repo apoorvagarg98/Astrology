@@ -1,181 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="10dp"
+    app:cardCornerRadius="12dp">
 
-    android:layout_height="match_parent">
-
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_height="match_parent"
+        android:padding="10dp">
 
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_baseline_people_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        android:elevation="@dimen/_40sdp"
-        app:cardCornerRadius="12dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/box"
+            android:backgroundTint="#DC128A"
+            android:padding="3dp"
+            android:text="⭐ 4.5"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="10dp"
-                android:gravity="center"
-                android:orientation="vertical">
+        <TextView
+            android:id="@+id/expertname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:text="Name"
+            android:textColor="#DC128A"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/book"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Expertise"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/expertname"
+            app:layout_constraintStart_toStartOf="@+id/expertname"
+            app:layout_constraintTop_toBottomOf="@+id/expertname" />
 
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
+        <TextView
+            android:id="@+id/exp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Experience"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/textView47"
+            app:layout_constraintStart_toStartOf="@+id/textView47"
+            app:layout_constraintTop_toBottomOf="@+id/textView47" />
 
-                    android:src="@drawable/ic_baseline_people_24">
-
-
-                </ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/box"
-                    android:backgroundTint="#DC128A"
-                    android:fontFamily="@font/open_sans"
-                    android:padding="@dimen/_3sdp"
-                    android:text="⭐ 4.5"
-                    android:textColor="@color/white"></TextView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="20dp"
-
-                android:gravity="center"
-                android:orientation="vertical"
-
-                android:padding="10dp">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/open_sans"
-                    android:text="Name"
-                    android:textSize="17dp"
-                    android:textColor="#DC128A"
-                    android:textStyle="bold"
-
-                    >
-
-                </TextView>
+        <TextView
+            android:id="@+id/expertratePerminute"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Charge/min"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/exp"
+            app:layout_constraintStart_toStartOf="@+id/exp"
+            app:layout_constraintTop_toBottomOf="@+id/exp" />
 
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+        <ImageButton
+            android:id="@+id/book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:src="@drawable/book_now"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                    android:fontFamily="@font/open_sans"
-                    android:text="Expertise"
-                    android:textColor="@color/black">
-
-                </TextView>
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-
-                    android:fontFamily="@font/open_sans"
-                    android:text="Experience"
-                    android:textSize="13dp"
-                    android:textColor="@color/black">
-
-                </TextView>
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-
-                    android:fontFamily="@font/open_sans_bold"
-                    android:text="Charge/min"
-                    android:textSize="13dp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold">
-
-                </TextView>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="end"
-
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:orientation="vertical">
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/_5sdp"
-
-                        android:layout_gravity="start"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@color/white"
-                        android:src="@drawable/book_now">
-
-                    </ImageButton>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="6dp"
-                        android:fontFamily="@font/alata"
-                        android:text="Book"
-
-                        android:textColor="#DC128A">
-
-                    </TextView>
-
-                </LinearLayout>
-
-            </LinearLayout>
+        <TextView
+            android:id="@+id/bla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Book"
+            android:textColor="#DC128A"
+            app:layout_constraintEnd_toEndOf="@+id/book"
+            app:layout_constraintStart_toStartOf="@+id/book"
+            app:layout_constraintTop_toBottomOf="@+id/book" />
 
 
-        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </androidx.cardview.widget.CardView>
-
-</RelativeLayout>
+</androidx.cardview.widget.CardView>
