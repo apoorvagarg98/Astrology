@@ -1,4 +1,4 @@
-package com.example.astrology;
+package com.example.astrology.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,25 +6,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.net.DnsResolver;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.example.astrology.Activities.chatActivity;
 import com.example.astrology.Notifications.APIService;
-import com.example.astrology.Notifications.Data;
-import com.example.astrology.Notifications.MyResponse;
-import com.example.astrology.Notifications.Sender;
-import com.example.astrology.Notifications.Token;
+import com.example.astrology.R;
 import com.example.astrology.models.userModel;
 import com.google.android.gms.common.util.Strings;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -35,21 +29,14 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.razorpay.Checkout;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.Calendar;
 import java.util.HashMap;
-
-import javax.security.auth.callback.Callback;
-
-import retrofit2.Call;
-import retrofit2.Response;
 
 public class hinduritualsbookingpage extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
 

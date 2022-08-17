@@ -1,14 +1,16 @@
-package com.example.astrology;
+package com.example.astrology.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class legalPolicy extends AppCompatActivity {
+import com.example.astrology.R;
+
+public class expertdetails extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_legal_policy);
+        setContentView(R.layout.activity_expertdetails);
     }
 }

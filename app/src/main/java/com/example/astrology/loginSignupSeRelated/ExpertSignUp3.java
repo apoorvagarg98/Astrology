@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -43,7 +44,7 @@ public class ExpertSignUp3 extends AppCompatActivity {
     EditText amt,password,experience;
     private FirebaseAuth mAuth;
     FirebaseUser user;
-    FloatingActionButton signup;
+    Button signup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +58,7 @@ public class ExpertSignUp3 extends AppCompatActivity {
         selection =getIntent().getStringExtra("selection").toString();
         exadress  =getIntent().getStringExtra("exadress").toString();
         expincode =getIntent().getStringExtra("expincode").toString();
-        exbirthdate =getIntent().getStringExtra("exbirthdate").toString();
+        exbirthdate=getIntent().getStringExtra("exbirthdate").toString();
         exabtyrslf =getIntent().getStringExtra("exabtyrslf").toString();
         postImageRef = FirebaseStorage.getInstance().getReference().child("postImages");
 
@@ -65,14 +66,13 @@ public class ExpertSignUp3 extends AppCompatActivity {
         experience = findViewById(R.id.experience);
         password = findViewById(R.id.expassword);
         signup = findViewById(R.id.Exsignuppage3);
-        certi = findViewById(R.id.certi);
-        adh = findViewById(R.id.adh);
-        pancard = findViewById(R.id.pancard);
+        certi = findViewById(R.id.imageView2);
+        adh = findViewById(R.id.ivAttachAdhar);
+        pancard = findViewById(R.id.ivAttachPan);
 
 
         mAuth = FirebaseAuth.getInstance();
-        user = mAuth.getCurrentUser();
-        userId = user.getUid();
+
 
         certi.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -53,7 +53,9 @@ public class ExpertProfile extends AppCompatActivity implements AdapterView.OnIt
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
         expertuid = user.getUid();
+        String[] onesel = new String[0];
 
+        final String[] finalselection = new String[1];
         Spinner spinner = findViewById(R.id.expryesno);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.request, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -65,18 +67,24 @@ public class ExpertProfile extends AppCompatActivity implements AdapterView.OnIt
         dekhte.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(int i=0; i <= 10;i++){
                 for (DataSnapshot childSnapshot : dataSnapshot.getChildren()){
-                    String parent = childSnapshot.getRef().getParent().child(expertuid).toString();
-                Toast.makeText(ExpertProfile.this, parent, Toast.LENGTH_SHORT).show();
+
+
+                onesel[i]=childSnapshot.getKey();
+                if(childSnapshot.child(onesel[i]).child(expertuid).exists())
+                {
+                    finalselection[0] = onesel[i];
+                }
             }
-            }
+            }}
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
-        exprofile = FirebaseDatabase.getInstance().getReference().child("Experts").child("Lal Kitab Expert").child(expertuid);
+        exprofile = FirebaseDatabase.getInstance().getReference().child("Experts").child(finalselection[0]).child(expertuid);
 
         exprofile.addValueEventListener(new ValueEventListener() {
             @Override

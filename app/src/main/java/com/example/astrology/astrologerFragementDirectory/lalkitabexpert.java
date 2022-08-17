@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.astrology.Activities.bookingPage;
+import com.example.astrology.Activities.chatActivity;
 import com.example.astrology.Notifications.Token;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -86,6 +87,7 @@ public class lalkitabexpert extends Fragment {
                         Intent intent = new Intent(getActivity(), bookingPage.class);
                         intent.putExtra("expertuid",getRef(position).getKey().toString());
                         intent.putExtra("selection","Lal Kitab Expert");
+
                         startActivity(intent);
                     }
                 });

@@ -163,7 +163,9 @@ request.addValueEventListener(new ValueEventListener() {
 Intent intent = new Intent(acceptordeclinepage.this,chatActivity.class);
 intent.putExtra("Duration of Timer",durationoftimer);
 intent.putExtra("userid",userid);
+intent.putExtra("recieverId",userid);
 intent.putExtra("expertid",user.getUid());
+intent.putExtra("senderId",user.getUid());
 intent.putExtra("name",nameofuser);
                               startActivity(intent);
                         }}
@@ -207,17 +209,6 @@ intent.putExtra("name",nameofuser);
 
             }
         });
-
-
-
-
-
-
     }
-
-
-
-
-
 }
 

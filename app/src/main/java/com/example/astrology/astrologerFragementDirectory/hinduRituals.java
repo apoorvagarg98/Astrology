@@ -4,9 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.astrology.Activities.bookingPage;
 import com.example.astrology.Notifications.Token;
-import com.example.astrology.hinduritualsbookingpage;
+import com.example.astrology.Activities.hinduritualsbookingpage;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
