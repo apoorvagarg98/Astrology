@@ -1,146 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/finalbackground"
-    android:layout_gravity="center"
-    android:gravity="center"
     tools:context=".loginSignupSeRelated.loginorsignup">
 
-    <TextView
-        android:id="@+id/hindiname"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="आदि शक्ति एस्ट्रो"
-        android:textColor="#8b008b"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/englishname"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="AADI SHAKTII ASTRO"
-        android:textColor="#8b008b"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hindiname" />
-
-    <ImageView
-        android:id="@+id/astro_img"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:src="@drawable/mainlogo"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/swagat1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/swagat"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:src="@drawable/swagat"
-        android:textColor="@color/white"
-        android:textSize="150sp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/astro_img" />
-
-    <TextView
-        android:id="@+id/swagat1"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginVertical="20dp"
-        android:text="हार्दिक शुभेच्छा"
-        android:textColor="#DC128A"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/topline1"
-        app:layout_constraintEnd_toEndOf="@+id/astro_img"
-        app:layout_constraintStart_toStartOf="@+id/astro_img" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/topline1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginBottom="10dp"
-        android:padding="4dp"
-        android:text=" 🙏🏻जय श्री गणेशाय नमः🌹🕉️💯🙏🏻 🐚🌹ॐ नमः शिवाय🌹अतुल्यशिव 🌹 🙏🏻❤️🕉️༺❤️हर_हर_महादेव ❤️༻🕉️❤️🙏🏻🌹 मां 🌹पार्वत्यै🌹 देवीया: नमः🌹🐚🙏🏻🌹 जय हिंद❤ वंदे मांतरम❤🇮🇳❤🙏😇 ❤🕉️💯🙏🏻😍🥰🕉😇🌹🌎🕉"
-        android:textColor="#131111"
-        android:textSize="14sp"
-        android:textStyle="bold"
+        <TextView
+            android:id="@+id/hindiname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="आदि शक्ति एस्ट्रो"
+            android:textColor="#8b008b"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        app:layout_constraintBottom_toTopOf="@+id/signupbutton"
-        app:layout_constraintEnd_toEndOf="@+id/signinbutton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/signupbutton" />
+        <TextView
+            android:id="@+id/englishname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="AADI SHAKTII ASTRO"
+            android:textColor="#8b008b"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hindiname" />
 
-    <Button
-        android:id="@+id/signupbutton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="30dp"
-        android:layout_weight="0.2"
-        android:background="@drawable/box"
-        android:gravity="center"
-        android:singleLine="true"
-        android:text="Sign Up"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="normal"
-        android:visibility="visible"
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/smoke_final"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/englishname" />
 
-        app:backgroundTint="#4DBFF0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/signinbutton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageView
+            android:id="@+id/astro_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/mainlogo"
+            app:layout_constraintBottom_toTopOf="@+id/swagat1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
 
-    <Button
-        android:id="@+id/signinbutton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="30dp"
-        android:layout_weight="0.2"
-        android:background="@drawable/box"
-        android:gravity="center"
-        android:singleLine="true"
-        android:text="Sign In"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        android:textStyle="normal"
-        android:visibility="visible"
-        app:backgroundTint="#4DBFF0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/signupbutton" />
+        <ImageView
+            android:id="@+id/swagat"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/swagat"
+            android:textColor="@color/white"
+            android:textSize="150sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/astro_img" />
+
+        <TextView
+            android:id="@+id/swagat1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="20dp"
+            android:gravity="center"
+            android:text="हार्दिक शुभेच्छा"
+            android:textColor="#DC128A"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/topline1"
+            app:layout_constraintEnd_toEndOf="@+id/astro_img"
+            app:layout_constraintStart_toStartOf="@+id/astro_img" />
+
+        <TextView
+            android:id="@+id/topline1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text=" 🙏🏻जय श्री गणेशाय नमः🌹🕉️💯🙏🏻 🐚🌹ॐ नमः शिवाय🌹अतुल्यशिव 🌹 🙏🏻❤️🕉️༺❤️हर_हर_महादेव ❤️༻🕉️❤️🙏🏻🌹 मां 🌹पार्वत्यै🌹 देवीया: नमः🌹🐚🙏🏻🌹 जय हिंद❤ वंदे मांतरम❤🇮🇳❤🙏😇 ❤🕉️💯🙏🏻😍🥰🕉😇🌹🌎🕉"
+            android:textColor="#131111"
+            android:textSize="14sp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toTopOf="@+id/signupbutton"
+            app:layout_constraintEnd_toEndOf="@+id/signinbutton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/signupbutton" />
+
+        <Button
+            android:id="@+id/signupbutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+
+            app:backgroundTint="#4DBFF0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/signinbutton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/signinbutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/box"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:visibility="visible"
+            app:backgroundTint="#4DBFF0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/signupbutton" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
