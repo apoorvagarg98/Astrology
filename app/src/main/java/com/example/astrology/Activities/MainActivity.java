@@ -23,8 +23,6 @@ import android.widget.Button;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.astrology.R;
-import com.example.astrology.aboutus;
-import com.example.astrology.legalPolicy;
 import com.example.astrology.models.expertModel;
 import com.example.astrology.viewHollders.item;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;

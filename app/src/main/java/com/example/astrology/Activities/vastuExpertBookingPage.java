@@ -1,4 +1,4 @@
-package com.example.astrology;
+package com.example.astrology.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,18 +9,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.example.astrology.Activities.bookingPage;
-import com.example.astrology.Activities.chatActivity;
 import com.example.astrology.Notifications.APIService;
 import com.example.astrology.Notifications.Data;
 import com.example.astrology.Notifications.MyResponse;
 import com.example.astrology.Notifications.Sender;
 import com.example.astrology.Notifications.Token;
+import com.example.astrology.R;
 import com.example.astrology.models.userModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -37,7 +34,6 @@ import com.razorpay.Checkout;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Calendar;
 import java.util.HashMap;
 
 import retrofit2.Call;

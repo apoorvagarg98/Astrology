@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -313,6 +314,8 @@ public class SignUp2 extends AppCompatActivity implements View.OnClickListener, 
                             if(task.isSuccessful())
                             {
                                 Toast.makeText(SignUp2.this, "User Registered succesfully, Please Login", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(SignUp2.this,Login.class));
+
 
                             }
                         }

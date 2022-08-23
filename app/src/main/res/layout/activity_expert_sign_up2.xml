@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/finalbackground"
     tools:context=".loginSignupSeRelated.ExpertSignUp2">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -60,16 +59,26 @@
             app:layout_constraintStart_toStartOf="@+id/hindiname"
             app:layout_constraintTop_toBottomOf="@+id/hindiname" />
 
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/smoke_final"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/englishname" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/englishname">
+            app:layout_constraintTop_toBottomOf="@+id/imageView7">
 
 
             <EditText
@@ -212,7 +221,7 @@
             android:id="@+id/constraintLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:padding="20dp"
             app:layout_constraintEnd_toEndOf="@+id/tvTermsAndCond"
             app:layout_constraintStart_toStartOf="@+id/tvTermsAndCond"
@@ -241,7 +250,7 @@
             android:id="@+id/exdontHaveacc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:singleLine="true"
             android:text="@string/already_have_an_account_sign_in"

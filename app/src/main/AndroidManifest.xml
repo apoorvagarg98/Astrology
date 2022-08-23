@@ -29,16 +29,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Astrology">
         <activity
-            android:name=".expertdetails"
+            android:name=".Activities.expertdetails"
             android:exported="false" />
         <activity
-            android:name=".legalPolicy"
+            android:name=".Activities.legalPolicy"
             android:exported="false" />
         <activity
-            android:name=".hinduritualsbookingpage"
+            android:name=".Activities.hinduritualsbookingpage"
             android:exported="false" />
         <activity
-            android:name=".vastuExpertBookingPage"
+            android:name=".Activities.vastuExpertBookingPage"
             android:exported="false" />
         <activity
             android:name=".chatRight"
@@ -56,7 +56,7 @@
             android:exported="false"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".homescreenexpertdetails"
+            android:name=".Activities.homescreenexpertdetails"
             android:exported="false" />
         <activity
             android:name=".Activities.ExpertProfile"
@@ -84,7 +84,7 @@
             android:name=".loginSignupSeRelated.ExpertSignUp3"
             android:exported="true" />
         <activity
-            android:name=".aboutus"
+            android:name=".Activities.aboutus"
             android:exported="true" />
         <activity
             android:name=".Activities.faqs"
