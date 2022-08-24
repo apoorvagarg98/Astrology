@@ -1,242 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/finalbackground"
     tools:context=".loginSignupSeRelated.ExpertSignUp1">
 
-    <ImageView
-        android:id="@+id/topicon"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="center"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/mainlogo"
-        android:text="AADISHAKTI"
-        android:textColor="#E9E83141"
-        android:textSize="32sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/hindiname"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/open_sans_bold"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="आदि शक्ति एस्ट्रो"
-        android:textColor="#8b008b"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/topicon"
-        app:layout_constraintTop_toTopOf="@+id/topicon" />
-
-    <TextView
-        android:id="@+id/englishname"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/open_sans_bold"
-        android:gravity="center"
-        android:text="AADI SHAKTII ASTRO"
-        android:textColor="#8b008b"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/hindiname"
-        app:layout_constraintTop_toBottomOf="@+id/hindiname" />
-    <TextView
-        android:id="@+id/logintextview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/box"
-        android:fontFamily="@font/open_sans_bold"
-        android:gravity="center"
-        android:backgroundTint="#FDFCFA"
-        android:text="Help Us With A Little Info"
-        android:textColor="#4DBFF0"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/englishname" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputname"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logintextview">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/topicon"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/mainlogo"
+            android:text="AADISHAKTI"
+            android:textColor="#E9E83141"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-        <EditText
-            android:id="@+id/Exfullname"
+        <TextView
+            android:id="@+id/hindiname"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:gravity="center"
+            android:text="आदि शक्ति एस्ट्रो"
+            android:textColor="#8b008b"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/topicon"
+            app:layout_constraintTop_toTopOf="@+id/topicon" />
+
+        <TextView
+            android:id="@+id/englishname"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/open_sans_bold"
+            android:gravity="center"
+            android:text="AADI SHAKTII ASTRO"
+            android:textColor="#8b008b"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/hindiname"
+            app:layout_constraintTop_toBottomOf="@+id/hindiname" />
+
+        <ImageView
+            android:id="@+id/imageView16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autoText="true"
-            android:background="@drawable/textviewbg"
-            android:backgroundTint="#F6F7FA"
-            android:ems="10"
-            android:hint="Name:"
-            android:inputType="textPersonName"
-            android:shadowColor="#EFE1E1"
-            android:textColor="#4F3DEF"
-            android:textColorHighlight="#090909"
-            android:textColorHint="#777575"
-            android:textColorLink="#FAF3F3"
-            android:textStyle="normal"  />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:src="@drawable/smoke_final"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/englishname" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputnumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/textInputname"
-        app:layout_constraintStart_toStartOf="@+id/textInputname"
-        app:layout_constraintTop_toBottomOf="@+id/textInputname">
-
-
-        <EditText
-            android:id="@+id/Exmobile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/textviewbg"
-            android:backgroundTint="#F6F7FA"
-            android:ems="10"
-            android:hint="Mobile Number:"
-            android:textColor="#4F3DEF" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/textInputnumber"
-        app:layout_constraintStart_toStartOf="@+id/textInputnumber"
-        app:layout_constraintTop_toBottomOf="@+id/textInputnumber">
-
-        <EditText
-            android:id="@+id/Exemailid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/textviewbg"
-            android:backgroundTint="#F6F7FA"
-            android:ems="10"
-            android:hint="Email Id:"
-            android:textColor="#4F3DEF" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/gender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="2dp"
-        android:fontFamily="@font/poppins_light"
-        android:gravity="center"
-        android:text="Select Your Gender"
-        android:textColor="#DC128A"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputmail" />
-
-    <RadioGroup
-        android:id="@+id/exradio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender" >
-
-        <RadioButton
-            android:id="@+id/exmale"
+        <TextView
+            android:id="@+id/logintextview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:background="@drawable/box"
-            android:backgroundTint="#F6F7FA"
+            android:layout_gravity="center"
+            android:backgroundTint="#FDFCFA"
+            android:fontFamily="@font/open_sans_bold"
+            android:gravity="center"
+            android:text="Help Us With A Little Info"
+            android:textColor="#4DBFF0"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
-            android:paddingEnd="14dp"
-            android:text="Male ♂️"></RadioButton>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logintextview">
 
-        <RadioButton
-            android:id="@+id/exfemale"
+
+            <EditText
+                android:id="@+id/Exfullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoText="true"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F6F7FA"
+                android:ems="10"
+                android:hint="Name:"
+                android:inputType="textPersonName"
+                android:shadowColor="#EFE1E1"
+                android:textColor="#4F3DEF"
+                android:textColorHighlight="#090909"
+                android:textColorHint="#777575"
+                android:textColorLink="#FAF3F3"
+                android:textStyle="normal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputname"
+            app:layout_constraintStart_toStartOf="@+id/textInputname"
+            app:layout_constraintTop_toBottomOf="@+id/textInputname">
+
+
+            <EditText
+                android:id="@+id/Exmobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F6F7FA"
+                android:ems="10"
+                android:hint="Mobile Number:"
+                android:textColor="#4F3DEF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputnumber"
+            app:layout_constraintStart_toStartOf="@+id/textInputnumber"
+            app:layout_constraintTop_toBottomOf="@+id/textInputnumber">
+
+            <EditText
+                android:id="@+id/Exemailid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textviewbg"
+                android:backgroundTint="#F6F7FA"
+                android:ems="10"
+                android:hint="Email Id:"
+                android:textColor="#4F3DEF" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/poppins_light"
+            android:gravity="center"
+            android:text="Select Your Gender"
+            android:textColor="#DC128A"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputmail" />
+
+        <RadioGroup
+            android:id="@+id/exradio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/box"
-            android:backgroundTint="#F6F7FA"
-            android:padding="2dp"
-            android:paddingEnd="4dp"
-            android:text="Female ♀️">
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender">
 
-        </RadioButton>
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/exmale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/box"
+                android:backgroundTint="#F6F7FA"
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/Exsignup2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exradio"
-        android:src="@drawable/ic_rightt"
-        android:text="Log In"
-        android:visibility="visible"
-        app:backgroundTint="#DC128A"
-        app:tint="@color/white" />
+                android:paddingEnd="14dp"
+                android:text="Male ♂️"></RadioButton>
 
-    <TextView
-        android:id="@+id/ExalreadyHaveacc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:singleLine="true"
-        android:text="@string/already_have_an_account_sign_in"
-        android:textColor="#4DBFF0"
-        android:textSize="12dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+            <RadioButton
+                android:id="@+id/exfemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/box"
+                android:backgroundTint="#F6F7FA"
+                android:padding="2dp"
+                android:paddingEnd="4dp"
+                android:text="Female ♀️">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </RadioButton>
+        </RadioGroup>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Exsignup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:singleLine="true"
+            android:src="@drawable/ic_rightt"
+            android:text="Log In"
+            android:visibility="visible"
+            app:backgroundTint="#DC128A"
+            app:layout_constraintBottom_toTopOf="@+id/ExalreadyHaveacc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exradio"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/ExalreadyHaveacc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/already_have_an_account_sign_in"
+            android:textColor="#4DBFF0"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

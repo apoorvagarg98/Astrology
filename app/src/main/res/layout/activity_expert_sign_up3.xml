@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/finalbackground"
     tools:context=".loginSignupSeRelated.ExpertSignUp3">
 
     <ScrollView
@@ -17,6 +16,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/topicon"
                 android:layout_width="100dp"
@@ -38,8 +38,8 @@
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/open_sans_bold"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/open_sans_bold"
                 android:gravity="center"
                 android:text="आदि शक्ति एस्ट्रो"
                 android:textColor="#8b008b"
@@ -66,12 +66,19 @@
                 app:layout_constraintStart_toStartOf="@+id/hindiname"
                 app:layout_constraintTop_toBottomOf="@+id/hindiname" />
 
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/smoke_final"
+                app:layout_constraintTop_toBottomOf="@+id/englishname" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="95dp"
-                app:layout_constraintTop_toBottomOf="@+id/englishname">
+                app:layout_constraintTop_toBottomOf="@+id/imageView16"
+                tools:layout_editor_absoluteX="10dp">
 
                 <!--Rate per minute-->
                 <com.google.android.material.textfield.TextInputLayout
@@ -330,6 +337,7 @@
                     android:id="@+id/dontHaveacc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:text="@string/already_have_an_account"
                     android:textSize="16sp"

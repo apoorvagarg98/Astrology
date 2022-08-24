@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/finalbackground"
     tools:context=".loginSignupSeRelated.SignUp2">
 
     <ImageView
@@ -56,6 +55,12 @@
         app:layout_constraintStart_toStartOf="@+id/hindiname"
         app:layout_constraintTop_toBottomOf="@+id/hindiname" />
 
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/smoke_final"
+        app:layout_constraintTop_toBottomOf="@+id/englishname" />
 
     <!--Values-->
     <!--Date-->
@@ -63,10 +68,9 @@
         android:id="@+id/textInputLayout6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/englishname">
+        app:layout_constraintTop_toBottomOf="@+id/imageView16">
 
 
         <EditText
