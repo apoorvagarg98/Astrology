@@ -12,7 +12,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 public class astrologer extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
-
+//tablayout at client side
     private String[] titles = new String[]{"astrology","laalKitaab","HinduRituals","MobileNumerology","Numerology","palmistory ","tarotCardReader","VastuExpert"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {

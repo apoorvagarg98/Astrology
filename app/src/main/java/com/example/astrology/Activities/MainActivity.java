@@ -37,7 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
+//when client logins this page will be shown to hi
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ImageSlider imageSlider = findViewById(R.id.slider);
 
         List<SlideModel> slideModels = new ArrayList<>();
-
+//for image slider
         slideModels.add(new SlideModel(R.drawable.backgroundd));
         slideModels.add(new SlideModel("https://5.imimg.com/data5/ANDROID/Default/2021/2/CL/AS/MJ/48693369/product-jpeg-500x500.jpg", "Astrology"));
         slideModels.add(new SlideModel("https://www.haribhoomi.com/cms/gall_content/2018/3/zodiac_2018032812431854.jpg", "Palmology"));

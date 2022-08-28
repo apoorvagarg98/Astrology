@@ -41,6 +41,7 @@ import java.util.HashMap;
 public class hinduritualsbookingpage extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener{
 
     Spinner typeofpuja;
+    // exabtyrslf is expert about yourself where description is written of expert, r is used to show experience
     String userid,selection,expertid,r,email,nameofuser,exabtyrslf,totalmin,date,time;
     Button selecttime,selectdate,request;
     TextView hrratepmin,hrallselections,hraboutme,hrexperiencebig,hrnameofExpert,name,exp,rpm,expertise,exabtyrslftxtvw;
@@ -115,13 +116,7 @@ exp = findViewById(R.id.hrexperiencebig);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
-        //request button dekh le yahan sahi hai aur koi sa button ayega
-        request.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
 
 
         dbr.addValueEventListener(new ValueEventListener() {
@@ -133,8 +128,8 @@ exp = findViewById(R.id.hrexperiencebig);
                     email = snapshot.child("exemails").getValue().toString();
                     nameofuser = snapshot.child("exnames").getValue().toString();
                     exabtyrslf = snapshot.child("exabtyrslf").getValue().toString();
-                    name.setText("Name- " + nameofuser);
-                    exp.setText("Experience- "+ r+ "yrs");
+                    name.setText("- " + nameofuser);
+                    exp.setText("ExperNameience- "+ r+ "yrs");
                     exabtyrslftxtvw.setText("About expert- "+exabtyrslf);
                     rpm.setText("Rate- "+snapshot.child("stamt").getValue().toString()+"rs");
                     expertise.setText("Booking for- "+ snapshot.child("selection").getValue().toString());
@@ -147,7 +142,7 @@ exp = findViewById(R.id.hrexperiencebig);
 
             }
         });
-
+//redirecting to payment
         request.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

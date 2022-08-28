@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 
 public class ExpertProfile extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
+//exp = experience,dob = date of birth,amt = amount
     TextView name, email,pin,address,exp,dob,amt,expertise;
 
 

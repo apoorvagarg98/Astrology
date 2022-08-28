@@ -26,6 +26,7 @@ import com.google.firebase.iid.FirebaseInstanceId;
 
 
 public class astrologer extends Fragment {
+    //all the fragements in the expert login will show in this directory
     public RecyclerView recyclerView;
     public FirebaseUser expertuser;
     public DatabaseReference client;

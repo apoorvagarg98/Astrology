@@ -54,6 +54,7 @@ import retrofit2.Response;
 public class bookingPage extends AppCompatActivity implements View.OnClickListener {
     String expertid,selection,r,email,userid,nameofuser,date,time,phone,exabtyrslf,userphone;
     DatabaseReference dbr,requestdb,userdb;
+    //rmp matlab rate per min, exabtyrslftxtvw matlab expert about yourself text view
     TextView name,exp,rpm,expertise,duration,totalAmountToBePaid,showstatus,exabtyrslftxtvw;
     Button pickDuration,request;
     ImageView show;
@@ -105,7 +106,7 @@ exabtyrslftxtvw = findViewById(R.id.aboutme);
 
 
 
-
+//fetching details of expert and displaying it to the user
         dbr.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -139,7 +140,7 @@ userphone = snapshot.child("mobile").getValue().toString();
     }
 });
 
-
+//redirects to payment gateway
         request.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -211,7 +212,7 @@ userphone = snapshot.child("mobile").getValue().toString();
         });
 
     }
-
+//payment success pe ye hoga aur request db mai jayegi aur expert ke pass bhi
 
     public void onPaymentSuccess(String s) {
 
@@ -280,7 +281,7 @@ userphone = snapshot.child("mobile").getValue().toString();
     }
 
 
-
+//duration picker dialogue hai
     @Override
     public void onClick(View v) {
 
@@ -305,6 +306,7 @@ userphone = snapshot.child("mobile").getValue().toString();
             picker.show();
         }
         }
+        //amount calculate karne ke liye
 
     private void getamounttobepaid(int sHour, int sMinute) {
          int hrintomin =0;

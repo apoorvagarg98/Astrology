@@ -85,7 +85,7 @@ public FirebaseAuth mAuth;
 
 
 
-
+//for retreiving the details
         request.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

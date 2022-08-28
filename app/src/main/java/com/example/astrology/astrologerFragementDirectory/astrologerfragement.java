@@ -26,7 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 
 public class astrologerfragement extends Fragment {
-
+//all the fragment in client side are in asatrologer fragement directory
     public RecyclerView recyclerView;
     public FirebaseUser user;
     public DatabaseReference expert;

@@ -33,14 +33,19 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class ExpertSignUp3 extends AppCompatActivity {
+    //ye request wale sab gallery se image pick karne ke liye
     public static  final int REQUEST_CODEcerti= 101;
     public static  final int REQUEST_CODEadh= 105;
     public static  final int REQUEST_CODEpan= 110;
     public static ImageView certi,adh,pancard;
 
+    //image uri ke andar store hoti hai
     public static Uri imageUricertificate,imageUriadhar,imageUripan;
+    //image store karane ka ref firebase pe
     StorageReference postImageRef;
+    //ex denotes to expert
     String exnames,exmobile, exemails,userId ,gender ,selection ,exadress ,expincode ,exbirthdate,stamt,stpass,exabtyrslf;
+    //amt matlab amount,baaki naam se samjh aa rahe
     EditText amt,password,experience;
     private FirebaseAuth mAuth;
     FirebaseUser user;
